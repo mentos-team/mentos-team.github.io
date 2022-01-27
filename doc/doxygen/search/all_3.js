@@ -112,7 +112,7 @@ var searchData=
   ['crtc_5fmode_5fcontrol_574',['crtc_mode_control',['../structvga__mode__t.html#a61fd6ca0f7d2376522715de0d6ca1a03',1,'vga_mode_t']]],
   ['crypto_5fscramble_5fext_5fcommand_5fsupported_575',['crypto_scramble_ext_command_supported',['../structata__identify__t.html#aa57f14a6ab6af43cc895d082ff05b36e',1,'ata_identify_t']]],
   ['cs_576',['cs',['../structtss__entry.html#a33c9606d477c18ae57ca3916a206cb68',1,'tss_entry::cs()'],['../structpt__regs.html#a06fad0cace0f03a2552ec55ab16a961c',1,'pt_regs::cs()']]],
-  ['ctime_577',['ctime',['../structvfs__file__t.html#a57d5b9fb6622027b5f46c70b81716e3b',1,'vfs_file_t::ctime()'],['../structext2__inode__t.html#afd7570d8c64b55a323a562aded98c979',1,'ext2_inode_t::ctime()'],['../structinitrd__file__t.html#ab7cae3aa06b9cdc12eb8b7dfc6057a69',1,'initrd_file_t::ctime()'],['../structprocfs__file__t.html#aad669866cdb9b1275a628a69a12c78b7',1,'procfs_file_t::ctime()']]],
+  ['ctime_577',['ctime',['../structvfs__file__t.html#a57d5b9fb6622027b5f46c70b81716e3b',1,'vfs_file_t::ctime()'],['../structext2__inode__t.html#afd7570d8c64b55a323a562aded98c979',1,'ext2_inode_t::ctime()'],['../structprocfs__file__t.html#aad669866cdb9b1275a628a69a12c78b7',1,'procfs_file_t::ctime()']]],
   ['ctor_578',['ctor',['../structkmem__cache__t.html#a6e448a661088b319904781c3736b6e75',1,'kmem_cache_t']]],
   ['ctrl_579',['ctrl',['../structkeymap__t.html#ad1a0a96c35df3da4c65680f5f6936d2d',1,'keymap_t']]],
   ['ctype_2ec_580',['ctype.c',['../mentos_2src_2klib_2ctype_8c.html',1,'(Global Namespace)'],['../libc_2src_2ctype_8c.html',1,'(Global Namespace)']]],
@@ -127,6 +127,5 @@ var searchData=
   ['cursor_5flocation_5flow_589',['cursor_location_low',['../structvga__mode__t.html#aa0be27c7049502b39e9afa4c5c226f76',1,'vga_mode_t']]],
   ['cursor_5fstart_590',['cursor_start',['../structvga__mode__t.html#a6450f0ffbc60f54717b557807296f328',1,'vga_mode_t']]],
   ['cvtbufsize_591',['CVTBUFSIZE',['../mentos_2src_2klib_2vsprintf_8c.html#a61777e31579cfeda1508f4130d09421b',1,'CVTBUFSIZE():&#160;vsprintf.c'],['../libc_2src_2vsprintf_8c.html#a61777e31579cfeda1508f4130d09421b',1,'CVTBUFSIZE():&#160;vsprintf.c']]],
-  ['cwd_592',['cwd',['../structtask__struct.html#a7c21f2477fef8029c5ffaa7dd9701b66',1,'task_struct']]],
-  ['coding_20style_593',['Coding Style',['../md_CODING_STYLE.html',1,'']]]
+  ['cwd_592',['cwd',['../structtask__struct.html#a7c21f2477fef8029c5ffaa7dd9701b66',1,'task_struct']]]
 ];

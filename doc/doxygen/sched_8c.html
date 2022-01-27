@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9"/>
     <meta name="generator" content="Doxygen 1.8.17"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>MentOS: mentos/inc/fs/initrd.h Source File</title>
+    <title>MentOS: libc/src/sched.c File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -65,33 +65,38 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_b4d46abdb8cafe1ad6c14fa0f9992e34.html">mentos</a></li><li class="navelem"><a class="el" href="dir_b043e71e4766e108b8d8f74323da14bd.html">inc</a></li><li class="navelem"><a class="el" href="dir_19702a7d0c75b12056766263842bc54a.html">fs</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_fc1eb218ab426e5adb60367f98438da0.html">libc</a></li><li class="navelem"><a class="el" href="dir_5a6d0a87a1975ef1f44187ebf21e0884.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">initrd.h</div>  </div>
+<div class="title">sched.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="initrd_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">int</span> <a class="code" href="initrd_8h.html#a776700079a371f434f482c05f5469ea1">initrd_init_module</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="initrd_8h.html#abf84266c19f14ae6696dbaf6d77e057c">initrd_cleanup_module</a>(<span class="keywordtype">void</span>);</div>
-</div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="ainitrd_8h_html_a776700079a371f434f482c05f5469ea1"><div class="ttname"><a href="initrd_8h.html#a776700079a371f434f482c05f5469ea1">initrd_init_module</a></div><div class="ttdeci">int initrd_init_module(void)</div><div class="ttdoc">Initialize the initrd filesystem.</div><div class="ttdef"><b>Definition:</b> <a href="initrd_8c_source.html#l00671">initrd.c:671</a></div></div>
-<div class="ttc" id="ainitrd_8h_html_abf84266c19f14ae6696dbaf6d77e057c"><div class="ttname"><a href="initrd_8h.html#abf84266c19f14ae6696dbaf6d77e057c">initrd_cleanup_module</a></div><div class="ttdeci">int initrd_cleanup_module(void)</div><div class="ttdoc">Clean up the initrd filesystem.</div><div class="ttdef"><b>Definition:</b> <a href="initrd_8c_source.html#l00685">initrd.c:685</a></div></div>
+
+<p>Function for managing scheduler.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="syscall__types_8h_source.html">system/syscall_types.h</a>&quot;</code><br />
+<code>#include &quot;sys/errno.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="sched_8h_source.html">sched.h</a>&quot;</code><br />
+</div>
+<p><a href="sched_8c_source.html">Go to the source code of this file.</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Function for managing scheduler. </p>
+<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="sched_8c_source.html">sched.c</a>.</p>
+</div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.16-->
 <!-- start footer part -->
 <div class="footer">
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:16.
+            This page was last modified on Thu Jan 27 2022 15:14:55.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

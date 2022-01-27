@@ -106,7 +106,9 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="termios-struct_8h.html#a79c826e2e8762135eda0b51352241bc6">   40</a></span>&#160;<span class="preprocessor">#define TOSTOP  0x00400000 </span></div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="termios-struct_8h.html#a1be1e11c89f23c1651328e62b9533ac2">   41</a></span>&#160;<span class="preprocessor">#define ECHOCTL 0x00000040 </span></div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="termios-struct_8h.html#ae5aeef4d21a390052a1a6cbb106e830c">   42</a></span>&#160;<span class="preprocessor">#define ECHOKE  0x00000001 </span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define IEXTEN  0x00000400 ///&lt; Enables implementation-defined input processing.</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="termios-struct_8h.html#ab64d018931a30f42a2590c5d997a41f2">   43</a></span>&#160;<span class="preprocessor">#define IEXTEN  0x00000400 </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor"></span> </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define CTRL(x) (x &amp; 037)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructtermios_html_a02ae972cbc9fb2cf4a1aa6a6751a421a"><div class="ttname"><a href="structtermios.html#a02ae972cbc9fb2cf4a1aa6a6751a421a">termios::c_ispeed</a></div><div class="ttdeci">speed_t c_ispeed</div><div class="ttdoc">input speed</div><div class="ttdef"><b>Definition:</b> <a href="termios-struct_8h_source.html#l00025">termios-struct.h:25</a></div></div>
 <div class="ttc" id="astructtermios_html_aeeafa1ceb36342fd91b67027dbdaaf8a"><div class="ttname"><a href="structtermios.html#aeeafa1ceb36342fd91b67027dbdaaf8a">termios::c_line</a></div><div class="ttdeci">cc_t c_line</div><div class="ttdoc">line discipline</div><div class="ttdef"><b>Definition:</b> <a href="termios-struct_8h_source.html#l00023">termios-struct.h:23</a></div></div>
@@ -128,10 +130,10 @@ $(function() {
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:16.
+            This page was last modified on Thu Jan 27 2022 15:14:52.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

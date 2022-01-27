@@ -74,44 +74,44 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="libc__start_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="unistd_8h.html">sys/unistd.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdlib_8h.html">stdlib.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_8h.html">string.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="assert_8h.html">assert.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="syscall__types_8h.html">system/syscall_types.h</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;sys/errno.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span> **<a class="code" href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">__libc_start_main</a>(<span class="keywordtype">int</span> (*main)(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> **, <span class="keywordtype">char</span> **), <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[], <span class="keywordtype">char</span> *envp[])</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//dbg_print(&quot;== START %-30s =======================================\n&quot;, argv[0]);</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//dbg_print(&quot;__libc_start_main(%p, %d, %p, %p)\n&quot;, main, argc, argv, envp);</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(main &amp;&amp; <span class="stringliteral">&quot;There is no `main` function.&quot;</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(argv &amp;&amp; <span class="stringliteral">&quot;There is no `argv` array.&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(envp &amp;&amp; <span class="stringliteral">&quot;There is no `envp` array.&quot;</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//dbg_print(&quot;environ  : %p\n&quot;, environ);</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Copy the environ.</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a> = envp;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Call the main function.</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> result = main(argc, argv, envp);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Free the environ.</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//dbg_print(&quot;== END   %-30s =======================================\n&quot;, argv[0]);</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// WARNING: This declaration must be here, because libc_start is compiled</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// with all the programs, and all the programs NEED to have the `sigreturn`</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// symbol. It must be this way, period.</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a>(<span class="keywordtype">int</span>, sigreturn)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="unistd_8h.html">sys/unistd.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdlib_8h.html">stdlib.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_8h.html">string.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="assert_8h.html">assert.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="syscall__types_8h.html">system/syscall_types.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;sys/errno.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">char</span> **<a class="code" href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">   22</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">__libc_start_main</a>(<span class="keywordtype">int</span> (*main)(<span class="keywordtype">int</span>, <span class="keywordtype">char</span> **, <span class="keywordtype">char</span> **), <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[], <span class="keywordtype">char</span> *envp[])</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//dbg_print(&quot;== START %-30s =======================================\n&quot;, argv[0]);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//dbg_print(&quot;__libc_start_main(%p, %d, %p, %p)\n&quot;, main, argc, argv, envp);</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(main &amp;&amp; <span class="stringliteral">&quot;There is no `main` function.&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(argv &amp;&amp; <span class="stringliteral">&quot;There is no `argv` array.&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(envp &amp;&amp; <span class="stringliteral">&quot;There is no `envp` array.&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//dbg_print(&quot;environ  : %p\n&quot;, environ);</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Copy the environ.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a> = envp;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">// Call the main function.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> result = main(argc, argv, envp);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Free the environ.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//dbg_print(&quot;== END   %-30s =======================================\n&quot;, argv[0]);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// WARNING: This declaration must be here, because libc_start is compiled</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// with all the programs, and all the programs NEED to have the `sigreturn`</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// symbol. It must be this way, period.</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a>(<span class="keywordtype">int</span>, sigreturn)</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="alibc__start_8c_html_aa006daaf11f1e2e45a6ababaf463212b"><div class="ttname"><a href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a></div><div class="ttdeci">char ** environ</div><div class="ttdoc">Reference to the environ variable in setenv.c.</div><div class="ttdef"><b>Definition:</b> <a href="setenv_8c_source.html#l00009">setenv.c:9</a></div></div>
+<div class="ttc" id="alibc__start_8c_html_aa006daaf11f1e2e45a6ababaf463212b"><div class="ttname"><a href="libc__start_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a></div><div class="ttdeci">char ** environ</div><div class="ttdoc">Reference to the environ variable in setenv.c.</div><div class="ttdef"><b>Definition:</b> <a href="setenv_8c_source.html#l00011">setenv.c:11</a></div></div>
 <div class="ttc" id="asyscall__types_8h_html_af1b3e00cc417e1b3986491493c339ffd"><div class="ttname"><a href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a></div><div class="ttdeci">#define _syscall0(type, name)</div><div class="ttdoc">System call with 0 parameters.</div><div class="ttdef"><b>Definition:</b> <a href="syscall__types_8h_source.html#l00256">syscall_types.h:256</a></div></div>
 <div class="ttc" id="astring_8h_html"><div class="ttname"><a href="string_8h.html">string.h</a></div><div class="ttdoc">String routines.</div></div>
 <div class="ttc" id="aassert_8h_html"><div class="ttname"><a href="assert_8h.html">assert.h</a></div><div class="ttdoc">Defines the function and pre-processor macro for assertions.</div></div>
 <div class="ttc" id="asyscall__types_8h_html"><div class="ttname"><a href="syscall__types_8h.html">syscall_types.h</a></div><div class="ttdoc">System Call numbers.</div></div>
 <div class="ttc" id="aassert_8h_html_a0041af519e0e7d47c9bcc83760c4669e"><div class="ttname"><a href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a></div><div class="ttdeci">#define assert(expression)</div><div class="ttdoc">Assert function.</div><div class="ttdef"><b>Definition:</b> <a href="assert_8h_source.html#l00019">assert.h:19</a></div></div>
-<div class="ttc" id="alibc__start_8c_html_af18b59222994a1f86cb816b1db07ac4d"><div class="ttname"><a href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">__libc_start_main</a></div><div class="ttdeci">int __libc_start_main(int(*main)(int, char **, char **), int argc, char *argv[], char *envp[])</div><div class="ttdoc">The entry point to every program.</div><div class="ttdef"><b>Definition:</b> <a href="libc__start_8c_source.html#l00020">libc_start.c:20</a></div></div>
+<div class="ttc" id="alibc__start_8c_html_af18b59222994a1f86cb816b1db07ac4d"><div class="ttname"><a href="libc__start_8c.html#af18b59222994a1f86cb816b1db07ac4d">__libc_start_main</a></div><div class="ttdeci">int __libc_start_main(int(*main)(int, char **, char **), int argc, char *argv[], char *envp[])</div><div class="ttdoc">The entry point to every program.</div><div class="ttdef"><b>Definition:</b> <a href="libc__start_8c_source.html#l00022">libc_start.c:22</a></div></div>
 <div class="ttc" id="aunistd_8h_html"><div class="ttname"><a href="unistd_8h.html">unistd.h</a></div><div class="ttdoc">Functions used to manage files.</div></div>
 <div class="ttc" id="astdlib_8h_html"><div class="ttname"><a href="stdlib_8h.html">stdlib.h</a></div><div class="ttdoc">Useful generic functions and macros.</div></div>
 <!-- HTML footer for doxygen 1.8.16-->
@@ -120,10 +120,10 @@ $(function() {
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:16.
+            This page was last modified on Thu Jan 27 2022 15:14:52.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

@@ -168,29 +168,29 @@ Functions</h2></td></tr>
 <div class="image">
 <img src="gdt_bits.png" alt=""/>
 </div>
- <h4><a class="anchor" id="autotoc_md23"></a>
+ <h4><a class="anchor" id="autotoc_md21"></a>
 PRIV (Privilege bits)</h4>
 <p>Contains the ring level, specifically:</p><ul>
 <li><code>00 (0)</code> = highest (kernel),</li>
 <li><code>11 (3)</code> = lowest (user applications).</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md24"></a>
+<h4><a class="anchor" id="autotoc_md22"></a>
 S (Descriptor type)</h4>
 <p>This bit should be set for code or data segments and should be cleared for system segments (eg. a Task State Segment).</p>
-<h4><a class="anchor" id="autotoc_md25"></a>
+<h4><a class="anchor" id="autotoc_md23"></a>
 EX (Executable bit)</h4>
 <ul>
 <li>If 1 code in this segment can be executed, ie. a code selector.</li>
 <li>If 0 it is a data selector.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md26"></a>
+<h4><a class="anchor" id="autotoc_md24"></a>
 DC (Direction bit/Conforming bit)</h4>
 <p>Direction bit for data selectors: Tells the direction. 0 the segment grows up. 1 the segment grows down, ie., the offset has to be greater than the limit.</p>
 <p>Conforming bit for code selectors:</p><ul>
 <li>If 1 code in this segment can be executed from an equal or lower privilege level. For example, code in ring 3 can far-jump to conforming code in a ring 2 segment. The privl-bits represent the highest privilege level that is allowed to execute the segment. For example, code in ring 0 cannot far-jump to a conforming code segment with privl==0x2, while code in ring 2 and 3 can. Note that the privilege level remains the same, ie. a far-jump form ring 3 to a privl==2-segment remains in ring 3 after the jump.</li>
 <li>If 0 code in this segment can only be executed from the ring set in privl.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md27"></a>
+<h4><a class="anchor" id="autotoc_md25"></a>
 RW (Readable bit/Writable bit)</h4>
 <ul>
 <li>Readable bit for code selectors:<ul>
@@ -204,16 +204,16 @@ RW (Readable bit/Writable bit)</h4>
 </ul>
 </li>
 </ul>
-<h4><a class="anchor" id="autotoc_md28"></a>
+<h4><a class="anchor" id="autotoc_md26"></a>
 AC (Accessed bit)</h4>
 <p>Just set to 0. The CPU sets this to 1 when the segment is accessed.</p>
-<h4><a class="anchor" id="autotoc_md29"></a>
+<h4><a class="anchor" id="autotoc_md27"></a>
 GR (Granularity bit)</h4>
 <ul>
 <li>If 0 the limit is in 1 B blocks (byte granularity);</li>
 <li>if 1 the limit is in 4 KiB blocks (page granularity).</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md30"></a>
+<h4><a class="anchor" id="autotoc_md28"></a>
 SZ (Size bit)</h4>
 <ul>
 <li>If 0 the selector defines 16 bit protected mode;</li>
@@ -240,29 +240,29 @@ SZ (Size bit)</h4>
 <div class="image">
 <img src="gdt_bits.png" alt=""/>
 </div>
- <h4><a class="anchor" id="autotoc_md23"></a>
+ <h4><a class="anchor" id="autotoc_md21"></a>
 PRIV (Privilege bits)</h4>
 <p>Contains the ring level, specifically:</p><ul>
 <li><code>00 (0)</code> = highest (kernel),</li>
 <li><code>11 (3)</code> = lowest (user applications).</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md24"></a>
+<h4><a class="anchor" id="autotoc_md22"></a>
 S (Descriptor type)</h4>
 <p>This bit should be set for code or data segments and should be cleared for system segments (eg. a Task State Segment).</p>
-<h4><a class="anchor" id="autotoc_md25"></a>
+<h4><a class="anchor" id="autotoc_md23"></a>
 EX (Executable bit)</h4>
 <ul>
 <li>If 1 code in this segment can be executed, ie. a code selector.</li>
 <li>If 0 it is a data selector.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md26"></a>
+<h4><a class="anchor" id="autotoc_md24"></a>
 DC (Direction bit/Conforming bit)</h4>
 <p>Direction bit for data selectors: Tells the direction. 0 the segment grows up. 1 the segment grows down, ie., the offset has to be greater than the limit.</p>
 <p>Conforming bit for code selectors:</p><ul>
 <li>If 1 code in this segment can be executed from an equal or lower privilege level. For example, code in ring 3 can far-jump to conforming code in a ring 2 segment. The privl-bits represent the highest privilege level that is allowed to execute the segment. For example, code in ring 0 cannot far-jump to a conforming code segment with privl==0x2, while code in ring 2 and 3 can. Note that the privilege level remains the same, ie. a far-jump form ring 3 to a privl==2-segment remains in ring 3 after the jump.</li>
 <li>If 0 code in this segment can only be executed from the ring set in privl.</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md27"></a>
+<h4><a class="anchor" id="autotoc_md25"></a>
 RW (Readable bit/Writable bit)</h4>
 <ul>
 <li>Readable bit for code selectors:<ul>
@@ -276,16 +276,16 @@ RW (Readable bit/Writable bit)</h4>
 </ul>
 </li>
 </ul>
-<h4><a class="anchor" id="autotoc_md28"></a>
+<h4><a class="anchor" id="autotoc_md26"></a>
 AC (Accessed bit)</h4>
 <p>Just set to 0. The CPU sets this to 1 when the segment is accessed.</p>
-<h4><a class="anchor" id="autotoc_md29"></a>
+<h4><a class="anchor" id="autotoc_md27"></a>
 GR (Granularity bit)</h4>
 <ul>
 <li>If 0 the limit is in 1 B blocks (byte granularity);</li>
 <li>if 1 the limit is in 4 KiB blocks (page granularity).</li>
 </ul>
-<h4><a class="anchor" id="autotoc_md30"></a>
+<h4><a class="anchor" id="autotoc_md28"></a>
 SZ (Size bit)</h4>
 <ul>
 <li>If 0 the selector defines 16 bit protected mode;</li>
@@ -413,10 +413,10 @@ SZ (Size bit)</h4>
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:22.
+            This page was last modified on Thu Jan 27 2022 15:14:58.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

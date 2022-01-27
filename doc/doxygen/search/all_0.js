@@ -256,7 +256,7 @@ var searchData=
   ['_5fsyscall0_253',['_syscall0',['../syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd',1,'syscall_types.h']]],
   ['_5fsyscall1_254',['_syscall1',['../syscall__types_8h.html#aae07a705fb0c46c2e3636ebf40724856',1,'_syscall1():&#160;syscall_types.h'],['../libc_2src_2time_8c.html#a96907b48bd8f37404ef456f2753337f0',1,'_syscall1(time_t, time, time_t *, t):&#160;time.c']]],
   ['_5fsyscall2_255',['_syscall2',['../syscall__types_8h.html#a62853f2c7099237ab27e25ab8ccba463',1,'_syscall2():&#160;syscall_types.h'],['../libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29',1,'_syscall2(int, nanosleep, const timespec *, req, timespec *, rem):&#160;time.c']]],
-  ['_5fsyscall3_256',['_syscall3',['../syscall__types_8h.html#aa92c1018b497680232ac9f147ab6731f',1,'_syscall3():&#160;syscall_types.h'],['../exec_8c.html#a7015165fb67104ad676457a9cacc0b43',1,'_syscall3(int, execve, const char *, path, char *const *, argv, char *const *, envp):&#160;exec.c']]],
+  ['_5fsyscall3_256',['_syscall3',['../syscall__types_8h.html#aa92c1018b497680232ac9f147ab6731f',1,'_syscall3():&#160;syscall_types.h'],['../exec_8c.html#a1cc82fdfe438348366f4ec229904243c',1,'_syscall3(int, execve, const char *, int execv(const char *path, char *const *, argv, char *const *, envp):&#160;exec.c']]],
   ['_5fsyscall4_257',['_syscall4',['../syscall__types_8h.html#a65296d51153f0bcf9624bed21c853065',1,'syscall_types.h']]],
   ['_5fsyscall5_258',['_syscall5',['../syscall__types_8h.html#a6ef767b0cdb6f432c4da1646d8d6bcf9',1,'syscall_types.h']]],
   ['_5ftext_5fend_259',['_text_end',['../kernel_8c.html#aafb455fa4371977c111a96ddb9d09685',1,'kernel.c']]],

@@ -98,12 +98,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7015165fb67104ad676457a9cacc0b43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a7015165fb67104ad676457a9cacc0b43">_syscall3</a> (int, <a class="el" href="unistd_8h.html#a7098c10773c2fc8fd4bd5bb20c9f89c9">execve</a>, const char *, path, char *const *, argv, char *const *, envp)</td></tr>
-<tr class="memdesc:a7015165fb67104ad676457a9cacc0b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image (argument vector), allows the caller to specify the environment of the executed program via <code>envp</code>.  <a href="exec_8c.html#a7015165fb67104ad676457a9cacc0b43">More...</a><br /></td></tr>
-<tr class="separator:a7015165fb67104ad676457a9cacc0b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1dd6bbd94b0f4e3dd37ecf1c1b832dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">execv</a> (const char *path, char *const argv[])</td></tr>
-<tr class="memdesc:ae1dd6bbd94b0f4e3dd37ecf1c1b832dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image (argument vector).  <a href="exec_8c.html#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">More...</a><br /></td></tr>
-<tr class="separator:ae1dd6bbd94b0f4e3dd37ecf1c1b832dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc82fdfe438348366f4ec229904243c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">_syscall3</a> (int, <a class="el" href="unistd_8h.html#a7098c10773c2fc8fd4bd5bb20c9f89c9">execve</a>, const char *, int <a class="el" href="unistd_8h.html#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">execv</a>(const char *path, char *const *, argv, char *const *, envp)</td></tr>
+<tr class="memdesc:a1cc82fdfe438348366f4ec229904243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image (argument vector), allows the caller to specify the environment of the executed program via <code>envp</code>.  <a href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">More...</a><br /></td></tr>
+<tr class="separator:a1cc82fdfe438348366f4ec229904243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c68bc1f0de7e428c2e24023e669658"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a99c68bc1f0de7e428c2e24023e669658">execvp</a> (const char *file, char *const argv[])</td></tr>
 <tr class="memdesc:a99c68bc1f0de7e428c2e24023e669658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image (argument vector).  <a href="exec_8c.html#a99c68bc1f0de7e428c2e24023e669658">More...</a><br /></td></tr>
 <tr class="separator:a99c68bc1f0de7e428c2e24023e669658"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,12 +128,12 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 <tr class="separator:aa006daaf11f1e2e45a6ababaf463212b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2021 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
+<div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7015165fb67104ad676457a9cacc0b43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7015165fb67104ad676457a9cacc0b43">&#9670;&nbsp;</a></span>_syscall3()</h2>
+<a id="a1cc82fdfe438348366f4ec229904243c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc82fdfe438348366f4ec229904243c">&#9670;&nbsp;</a></span>_syscall3()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,8 +159,8 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">path&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">int <a class="el" href="unistd_8h.html#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">execv</a>(const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -199,6 +196,8 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 
 <p>Replaces the current process image with a new process image (argument vector), allows the caller to specify the environment of the executed program via <code>envp</code>. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns -1 only if an error has occurred, and sets errno. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="exec_8c_source.html#l00066">66</a> of file <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
 
 </div>
 </div>
@@ -390,46 +389,6 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 
 </div>
 </div>
-<a id="ae1dd6bbd94b0f4e3dd37ecf1c1b832dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">&#9670;&nbsp;</a></span>execv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int execv </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *const&#160;</td>
-          <td class="paramname"><em>argv</em>[]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Replaces the current process image with a new process image (argument vector). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>The absolute path to the binary file to execute. </td></tr>
-    <tr><td class="paramname">argv</td><td>A vector of one or more pointers to null-terminated strings that represent the argument list available to the executed program. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns -1 only if an error has occurred, and sets errno. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="exec_8c_source.html#l00068">68</a> of file <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
-
-</div>
-</div>
 <a id="a99c68bc1f0de7e428c2e24023e669658"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99c68bc1f0de7e428c2e24023e669658">&#9670;&nbsp;</a></span>execvp()</h2>
 
@@ -524,10 +483,10 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:20.
+            This page was last modified on Thu Jan 27 2022 15:14:55.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

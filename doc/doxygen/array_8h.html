@@ -80,11 +80,17 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a24b022e52e2cb59d68284edc625d2e73"><td class="memItemLeft" align="right" valign="top"><a id="a24b022e52e2cb59d68284edc625d2e73"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ARRAY_ALLOC</b>&#160;&#160;&#160;<a class="el" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a></td></tr>
+<tr class="separator:a24b022e52e2cb59d68284edc625d2e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4c32c85220dec197e774a465085203"><td class="memItemLeft" align="right" valign="top"><a id="a1d4c32c85220dec197e774a465085203"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ARRAY_FREE</b>&#160;&#160;&#160;<a class="el" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a></td></tr>
+<tr class="separator:a1d4c32c85220dec197e774a465085203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acecd2ca8249f713b9238f8d281dffd7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>DECLARE_ARRAY</b>(type,  name)</td></tr>
 <tr class="separator:acecd2ca8249f713b9238f8d281dffd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2021 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
+<div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="array_8h_source.html">array.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -113,38 +119,37 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">typedef</span> <span class="keyword">struct </span>arr_##name##_t {                                              \</div>
-<div class="line">        const <span class="keywordtype">unsigned</span> size;                                                     \</div>
-<div class="line">        type *buffer;                                                            \</div>
-<div class="line">    } arr_##name##_t;                                                            \</div>
-<div class="line">    arr_##name##_t alloc_arr_##name(<span class="keywordtype">unsigned</span> len)                                \</div>
-<div class="line">    {                                                                            \</div>
-<div class="line">        arr_##name##_t a = { len, len &gt; 0 ? <a class="code" href="stdlib_8h.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(<span class="keyword">sizeof</span>(type) * len) : <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> }; \</div>
-<div class="line">        memset(a.buffer, 0, <span class="keyword">sizeof</span>(type) * len);                                 \</div>
-<div class="line">        return a;                                                                \</div>
-<div class="line">    }                                                                            \</div>
-<div class="line">    static <span class="keyword">inline</span> <span class="keywordtype">void</span> free_arr_##name(arr_##name##_t *arr)                      \</div>
-<div class="line">    {                                                                            \</div>
-<div class="line">        free(arr-&gt;buffer);                                                       \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">typedef</span> <span class="keyword">struct </span>arr_##name##_t {                                                   \</div>
+<div class="line">        const <span class="keywordtype">unsigned</span> size;                                                          \</div>
+<div class="line">        type *buffer;                                                                 \</div>
+<div class="line">    } arr_##name##_t;                                                                 \</div>
+<div class="line">    arr_##name##_t alloc_arr_##name(<span class="keywordtype">unsigned</span> len)                                     \</div>
+<div class="line">    {                                                                                 \</div>
+<div class="line">        arr_##name##_t a = { len, len &gt; 0 ? ARRAY_ALLOC(<span class="keyword">sizeof</span>(type) * len) : <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> }; \</div>
+<div class="line">        memset(a.buffer, 0, <span class="keyword">sizeof</span>(type) * len);                                      \</div>
+<div class="line">        return a;                                                                     \</div>
+<div class="line">    }                                                                                 \</div>
+<div class="line">    static <span class="keyword">inline</span> <span class="keywordtype">void</span> free_arr_##name(arr_##name##_t *arr)                           \</div>
+<div class="line">    {                                                                                 \</div>
+<div class="line">        ARRAY_FREE(arr-&gt;buffer);                                                      \</div>
 <div class="line">    }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00025">25</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="array_8h_source.html#l00016">16</a> of file <a class="el" href="array_8h_source.html">array.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">Define NULL.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00010">stddef.h:10</a></div></div>
-<div class="ttc" id="astdlib_8h_html_ac0a811fd8b7a378500f100a2d9a1f1a2"><div class="ttname"><a href="stdlib_8h.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a></div><div class="ttdeci">void * malloc(unsigned int size)</div><div class="ttdoc">Provides dynamically allocated memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00027">stdlib.c:27</a></div></div>
 <!-- HTML footer for doxygen 1.8.16-->
 <!-- start footer part -->
 <div class="footer">
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:19.
+            This page was last modified on Thu Jan 27 2022 15:14:54.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

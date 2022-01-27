@@ -73,19 +73,16 @@ $(function() {
 <div class="title">sched.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by enryf on 24/09/2020.</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="syscall__types_8h.html">system/syscall_types.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;sys/errno.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sched_8h.html">sched.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<a class="code" href="libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29">_syscall2</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#a87cddd72d7a75c3a3c6f1a8c0975cca9">sched_setparam</a>, <a class="code" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a>, pid, <span class="keyword">const</span> <a class="code" href="structsched__param__t.html">sched_param_t</a> *, param)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29">_syscall2</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#a7eb83c0d43fdefe01bb8f6473fa202f2">sched_getparam</a>, <a class="code" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a>, pid, <a class="code" href="structsched__param__t.html">sched_param_t</a> *, param)</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#ab232609ac01a5becbdc731df810badc3">waitperiod</a>)</div>
+<a href="sched_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="syscall__types_8h.html">system/syscall_types.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;sys/errno.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sched_8h.html">sched.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29">_syscall2</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#a87cddd72d7a75c3a3c6f1a8c0975cca9">sched_setparam</a>, <a class="code" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a>, pid, <span class="keyword">const</span> <a class="code" href="structsched__param__t.html">sched_param_t</a> *, param)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29">_syscall2</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#a7eb83c0d43fdefe01bb8f6473fa202f2">sched_getparam</a>, <a class="code" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a>, pid, <a class="code" href="structsched__param__t.html">sched_param_t</a> *, param)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a>(<span class="keywordtype">int</span>, <a class="code" href="sched_8h.html#ab232609ac01a5becbdc731df810badc3">waitperiod</a>)</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructsched__param__t_html"><div class="ttname"><a href="structsched__param__t.html">sched_param_t</a></div><div class="ttdoc">Structure that describes scheduling parameters.</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8h_source.html#l00025">scheduler.h:25</a></div></div>
 <div class="ttc" id="asyscall__types_8h_html_af1b3e00cc417e1b3986491493c339ffd"><div class="ttname"><a href="syscall__types_8h.html#af1b3e00cc417e1b3986491493c339ffd">_syscall0</a></div><div class="ttdeci">#define _syscall0(type, name)</div><div class="ttdoc">System call with 0 parameters.</div><div class="ttdef"><b>Definition:</b> <a href="syscall__types_8h_source.html#l00256">syscall_types.h:256</a></div></div>
@@ -102,10 +99,10 @@ $(function() {
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:16.
+            This page was last modified on Thu Jan 27 2022 15:14:52.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

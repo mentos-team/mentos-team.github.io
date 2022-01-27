@@ -461,8 +461,9 @@ $(function() {
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<a class="code" href="libc_2src_2time_8c.html#aa46487467d3dfc85646e4c8c10c25f29">_syscall2</a>(<span class="keywordtype">int</span>, <a class="code" href="time_8h.html#a378035ee81a7d79834ad3403e91868c9">getitimer</a>, <span class="keywordtype">int</span>, which, <a class="code" href="structitimerval.html">itimerval</a> *, curr_value)</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<a class="code" href="exec_8c.html#a7015165fb67104ad676457a9cacc0b43">_syscall3</a>(<span class="keywordtype">int</span>, <a class="code" href="time_8h.html#a72802563c8d895707e7c1fcf47b3280f">setitimer</a>, <span class="keywordtype">int</span>, which, <span class="keyword">const</span> <a class="code" href="structitimerval.html">itimerval</a> *, new_value, <a class="code" href="structitimerval.html">itimerval</a> *, old_value)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<a class="code" href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">_syscall3</a>(<span class="keywordtype">int</span>, <a class="code" href="time_8h.html#a72802563c8d895707e7c1fcf47b3280f">setitimer</a>, <span class="keywordtype">int</span>, which, <span class="keyword">const</span> <a class="code" href="structitimerval.html">itimerval</a> *, new_value, <a class="code" href="structitimerval.html">itimerval</a> *, old_value)</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aexec_8c_html_a1cc82fdfe438348366f4ec229904243c"><div class="ttname"><a href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">_syscall3</a></div><div class="ttdeci">_syscall3(int, execve, const char *, int execv(const char *path, char *const *, argv, char *const *, envp)</div><div class="ttdoc">Replaces the current process image with a new process image (argument vector), allows the caller to s...</div><div class="ttdef"><b>Definition:</b> <a href="exec_8c_source.html#l00066">exec.c:66</a></div></div>
 <div class="ttc" id="atime_8h_html_abcc3c77a81d5a4c457fd8e4f7f830fe3"><div class="ttname"><a href="time_8h.html#abcc3c77a81d5a4c457fd8e4f7f830fe3">nanosleep</a></div><div class="ttdeci">int nanosleep(const timespec *req, timespec *rem)</div><div class="ttdoc">Suspends the execution of the calling thread.</div></div>
 <div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">Define NULL.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00010">stddef.h:10</a></div></div>
 <div class="ttc" id="astring_8h_html"><div class="ttname"><a href="string_8h.html">string.h</a></div><div class="ttdoc">String routines.</div></div>
@@ -487,7 +488,6 @@ $(function() {
 <div class="ttc" id="astdio_8h_html"><div class="ttname"><a href="stdio_8h.html">stdio.h</a></div><div class="ttdoc">Standard I/0 functions.</div></div>
 <div class="ttc" id="astructtm__t_html_ab058d26a2ffe0588462186a073165694"><div class="ttname"><a href="structtm__t.html#ab058d26a2ffe0588462186a073165694">tm_t::tm_sec</a></div><div class="ttdeci">int tm_sec</div><div class="ttdoc">Seconds [0 to 59].</div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00027">time.h:27</a></div></div>
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_a4c10a214b02eed3dafc48c59ad71abbd"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#a4c10a214b02eed3dafc48c59ad71abbd">strncat</a></div><div class="ttdeci">char * strncat(char *s1, const char *s2, size_t n)</div><div class="ttdoc">Appends a copy of the string src to the string dst, up to n bytes.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00282">string.c:282</a></div></div>
-<div class="ttc" id="aexec_8c_html_a7015165fb67104ad676457a9cacc0b43"><div class="ttname"><a href="exec_8c.html#a7015165fb67104ad676457a9cacc0b43">_syscall3</a></div><div class="ttdeci">_syscall3(int, execve, const char *, path, char *const *, argv, char *const *, envp)</div><div class="ttdoc">Replaces the current process image with a new process image (argument vector), allows the caller to s...</div></div>
 <div class="ttc" id="astructitimerval_html"><div class="ttname"><a href="structitimerval.html">itimerval</a></div><div class="ttdoc">Rappresents a time interval.</div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00185">timer.h:185</a></div></div>
 <div class="ttc" id="amentos_2inc_2sys_2errno_8h_html_a46b83d9f6c23b1b65a8cecfd775ddaed"><div class="ttname"><a href="mentos_2inc_2sys_2errno_8h.html#a46b83d9f6c23b1b65a8cecfd775ddaed">EINTR</a></div><div class="ttdeci">#define EINTR</div><div class="ttdoc">Interrupted system call.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2inc_2sys_2errno_8h_source.html#l00016">errno.h:16</a></div></div>
 <div class="ttc" id="astructtm__t_html_a195cf42eed252fd37c285ee3b3a12f50"><div class="ttname"><a href="structtm__t.html#a195cf42eed252fd37c285ee3b3a12f50">tm_t::tm_hour</a></div><div class="ttdeci">int tm_hour</div><div class="ttdoc">Hours [0 to 23].</div><div class="ttdef"><b>Definition:</b> <a href="time_8h_source.html#l00031">time.h:31</a></div></div>
@@ -502,10 +502,10 @@ $(function() {
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:19.
+            This page was last modified on Thu Jan 27 2022 15:14:54.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>

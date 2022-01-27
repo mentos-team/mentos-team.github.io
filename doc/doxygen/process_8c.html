@@ -120,12 +120,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac4d4f6bd88e4143d3e9f80e109605ad9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#ac4d4f6bd88e4143d3e9f80e109605ad9">sys_getcwd</a> (char *buf, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> size)</td></tr>
 <tr class="memdesc:ac4d4f6bd88e4143d3e9f80e109605ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current working directory.  <a href="process_8c.html#ac4d4f6bd88e4143d3e9f80e109605ad9">More...</a><br /></td></tr>
 <tr class="separator:ac4d4f6bd88e4143d3e9f80e109605ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49a960f791c233fbbb92ad607e7e64ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a49a960f791c233fbbb92ad607e7e64ee">sys_chdir</a> (char const *path)</td></tr>
-<tr class="memdesc:a49a960f791c233fbbb92ad607e7e64ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the working directory.  <a href="process_8c.html#a49a960f791c233fbbb92ad607e7e64ee">More...</a><br /></td></tr>
-<tr class="separator:a49a960f791c233fbbb92ad607e7e64ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f8e3b5e49915026aeda1bdf0d98f0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a5f8e3b5e49915026aeda1bdf0d98f0e3">sys_fchdir</a> (int fd)</td></tr>
-<tr class="memdesc:a5f8e3b5e49915026aeda1bdf0d98f0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the working directory.  <a href="process_8c.html#a5f8e3b5e49915026aeda1bdf0d98f0e3">More...</a><br /></td></tr>
-<tr class="separator:a5f8e3b5e49915026aeda1bdf0d98f0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5215f1f30114761892767cbb00c5d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a9b5215f1f30114761892767cbb00c5d2">sys_chdir</a> (char const *path)</td></tr>
+<tr class="memdesc:a9b5215f1f30114761892767cbb00c5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the working directory.  <a href="process_8c.html#a9b5215f1f30114761892767cbb00c5d2">More...</a><br /></td></tr>
+<tr class="separator:a9b5215f1f30114761892767cbb00c5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58569b5c13bd9e4300954e28b138473a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a58569b5c13bd9e4300954e28b138473a">sys_fchdir</a> (int fd)</td></tr>
+<tr class="memdesc:a58569b5c13bd9e4300954e28b138473a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the working directory.  <a href="process_8c.html#a58569b5c13bd9e4300954e28b138473a">More...</a><br /></td></tr>
+<tr class="separator:a58569b5c13bd9e4300954e28b138473a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfe8a5a73be9d30fcdbf269fa5683f67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#abfe8a5a73be9d30fcdbf269fa5683f67">sys_fork</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:abfe8a5a73be9d30fcdbf269fa5683f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the calling process, but without copying the whole address space. The calling process is suspended until the new process exits or is replaced by a call to &lsquo;execve&rsquo;.  <a href="process_8c.html#abfe8a5a73be9d30fcdbf269fa5683f67">More...</a><br /></td></tr>
 <tr class="separator:abfe8a5a73be9d30fcdbf269fa5683f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +135,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Process data structures and functions. </p>
-<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2021 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -190,14 +190,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a49a960f791c233fbbb92ad607e7e64ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49a960f791c233fbbb92ad607e7e64ee">&#9670;&nbsp;</a></span>sys_chdir()</h2>
+<a id="a9b5215f1f30114761892767cbb00c5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5215f1f30114761892767cbb00c5d2">&#9670;&nbsp;</a></span>sys_chdir()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sys_chdir </td>
+          <td class="memname">int sys_chdir </td>
           <td>(</td>
           <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -213,6 +213,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>On success 0. On error -1, and errno indicates the error. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00349">349</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
@@ -243,18 +244,18 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00419">419</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00424">424</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
-<a id="a5f8e3b5e49915026aeda1bdf0d98f0e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f8e3b5e49915026aeda1bdf0d98f0e3">&#9670;&nbsp;</a></span>sys_fchdir()</h2>
+<a id="a58569b5c13bd9e4300954e28b138473a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58569b5c13bd9e4300954e28b138473a">&#9670;&nbsp;</a></span>sys_fchdir()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void sys_fchdir </td>
+          <td class="memname">int sys_fchdir </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>fd</em></td><td>)</td>
@@ -270,8 +271,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>On success 0. On error -1, and errno indicates the error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00367">367</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00368">368</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
@@ -300,7 +302,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return -1 for errors, 0 to the new process, and the process ID of the new process to the old process. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00384">384</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00389">389</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 
 </div>
 </div>
@@ -351,10 +353,10 @@ Functions</h2></td></tr>
     <hr class="footer"/>
     <ul class="footer-info">
         <li class="footer-info-lastmode">
-            This page was last modified on Mon Jan 24 2022 10:26:21.
+            This page was last modified on Thu Jan 27 2022 15:14:57.
         </li>
         <li class="footer-info-copyright">
-            MentOs © 2014–2021 the MentOs team, and numerous contributors.<br>
+            MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
             It is available for use and modification under the&#160;
             <a href="md_LICENSE.html">MIT License</a>.<br>
         </li>
