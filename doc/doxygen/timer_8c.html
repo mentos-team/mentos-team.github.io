@@ -72,7 +72,8 @@ $(function() {
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">timer.c File Reference</div>  </div>
 </div><!--header-->
@@ -173,6 +174,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a4ecc331ad6ee0fc8fe68845e639533db">dynamic_timers_install</a> ()</td></tr>
 <tr class="memdesc:a4ecc331ad6ee0fc8fe68845e639533db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize dynamic timer system. <br /></td></tr>
 <tr class="separator:a4ecc331ad6ee0fc8fe68845e639533db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5718466cf2fa11a6aa60d72f864bd070"><td class="memItemLeft" align="right" valign="top"><a id="a5718466cf2fa11a6aa60d72f864bd070"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a5718466cf2fa11a6aa60d72f864bd070">__print_tvec_slots</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base, int tv_index)</td></tr>
+<tr class="memdesc:a5718466cf2fa11a6aa60d72f864bd070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints used slots of timer vector. <br /></td></tr>
+<tr class="separator:a5718466cf2fa11a6aa60d72f864bd070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fc5866822dd45415e10c78cfd46164"><td class="memItemLeft" align="right" valign="top"><a id="af4fc5866822dd45415e10c78cfd46164"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#af4fc5866822dd45415e10c78cfd46164">__dump_all_tvec_slots</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base)</td></tr>
+<tr class="memdesc:af4fc5866822dd45415e10c78cfd46164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump all timer vector in base. <br /></td></tr>
+<tr class="separator:af4fc5866822dd45415e10c78cfd46164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2279d034a934c1cb1c14408ade5c087"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#ab2279d034a934c1cb1c14408ade5c087">__find_tvec</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base, struct <a class="el" href="structtimer__list.html">timer_list</a> *timer, int *index, int *tv_index)</td></tr>
+<tr class="separator:ab2279d034a934c1cb1c14408ade5c087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef8c8d4ea24448cf5206d32fc11df5d"><td class="memItemLeft" align="right" valign="top"><a id="a9ef8c8d4ea24448cf5206d32fc11df5d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a9ef8c8d4ea24448cf5206d32fc11df5d">__add_timer_tvec_base</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base, struct <a class="el" href="structtimer__list.html">timer_list</a> *timer)</td></tr>
+<tr class="memdesc:a9ef8c8d4ea24448cf5206d32fc11df5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add timers into different lists based on their expire time. <br /></td></tr>
+<tr class="separator:a9ef8c8d4ea24448cf5206d32fc11df5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3274a03fa3f9c98dad6de4dc16274723"><td class="memItemLeft" align="right" valign="top"><a id="a3274a03fa3f9c98dad6de4dc16274723"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a3274a03fa3f9c98dad6de4dc16274723">__rem_timer_tvec_base</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base, struct <a class="el" href="structtimer__list.html">timer_list</a> *timer)</td></tr>
+<tr class="memdesc:a3274a03fa3f9c98dad6de4dc16274723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove timer from tvec_base. <br /></td></tr>
+<tr class="separator:a3274a03fa3f9c98dad6de4dc16274723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99dac68f955f66d44cd352d624964c0e"><td class="memItemLeft" align="right" valign="top"><a id="a99dac68f955f66d44cd352d624964c0e"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a99dac68f955f66d44cd352d624964c0e">cascate</a> (<a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *base, <a class="el" href="structtimer__vec.html">timer_vec</a> *tv, int time_index, int tv_index)</td></tr>
+<tr class="memdesc:a99dac68f955f66d44cd352d624964c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move all timers from tv up one level. <br /></td></tr>
+<tr class="separator:a99dac68f955f66d44cd352d624964c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f9d8dd354f0679d58967965216df3ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a3f9d8dd354f0679d58967965216df3ea">run_timer_softirq</a> ()</td></tr>
 <tr class="memdesc:a3f9d8dd354f0679d58967965216df3ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the timer data structures.  <a href="timer_8c.html#a3f9d8dd354f0679d58967965216df3ea">More...</a><br /></td></tr>
 <tr class="separator:a3f9d8dd354f0679d58967965216df3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +208,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
 <tr class="memitem:a8a76c16643648c08b048967752c3912b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a8a76c16643648c08b048967752c3912b">del_timer</a> (struct <a class="el" href="structtimer__list.html">timer_list</a> *timer)</td></tr>
 <tr class="memdesc:a8a76c16643648c08b048967752c3912b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a timer from the current CPU.  <a href="timer_8c.html#a8a76c16643648c08b048967752c3912b">More...</a><br /></td></tr>
 <tr class="separator:a8a76c16643648c08b048967752c3912b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26dcdff5a470f31877c70044941f2faa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a26dcdff5a470f31877c70044941f2faa">debug_timeout</a> (unsigned long data)</td></tr>
+<tr class="memdesc:a26dcdff5a470f31877c70044941f2faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debugging function.  <a href="timer_8c.html#a26dcdff5a470f31877c70044941f2faa">More...</a><br /></td></tr>
+<tr class="separator:a26dcdff5a470f31877c70044941f2faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd1f28fb76b677baa285c5d568cf93bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#abd1f28fb76b677baa285c5d568cf93bc">sleep_timeout</a> (unsigned long data)</td></tr>
 <tr class="memdesc:abd1f28fb76b677baa285c5d568cf93bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for when a sleep timer expires.  <a href="timer_8c.html#abd1f28fb76b677baa285c5d568cf93bc">More...</a><br /></td></tr>
 <tr class="separator:abd1f28fb76b677baa285c5d568cf93bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,15 +223,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
 <tr class="memitem:aee3533cbf30354d2c5cd5bb78f54134c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#aee3533cbf30354d2c5cd5bb78f54134c">sys_alarm</a> (int seconds)</td></tr>
 <tr class="memdesc:aee3533cbf30354d2c5cd5bb78f54134c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send signal to calling thread after desired seconds.  <a href="timer_8c.html#aee3533cbf30354d2c5cd5bb78f54134c">More...</a><br /></td></tr>
 <tr class="separator:aee3533cbf30354d2c5cd5bb78f54134c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43452b5749367a8dda90afb2361362d8"><td class="memItemLeft" align="right" valign="top"><a id="a43452b5749367a8dda90afb2361362d8"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>calc_itimerval</b> (unsigned long incr, unsigned long value, struct <a class="el" href="structitimerval.html">itimerval</a> *result)</td></tr>
+<tr class="separator:a43452b5749367a8dda90afb2361362d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91dc322241d3b0cda45f01603ffff18"><td class="memItemLeft" align="right" valign="top"><a id="af91dc322241d3b0cda45f01603ffff18"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>update_task_itimerval</b> (int which, const struct <a class="el" href="structitimerval.html">itimerval</a> *val)</td></tr>
+<tr class="separator:af91dc322241d3b0cda45f01603ffff18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8517daf5f751e84c24039f05f2bd966"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#ac8517daf5f751e84c24039f05f2bd966">sys_getitimer</a> (int which, struct <a class="el" href="structitimerval.html">itimerval</a> *curr_value)</td></tr>
 <tr class="memdesc:ac8517daf5f751e84c24039f05f2bd966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the structure pointed to by curr_value with the current setting for the timer specified by which.  <a href="timer_8c.html#ac8517daf5f751e84c24039f05f2bd966">More...</a><br /></td></tr>
 <tr class="separator:ac8517daf5f751e84c24039f05f2bd966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6df737b4dc53407bb0f80dc87376069"><td class="memItemLeft" align="right" valign="top"><a id="af6df737b4dc53407bb0f80dc87376069"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>it_real_fn</b> (unsigned long pid)</td></tr>
+<tr class="separator:af6df737b4dc53407bb0f80dc87376069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41098d4b74d06f6ca5e0ba262e00265f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a41098d4b74d06f6ca5e0ba262e00265f">sys_setitimer</a> (int which, const struct <a class="el" href="structitimerval.html">itimerval</a> *new_value, struct <a class="el" href="structitimerval.html">itimerval</a> *old_value)</td></tr>
 <tr class="memdesc:a41098d4b74d06f6ca5e0ba262e00265f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arms or disarms the timer specified by which, by setting the timer to the value specified by new_value.  <a href="timer_8c.html#a41098d4b74d06f6ca5e0ba262e00265f">More...</a><br /></td></tr>
 <tr class="separator:a41098d4b74d06f6ca5e0ba262e00265f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9f1a28b88ec974035fbe2d3bd3a97de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#af9f1a28b88ec974035fbe2d3bd3a97de">update_process_profiling_timer</a> (<a class="el" href="structtask__struct.html">task_struct</a> *proc)</td></tr>
 <tr class="memdesc:af9f1a28b88ec974035fbe2d3bd3a97de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the profiling timer and generate SIGPROF if it has expired.  <a href="timer_8c.html#af9f1a28b88ec974035fbe2d3bd3a97de">More...</a><br /></td></tr>
 <tr class="separator:af9f1a28b88ec974035fbe2d3bd3a97de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a64db94100d66ee4ead6dc359f0032b2b"><td class="memItemLeft" align="right" valign="top"><a id="a64db94100d66ee4ead6dc359f0032b2b"></a>
+static __volatile__ unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a64db94100d66ee4ead6dc359f0032b2b">timer_ticks</a> = 0</td></tr>
+<tr class="memdesc:a64db94100d66ee4ead6dc359f0032b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of ticks since the system started its execution. <br /></td></tr>
+<tr class="separator:a64db94100d66ee4ead6dc359f0032b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e92ca75b5641080e2a8ddc0fc981be"><td class="memItemLeft" align="right" valign="top"><a id="a28e92ca75b5641080e2a8ddc0fc981be"></a>
+static <a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a28e92ca75b5641080e2a8ddc0fc981be">cpu_base</a> = { 0 }</td></tr>
+<tr class="memdesc:a28e92ca75b5641080e2a8ddc0fc981be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains timer for each CPU (for now only one) <br /></td></tr>
+<tr class="separator:a28e92ca75b5641080e2a8ddc0fc981be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd1b26117447e585b137146ea5f21d8"><td class="memItemLeft" align="right" valign="top"><a id="a0bd1b26117447e585b137146ea5f21d8"></a>
+static <a class="el" href="structwait__queue__head__t.html">wait_queue_head_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a0bd1b26117447e585b137146ea5f21d8">sleep_queue</a></td></tr>
+<tr class="memdesc:a0bd1b26117447e585b137146ea5f21d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains all process waiting for a sleep. <br /></td></tr>
+<tr class="separator:a0bd1b26117447e585b137146ea5f21d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Timer implementation. </p>
@@ -234,6 +284,57 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ab2279d034a934c1cb1c14408ade5c087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2279d034a934c1cb1c14408ade5c087">&#9670;&nbsp;</a></span>__find_tvec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __find_tvec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="timer_8h.html#ae1e1890286635152dc64361ba6653573">tvec_base_t</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structtimer__list.html">timer_list</a> *&#160;</td>
+          <td class="paramname"><em>timer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tv_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Select correct timer vector and position inside of it for the input timer index contains the position inside of the tv_index timer vector </p>
+
+<p class="definition">Definition at line <a class="el" href="timer_8c_source.html#l00246">246</a> of file <a class="el" href="timer_8c_source.html">timer.c</a>.</p>
+
+</div>
+</div>
 <a id="aa77a27e782a19c16847d42e6303004f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa77a27e782a19c16847d42e6303004f7">&#9670;&nbsp;</a></span>add_timer()</h2>
 
@@ -287,6 +388,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="timer_8c_source.html#l00572">572</a> of file <a class="el" href="timer_8c_source.html">timer.c</a>.</p>
+
+</div>
+</div>
+<a id="a26dcdff5a470f31877c70044941f2faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26dcdff5a470f31877c70044941f2faa">&#9670;&nbsp;</a></span>debug_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void debug_timeout </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debugging function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="timer_8c_source.html#l00503">503</a> of file <a class="el" href="timer_8c_source.html">timer.c</a>.</p>
 
 </div>
 </div>
@@ -689,7 +826,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="time
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

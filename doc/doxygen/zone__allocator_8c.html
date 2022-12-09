@@ -131,6 +131,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a217103b82871ca7b78acfe9222fe4e15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpage__t.html">page_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#a217103b82871ca7b78acfe9222fe4e15">get_page_from_physical_address</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> phy_addr)</td></tr>
 <tr class="memdesc:a217103b82871ca7b78acfe9222fe4e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the page from it's physical address.  <a href="zone__allocator_8c.html#a217103b82871ca7b78acfe9222fe4e15">More...</a><br /></td></tr>
 <tr class="separator:a217103b82871ca7b78acfe9222fe4e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba699051d46743b64c144a5a30fc5b53"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structzone__t.html">zone_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#aba699051d46743b64c144a5a30fc5b53">get_zone_from_page</a> (<a class="el" href="structpage__t.html">page_t</a> *page)</td></tr>
+<tr class="memdesc:aba699051d46743b64c144a5a30fc5b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the zone that contains a page frame.  <a href="zone__allocator_8c.html#aba699051d46743b64c144a5a30fc5b53">More...</a><br /></td></tr>
+<tr class="separator:aba699051d46743b64c144a5a30fc5b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228d3c16a3fc71fc55d2db6c9871a095"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structzone__t.html">zone_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#a228d3c16a3fc71fc55d2db6c9871a095">get_zone_from_flags</a> (<a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a> gfp_mask)</td></tr>
+<tr class="memdesc:a228d3c16a3fc71fc55d2db6c9871a095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a zone from gfp_mask.  <a href="zone__allocator_8c.html#a228d3c16a3fc71fc55d2db6c9871a095">More...</a><br /></td></tr>
+<tr class="separator:a228d3c16a3fc71fc55d2db6c9871a095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2aaa79c21dfe5b8fcb18374b1ef9409"><td class="memItemLeft" align="right" valign="top"><a id="ad2aaa79c21dfe5b8fcb18374b1ef9409"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>is_memory_clean</b> (<a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a> gfp_mask)</td></tr>
+<tr class="separator:ad2aaa79c21dfe5b8fcb18374b1ef9409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d39ab80abf0556a41341f2eb8169a1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#a27d39ab80abf0556a41341f2eb8169a1">pmm_check</a> ()</td></tr>
+<tr class="memdesc:a27d39ab80abf0556a41341f2eb8169a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the physical memory manager is working properly.  <a href="zone__allocator_8c.html#a27d39ab80abf0556a41341f2eb8169a1">More...</a><br /></td></tr>
+<tr class="separator:a27d39ab80abf0556a41341f2eb8169a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa617f2445cbb62b8dbc347ec6e3104fc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#aa617f2445cbb62b8dbc347ec6e3104fc">zone_init</a> (char *name, int zone_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> adr_from, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> adr_to)</td></tr>
+<tr class="memdesc:aa617f2445cbb62b8dbc347ec6e3104fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the memory attributes.  <a href="zone__allocator_8c.html#aa617f2445cbb62b8dbc347ec6e3104fc">More...</a><br /></td></tr>
+<tr class="separator:aa617f2445cbb62b8dbc347ec6e3104fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cde07d0c8701fdfa4bc9bbd77555f2f"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8c.html#a0cde07d0c8701fdfa4bc9bbd77555f2f">find_nearest_order_greater</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> base_addr, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> amount)</td></tr>
 <tr class="memdesc:a0cde07d0c8701fdfa4bc9bbd77555f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the nearest block's order of size greater than the amount of byte.  <a href="zone__allocator_8c.html#a0cde07d0c8701fdfa4bc9bbd77555f2f">More...</a><br /></td></tr>
 <tr class="separator:a0cde07d0c8701fdfa4bc9bbd77555f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -687,6 +702,80 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a228d3c16a3fc71fc55d2db6c9871a095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228d3c16a3fc71fc55d2db6c9871a095">&#9670;&nbsp;</a></span>get_zone_from_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structzone__t.html">zone_t</a>* get_zone_from_flags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a>&#160;</td>
+          <td class="paramname"><em>gfp_mask</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a zone from gfp_mask. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gfp_mask</td><td>GFP_FLAG see <a class="el" href="gfp_8h.html" title="List of Get Free Pages (GFP) Flags.">gfp.h</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The zone requested. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="zone__allocator_8c_source.html#l00090">90</a> of file <a class="el" href="zone__allocator_8c_source.html">zone_allocator.c</a>.</p>
+
+</div>
+</div>
+<a id="aba699051d46743b64c144a5a30fc5b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba699051d46743b64c144a5a30fc5b53">&#9670;&nbsp;</a></span>get_zone_from_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structzone__t.html">zone_t</a>* get_zone_from_page </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpage__t.html">page_t</a> *&#160;</td>
+          <td class="paramname"><em>page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the zone that contains a page frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>A page descriptor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The zone requested. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="zone__allocator_8c_source.html#l00067">67</a> of file <a class="el" href="zone__allocator_8c_source.html">zone_allocator.c</a>.</p>
+
+</div>
+</div>
 <a id="a4cafa8397028625232f13bfaff534f77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4cafa8397028625232f13bfaff534f77">&#9670;&nbsp;</a></span>get_zone_total_space()</h2>
 
@@ -713,6 +802,36 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Total space of the given zone. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="zone__allocator_8c_source.html#l00463">463</a> of file <a class="el" href="zone__allocator_8c_source.html">zone_allocator.c</a>.</p>
+
+</div>
+</div>
+<a id="a27d39ab80abf0556a41341f2eb8169a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d39ab80abf0556a41341f2eb8169a1">&#9670;&nbsp;</a></span>pmm_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int pmm_check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the physical memory manager is working properly. </p>
+<dl class="section return"><dt>Returns</dt><dd>If the check was done correctly. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="zone__allocator_8c_source.html#l00127">127</a> of file <a class="el" href="zone__allocator_8c_source.html">zone_allocator.c</a>.</p>
 
 </div>
 </div>
@@ -745,6 +864,67 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa617f2445cbb62b8dbc347ec6e3104fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa617f2445cbb62b8dbc347ec6e3104fc">&#9670;&nbsp;</a></span>zone_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void zone_init </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zone_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>adr_from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>adr_to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the memory attributes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Zone's name. </td></tr>
+    <tr><td class="paramname">zone_index</td><td>Zone's index. </td></tr>
+    <tr><td class="paramname">adr_from</td><td>the lowest address of the zone </td></tr>
+    <tr><td class="paramname">adr_to</td><td>the highest address of the zone (not included!) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="zone__allocator_8c_source.html#l00212">212</a> of file <a class="el" href="zone__allocator_8c_source.html">zone_allocator.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -752,7 +932,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

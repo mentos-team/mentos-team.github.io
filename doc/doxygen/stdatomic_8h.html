@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">stdatomic.h File Reference</div>  </div>
 </div><!--header-->
@@ -100,6 +101,61 @@ Typedefs</h2></td></tr>
 typedef volatile unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a></td></tr>
 <tr class="memdesc:a27fd26b0ec72da709c47536f496e5844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard structure for atomic operations (see below for volatile explanation). <br /></td></tr>
 <tr class="separator:a27fd26b0ec72da709c47536f496e5844"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab232255e20b8c01bb37a661b5e27ed43"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#ab232255e20b8c01bb37a661b5e27ed43">atomic_set_and_test</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> x)</td></tr>
+<tr class="memdesc:ab232255e20b8c01bb37a661b5e27ed43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically sets the value of ptr with the value of x.  <a href="stdatomic_8h.html#ab232255e20b8c01bb37a661b5e27ed43">More...</a><br /></td></tr>
+<tr class="separator:ab232255e20b8c01bb37a661b5e27ed43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e8927e307eceed0b2a83b86b7e62d0"><td class="memItemLeft" align="right" valign="top"><a id="a25e8927e307eceed0b2a83b86b7e62d0"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a25e8927e307eceed0b2a83b86b7e62d0">atomic_set</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> i)</td></tr>
+<tr class="memdesc:a25e8927e307eceed0b2a83b86b7e62d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically set ptr equal to i. <br /></td></tr>
+<tr class="separator:a25e8927e307eceed0b2a83b86b7e62d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493a53e0f615fd5d0417a1f9f509ae08"><td class="memItemLeft" align="right" valign="top"><a id="a493a53e0f615fd5d0417a1f9f509ae08"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a493a53e0f615fd5d0417a1f9f509ae08">atomic_read</a> (const <a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr)</td></tr>
+<tr class="memdesc:a493a53e0f615fd5d0417a1f9f509ae08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically read the integer value of ptr. <br /></td></tr>
+<tr class="separator:a493a53e0f615fd5d0417a1f9f509ae08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7266ae62e0b0a3d1d98c4431c709ed3d"><td class="memItemLeft" align="right" valign="top"><a id="a7266ae62e0b0a3d1d98c4431c709ed3d"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a7266ae62e0b0a3d1d98c4431c709ed3d">atomic_add</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> const *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> i)</td></tr>
+<tr class="memdesc:a7266ae62e0b0a3d1d98c4431c709ed3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically add i to ptr. <br /></td></tr>
+<tr class="separator:a7266ae62e0b0a3d1d98c4431c709ed3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeba8d1210a6c6793081f6f306a419fd"><td class="memItemLeft" align="right" valign="top"><a id="abeba8d1210a6c6793081f6f306a419fd"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#abeba8d1210a6c6793081f6f306a419fd">atomic_sub</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> i)</td></tr>
+<tr class="memdesc:abeba8d1210a6c6793081f6f306a419fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically subtract i from ptr. <br /></td></tr>
+<tr class="separator:abeba8d1210a6c6793081f6f306a419fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dacbbf784da33bbb574817dde887dda"><td class="memItemLeft" align="right" valign="top"><a id="a0dacbbf784da33bbb574817dde887dda"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a0dacbbf784da33bbb574817dde887dda">atomic_inc</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr)</td></tr>
+<tr class="memdesc:a0dacbbf784da33bbb574817dde887dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically add one to ptr. <br /></td></tr>
+<tr class="separator:a0dacbbf784da33bbb574817dde887dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8db27b944d33494090002d7b01110ce"><td class="memItemLeft" align="right" valign="top"><a id="ab8db27b944d33494090002d7b01110ce"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#ab8db27b944d33494090002d7b01110ce">atomic_dec</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr)</td></tr>
+<tr class="memdesc:ab8db27b944d33494090002d7b01110ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically subtract one from ptr. <br /></td></tr>
+<tr class="separator:ab8db27b944d33494090002d7b01110ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25833796a56381f57ec03b4e901c244a"><td class="memItemLeft" align="right" valign="top"><a id="a25833796a56381f57ec03b4e901c244a"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a25833796a56381f57ec03b4e901c244a">atomic_add_negative</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> i)</td></tr>
+<tr class="memdesc:a25833796a56381f57ec03b4e901c244a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically add i to ptr and return true if the result is negative; otherwise false. <br /></td></tr>
+<tr class="separator:a25833796a56381f57ec03b4e901c244a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4f11e9b5894b67578e8f52bb24d3a8"><td class="memItemLeft" align="right" valign="top"><a id="a1f4f11e9b5894b67578e8f52bb24d3a8"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a1f4f11e9b5894b67578e8f52bb24d3a8">atomic_sub_and_test</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> i)</td></tr>
+<tr class="memdesc:a1f4f11e9b5894b67578e8f52bb24d3a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically subtract i from ptr and return true if the result is zero; otherwise false. <br /></td></tr>
+<tr class="separator:a1f4f11e9b5894b67578e8f52bb24d3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591fd78f8483463f44eceb8981cdd085"><td class="memItemLeft" align="right" valign="top"><a id="a591fd78f8483463f44eceb8981cdd085"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a591fd78f8483463f44eceb8981cdd085">atomic_inc_and_test</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr)</td></tr>
+<tr class="memdesc:a591fd78f8483463f44eceb8981cdd085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically increment ptr by one and return true if the result is zero; false otherwise. <br /></td></tr>
+<tr class="separator:a591fd78f8483463f44eceb8981cdd085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab829527357ebd386613fd953f41169c"><td class="memItemLeft" align="right" valign="top"><a id="aab829527357ebd386613fd953f41169c"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#aab829527357ebd386613fd953f41169c">atomic_dec_and_test</a> (<a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *ptr)</td></tr>
+<tr class="memdesc:aab829527357ebd386613fd953f41169c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically decrement ptr by one and return true if zero; false otherwise. <br /></td></tr>
+<tr class="separator:aab829527357ebd386613fd953f41169c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0283ffe38a08a29534d857b1d2be5d36"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a0283ffe38a08a29534d857b1d2be5d36">set_bit</a> (int offset, volatile unsigned long *base)</td></tr>
+<tr class="memdesc:a0283ffe38a08a29534d857b1d2be5d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically sets a bit in memory, using Bit Test And Set (bts).  <a href="stdatomic_8h.html#a0283ffe38a08a29534d857b1d2be5d36">More...</a><br /></td></tr>
+<tr class="separator:a0283ffe38a08a29534d857b1d2be5d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7793a2f6735ab4e7db5329c0ca551d72"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#a7793a2f6735ab4e7db5329c0ca551d72">clear_bit</a> (int offset, volatile unsigned long *base)</td></tr>
+<tr class="memdesc:a7793a2f6735ab4e7db5329c0ca551d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically clears a bit in memory.  <a href="stdatomic_8h.html#a7793a2f6735ab4e7db5329c0ca551d72">More...</a><br /></td></tr>
+<tr class="separator:a7793a2f6735ab4e7db5329c0ca551d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9b8730f4d099fbd025ede532f12cb3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stdatomic_8h.html#afb9b8730f4d099fbd025ede532f12cb3">test_bit</a> (int offset, volatile unsigned long *base)</td></tr>
+<tr class="memdesc:afb9b8730f4d099fbd025ede532f12cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically tests a bit in memory.  <a href="stdatomic_8h.html#afb9b8730f4d099fbd025ede532f12cb3">More...</a><br /></td></tr>
+<tr class="separator:afb9b8730f4d099fbd025ede532f12cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
@@ -156,6 +212,197 @@ typedef volatile unsigned&#160;</td><td class="memItemRight" valign="bottom"><a 
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab232255e20b8c01bb37a661b5e27ed43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab232255e20b8c01bb37a661b5e27ed43">&#9670;&nbsp;</a></span>atomic_set_and_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> atomic_set_and_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdatomic_8h.html#a27fd26b0ec72da709c47536f496e5844">atomic_t</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atomically sets the value of ptr with the value of x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to the atomic variable to set. </td></tr>
+    <tr><td class="paramname">x</td><td>The value to set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The final value of the atomic variable. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="stdatomic_8h_source.html#l00036">36</a> of file <a class="el" href="stdatomic_8h_source.html">stdatomic.h</a>.</p>
+
+</div>
+</div>
+<a id="a7793a2f6735ab4e7db5329c0ca551d72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7793a2f6735ab4e7db5329c0ca551d72">&#9670;&nbsp;</a></span>clear_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void clear_bit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">volatile unsigned long *&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atomically clears a bit in memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset to the bit. </td></tr>
+    <tr><td class="paramname">base</td><td>The base address. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="stdatomic_8h_source.html#l00127">127</a> of file <a class="el" href="stdatomic_8h_source.html">stdatomic.h</a>.</p>
+
+</div>
+</div>
+<a id="a0283ffe38a08a29534d857b1d2be5d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0283ffe38a08a29534d857b1d2be5d36">&#9670;&nbsp;</a></span>set_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void set_bit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">volatile unsigned long *&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atomically sets a bit in memory, using Bit Test And Set (bts). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset to the bit. </td></tr>
+    <tr><td class="paramname">base</td><td>The base address. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="stdatomic_8h_source.html#l00117">117</a> of file <a class="el" href="stdatomic_8h_source.html">stdatomic.h</a>.</p>
+
+</div>
+</div>
+<a id="afb9b8730f4d099fbd025ede532f12cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9b8730f4d099fbd025ede532f12cb3">&#9670;&nbsp;</a></span>test_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_bit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">volatile unsigned long *&#160;</td>
+          <td class="paramname"><em>base</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atomically tests a bit in memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset to the bit. </td></tr>
+    <tr><td class="paramname">base</td><td>The base address. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the bit is set, 0 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="stdatomic_8h_source.html#l00138">138</a> of file <a class="el" href="stdatomic_8h_source.html">stdatomic.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -163,7 +410,7 @@ typedef volatile unsigned&#160;</td><td class="memItemRight" valign="bottom"><a 
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

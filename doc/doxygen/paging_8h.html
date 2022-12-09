@@ -178,12 +178,25 @@ Functions</h2></td></tr>
 <tr class="memitem:aad655f4cf880db24429feccf2af2c2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpage__directory__t.html">page_directory_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#aad655f4cf880db24429feccf2af2c2f1">paging_get_main_directory</a> ()</td></tr>
 <tr class="memdesc:aad655f4cf880db24429feccf2af2c2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide access to the main page directory.  <a href="paging_8h.html#aad655f4cf880db24429feccf2af2c2f1">More...</a><br /></td></tr>
 <tr class="separator:aad655f4cf880db24429feccf2af2c2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a0eb525b1c0d63f56ea27b671c77f7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structpage__directory__t.html">page_directory_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a53a0eb525b1c0d63f56ea27b671c77f7">paging_get_current_directory</a> ()</td></tr>
+<tr class="memdesc:a53a0eb525b1c0d63f56ea27b671c77f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide access to the current paging directory.  <a href="paging_8h.html#a53a0eb525b1c0d63f56ea27b671c77f7">More...</a><br /></td></tr>
+<tr class="separator:a53a0eb525b1c0d63f56ea27b671c77f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb7c264c90dcd844da63c60d4886dab0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#acb7c264c90dcd844da63c60d4886dab0">paging_switch_directory</a> (<a class="el" href="structpage__directory__t.html">page_directory_t</a> *dir)</td></tr>
+<tr class="memdesc:acb7c264c90dcd844da63c60d4886dab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switches paging directory, the pointer must be a physical address.  <a href="paging_8h.html#acb7c264c90dcd844da63c60d4886dab0">More...</a><br /></td></tr>
+<tr class="separator:acb7c264c90dcd844da63c60d4886dab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275110d039474e166124734b3c76e5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a275110d039474e166124734b3c76e5ea">paging_switch_directory_va</a> (<a class="el" href="structpage__directory__t.html">page_directory_t</a> *dir)</td></tr>
 <tr class="memdesc:a275110d039474e166124734b3c76e5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switches paging directory, the pointer can be a lowmem address.  <a href="paging_8h.html#a275110d039474e166124734b3c76e5ea">More...</a><br /></td></tr>
 <tr class="separator:a275110d039474e166124734b3c76e5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35dda0e7b77ebba4236bf93e610d98b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a35dda0e7b77ebba4236bf93e610d98b1">paging_flush_tlb_single</a> (unsigned long addr)</td></tr>
 <tr class="memdesc:a35dda0e7b77ebba4236bf93e610d98b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalidate a single tlb page (the one that maps the specified virtual address)  <a href="paging_8h.html#a35dda0e7b77ebba4236bf93e610d98b1">More...</a><br /></td></tr>
 <tr class="separator:a35dda0e7b77ebba4236bf93e610d98b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b34919f914b18ac65de742c97b4cb6f"><td class="memItemLeft" align="right" valign="top"><a id="a2b34919f914b18ac65de742c97b4cb6f"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a2b34919f914b18ac65de742c97b4cb6f">paging_enable</a> ()</td></tr>
+<tr class="memdesc:a2b34919f914b18ac65de742c97b4cb6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables paging. <br /></td></tr>
+<tr class="separator:a2b34919f914b18ac65de742c97b4cb6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1702184dae23df19ef1f86c4da90e6e7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a1702184dae23df19ef1f86c4da90e6e7">paging_is_enabled</a> ()</td></tr>
+<tr class="memdesc:a1702184dae23df19ef1f86c4da90e6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if paging is enabled.  <a href="paging_8h.html#a1702184dae23df19ef1f86c4da90e6e7">More...</a><br /></td></tr>
+<tr class="separator:a1702184dae23df19ef1f86c4da90e6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8h.html#a6efd35676a6c4f61f21747cc5f2caaa2">page_fault_handler</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a page fault.  <a href="paging_8h.html#a6efd35676a6c4f61f21747cc5f2caaa2">More...</a><br /></td></tr>
 <tr class="separator:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,6 +736,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a53a0eb525b1c0d63f56ea27b671c77f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a0eb525b1c0d63f56ea27b671c77f7">&#9670;&nbsp;</a></span>paging_get_current_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structpage__directory__t.html">page_directory_t</a>* paging_get_current_directory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provide access to the current paging directory. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the current page directory. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8h_source.html#l00149">149</a> of file <a class="el" href="paging_8h_source.html">paging.h</a>.</p>
+
+</div>
+</div>
 <a id="aad655f4cf880db24429feccf2af2c2f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad655f4cf880db24429feccf2af2c2f1">&#9670;&nbsp;</a></span>paging_get_main_directory()</h2>
 
@@ -770,6 +813,72 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="paging_8c_source.html#l00176">176</a> of file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
+
+</div>
+</div>
+<a id="a1702184dae23df19ef1f86c4da90e6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1702184dae23df19ef1f86c4da90e6e7">&#9670;&nbsp;</a></span>paging_is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int paging_is_enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns if paging is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if paging is enables, 0 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8h_source.html#l00180">180</a> of file <a class="el" href="paging_8h_source.html">paging.h</a>.</p>
+
+</div>
+</div>
+<a id="acb7c264c90dcd844da63c60d4886dab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb7c264c90dcd844da63c60d4886dab0">&#9670;&nbsp;</a></span>paging_switch_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void paging_switch_directory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpage__directory__t.html">page_directory_t</a> *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Switches paging directory, the pointer must be a physical address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>A pointer to the new page directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8h_source.html#l00156">156</a> of file <a class="el" href="paging_8h_source.html">paging.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +945,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

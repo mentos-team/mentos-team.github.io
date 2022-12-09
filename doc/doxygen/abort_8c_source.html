@@ -78,9 +78,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;signal.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdio_8h.html">stdio.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Since there could be signal handlers listening for the abort, we</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//  need to keep track at which stage of the abort we are.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> stage = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">   13</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> = 0;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="stdlib_8h.html#ac54f53dc342019e8db34f4aa581a5792">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="abort_8c.html#a8dec7c95227ff149687066cf04029191">abort</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
@@ -88,8 +86,8 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="structsigset__t.html">sigset_t</a> sigset;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">/* Unblock SIGABRT.  */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (stage == 0) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ++stage;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 0) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ++<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="mentos_2inc_2system_2signal_8h.html#a5925352f90eb589393274fa0376d7def">sigemptyset</a>(&amp;sigset);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="mentos_2inc_2system_2signal_8h.html#ae412e6a5436a6c28424b0173251d349c">sigaddset</a>(&amp;sigset, <a class="code" href="mentos_2inc_2system_2signal_8h.html#a01fdbe4643233dbacdf58e54367d7289a482a7216ea9a36de82e722b950b99e15">SIGABRT</a>);</div>
@@ -97,19 +95,19 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/* Send signal which possibly calls a user handler.  */</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (stage == 1) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 1) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// We must allow recursive calls of abort</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> save_stage = stage;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> save_stage = <a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        stage = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> = 0;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="libc_2inc_2signal_8h.html#a4539db972bcf3dd8c8b429af0dc3789d">kill</a>(<a class="code" href="unistd_8h.html#add1dc6545057b7f1c7f91352536fb060">getpid</a>(), <a class="code" href="mentos_2inc_2system_2signal_8h.html#a01fdbe4643233dbacdf58e54367d7289a482a7216ea9a36de82e722b950b99e15">SIGABRT</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        stage = save_stage + 1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> = save_stage + 1;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">/* There was a handler installed.  Now remove it.  */</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (stage == 2) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ++stage;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 2) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ++<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a>(&amp;action, 0, <span class="keyword">sizeof</span>(action));</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
@@ -121,22 +119,22 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">/* Try again.  */</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (stage == 3) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ++stage;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 3) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        ++<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="libc_2inc_2signal_8h.html#a4539db972bcf3dd8c8b429af0dc3789d">kill</a>(<a class="code" href="unistd_8h.html#add1dc6545057b7f1c7f91352536fb060">getpid</a>(), <a class="code" href="mentos_2inc_2system_2signal_8h.html#a01fdbe4643233dbacdf58e54367d7289a482a7216ea9a36de82e722b950b99e15">SIGABRT</a>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">/* Now try to abort using the system specific command.  */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (stage == 4) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ++stage;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 4) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ++<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        __asm__ __volatile__(<span class="stringliteral">&quot;hlt&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">/* If we can&#39;t signal ourselves and the abort instruction failed, exit.  */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (stage == 5) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        ++stage;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a> == 5) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        ++<a class="code" href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="unistd_8h.html#a55e99c539cf7723ec15e856b7e0a8cee">exit</a>(127);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
@@ -148,6 +146,7 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">while</span> (1) __asm__ __volatile__(<span class="stringliteral">&quot;hlt&quot;</span>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#pragma clang diagnostic pop</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="aabort_8c_html_a2474817ddb7d8b524ad42e2455ed2e06"><div class="ttname"><a href="abort_8c.html#a2474817ddb7d8b524ad42e2455ed2e06">stage</a></div><div class="ttdeci">static int stage</div><div class="ttdoc">Since there could be signal handlers listening for the abort, we need to keep track at which stage of...</div><div class="ttdef"><b>Definition:</b> <a href="abort_8c_source.html#l00013">abort.c:13</a></div></div>
 <div class="ttc" id="aabort_8c_html_a8dec7c95227ff149687066cf04029191"><div class="ttname"><a href="abort_8c.html#a8dec7c95227ff149687066cf04029191">abort</a></div><div class="ttdeci">void abort(void)</div><div class="ttdoc">Cause an abnormal program termination with core-dump.</div><div class="ttdef"><b>Definition:</b> <a href="abort_8c_source.html#l00015">abort.c:15</a></div></div>
 <div class="ttc" id="alibc_2inc_2signal_8h_html_a0fd1024302d5bc062261b9b732bdf92b"><div class="ttname"><a href="libc_2inc_2signal_8h.html#a0fd1024302d5bc062261b9b732bdf92b">sigprocmask</a></div><div class="ttdeci">int sigprocmask(int how, const sigset_t *set, sigset_t *oldset)</div><div class="ttdoc">Examine and change blocked signals.</div></div>
 <div class="ttc" id="alibc_2inc_2signal_8h_html_a386cfcae18431596566a404210940495"><div class="ttname"><a href="libc_2inc_2signal_8h.html#a386cfcae18431596566a404210940495">sigaction</a></div><div class="ttdeci">int sigaction(int signum, const sigaction_t *act, sigaction_t *oldact)</div><div class="ttdoc">Examine and change a signal action.</div><div class="ttdef"><b>Definition:</b> <a href="libc_2src_2unistd_2signal_8c_source.html#l00059">signal.c:59</a></div></div>
@@ -176,7 +175,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

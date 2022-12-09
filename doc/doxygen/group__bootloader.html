@@ -92,6 +92,37 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4495e6fae6f8cd8730e54c0d007bc22e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga4495e6fae6f8cd8730e54c0d007bc22e">boot_kernel</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> stack_pointer, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> entry, struct <a class="el" href="structboot__info__t.html">boot_info_t</a> *<a class="el" href="kernel_8c.html#a6fb24e311419027d49f1cab853a9a9ac">boot_info</a>)</td></tr>
 <tr class="memdesc:ga4495e6fae6f8cd8730e54c0d007bc22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">External function implemented in <code><a class="el" href="boot_8S_source.html">boot.S</a></code>.  <a href="group__bootloader.html#ga4495e6fae6f8cd8730e54c0d007bc22e">More...</a><br /></td></tr>
 <tr class="separator:ga4495e6fae6f8cd8730e54c0d007bc22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa63a3d960c975ee827ff0a2fc3476701"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#gaa63a3d960c975ee827ff0a2fc3476701">__outportb</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> port, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> data)</td></tr>
+<tr class="memdesc:gaa63a3d960c975ee827ff0a2fc3476701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to write to I/O ports to send bytes to devices.  <a href="group__bootloader.html#gaa63a3d960c975ee827ff0a2fc3476701">More...</a><br /></td></tr>
+<tr class="separator:gaa63a3d960c975ee827ff0a2fc3476701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ba470e8e6ddd99c8477488075ea193f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga1ba470e8e6ddd99c8477488075ea193f">__debug_putchar</a> (char c)</td></tr>
+<tr class="memdesc:ga1ba470e8e6ddd99c8477488075ea193f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given character on the debug port.  <a href="group__bootloader.html#ga1ba470e8e6ddd99c8477488075ea193f">More...</a><br /></td></tr>
+<tr class="separator:ga1ba470e8e6ddd99c8477488075ea193f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fc306186877b6d1dce840255b22e80e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga2fc306186877b6d1dce840255b22e80e">__debug_puts</a> (char *s)</td></tr>
+<tr class="memdesc:ga2fc306186877b6d1dce840255b22e80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given string on the debug port.  <a href="group__bootloader.html#ga2fc306186877b6d1dce840255b22e80e">More...</a><br /></td></tr>
+<tr class="separator:ga2fc306186877b6d1dce840255b22e80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga893ddff9e61a7d71f78c6f8c5fce63bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga893ddff9e61a7d71f78c6f8c5fce63bb">__align_rup</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> addr, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> value)</td></tr>
+<tr class="memdesc:ga893ddff9e61a7d71f78c6f8c5fce63bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align memory address to the specified value (round up).  <a href="group__bootloader.html#ga893ddff9e61a7d71f78c6f8c5fce63bb">More...</a><br /></td></tr>
+<tr class="separator:ga893ddff9e61a7d71f78c6f8c5fce63bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82217f4bfb3e32d6b75942d2f0b8761e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga82217f4bfb3e32d6b75942d2f0b8761e">__align_rdown</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> addr, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> value)</td></tr>
+<tr class="memdesc:ga82217f4bfb3e32d6b75942d2f0b8761e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align memory address to the specified value (round down).  <a href="group__bootloader.html#ga82217f4bfb3e32d6b75942d2f0b8761e">More...</a><br /></td></tr>
+<tr class="separator:ga82217f4bfb3e32d6b75942d2f0b8761e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b5f1b58267fab0955fc756fc7637acb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga8b5f1b58267fab0955fc756fc7637acb">__setup_pages</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pfn_virt_start, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pfn_phys_start, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pfn_count)</td></tr>
+<tr class="memdesc:ga8b5f1b58267fab0955fc756fc7637acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the page frames.  <a href="group__bootloader.html#ga8b5f1b58267fab0955fc756fc7637acb">More...</a><br /></td></tr>
+<tr class="separator:ga8b5f1b58267fab0955fc756fc7637acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fd6069c62d5029c2b96a88396f8cf87"><td class="memItemLeft" align="right" valign="top"><a id="ga8fd6069c62d5029c2b96a88396f8cf87"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga8fd6069c62d5029c2b96a88396f8cf87">__setup_boot_paging</a> ()</td></tr>
+<tr class="memdesc:ga8fd6069c62d5029c2b96a88396f8cf87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup paging mapping all the low memory to two places: one is the physical address of the memory itself the other is in the virtual kernel address space. <br /></td></tr>
+<tr class="separator:ga8fd6069c62d5029c2b96a88396f8cf87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d8050b8ebf946cdbfd42d99a6b5254"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga77d8050b8ebf946cdbfd42d99a6b5254">__get_kernel_low_high</a> (<a class="el" href="elf_8h.html#abd68363543c6282562550befc8fbcf14">elf_header_t</a> *elf_hdr, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *virt_low, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *virt_high)</td></tr>
+<tr class="memdesc:ga77d8050b8ebf946cdbfd42d99a6b5254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the starting and ending address of the kernel.  <a href="group__bootloader.html#ga77d8050b8ebf946cdbfd42d99a6b5254">More...</a><br /></td></tr>
+<tr class="separator:ga77d8050b8ebf946cdbfd42d99a6b5254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b050a0ccea15e352c2fdbece61d4528"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga3b050a0ccea15e352c2fdbece61d4528">__get_address_after_modules</a> (<a class="el" href="structmultiboot__info__t.html">multiboot_info_t</a> *header)</td></tr>
+<tr class="memdesc:ga3b050a0ccea15e352c2fdbece61d4528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first address after the modules.  <a href="group__bootloader.html#ga3b050a0ccea15e352c2fdbece61d4528">More...</a><br /></td></tr>
+<tr class="separator:ga3b050a0ccea15e352c2fdbece61d4528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67ec3ea296ed6f04110413c78ee06b55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga67ec3ea296ed6f04110413c78ee06b55">__relocate_kernel_image</a> (<a class="el" href="elf_8h.html#abd68363543c6282562550befc8fbcf14">elf_header_t</a> *elf_hdr)</td></tr>
+<tr class="memdesc:ga67ec3ea296ed6f04110413c78ee06b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relocate the kernel image.  <a href="group__bootloader.html#ga67ec3ea296ed6f04110413c78ee06b55">More...</a><br /></td></tr>
+<tr class="separator:ga67ec3ea296ed6f04110413c78ee06b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1f1e65c8fd4d2ba25b83fa563a0c25f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga1f1e65c8fd4d2ba25b83fa563a0c25f9">boot_main</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> magic, <a class="el" href="structmultiboot__info__t.html">multiboot_info_t</a> *header, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> esp)</td></tr>
 <tr class="memdesc:ga1f1e65c8fd4d2ba25b83fa563a0c25f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point of the bootloader.  <a href="group__bootloader.html#ga1f1e65c8fd4d2ba25b83fa563a0c25f9">More...</a><br /></td></tr>
 <tr class="separator:ga1f1e65c8fd4d2ba25b83fa563a0c25f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,10 +136,418 @@ Variables</h2></td></tr>
 char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga2480079e2ce9c6189d6aa1de73e44292">_bootloader_end</a> []</td></tr>
 <tr class="memdesc:ga2480079e2ce9c6189d6aa1de73e44292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linker symbol for where the bootloader ends. <br /></td></tr>
 <tr class="separator:ga2480079e2ce9c6189d6aa1de73e44292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fb24e311419027d49f1cab853a9a9ac"><td class="memItemLeft" align="right" valign="top"><a id="ga6fb24e311419027d49f1cab853a9a9ac"></a>
+static <a class="el" href="structboot__info__t.html">boot_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga6fb24e311419027d49f1cab853a9a9ac">boot_info</a></td></tr>
+<tr class="memdesc:ga6fb24e311419027d49f1cab853a9a9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boot info provided to the kmain function. <br /></td></tr>
+<tr class="separator:ga6fb24e311419027d49f1cab853a9a9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae4c37d03988324a3c059046f640b81e"><td class="memItemLeft" align="right" valign="top"><a id="gaae4c37d03988324a3c059046f640b81e"></a>
+static <a class="el" href="structpage__directory__t.html">page_directory_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#gaae4c37d03988324a3c059046f640b81e">boot_pgdir</a></td></tr>
+<tr class="memdesc:gaae4c37d03988324a3c059046f640b81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boot page directory. <br /></td></tr>
+<tr class="separator:gaae4c37d03988324a3c059046f640b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga171b04d21a11d93bdada313dce5e7e07"><td class="memItemLeft" align="right" valign="top"><a id="ga171b04d21a11d93bdada313dce5e7e07"></a>
+static <a class="el" href="structpage__table__t.html">page_table_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__bootloader.html#ga171b04d21a11d93bdada313dce5e7e07">boot_pgtables</a> [1024]</td></tr>
+<tr class="memdesc:ga171b04d21a11d93bdada313dce5e7e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boot page tables. <br /></td></tr>
+<tr class="separator:ga171b04d21a11d93bdada313dce5e7e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Set of functions and variables for booting the kernel. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga82217f4bfb3e32d6b75942d2f0b8761e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82217f4bfb3e32d6b75942d2f0b8761e">&#9670;&nbsp;</a></span>__align_rdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __align_rdown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Align memory address to the specified value (round down). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to align </td></tr>
+    <tr><td class="paramname">value</td><td>the value used to align. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the aligned address. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00082">82</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga893ddff9e61a7d71f78c6f8c5fce63bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga893ddff9e61a7d71f78c6f8c5fce63bb">&#9670;&nbsp;</a></span>__align_rup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __align_rup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Align memory address to the specified value (round up). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the address to align </td></tr>
+    <tr><td class="paramname">value</td><td>the value used to align. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the aligned address. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00072">72</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga1ba470e8e6ddd99c8477488075ea193f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ba470e8e6ddd99c8477488075ea193f">&#9670;&nbsp;</a></span>__debug_putchar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __debug_putchar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the given character on the debug port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>the character to send to the debug port. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00055">55</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga2fc306186877b6d1dce840255b22e80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fc306186877b6d1dce840255b22e80e">&#9670;&nbsp;</a></span>__debug_puts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __debug_puts </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the given string on the debug port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>the string to send to the debug port. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00062">62</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga3b050a0ccea15e352c2fdbece61d4528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b050a0ccea15e352c2fdbece61d4528">&#9670;&nbsp;</a></span>__get_address_after_modules()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> __get_address_after_modules </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmultiboot__info__t.html">multiboot_info_t</a> *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first address after the modules. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>The multiboot info structure from which we extract the info. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The address after the modules. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00162">162</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga77d8050b8ebf946cdbfd42d99a6b5254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77d8050b8ebf946cdbfd42d99a6b5254">&#9670;&nbsp;</a></span>__get_kernel_low_high()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __get_kernel_low_high </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="elf_8h.html#abd68363543c6282562550befc8fbcf14">elf_header_t</a> *&#160;</td>
+          <td class="paramname"><em>elf_hdr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>virt_low</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>virt_high</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extract the starting and ending address of the kernel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elf_hdr</td><td>The elf header of the kernel. </td></tr>
+    <tr><td class="paramname">virt_low</td><td>Output variable where we store the lowest address of the kernel. </td></tr>
+    <tr><td class="paramname">virt_high</td><td>Output variable where we store the highest address of the kernel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00137">137</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="gaa63a3d960c975ee827ff0a2fc3476701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa63a3d960c975ee827ff0a2fc3476701">&#9670;&nbsp;</a></span>__outportb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __outportb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use this to write to I/O ports to send bytes to devices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>The output port. </td></tr>
+    <tr><td class="paramname">data</td><td>The data to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00048">48</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga67ec3ea296ed6f04110413c78ee06b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67ec3ea296ed6f04110413c78ee06b55">&#9670;&nbsp;</a></span>__relocate_kernel_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __relocate_kernel_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="elf_8h.html#abd68363543c6282562550befc8fbcf14">elf_header_t</a> *&#160;</td>
+          <td class="paramname"><em>elf_hdr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Relocate the kernel image. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elf_hdr</td><td>The elf header of the kernel. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00177">177</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
+<a id="ga8b5f1b58267fab0955fc756fc7637acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b5f1b58267fab0955fc756fc7637acb">&#9670;&nbsp;</a></span>__setup_pages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __setup_pages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>pfn_virt_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>pfn_phys_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>pfn_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prepares the page frames. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pfn_virt_start</td><td>The first virtual page frame. </td></tr>
+    <tr><td class="paramname">pfn_phys_start</td><td>The first physical page frame. </td></tr>
+    <tr><td class="paramname">pfn_count</td><td>The number of page frames. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="boot_8c_source.html#l00091">91</a> of file <a class="el" href="boot_8c_source.html">boot.c</a>.</p>
+
+</div>
+</div>
 <a id="ga4495e6fae6f8cd8730e54c0d007bc22e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4495e6fae6f8cd8730e54c0d007bc22e">&#9670;&nbsp;</a></span>boot_kernel()</h2>
 
@@ -232,7 +671,7 @@ char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:54.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -106,6 +106,31 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6bea41ca03a20afa48a3d07feeb9b3c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rtc.html#ga6bea41ca03a20afa48a3d07feeb9b3c8">rtc_finalize</a> ()</td></tr>
 <tr class="memdesc:ga6bea41ca03a20afa48a3d07feeb9b3c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes the Real Time Clock (RTC).  <a href="group__rtc.html#ga6bea41ca03a20afa48a3d07feeb9b3c8">More...</a><br /></td></tr>
 <tr class="separator:ga6bea41ca03a20afa48a3d07feeb9b3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e2fbca22d05686d9eeeb75a1464dcff"><td class="memItemLeft" align="right" valign="top"><a id="ga3e2fbca22d05686d9eeeb75a1464dcff"></a>
+static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_are_different</b> (<a class="el" href="structtm__t.html">tm_t</a> *t0, <a class="el" href="structtm__t.html">tm_t</a> *t1)</td></tr>
+<tr class="separator:ga3e2fbca22d05686d9eeeb75a1464dcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ca41878208fad587afd2b108eedce25"><td class="memItemLeft" align="right" valign="top"><a id="ga7ca41878208fad587afd2b108eedce25"></a>
+static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">is_updating_rtc</a> ()</td></tr>
+<tr class="memdesc:ga7ca41878208fad587afd2b108eedce25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if rtc is updating time currently. <br /></td></tr>
+<tr class="separator:ga7ca41878208fad587afd2b108eedce25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdf9e2b0228c769bf11e5a0a332020ab"><td class="memItemLeft" align="right" valign="top"><a id="gabdf9e2b0228c769bf11e5a0a332020ab"></a>
+static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>read_register</b> (unsigned char reg)</td></tr>
+<tr class="separator:gabdf9e2b0228c769bf11e5a0a332020ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b1ada0e90aa057fe1e6cf1ed84a849b"><td class="memItemLeft" align="right" valign="top"><a id="ga3b1ada0e90aa057fe1e6cf1ed84a849b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>write_register</b> (unsigned char reg, unsigned char value)</td></tr>
+<tr class="separator:ga3b1ada0e90aa057fe1e6cf1ed84a849b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bacee586edd36ff624d2fec47266aeb"><td class="memItemLeft" align="right" valign="top"><a id="ga1bacee586edd36ff624d2fec47266aeb"></a>
+static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>bcd2bin</b> (unsigned char bcd)</td></tr>
+<tr class="separator:ga1bacee586edd36ff624d2fec47266aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ba96659ffb10ed179e92345bf4fa2e9"><td class="memItemLeft" align="right" valign="top"><a id="ga2ba96659ffb10ed179e92345bf4fa2e9"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_read_datetime</b> ()</td></tr>
+<tr class="separator:ga2ba96659ffb10ed179e92345bf4fa2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ce3dbfefde1d78560a2ef53dd66734c"><td class="memItemLeft" align="right" valign="top"><a id="ga7ce3dbfefde1d78560a2ef53dd66734c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_update_datetime</b> ()</td></tr>
+<tr class="separator:ga7ce3dbfefde1d78560a2ef53dd66734c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d2a3cbc3a36a3f93a0c771826e67509"><td class="memItemLeft" align="right" valign="top"><a id="ga2d2a3cbc3a36a3f93a0c771826e67509"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>rtc_handler_isr</b> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="separator:ga2d2a3cbc3a36a3f93a0c771826e67509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -204,7 +229,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:54.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

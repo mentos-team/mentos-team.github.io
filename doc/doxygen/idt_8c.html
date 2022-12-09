@@ -298,6 +298,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idt_
 <tr class="memitem:a587fa6c40081bdc83bffaa23f9bcad50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idt_8c.html#a587fa6c40081bdc83bffaa23f9bcad50">idt_flush</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="idt_8c.html#a48d280b73162c2063f187a57e9a67638">idt_pointer</a>)</td></tr>
 <tr class="memdesc:a587fa6c40081bdc83bffaa23f9bcad50"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is in idt.asm.  <a href="idt_8c.html#a587fa6c40081bdc83bffaa23f9bcad50">More...</a><br /></td></tr>
 <tr class="separator:a587fa6c40081bdc83bffaa23f9bcad50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc092262bf54ecbeb4013ad469162a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idt_8c.html#a8fc092262bf54ecbeb4013ad469162a0">__idt_set_gate</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> index, <a class="el" href="group__isr.html#ga5d1e6f2f45493ce2e77845a6daeca39c">interrupt_handler_t</a> handler, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> options, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> seg_sel)</td></tr>
+<tr class="memdesc:a8fc092262bf54ecbeb4013ad469162a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this function to set an entry in the IDT.  <a href="idt_8c.html#a8fc092262bf54ecbeb4013ad469162a0">More...</a><br /></td></tr>
+<tr class="separator:a8fc092262bf54ecbeb4013ad469162a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga35fe413107af682030ab7a4b6dff19b8"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__idt.html#ga35fe413107af682030ab7a4b6dff19b8">init_idt</a> ()</td></tr>
 <tr class="memdesc:ga35fe413107af682030ab7a4b6dff19b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the interrupt descriptor table. <br /></td></tr>
@@ -305,6 +308,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a4fb8c07abd4be41fdc67e90d53c38514"><td class="memItemLeft" align="right" valign="top"><a id="a4fb8c07abd4be41fdc67e90d53c38514"></a>
+static <a class="el" href="structidt__descriptor__t.html">idt_descriptor_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idt_8c.html#a4fb8c07abd4be41fdc67e90d53c38514">idt_table</a> [<a class="el" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>]</td></tr>
+<tr class="memdesc:a4fb8c07abd4be41fdc67e90d53c38514"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IDT itself. <br /></td></tr>
+<tr class="separator:a4fb8c07abd4be41fdc67e90d53c38514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d280b73162c2063f187a57e9a67638"><td class="memItemLeft" align="right" valign="top"><a id="a48d280b73162c2063f187a57e9a67638"></a>
 <a class="el" href="structidt__pointer__t.html">idt_pointer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="idt_8c.html#a48d280b73162c2063f187a57e9a67638">idt_pointer</a></td></tr>
 <tr class="memdesc:a48d280b73162c2063f187a57e9a67638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer structure to give to the CPU. <br /></td></tr>
@@ -316,6 +323,67 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="idt_8c_source.html">idt.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a8fc092262bf54ecbeb4013ad469162a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc092262bf54ecbeb4013ad469162a0">&#9670;&nbsp;</a></span>__idt_set_gate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __idt_set_gate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__isr.html#ga5d1e6f2f45493ce2e77845a6daeca39c">interrupt_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>seg_sel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use this function to set an entry in the IDT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index of the IDT entry. </td></tr>
+    <tr><td class="paramname">handler</td><td>Pointer to the entry handler. </td></tr>
+    <tr><td class="paramname">options</td><td>Descriptors options (PRESENT, NOTPRESENT, KERNEL, USER). </td></tr>
+    <tr><td class="paramname">seg_sel</td><td>GDT segment selector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="idt_8c_source.html#l00131">131</a> of file <a class="el" href="idt_8c_source.html">idt.c</a>.</p>
+
+</div>
+</div>
 <a id="a587fa6c40081bdc83bffaa23f9bcad50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a587fa6c40081bdc83bffaa23f9bcad50">&#9670;&nbsp;</a></span>idt_flush()</h2>
 
@@ -349,7 +417,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

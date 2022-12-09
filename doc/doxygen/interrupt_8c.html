@@ -72,7 +72,8 @@ $(function() {
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">interrupt.c File Reference</div>  </div>
 </div><!--header-->
@@ -118,6 +119,14 @@ typedef struct <a class="el" href="structirq__struct__t.html">irq_struct_t</a>&#
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2e267a071d59a103cfdc7e213a445d31"><td class="memItemLeft" align="right" valign="top"><a id="a2e267a071d59a103cfdc7e213a445d31"></a>
+static <a class="el" href="structirq__struct__t.html">irq_struct_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#a2e267a071d59a103cfdc7e213a445d31">__irq_struct_alloc</a> ()</td></tr>
+<tr class="memdesc:a2e267a071d59a103cfdc7e213a445d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new irq struct. <br /></td></tr>
+<tr class="separator:a2e267a071d59a103cfdc7e213a445d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd890179799ac144691b1d639235dbd4"><td class="memItemLeft" align="right" valign="top"><a id="acd890179799ac144691b1d639235dbd4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#acd890179799ac144691b1d639235dbd4">__irq_struct_dealloc</a> (<a class="el" href="structirq__struct__t.html">irq_struct_t</a> *irq_struct)</td></tr>
+<tr class="memdesc:acd890179799ac144691b1d639235dbd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys an irq struct. <br /></td></tr>
+<tr class="separator:acd890179799ac144691b1d639235dbd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0eee1178db521b54c55074c2bdfebc73"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__isr.html#ga0eee1178db521b54c55074c2bdfebc73">irq_init</a> ()</td></tr>
 <tr class="memdesc:ga0eee1178db521b54c55074c2bdfebc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each interrupt irq_init sets a default handler which prints the rose IRQ line and stops kernel execution. <br /></td></tr>
@@ -131,6 +140,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <tr class="memitem:ga98ae156e2accee60877a550db4b4d70b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__isr.html#ga98ae156e2accee60877a550db4b4d70b">irq_handler</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:ga98ae156e2accee60877a550db4b4d70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method called by CPU to handle interrupts.  <a href="group__isr.html#ga98ae156e2accee60877a550db4b4d70b">More...</a><br /></td></tr>
 <tr class="separator:ga98ae156e2accee60877a550db4b4d70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa6d214c2ebfac2d182274c7b0bec1b24"><td class="memItemLeft" align="right" valign="top"><a id="aa6d214c2ebfac2d182274c7b0bec1b24"></a>
+static <a class="el" href="structlist__head.html">list_head</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#aa6d214c2ebfac2d182274c7b0bec1b24">shared_interrupt_handlers</a> [<a class="el" href="pic8259_8h.html#a9c4e2ecb130b67be05fea17bb291b2ac">IRQ_NUM</a>]</td></tr>
+<tr class="memdesc:aa6d214c2ebfac2d182274c7b0bec1b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each IRQ, a chain of handlers. <br /></td></tr>
+<tr class="separator:aa6d214c2ebfac2d182274c7b0bec1b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f0f4ea0af08904efa261e4e5f40855"><td class="memItemLeft" align="right" valign="top"><a id="a21f0f4ea0af08904efa261e4e5f40855"></a>
+static <a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#a21f0f4ea0af08904efa261e4e5f40855">irq_cache</a></td></tr>
+<tr class="memdesc:a21f0f4ea0af08904efa261e4e5f40855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache where we will store the data regarding an irq service. <br /></td></tr>
+<tr class="separator:a21f0f4ea0af08904efa261e4e5f40855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions which manage the Interrupt Service Routines (ISRs). </p>
@@ -144,7 +164,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -154,6 +154,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sche
 <tr class="memitem:ad5a2ea87b50340ee4a94c42cea69806d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#ad5a2ea87b50340ee4a94c42cea69806d">scheduler_enter_user_jmp</a> (<a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> location, <a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> stack)</td></tr>
 <tr class="memdesc:ad5a2ea87b50340ee4a94c42cea69806d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch CPU to user mode and start running that given process.  <a href="scheduler_8c.html#ad5a2ea87b50340ee4a94c42cea69806d">More...</a><br /></td></tr>
 <tr class="separator:ad5a2ea87b50340ee4a94c42cea69806d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a074511a787d859227252694367420d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#a4a074511a787d859227252694367420d">try_to_wake_up</a> (<a class="el" href="structtask__struct.html">task_struct</a> *process, int mode, int sync)</td></tr>
+<tr class="memdesc:a4a074511a787d859227252694367420d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Awakens a sleeping process.  <a href="scheduler_8c.html#a4a074511a787d859227252694367420d">More...</a><br /></td></tr>
+<tr class="separator:a4a074511a787d859227252694367420d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a457bca3efb91a2ccf468b6007f5574e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#a457bca3efb91a2ccf468b6007f5574e2">default_wake_function</a> (<a class="el" href="structwait__queue__entry__t.html">wait_queue_entry_t</a> *<a class="el" href="waitpid_8c.html#abf2fbcf6df59fd5234e9eed4db1a1804">wait</a>, unsigned mode, int sync)</td></tr>
 <tr class="memdesc:a457bca3efb91a2ccf468b6007f5574e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default wake function, a wrapper for try_to_wake_up.  <a href="scheduler_8c.html#a457bca3efb91a2ccf468b6007f5574e2">More...</a><br /></td></tr>
 <tr class="separator:a457bca3efb91a2ccf468b6007f5574e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +210,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sche
 <tr class="memitem:ae55fc1d0c40153e4d95a32244fc2d41c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#ae55fc1d0c40153e4d95a32244fc2d41c">sys_sched_getparam</a> (<a class="el" href="mentos_2inc_2sys_2types_8h.html#a632d205ec0e6c1358e38dce69d918b78">pid_t</a> pid, <a class="el" href="structsched__param__t.html">sched_param_t</a> *param)</td></tr>
 <tr class="memdesc:ae55fc1d0c40153e4d95a32244fc2d41c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the scheduling settings for the given process.  <a href="scheduler_8c.html#ae55fc1d0c40153e4d95a32244fc2d41c">More...</a><br /></td></tr>
 <tr class="separator:ae55fc1d0c40153e4d95a32244fc2d41c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c315e88fe4b49e5d9424a7bdb38de5f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#a9c315e88fe4b49e5d9424a7bdb38de5f">__response_time_analysis</a> ()</td></tr>
+<tr class="memdesc:a9c315e88fe4b49e5d9424a7bdb38de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the response time analysis for the current list of periodic processes.  <a href="scheduler_8c.html#a9c315e88fe4b49e5d9424a7bdb38de5f">More...</a><br /></td></tr>
+<tr class="separator:a9c315e88fe4b49e5d9424a7bdb38de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d2d2c6fb6ae1c8394d1ab568f46c2c"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#a64d2d2c6fb6ae1c8394d1ab568f46c2c">__compute_utilization_factor</a> ()</td></tr>
+<tr class="memdesc:a64d2d2c6fb6ae1c8394d1ab568f46c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the total utilization factor.  <a href="scheduler_8c.html#a64d2d2c6fb6ae1c8394d1ab568f46c2c">More...</a><br /></td></tr>
+<tr class="separator:a64d2d2c6fb6ae1c8394d1ab568f46c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f756f9386e6264f715884e69f01efc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler_8c.html#a6f756f9386e6264f715884e69f01efc9">sys_waitperiod</a> ()</td></tr>
 <tr class="memdesc:a6f756f9386e6264f715884e69f01efc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts the process on wait until its next period starts.  <a href="scheduler_8c.html#a6f756f9386e6264f715884e69f01efc9">More...</a><br /></td></tr>
 <tr class="separator:a6f756f9386e6264f715884e69f01efc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +233,66 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a64d2d2c6fb6ae1c8394d1ab568f46c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d2d2c6fb6ae1c8394d1ab568f46c2c">&#9670;&nbsp;</a></span>__compute_utilization_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static double __compute_utilization_factor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the total utilization factor. </p>
+<dl class="section return"><dt>Returns</dt><dd>the utilization factor. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8c_source.html#l00651">651</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
+
+</div>
+</div>
+<a id="a9c315e88fe4b49e5d9424a7bdb38de5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c315e88fe4b49e5d9424a7bdb38de5f">&#9670;&nbsp;</a></span>__response_time_analysis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __response_time_analysis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs the response time analysis for the current list of periodic processes. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 if scheduling periodic processes is feasible, 0 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8c_source.html#l00602">602</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
+
+</div>
+</div>
 <a id="a457bca3efb91a2ccf468b6007f5574e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a457bca3efb91a2ccf468b6007f5574e2">&#9670;&nbsp;</a></span>default_wake_function()</h2>
 
@@ -1155,6 +1224,61 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a4a074511a787d859227252694367420d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a074511a787d859227252694367420d">&#9670;&nbsp;</a></span>try_to_wake_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int try_to_wake_up </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td>
+          <td class="paramname"><em>process</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sync</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Awakens a sleeping process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">process</td><td>The process that should be awakened </td></tr>
+    <tr><td class="paramname">mode</td><td>The type of wait (TASK_INTERRUPTIBLE or TASK_UNINTERRUPTIBLE). </td></tr>
+    <tr><td class="paramname">sync</td><td>Specifies if the wakeup should be synchronous. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 on success, 0 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8c_source.html#l00216">216</a> of file <a class="el" href="scheduler_8c_source.html">scheduler.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -1162,7 +1286,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

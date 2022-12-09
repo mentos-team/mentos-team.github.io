@@ -69,7 +69,8 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Advanced Technology Attachment (ATA)<div class="ingroups"><a class="el" href="group__drivers.html">Device Drivers</a></div></div>  </div>
 </div><!--header-->
@@ -230,6 +231,123 @@ Functions</h2></td></tr>
 <tr class="memitem:ga46f112f823677dadfb518f8cdd95144e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga46f112f823677dadfb518f8cdd95144e">ata_finalize</a> ()</td></tr>
 <tr class="memdesc:ga46f112f823677dadfb518f8cdd95144e"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes the ATA drivers.  <a href="group__ata.html#ga46f112f823677dadfb518f8cdd95144e">More...</a><br /></td></tr>
 <tr class="separator:ga46f112f823677dadfb518f8cdd95144e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0285034a9657c7e2ca2192ac14622419"><td class="memItemLeft" align="right" valign="top"><a id="ga0285034a9657c7e2ca2192ac14622419"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_read_sector</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *, <a class="el" href="stdint_8h.html#a33374f76943e191390ccf6a1ba184d39">uint64_t</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *)</td></tr>
+<tr class="separator:ga0285034a9657c7e2ca2192ac14622419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaace5aa98e26126537e9df364569be719"><td class="memItemLeft" align="right" valign="top"><a id="gaace5aa98e26126537e9df364569be719"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_write_sector</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *, <a class="el" href="stdint_8h.html#a33374f76943e191390ccf6a1ba184d39">uint64_t</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *)</td></tr>
+<tr class="separator:gaace5aa98e26126537e9df364569be719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c2a7a22e7c6c513d29bec38060a9439"><td class="memItemLeft" align="right" valign="top"><a id="ga7c2a7a22e7c6c513d29bec38060a9439"></a>
+static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ata_open</b> (const char *, int, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>)</td></tr>
+<tr class="separator:ga7c2a7a22e7c6c513d29bec38060a9439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4f90548ca5552ef056d579556fde62f"><td class="memItemLeft" align="right" valign="top"><a id="gac4f90548ca5552ef056d579556fde62f"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ata_close</b> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *)</td></tr>
+<tr class="separator:gac4f90548ca5552ef056d579556fde62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b412ec7cd6bf844048006a611151804"><td class="memItemLeft" align="right" valign="top"><a id="ga2b412ec7cd6bf844048006a611151804"></a>
+static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_read</b> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *, char *, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>)</td></tr>
+<tr class="separator:ga2b412ec7cd6bf844048006a611151804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef7b2933590605a0f758afa4579519ef"><td class="memItemLeft" align="right" valign="top"><a id="gaef7b2933590605a0f758afa4579519ef"></a>
+static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_write</b> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *, const void *, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>)</td></tr>
+<tr class="separator:gaef7b2933590605a0f758afa4579519ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50340da1985c7794c45fbb834d23d038"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga50340da1985c7794c45fbb834d23d038">ata_fstat</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:ga50340da1985c7794c45fbb834d23d038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="group__ata.html#ga50340da1985c7794c45fbb834d23d038">More...</a><br /></td></tr>
+<tr class="separator:ga50340da1985c7794c45fbb834d23d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf2d5a559aebc59e35188b053e0ca388"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#gadf2d5a559aebc59e35188b053e0ca388">ata_stat</a> (const char *path, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:gadf2d5a559aebc59e35188b053e0ca388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="group__ata.html#gadf2d5a559aebc59e35188b053e0ca388">More...</a><br /></td></tr>
+<tr class="separator:gadf2d5a559aebc59e35188b053e0ca388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50b808749549914d6d6be86dd26eb4f5"><td class="memItemLeft" align="right" valign="top"><a id="ga50b808749549914d6d6be86dd26eb4f5"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ata_get_device_status_str</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:ga50b808749549914d6d6be86dd26eb4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40b128057045e780308fb99fd5d65da8"><td class="memItemLeft" align="right" valign="top"><a id="ga40b128057045e780308fb99fd5d65da8"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ata_get_device_settings_str</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:ga40b128057045e780308fb99fd5d65da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18d30ef0d5778c10ee92c604d20b0815"><td class="memItemLeft" align="right" valign="top"><a id="ga18d30ef0d5778c10ee92c604d20b0815"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ata_get_device_type_str</b> (<a class="el" href="group__ata.html#ga801e3b546b4a7f9abab36f397765b787">ata_device_type_t</a> type)</td></tr>
+<tr class="separator:ga18d30ef0d5778c10ee92c604d20b0815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93621c0c75fc9c2d9c83cfc8419c3c20"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga93621c0c75fc9c2d9c83cfc8419c3c20">ata_io_wait</a> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="memdesc:ga93621c0c75fc9c2d9c83cfc8419c3c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for 400 nanoseconds.  <a href="group__ata.html#ga93621c0c75fc9c2d9c83cfc8419c3c20">More...</a><br /></td></tr>
+<tr class="separator:ga93621c0c75fc9c2d9c83cfc8419c3c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e47bcda5abf94db9000ad6fcfdc83dd"><td class="memItemLeft" align="right" valign="top"><a id="ga8e47bcda5abf94db9000ad6fcfdc83dd"></a>
+static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_status_wait</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev, int timeout)</td></tr>
+<tr class="separator:ga8e47bcda5abf94db9000ad6fcfdc83dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9c2775e7a18315d70dad303794c463e"><td class="memItemLeft" align="right" valign="top"><a id="gaa9c2775e7a18315d70dad303794c463e"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ata_wait</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev, <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> advanced)</td></tr>
+<tr class="separator:gaa9c2775e7a18315d70dad303794c463e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1719cf9a4ffee40d6e8a5766e30da765"><td class="memItemLeft" align="right" valign="top"><a id="ga1719cf9a4ffee40d6e8a5766e30da765"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_select</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:ga1719cf9a4ffee40d6e8a5766e30da765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb3f9cf30fcb79abb99c6f447fddf17f"><td class="memItemLeft" align="right" valign="top"><a id="gadb3f9cf30fcb79abb99c6f447fddf17f"></a>
+static <a class="el" href="stdint_8h.html#a33374f76943e191390ccf6a1ba184d39">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_max_offset</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:gadb3f9cf30fcb79abb99c6f447fddf17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4e75b4f43a1dc994ea7cb10a4843bc4"><td class="memItemLeft" align="right" valign="top"><a id="gaf4e75b4f43a1dc994ea7cb10a4843bc4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ata_fix_string</b> (char *str, unsigned len)</td></tr>
+<tr class="separator:gaf4e75b4f43a1dc994ea7cb10a4843bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9355d5df06bd280281a999828f9c9bd8"><td class="memItemLeft" align="right" valign="top"><a id="ga9355d5df06bd280281a999828f9c9bd8"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_read_device_identity</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev, <a class="el" href="group__ata.html#gaaa94696717cd90f157acac5b64762ab1">ata_identity_command_t</a> command)</td></tr>
+<tr class="separator:ga9355d5df06bd280281a999828f9c9bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd21a6931e43d8a7b52f6b2932c5d692"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#gacd21a6931e43d8a7b52f6b2932c5d692">ata_soft_reset</a> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="memdesc:gacd21a6931e43d8a7b52f6b2932c5d692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a soft reset of the device.  <a href="group__ata.html#gacd21a6931e43d8a7b52f6b2932c5d692">More...</a><br /></td></tr>
+<tr class="separator:gacd21a6931e43d8a7b52f6b2932c5d692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga874aed42395a95c13241f9975f86e52b"><td class="memItemLeft" align="right" valign="top"><a id="ga874aed42395a95c13241f9975f86e52b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ata_enable_bus_mastering</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:ga874aed42395a95c13241f9975f86e52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5c04b4e83e210ec0756a768b0983d0a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#gab5c04b4e83e210ec0756a768b0983d0a">ata_initialize_bus_mastering_address</a> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="memdesc:gab5c04b4e83e210ec0756a768b0983d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the bmr field of the ATA device.  <a href="group__ata.html#gab5c04b4e83e210ec0756a768b0983d0a">More...</a><br /></td></tr>
+<tr class="separator:gab5c04b4e83e210ec0756a768b0983d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc96ed702ef3482384679d965d7b2a68"><td class="memItemLeft" align="right" valign="top"><a id="gabc96ed702ef3482384679d965d7b2a68"></a>
+static <a class="el" href="group__ata.html#ga801e3b546b4a7f9abab36f397765b787">ata_device_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_detect_device_type</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:gabc96ed702ef3482384679d965d7b2a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00830ff07042dbb8efa1a15b506f1471"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga00830ff07042dbb8efa1a15b506f1471">malloc_dma</a> (<a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> size, <a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> *physical)</td></tr>
+<tr class="memdesc:ga00830ff07042dbb8efa1a15b506f1471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the DMA memory area used to write and read on the device.  <a href="group__ata.html#ga00830ff07042dbb8efa1a15b506f1471">More...</a><br /></td></tr>
+<tr class="separator:ga00830ff07042dbb8efa1a15b506f1471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabec34b367c184d496926221f1d214719"><td class="memItemLeft" align="right" valign="top"><a id="gabec34b367c184d496926221f1d214719"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_init</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:gabec34b367c184d496926221f1d214719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f9dc1d3c4f39a68eac3d6d9b640952f"><td class="memItemLeft" align="right" valign="top"><a id="ga3f9dc1d3c4f39a68eac3d6d9b640952f"></a>
+static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_create</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:ga3f9dc1d3c4f39a68eac3d6d9b640952f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe346204c6d1c164a679d676809f1237"><td class="memItemLeft" align="right" valign="top"><a id="gabe346204c6d1c164a679d676809f1237"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>_ata_stat</b> (const <a class="el" href="structata__device__t.html">ata_device_t</a> *dev, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="separator:gabe346204c6d1c164a679d676809f1237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6e44efe14bf555fe937ab774dad4775"><td class="memItemLeft" align="right" valign="top"><a id="gae6e44efe14bf555fe937ab774dad4775"></a>
+static <a class="el" href="group__ata.html#ga801e3b546b4a7f9abab36f397765b787">ata_device_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_device_detect</b> (<a class="el" href="structata__device__t.html">ata_device_t</a> *dev)</td></tr>
+<tr class="separator:gae6e44efe14bf555fe937ab774dad4775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga148512be6ea8cf96aff9dd754bca4114"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga148512be6ea8cf96aff9dd754bca4114">ata_irq_handler_master</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="separator:ga148512be6ea8cf96aff9dd754bca4114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga684659750f7460df9e9f3628595a9704"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga684659750f7460df9e9f3628595a9704">ata_irq_handler_slave</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="separator:ga684659750f7460df9e9f3628595a9704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga593d5e75eea7c5cd0984d71ea6044136"><td class="memItemLeft" align="right" valign="top"><a id="ga593d5e75eea7c5cd0984d71ea6044136"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>pci_find_ata</b> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dev, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> vid, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> did, void *extra)</td></tr>
+<tr class="separator:ga593d5e75eea7c5cd0984d71ea6044136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga11ca803b145114bdc687a1c5c08a9b38"><td class="memItemLeft" align="right" valign="top"><a id="ga11ca803b145114bdc687a1c5c08a9b38"></a>
+static <a class="el" href="spinlock_8h.html#a1a7da4ce80f3ccdd08051012ff5580ff">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_lock</b></td></tr>
+<tr class="separator:ga11ca803b145114bdc687a1c5c08a9b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga493bfdaa37a0c09fff9a5a649240b748"><td class="memItemLeft" align="right" valign="top"><a id="ga493bfdaa37a0c09fff9a5a649240b748"></a>
+static char&#160;</td><td class="memItemRight" valign="bottom"><b>ata_drive_char</b> = 'a'</td></tr>
+<tr class="separator:ga493bfdaa37a0c09fff9a5a649240b748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa575ef61dc5daf99c6f24f6b970cc08d"><td class="memItemLeft" align="right" valign="top"><a id="gaa575ef61dc5daf99c6f24f6b970cc08d"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>cdrom_number</b> = 0</td></tr>
+<tr class="separator:gaa575ef61dc5daf99c6f24f6b970cc08d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51da0f873ce63fa0c8a0c3d1687cbeec"><td class="memItemLeft" align="right" valign="top"><a id="ga51da0f873ce63fa0c8a0c3d1687cbeec"></a>
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_pci</b> = 0x00000000</td></tr>
+<tr class="separator:ga51da0f873ce63fa0c8a0c3d1687cbeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4bedb79b10d6b70a7f1f6be42050f9c2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structata__device__t.html">ata_device_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_primary_master</b></td></tr>
+<tr class="separator:ga4bedb79b10d6b70a7f1f6be42050f9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae121e2eb04e127bcd100a67ac726ffb0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structata__device__t.html">ata_device_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_primary_slave</b></td></tr>
+<tr class="separator:gae121e2eb04e127bcd100a67ac726ffb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa5e64b4b0f6011205b30fa5b8f5796f6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structata__device__t.html">ata_device_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_secondary_master</b></td></tr>
+<tr class="separator:gaa5e64b4b0f6011205b30fa5b8f5796f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed88d27a6875970c034bd49a27126a75"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structata__device__t.html">ata_device_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ata_secondary_slave</b></td></tr>
+<tr class="separator:gaed88d27a6875970c034bd49a27126a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ea20d36411e82a521b90a81c7626df1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga0ea20d36411e82a521b90a81c7626df1">ata_sys_operations</a></td></tr>
+<tr class="memdesc:ga0ea20d36411e82a521b90a81c7626df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem general operations.  <a href="group__ata.html#ga0ea20d36411e82a521b90a81c7626df1">More...</a><br /></td></tr>
+<tr class="separator:ga0ea20d36411e82a521b90a81c7626df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c75236c710800c16399297e1b468ca6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ata.html#ga8c75236c710800c16399297e1b468ca6">ata_fs_operations</a></td></tr>
+<tr class="memdesc:ga8c75236c710800c16399297e1b468ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATA filesystem file operations.  <a href="group__ata.html#ga8c75236c710800c16399297e1b468ca6">More...</a><br /></td></tr>
+<tr class="separator:ga8c75236c710800c16399297e1b468ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Drivers for the Advanced Technology Attachment (ATA) devices. </p>
@@ -483,6 +601,54 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga50340da1985c7794c45fbb834d23d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50340da1985c7794c45fbb834d23d038">&#9670;&nbsp;</a></span>ata_fstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ata_fstat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fid</td><td>The file struct. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l01031">1031</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
 <a id="gac4e5f4f4a8fdd06719defbe14a659cf3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac4e5f4f4a8fdd06719defbe14a659cf3">&#9670;&nbsp;</a></span>ata_initialize()</h2>
 
@@ -505,6 +671,521 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gab5c04b4e83e210ec0756a768b0983d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5c04b4e83e210ec0756a768b0983d0a">&#9670;&nbsp;</a></span>ata_initialize_bus_mastering_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ata_initialize_bus_mastering_address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structata__device__t.html">ata_device_t</a> *&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the bmr field of the ATA device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>the device to initialize.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>When you want to retrieve the actual base address of a BAR, be sure to mask the lower bits. For 16-bit Memory Space BARs, you calculate (BAR[x] &amp; 0xFFF0). For 32-bit Memory Space BARs, you calculate (BAR[x] &amp; 0xFFFFFFF0). </p>
+<p>When you want to retrieve the actual base address of a BAR, be sure to mask the lower bits, for I/O space BARs you calculate (BAR &amp; 0xFFFFFFFC).</p>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00562">562</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga93621c0c75fc9c2d9c83cfc8419c3c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93621c0c75fc9c2d9c83cfc8419c3c20">&#9670;&nbsp;</a></span>ata_io_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ata_io_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structata__device__t.html">ata_device_t</a> *&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Waits for 400 nanoseconds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>the device on which we wait. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00430">430</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga148512be6ea8cf96aff9dd754bca4114"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga148512be6ea8cf96aff9dd754bca4114">&#9670;&nbsp;</a></span>ata_irq_handler_master()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ata_irq_handler_master </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l01097">1097</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga684659750f7460df9e9f3628595a9704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga684659750f7460df9e9f3628595a9704">&#9670;&nbsp;</a></span>ata_irq_handler_slave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ata_irq_handler_slave </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l01107">1107</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="gacd21a6931e43d8a7b52f6b2932c5d692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd21a6931e43d8a7b52f6b2932c5d692">&#9670;&nbsp;</a></span>ata_soft_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ata_soft_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structata__device__t.html">ata_device_t</a> *&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs a soft reset of the device. </p>
+<p>"For non-ATAPI drives, the only method a driver has of resetting a
+drive after a major error is to do a "software reset" on the bus. Set bit 2 (SRST, value = 4) in the proper Control Register for the bus. This will reset both ATA devices on the bus." </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>the device on which we perform the soft reset. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00525">525</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="gadf2d5a559aebc59e35188b053e0ca388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf2d5a559aebc59e35188b053e0ca388">&#9670;&nbsp;</a></span>ata_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ata_stat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path where the file resides. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l01040">1040</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga00830ff07042dbb8efa1a15b506f1471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00830ff07042dbb8efa1a15b506f1471">&#9670;&nbsp;</a></span>malloc_dma()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> malloc_dma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> *&#160;</td>
+          <td class="paramname"><em>physical</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the DMA memory area used to write and read on the device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>the size of the DMA memory area. </td></tr>
+    <tr><td class="paramname">physical</td><td>the physical address of the DMA memory area. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the logical address of the DMA memory area. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00620">620</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="ga8c75236c710800c16399297e1b468ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c75236c710800c16399297e1b468ca6">&#9670;&nbsp;</a></span>ata_fs_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a> ata_fs_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .open_f     = ata_open,</div>
+<div class="line">    .unlink_f   = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">    .close_f    = ata_close,</div>
+<div class="line">    .read_f     = ata_read,</div>
+<div class="line">    .write_f    = ata_write,</div>
+<div class="line">    .lseek_f    = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">    .stat_f     = <a class="code" href="group__ata.html#ga50340da1985c7794c45fbb834d23d038">ata_fstat</a>,</div>
+<div class="line">    .ioctl_f    = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">    .getdents_f = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__ata_html_ga50340da1985c7794c45fbb834d23d038"><div class="ttname"><a href="group__ata.html#ga50340da1985c7794c45fbb834d23d038">ata_fstat</a></div><div class="ttdeci">static int ata_fstat(vfs_file_t *file, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="ata_8c_source.html#l01031">ata.c:1031</a></div></div>
+<div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">Define NULL.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00010">stddef.h:10</a></div></div>
+</div><!-- fragment -->
+<p>ATA filesystem file operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00822">822</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga4bedb79b10d6b70a7f1f6be42050f9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4bedb79b10d6b70a7f1f6be42050f9c2">&#9670;&nbsp;</a></span>ata_primary_master</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structata__device__t.html">ata_device_t</a> ata_primary_master</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .io_base = 0x1F0,</div>
+<div class="line">    .io_reg  = {</div>
+<div class="line">         .data         = 0x1F0 + 0x00,</div>
+<div class="line">         .error        = 0x1F0 + 0x01,</div>
+<div class="line">         .feature      = 0x1F0 + 0x01,</div>
+<div class="line">         .sector_count = 0x1F0 + 0x02,</div>
+<div class="line">         .lba_lo       = 0x1F0 + 0x03,</div>
+<div class="line">         .lba_mid      = 0x1F0 + 0x04,</div>
+<div class="line">         .lba_hi       = 0x1F0 + 0x05,</div>
+<div class="line">         .hddevsel     = 0x1F0 + 0x06,</div>
+<div class="line">         .status       = 0x1F0 + 0x07,</div>
+<div class="line">         .command      = 0x1F0 + 0x07,</div>
+<div class="line">    },</div>
+<div class="line">    .control_base = 0x3F6,</div>
+<div class="line">    .slave        = 0,</div>
+<div class="line">    .primary      = <span class="keyword">true</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00298">298</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="gae121e2eb04e127bcd100a67ac726ffb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae121e2eb04e127bcd100a67ac726ffb0">&#9670;&nbsp;</a></span>ata_primary_slave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structata__device__t.html">ata_device_t</a> ata_primary_slave</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .io_base = 0x1F0,</div>
+<div class="line">    .io_reg  = {</div>
+<div class="line">         .data         = 0x1F0 + 0x00,</div>
+<div class="line">         .error        = 0x1F0 + 0x01,</div>
+<div class="line">         .feature      = 0x1F0 + 0x01,</div>
+<div class="line">         .sector_count = 0x1F0 + 0x02,</div>
+<div class="line">         .lba_lo       = 0x1F0 + 0x03,</div>
+<div class="line">         .lba_mid      = 0x1F0 + 0x04,</div>
+<div class="line">         .lba_hi       = 0x1F0 + 0x05,</div>
+<div class="line">         .hddevsel     = 0x1F0 + 0x06,</div>
+<div class="line">         .status       = 0x1F0 + 0x07,</div>
+<div class="line">         .command      = 0x1F0 + 0x07,</div>
+<div class="line">    },</div>
+<div class="line">    .control_base = 0x3F6,</div>
+<div class="line">    .slave        = 1,</div>
+<div class="line">    .primary      = <span class="keyword">true</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00317">317</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="gaa5e64b4b0f6011205b30fa5b8f5796f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5e64b4b0f6011205b30fa5b8f5796f6">&#9670;&nbsp;</a></span>ata_secondary_master</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structata__device__t.html">ata_device_t</a> ata_secondary_master</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .io_base = 0x170,</div>
+<div class="line">    .io_reg  = {</div>
+<div class="line">         .data         = 0x170 + 0x00,</div>
+<div class="line">         .error        = 0x170 + 0x01,</div>
+<div class="line">         .feature      = 0x170 + 0x01,</div>
+<div class="line">         .sector_count = 0x170 + 0x02,</div>
+<div class="line">         .lba_lo       = 0x170 + 0x03,</div>
+<div class="line">         .lba_mid      = 0x170 + 0x04,</div>
+<div class="line">         .lba_hi       = 0x170 + 0x05,</div>
+<div class="line">         .hddevsel     = 0x170 + 0x06,</div>
+<div class="line">         .status       = 0x170 + 0x07,</div>
+<div class="line">         .command      = 0x170 + 0x07,</div>
+<div class="line">    },</div>
+<div class="line">    .control_base = 0x376,</div>
+<div class="line">    .slave        = 0,</div>
+<div class="line">    .primary      = <span class="keyword">false</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00336">336</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="gaed88d27a6875970c034bd49a27126a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed88d27a6875970c034bd49a27126a75">&#9670;&nbsp;</a></span>ata_secondary_slave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structata__device__t.html">ata_device_t</a> ata_secondary_slave</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .io_base = 0x170,</div>
+<div class="line">    .io_reg  = {</div>
+<div class="line">         .data         = 0x170 + 0x00,</div>
+<div class="line">         .error        = 0x170 + 0x01,</div>
+<div class="line">         .feature      = 0x170 + 0x01,</div>
+<div class="line">         .sector_count = 0x170 + 0x02,</div>
+<div class="line">         .lba_lo       = 0x170 + 0x03,</div>
+<div class="line">         .lba_mid      = 0x170 + 0x04,</div>
+<div class="line">         .lba_hi       = 0x170 + 0x05,</div>
+<div class="line">         .hddevsel     = 0x170 + 0x06,</div>
+<div class="line">         .status       = 0x170 + 0x07,</div>
+<div class="line">         .command      = 0x170 + 0x07,</div>
+<div class="line">    },</div>
+<div class="line">    .control_base = 0x376,</div>
+<div class="line">    .slave        = 1,</div>
+<div class="line">    .primary      = <span class="keyword">false</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00355">355</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
+<a id="ga0ea20d36411e82a521b90a81c7626df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ea20d36411e82a521b90a81c7626df1">&#9670;&nbsp;</a></span>ata_sys_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a> ata_sys_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .mkdir_f = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">    .rmdir_f = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line">    .stat_f  = <a class="code" href="group__ata.html#gadf2d5a559aebc59e35188b053e0ca388">ata_stat</a></div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__ata_html_gadf2d5a559aebc59e35188b053e0ca388"><div class="ttname"><a href="group__ata.html#gadf2d5a559aebc59e35188b053e0ca388">ata_stat</a></div><div class="ttdeci">static int ata_stat(const char *path, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="ata_8c_source.html#l01040">ata.c:1040</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem general operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="ata_8c_source.html#l00815">815</a> of file <a class="el" href="ata_8c_source.html">ata.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -512,7 +1193,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:54.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

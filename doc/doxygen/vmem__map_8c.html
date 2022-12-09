@@ -119,6 +119,9 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vmem__map_8c.html#a094fd2382db5d1b88d52f17e0c600494">virt_init</a> (void)</td></tr>
 <tr class="memdesc:a094fd2382db5d1b88d52f17e0c600494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the virtual memory mapper. <br /></td></tr>
 <tr class="separator:a094fd2382db5d1b88d52f17e0c600494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e017dfe4d2d2e92050f4bda08b69a1"><td class="memItemLeft" align="right" valign="top"><a id="ae5e017dfe4d2d2e92050f4bda08b69a1"></a>
+static <a class="el" href="structvirt__map__page__t.html">virt_map_page_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_alloc_virt_pages</b> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pfn_count)</td></tr>
+<tr class="separator:ae5e017dfe4d2d2e92050f4bda08b69a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb499d5e04827bedfa7fc2cfd90b34f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vmem__map_8c.html#afb499d5e04827bedfa7fc2cfd90b34f0">virt_map_physical_pages</a> (<a class="el" href="structpage__t.html">page_t</a> *page, int pfn_count)</td></tr>
 <tr class="memdesc:afb499d5e04827bedfa7fc2cfd90b34f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map a page range to virtual memory.  <a href="vmem__map_8c.html#afb499d5e04827bedfa7fc2cfd90b34f0">More...</a><br /></td></tr>
 <tr class="separator:afb499d5e04827bedfa7fc2cfd90b34f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +146,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vmem
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a2c1ba4809c88319580b5e8cc16debcec"><td class="memItemLeft" align="right" valign="top"><a id="a2c1ba4809c88319580b5e8cc16debcec"></a>
+static <a class="el" href="structvirt__map__page__manager__t.html">virt_map_page_manager_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vmem__map_8c.html#a2c1ba4809c88319580b5e8cc16debcec">virt_default_mapping</a></td></tr>
+<tr class="memdesc:a2c1ba4809c88319580b5e8cc16debcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual addresses manager. <br /></td></tr>
+<tr class="separator:a2c1ba4809c88319580b5e8cc16debcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7005469a725d3d9ad38cc58d7c28c8aa"><td class="memItemLeft" align="right" valign="top"><a id="a7005469a725d3d9ad38cc58d7c28c8aa"></a>
 <a class="el" href="structvirt__map__page__t.html">virt_map_page_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vmem__map_8c.html#a7005469a725d3d9ad38cc58d7c28c8aa">virt_pages</a> [<a class="el" href="vmem__map_8c.html#a8bc7838f81ed833b4401620fcd5521a4">VIRTUAL_MEMORY_PAGES_COUNT</a>]</td></tr>
 <tr class="memdesc:a7005469a725d3d9ad38cc58d7c28c8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of virtual pages. <br /></td></tr>
@@ -429,7 +436,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

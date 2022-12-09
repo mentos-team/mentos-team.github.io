@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">process.c File Reference</div>  </div>
 </div><!--header-->
@@ -110,6 +111,24 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3de12e2df80906e114483ac212f9a3b4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a3de12e2df80906e114483ac212f9a3b4">__count_args</a> (char **args)</td></tr>
+<tr class="memdesc:a3de12e2df80906e114483ac212f9a3b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of arguments.  <a href="process_8c.html#a3de12e2df80906e114483ac212f9a3b4">More...</a><br /></td></tr>
+<tr class="separator:a3de12e2df80906e114483ac212f9a3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cda375a61ffc2198644d07c98a1f44"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#ab6cda375a61ffc2198644d07c98a1f44">__count_args_bytes</a> (char **args)</td></tr>
+<tr class="memdesc:ab6cda375a61ffc2198644d07c98a1f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the bytes occupied by the arguments.  <a href="process_8c.html#ab6cda375a61ffc2198644d07c98a1f44">More...</a><br /></td></tr>
+<tr class="separator:ab6cda375a61ffc2198644d07c98a1f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37bf2a03cf9aa2bc0492ac46e83db38"><td class="memItemLeft" align="right" valign="top">static char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#ad37bf2a03cf9aa2bc0492ac46e83db38">__push_args_on_stack</a> (<a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> *stack, char *args[])</td></tr>
+<tr class="memdesc:ad37bf2a03cf9aa2bc0492ac46e83db38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the arguments on the stack.  <a href="process_8c.html#ad37bf2a03cf9aa2bc0492ac46e83db38">More...</a><br /></td></tr>
+<tr class="separator:ad37bf2a03cf9aa2bc0492ac46e83db38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8916b6c151bb3b2a1dcb81ca691886fb"><td class="memItemLeft" align="right" valign="top"><a id="a8916b6c151bb3b2a1dcb81ca691886fb"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__reset_process</b> (<a class="el" href="structtask__struct.html">task_struct</a> *task)</td></tr>
+<tr class="separator:a8916b6c151bb3b2a1dcb81ca691886fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7521647dcbcfa0ce92288c8eecda6507"><td class="memItemLeft" align="right" valign="top"><a id="a7521647dcbcfa0ce92288c8eecda6507"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__load_executable</b> (const char *path, <a class="el" href="structtask__struct.html">task_struct</a> *task, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *entry)</td></tr>
+<tr class="separator:a7521647dcbcfa0ce92288c8eecda6507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7909982f3b5079ee4117fad68b1206e1"><td class="memItemLeft" align="right" valign="top"><a id="a7909982f3b5079ee4117fad68b1206e1"></a>
+static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__alloc_task</b> (<a class="el" href="structtask__struct.html">task_struct</a> *source, <a class="el" href="structtask__struct.html">task_struct</a> *parent, const char *name)</td></tr>
+<tr class="separator:a7909982f3b5079ee4117fad68b1206e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e0316d44416bfe809d434edfb2ac16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a12e0316d44416bfe809d434edfb2ac16">init_tasking</a> ()</td></tr>
 <tr class="memdesc:a12e0316d44416bfe809d434edfb2ac16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the task management.  <a href="process_8c.html#a12e0316d44416bfe809d434edfb2ac16">More...</a><br /></td></tr>
 <tr class="separator:a12e0316d44416bfe809d434edfb2ac16"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +150,17 @@ Functions</h2></td></tr>
 <tr class="memitem:ad598c24e0e2860e850bd48a217282bd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#ad598c24e0e2860e850bd48a217282bd0">sys_execve</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:ad598c24e0e2860e850bd48a217282bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image.  <a href="process_8c.html#ad598c24e0e2860e850bd48a217282bd0">More...</a><br /></td></tr>
 <tr class="separator:ad598c24e0e2860e850bd48a217282bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a360b960e9d73f0b087cbd05790218aa9"><td class="memItemLeft" align="right" valign="top"><a id="a360b960e9d73f0b087cbd05790218aa9"></a>
+static <a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#a360b960e9d73f0b087cbd05790218aa9">task_struct_cache</a></td></tr>
+<tr class="memdesc:a360b960e9d73f0b087cbd05790218aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for creating the task structs. <br /></td></tr>
+<tr class="separator:a360b960e9d73f0b087cbd05790218aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d34dca0271a77927ccfb74bdc27404"><td class="memItemLeft" align="right" valign="top"><a id="ac7d34dca0271a77927ccfb74bdc27404"></a>
+static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="process_8c.html#ac7d34dca0271a77927ccfb74bdc27404">init_proc</a></td></tr>
+<tr class="memdesc:ac7d34dca0271a77927ccfb74bdc27404"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structtask__struct.html" title="this is our task object. Every process in the system has this, and it holds a lot of information....">task_struct</a> of the init process. <br /></td></tr>
+<tr class="separator:ac7d34dca0271a77927ccfb74bdc27404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Process data structures and functions. </p>
@@ -138,6 +168,128 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="process_8c_source.html">process.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a3de12e2df80906e114483ac212f9a3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de12e2df80906e114483ac212f9a3b4">&#9670;&nbsp;</a></span>__count_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __count_args </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Counts the number of arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the array of arguments, it must be NULL terminated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of arguments. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00037">37</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+
+</div>
+</div>
+<a id="ab6cda375a61ffc2198644d07c98a1f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cda375a61ffc2198644d07c98a1f44">&#9670;&nbsp;</a></span>__count_args_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __count_args_bytes </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Counts the bytes occupied by the arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>the array of arguments, it must be NULL terminated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the bytes occupied by the arguments. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00048">48</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+
+</div>
+</div>
+<a id="ad37bf2a03cf9aa2bc0492ac46e83db38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37bf2a03cf9aa2bc0492ac46e83db38">&#9670;&nbsp;</a></span>__push_args_on_stack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static char** __push_args_on_stack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a> *&#160;</td>
+          <td class="paramname"><em>stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>args</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes the arguments on the stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stack</td><td>pointer to the stack location. </td></tr>
+    <tr><td class="paramname">args</td><td>the list of arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the final position of the stack, where the list of pushed arguments is stored. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="process_8c_source.html#l00064">64</a> of file <a class="el" href="process_8c_source.html">process.c</a>.</p>
+
+</div>
+</div>
 <a id="a12e0316d44416bfe809d434edfb2ac16"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12e0316d44416bfe809d434edfb2ac16">&#9670;&nbsp;</a></span>init_tasking()</h2>
 
@@ -352,7 +504,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

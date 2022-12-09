@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="prio_8h.html#aeeb0a2abe27f81cbec9f5a4748b3fa4c">   52</a></span>&#160;<span class="preprocessor">#define MAX_USER_PRIO (USER_PRIO(MAX_PRIO))</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> prio_to_weight[<a class="code" href="prio_8h.html#a0d8180edbb9cd028cecbb67c9d063717">NICE_WIDTH</a>] = {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="prio_8h.html#a7334948f234a229c3da87f4c86666981">   56</a></span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="prio_8h.html#a7334948f234a229c3da87f4c86666981">prio_to_weight</a>[<a class="code" href="prio_8h.html#a0d8180edbb9cd028cecbb67c9d063717">NICE_WIDTH</a>] = {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">/* 100 */</span> 88761, 71755, 56483, 46273, 36291,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">/* 105 */</span> 29154, 23254, 18705, 14949, 11916,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">/* 110 */</span> 9548, 7620, 6100, 4904, 3906,</div>
@@ -121,6 +121,7 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="prio_8h.html#a01d626731f4fb452c257fd15a28d7b82">   71</a></span>&#160;<span class="preprocessor">#define NICE_0_LOAD GET_WEIGHT(DEFAULT_PRIO)</span></div>
 <div class="ttc" id="aprio_8h_html_a0d8180edbb9cd028cecbb67c9d063717"><div class="ttname"><a href="prio_8h.html#a0d8180edbb9cd028cecbb67c9d063717">NICE_WIDTH</a></div><div class="ttdeci">#define NICE_WIDTH</div><div class="ttdoc">Niceness range.</div><div class="ttdef"><b>Definition:</b> <a href="prio_8h_source.html#l00024">prio.h:24</a></div></div>
+<div class="ttc" id="aprio_8h_html_a7334948f234a229c3da87f4c86666981"><div class="ttname"><a href="prio_8h.html#a7334948f234a229c3da87f4c86666981">prio_to_weight</a></div><div class="ttdeci">static const int prio_to_weight[NICE_WIDTH]</div><div class="ttdoc">Table that transforms the priority into a weight, used for computing the virtual runtime.</div><div class="ttdef"><b>Definition:</b> <a href="prio_8h_source.html#l00056">prio.h:56</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -128,7 +129,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

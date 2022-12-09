@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">signal.c File Reference</div>  </div>
 </div><!--header-->
@@ -105,9 +106,56 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:af916494a0a930153d9324c3f7733773a"><td class="memItemLeft" align="right" valign="top"><a id="af916494a0a930153d9324c3f7733773a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__copy_siginfo</b> (<a class="el" href="structsiginfo__t.html">siginfo_t</a> *to, const <a class="el" href="structsiginfo__t.html">siginfo_t</a> *from)</td></tr>
+<tr class="separator:af916494a0a930153d9324c3f7733773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4252d79b00a469228b71ec5b9d909f0"><td class="memItemLeft" align="right" valign="top"><a id="af4252d79b00a469228b71ec5b9d909f0"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__clear_siginfo</b> (<a class="el" href="structsiginfo__t.html">siginfo_t</a> *info)</td></tr>
+<tr class="separator:af4252d79b00a469228b71ec5b9d909f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa368c003920e4bce21e72c40632ea6e6"><td class="memItemLeft" align="right" valign="top"><a id="aa368c003920e4bce21e72c40632ea6e6"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__lock_task_sighand</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *t)</td></tr>
+<tr class="separator:aa368c003920e4bce21e72c40632ea6e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d87c0078dce27cb1cbe776896737bf"><td class="memItemLeft" align="right" valign="top"><a id="a99d87c0078dce27cb1cbe776896737bf"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__unlock_task_sighand</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *t)</td></tr>
+<tr class="separator:a99d87c0078dce27cb1cbe776896737bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71a443909fd69e548cc9f34993fa3ea"><td class="memItemLeft" align="right" valign="top"><a id="ab71a443909fd69e548cc9f34993fa3ea"></a>
+static <a class="el" href="libc_2inc_2signal_8h.html#a754cdc0bcfffe07baa426dc252c9101a">sighandler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>__get_handler</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *t, int sig)</td></tr>
+<tr class="separator:ab71a443909fd69e548cc9f34993fa3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3edb10922e60b0d79177536002a1f12"><td class="memItemLeft" align="right" valign="top"><a id="ab3edb10922e60b0d79177536002a1f12"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__sig_is_ignored</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *t, int sig)</td></tr>
+<tr class="separator:ab3edb10922e60b0d79177536002a1f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57526aef6954224feaee0e0b1e632f1c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structsigqueue__t.html">sigqueue_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#a57526aef6954224feaee0e0b1e632f1c">__sigqueue_alloc</a> (struct <a class="el" href="structtask__struct.html">task_struct</a> *t, int sig, <a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a> flags)</td></tr>
+<tr class="memdesc:a57526aef6954224feaee0e0b1e632f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a new signal queue record.  <a href="mentos_2src_2system_2signal_8c.html#a57526aef6954224feaee0e0b1e632f1c">More...</a><br /></td></tr>
+<tr class="separator:a57526aef6954224feaee0e0b1e632f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac355f228fbdb80bf6236701f69d0fc4"><td class="memItemLeft" align="right" valign="top"><a id="aac355f228fbdb80bf6236701f69d0fc4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__sigqueue_free</b> (<a class="el" href="structsigqueue__t.html">sigqueue_t</a> *q)</td></tr>
+<tr class="separator:aac355f228fbdb80bf6236701f69d0fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68822b4b647046069f335d6538854092"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#a68822b4b647046069f335d6538854092">__send_signal</a> (int sig, <a class="el" href="structsiginfo__t.html">siginfo_t</a> *info, struct <a class="el" href="structtask__struct.html">task_struct</a> *t)</td></tr>
+<tr class="separator:a68822b4b647046069f335d6538854092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a48271f71884da27cbb5bc5318da54e"><td class="memItemLeft" align="right" valign="top"><a id="a2a48271f71884da27cbb5bc5318da54e"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__next_signal</b> (<a class="el" href="structsigpending__t.html">sigpending_t</a> *pending, <a class="el" href="structsigset__t.html">sigset_t</a> *mask)</td></tr>
+<tr class="separator:a2a48271f71884da27cbb5bc5318da54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc2f5c9f74373550b18a17ce8c6a7df"><td class="memItemLeft" align="right" valign="top"><a id="accc2f5c9f74373550b18a17ce8c6a7df"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__collect_signal</b> (int sig, <a class="el" href="structsigpending__t.html">sigpending_t</a> *list, <a class="el" href="structsiginfo__t.html">siginfo_t</a> *info)</td></tr>
+<tr class="separator:accc2f5c9f74373550b18a17ce8c6a7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b1b9f0de965e04dc57317e1a8e8acf"><td class="memItemLeft" align="right" valign="top"><a id="a32b1b9f0de965e04dc57317e1a8e8acf"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__dequeue_signal</b> (<a class="el" href="structsigpending__t.html">sigpending_t</a> *pending, <a class="el" href="structsigset__t.html">sigset_t</a> *mask, <a class="el" href="structsiginfo__t.html">siginfo_t</a> *info)</td></tr>
+<tr class="separator:a32b1b9f0de965e04dc57317e1a8e8acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821b1e323664b41d2e79d8dd71f6a21b"><td class="memItemLeft" align="right" valign="top"><a id="a821b1e323664b41d2e79d8dd71f6a21b"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__handle_signal</b> (int signr, <a class="el" href="structsiginfo__t.html">siginfo_t</a> *info, <a class="el" href="structsigaction__t.html">sigaction_t</a> *ka, struct <a class="el" href="structpt__regs.html">pt_regs</a> *regs)</td></tr>
+<tr class="separator:a821b1e323664b41d2e79d8dd71f6a21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af32043d77c4b3688479c5ac093d2537f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#af32043d77c4b3688479c5ac093d2537f">sys_sigreturn</a> (struct <a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:af32043d77c4b3688479c5ac093d2537f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the return from a signal handler.  <a href="mentos_2src_2system_2signal_8c.html#af32043d77c4b3688479c5ac093d2537f">More...</a><br /></td></tr>
 <tr class="separator:af32043d77c4b3688479c5ac093d2537f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c8d281dc4174cd0407f503238c2b91"><td class="memItemLeft" align="right" valign="top"><a id="aa5c8d281dc4174cd0407f503238c2b91"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__notify_parent</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *current, int signr)</td></tr>
+<tr class="separator:aa5c8d281dc4174cd0407f503238c2b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c8fe44fce735c9e6448051514f3170c"><td class="memItemLeft" align="right" valign="top"><a id="a3c8fe44fce735c9e6448051514f3170c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__rm_from_queue</b> (<a class="el" href="structsigset__t.html">sigset_t</a> *mask, <a class="el" href="structsigpending__t.html">sigpending_t</a> *q)</td></tr>
+<tr class="separator:a3c8fe44fce735c9e6448051514f3170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f89134630f53c8a3388e38c141055f6"><td class="memItemLeft" align="right" valign="top"><a id="a4f89134630f53c8a3388e38c141055f6"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__do_signal_stop</b> (struct <a class="el" href="structtask__struct.html">task_struct</a> *current, struct <a class="el" href="structpt__regs.html">pt_regs</a> *f, int signr)</td></tr>
+<tr class="separator:a4f89134630f53c8a3388e38c141055f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace01f40f9bb1509a7d2c70950e358d38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#ace01f40f9bb1509a7d2c70950e358d38">do_signal</a> (struct <a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:ace01f40f9bb1509a7d2c70950e358d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the signals of the current process.  <a href="mentos_2src_2system_2signal_8c.html#ace01f40f9bb1509a7d2c70950e358d38">More...</a><br /></td></tr>
 <tr class="separator:ace01f40f9bb1509a7d2c70950e358d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +198,20 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d8c5ff284d58f2e492e420b523ea38e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#a4d8c5ff284d58f2e492e420b523ea38e">sigismember</a> (<a class="el" href="structsigset__t.html">sigset_t</a> *set, int signum)</td></tr>
 <tr class="memdesc:a4d8c5ff284d58f2e492e420b523ea38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given signal is part of the set.  <a href="mentos_2src_2system_2signal_8c.html#a4d8c5ff284d58f2e492e420b523ea38e">More...</a><br /></td></tr>
 <tr class="separator:a4d8c5ff284d58f2e492e420b523ea38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a347acc510edb5690394e7946d597de90"><td class="memItemLeft" align="right" valign="top"><a id="a347acc510edb5690394e7946d597de90"></a>
+static <a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#a347acc510edb5690394e7946d597de90">sigqueue_cachep</a></td></tr>
+<tr class="memdesc:a347acc510edb5690394e7946d597de90"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAB caches for signal bits. <br /></td></tr>
+<tr class="separator:a347acc510edb5690394e7946d597de90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f7e147791e5ed2413711f367aa3ddf"><td class="memItemLeft" align="right" valign="top"><a id="a14f7e147791e5ed2413711f367aa3ddf"></a>
+static struct <a class="el" href="structwait__queue__head__t.html">wait_queue_head_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2system_2signal_8c.html#a14f7e147791e5ed2413711f367aa3ddf">stopped_queue</a></td></tr>
+<tr class="memdesc:a14f7e147791e5ed2413711f367aa3ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains all stopped process waiting for a continue signal. <br /></td></tr>
+<tr class="separator:a14f7e147791e5ed2413711f367aa3ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327eb6942431cfbf67a4d8acad9ba423"><td class="memItemLeft" align="right" valign="top"><a id="a327eb6942431cfbf67a4d8acad9ba423"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>sys_siglist</b> []</td></tr>
+<tr class="separator:a327eb6942431cfbf67a4d8acad9ba423"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Signals definition. </p>
@@ -201,6 +263,113 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Returns 0 if there is no error, otherwise returns an error code </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mentos_2src_2system_2signal_8c_source.html#l00577">577</a> of file <a class="el" href="mentos_2src_2system_2signal_8c_source.html">signal.c</a>.</p>
+
+</div>
+</div>
+<a id="a68822b4b647046069f335d6538854092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68822b4b647046069f335d6538854092">&#9670;&nbsp;</a></span>__send_signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __send_signal </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsiginfo__t.html">siginfo_t</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sig</td><td>Signal to be sent. </td></tr>
+    <tr><td class="paramname">info</td><td>The signal info </td></tr>
+    <tr><td class="paramname">t</td><td>The process to which we send the signal. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mentos_2src_2system_2signal_8c_source.html#l00135">135</a> of file <a class="el" href="mentos_2src_2system_2signal_8c_source.html">signal.c</a>.</p>
+
+</div>
+</div>
+<a id="a57526aef6954224feaee0e0b1e632f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57526aef6954224feaee0e0b1e632f1c">&#9670;&nbsp;</a></span>__sigqueue_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structsigqueue__t.html">sigqueue_t</a>* __sigqueue_alloc </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate a new signal queue record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The task to which the signal belongs. </td></tr>
+    <tr><td class="paramname">sig</td><td>The signal to set. </td></tr>
+    <tr><td class="paramname">flags</td><td>Flags identifying from where we are going to take the memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mentos_2src_2system_2signal_8c_source.html#l00113">113</a> of file <a class="el" href="mentos_2src_2system_2signal_8c_source.html">signal.c</a>.</p>
 
 </div>
 </div>
@@ -733,7 +902,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

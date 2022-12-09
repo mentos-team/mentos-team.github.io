@@ -72,7 +72,8 @@ $(function() {
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">kheap.c File Reference</div>  </div>
 </div><!--header-->
@@ -134,6 +135,52 @@ typedef struct <a class="el" href="structblock__t.html">block_t</a>&#160;</td><t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a0dda2df5416936d5de39822233c1932b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a0dda2df5416936d5de39822233c1932b">blkmngr_get_real_size</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size)</td></tr>
+<tr class="memdesc:a0dda2df5416936d5de39822233c1932b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the field size in a Block(which contain free/alloc information), extract the size.  <a href="kheap_8c.html#a0dda2df5416936d5de39822233c1932b">More...</a><br /></td></tr>
+<tr class="separator:a0dda2df5416936d5de39822233c1932b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27ee27cb616d35e6019a1caef75ab39"><td class="memItemLeft" align="right" valign="top"><a id="ab27ee27cb616d35e6019a1caef75ab39"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#ab27ee27cb616d35e6019a1caef75ab39">blkmngr_set_free</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *size, int x)</td></tr>
+<tr class="memdesc:ab27ee27cb616d35e6019a1caef75ab39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the free/alloc bit of the size field. <br /></td></tr>
+<tr class="separator:ab27ee27cb616d35e6019a1caef75ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cfb83a0f081d0d3374c93c8956d78a3"><td class="memItemLeft" align="right" valign="top"><a id="a9cfb83a0f081d0d3374c93c8956d78a3"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a9cfb83a0f081d0d3374c93c8956d78a3">blkmngr_is_free</a> (<a class="el" href="structblock__t.html">block_t</a> *block)</td></tr>
+<tr class="memdesc:a9cfb83a0f081d0d3374c93c8956d78a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a block is freed or allocated. <br /></td></tr>
+<tr class="separator:a9cfb83a0f081d0d3374c93c8956d78a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b51d817f8b154fbe3502bf24d3c9e9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#ab4b51d817f8b154fbe3502bf24d3c9e9">blkmngr_does_it_fit</a> (<a class="el" href="structblock__t.html">block_t</a> *block, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size)</td></tr>
+<tr class="memdesc:ab4b51d817f8b154fbe3502bf24d3c9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given size fits inside the block.  <a href="kheap_8c.html#ab4b51d817f8b154fbe3502bf24d3c9e9">More...</a><br /></td></tr>
+<tr class="separator:ab4b51d817f8b154fbe3502bf24d3c9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298c3fc3923b636e5b6ca5203e4a9097"><td class="memItemLeft" align="right" valign="top"><a id="a298c3fc3923b636e5b6ca5203e4a9097"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a298c3fc3923b636e5b6ca5203e4a9097">blkmngr_remove_from_freelist</a> (<a class="el" href="structblock__t.html">block_t</a> *block, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *freelist)</td></tr>
+<tr class="memdesc:a298c3fc3923b636e5b6ca5203e4a9097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the block from freelist. <br /></td></tr>
+<tr class="separator:a298c3fc3923b636e5b6ca5203e4a9097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa42d0274c1794455a6e61434776eaabb"><td class="memItemLeft" align="right" valign="top"><a id="aa42d0274c1794455a6e61434776eaabb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#aa42d0274c1794455a6e61434776eaabb">blkmngr_add_to_freelist</a> (<a class="el" href="structblock__t.html">block_t</a> *block, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *freelist)</td></tr>
+<tr class="memdesc:aa42d0274c1794455a6e61434776eaabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the block to the free list. <br /></td></tr>
+<tr class="separator:aa42d0274c1794455a6e61434776eaabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1268a4c7db623cb1eaf0861f2de8b51"><td class="memItemLeft" align="right" valign="top"><a id="af1268a4c7db623cb1eaf0861f2de8b51"></a>
+static <a class="el" href="structblock__t.html">block_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#af1268a4c7db623cb1eaf0861f2de8b51">blkmngr_find_best_fitting</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *freelist)</td></tr>
+<tr class="memdesc:af1268a4c7db623cb1eaf0861f2de8b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the best fitting block in the memory pool. <br /></td></tr>
+<tr class="separator:af1268a4c7db623cb1eaf0861f2de8b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdc6d23a30ca5a580e34ad603c00294"><td class="memItemLeft" align="right" valign="top"><a id="a6cdc6d23a30ca5a580e34ad603c00294"></a>
+static <a class="el" href="structblock__t.html">block_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a6cdc6d23a30ca5a580e34ad603c00294">blkmngr_get_previous_block</a> (<a class="el" href="structblock__t.html">block_t</a> *block, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *head)</td></tr>
+<tr class="memdesc:a6cdc6d23a30ca5a580e34ad603c00294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a block, finds its previous block. <br /></td></tr>
+<tr class="separator:a6cdc6d23a30ca5a580e34ad603c00294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2cd89d8c54b0929b417789bf4b8a0d4"><td class="memItemLeft" align="right" valign="top"><a id="ac2cd89d8c54b0929b417789bf4b8a0d4"></a>
+static <a class="el" href="structblock__t.html">block_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#ac2cd89d8c54b0929b417789bf4b8a0d4">blkmngr_get_next_block</a> (<a class="el" href="structblock__t.html">block_t</a> *block, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *tail)</td></tr>
+<tr class="memdesc:ac2cd89d8c54b0929b417789bf4b8a0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a block, finds its next block. <br /></td></tr>
+<tr class="separator:ac2cd89d8c54b0929b417789bf4b8a0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b8d4ab93a13ae1b1f8924fd5c54273"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#ac8b8d4ab93a13ae1b1f8924fd5c54273">__find_user_heap</a> ()</td></tr>
+<tr class="memdesc:ac8b8d4ab93a13ae1b1f8924fd5c54273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the current user heap.  <a href="kheap_8c.html#ac8b8d4ab93a13ae1b1f8924fd5c54273">More...</a><br /></td></tr>
+<tr class="separator:ac8b8d4ab93a13ae1b1f8924fd5c54273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0bd0ac020b977c6edc9a2c5e9f97c7"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a6d0bd0ac020b977c6edc9a2c5e9f97c7">__do_brk</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *heap_top, <a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *heap, int increment)</td></tr>
+<tr class="memdesc:a6d0bd0ac020b977c6edc9a2c5e9f97c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extends the provided heap of the given increment.  <a href="kheap_8c.html#a6d0bd0ac020b977c6edc9a2c5e9f97c7">More...</a><br /></td></tr>
+<tr class="separator:a6d0bd0ac020b977c6edc9a2c5e9f97c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a9714772901c02c050e8c1aed738679"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a2a9714772901c02c050e8c1aed738679">__do_malloc</a> (<a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *heap, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> size)</td></tr>
+<tr class="memdesc:a2a9714772901c02c050e8c1aed738679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates size bytes of uninitialized storage.  <a href="kheap_8c.html#a2a9714772901c02c050e8c1aed738679">More...</a><br /></td></tr>
+<tr class="separator:a2a9714772901c02c050e8c1aed738679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4ea7a9aa5b6c3265ea6735797c5408"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a9d4ea7a9aa5b6c3265ea6735797c5408">__do_free</a> (<a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *heap, void *ptr)</td></tr>
+<tr class="memdesc:a9d4ea7a9aa5b6c3265ea6735797c5408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates previously allocated space.  <a href="kheap_8c.html#a9d4ea7a9aa5b6c3265ea6735797c5408">More...</a><br /></td></tr>
+<tr class="separator:a9d4ea7a9aa5b6c3265ea6735797c5408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af02288749daefd1a6cce47b8f4cc1670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#af02288749daefd1a6cce47b8f4cc1670">kheap_init</a> (<a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> initial_size)</td></tr>
 <tr class="memdesc:af02288749daefd1a6cce47b8f4cc1670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize heap.  <a href="kheap_8c.html#af02288749daefd1a6cce47b8f4cc1670">More...</a><br /></td></tr>
 <tr class="separator:af02288749daefd1a6cce47b8f4cc1670"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,12 +197,288 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a3d2894508f2fc20fc4cbee778bc6b80a">kheap_dump</a> ()</td></tr>
 <tr class="memdesc:a3d2894508f2fc20fc4cbee778bc6b80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the heap visually, for debug. <br /></td></tr>
 <tr class="separator:a3d2894508f2fc20fc4cbee778bc6b80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a027bc0074cfdbb34ec9d4ad0828f7267"><td class="memItemLeft" align="right" valign="top"><a id="a027bc0074cfdbb34ec9d4ad0828f7267"></a>
+static <a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#a027bc0074cfdbb34ec9d4ad0828f7267">kernel_heap</a></td></tr>
+<tr class="memdesc:a027bc0074cfdbb34ec9d4ad0828f7267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel heap section. <br /></td></tr>
+<tr class="separator:a027bc0074cfdbb34ec9d4ad0828f7267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7364f96b33dc4404cda961c6537970b"><td class="memItemLeft" align="right" valign="top"><a id="ab7364f96b33dc4404cda961c6537970b"></a>
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kheap_8c.html#ab7364f96b33dc4404cda961c6537970b">kernel_heap_top</a></td></tr>
+<tr class="memdesc:ab7364f96b33dc4404cda961c6537970b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Top of the kernel heap. <br /></td></tr>
+<tr class="separator:ab7364f96b33dc4404cda961c6537970b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a6d0bd0ac020b977c6edc9a2c5e9f97c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0bd0ac020b977c6edc9a2c5e9f97c7">&#9670;&nbsp;</a></span>__do_brk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* __do_brk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>heap_top</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *&#160;</td>
+          <td class="paramname"><em>heap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>increment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extends the provided heap of the given increment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap_top</td><td>Current top of the heap. </td></tr>
+    <tr><td class="paramname">heap</td><td>Pointer to the heap. </td></tr>
+    <tr><td class="paramname">increment</td><td>Increment to the heap. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the old top of the heap, ready to be used. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00227">227</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
+<a id="a9d4ea7a9aa5b6c3265ea6735797c5408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4ea7a9aa5b6c3265ea6735797c5408">&#9670;&nbsp;</a></span>__do_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __do_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *&#160;</td>
+          <td class="paramname"><em>heap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deallocates previously allocated space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap</td><td>Heap to which we return the allocated memory. </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the allocated memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00668">668</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a9714772901c02c050e8c1aed738679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a9714772901c02c050e8c1aed738679">&#9670;&nbsp;</a></span>__do_malloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void* __do_malloc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *&#160;</td>
+          <td class="paramname"><em>heap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocates size bytes of uninitialized storage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">heap</td><td>Heap from which we get the unallocated memory. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of the desired memory area. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the allocated memory area. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00256">256</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
+<a id="ac8b8d4ab93a13ae1b1f8924fd5c54273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b8d4ab93a13ae1b1f8924fd5c54273">&#9670;&nbsp;</a></span>__find_user_heap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a>* __find_user_heap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Find the current user heap. </p>
+<dl class="section return"><dt>Returns</dt><dd>The heap structure if heap exists, otherwise NULL. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00191">191</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
+<a id="ab4b51d817f8b154fbe3502bf24d3c9e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b51d817f8b154fbe3502bf24d3c9e9">&#9670;&nbsp;</a></span>blkmngr_does_it_fit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int blkmngr_does_it_fit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structblock__t.html">block_t</a> *&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the given size fits inside the block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">block</td><td>The given block. </td></tr>
+    <tr><td class="paramname">size</td><td>The size to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00090">90</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
+<a id="a0dda2df5416936d5de39822233c1932b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dda2df5416936d5de39822233c1932b">&#9670;&nbsp;</a></span>blkmngr_get_real_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> blkmngr_get_real_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given the field size in a Block(which contain free/alloc information), extract the size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kheap_8c_source.html#l00055">55</a> of file <a class="el" href="kheap_8c_source.html">kheap.c</a>.</p>
+
+</div>
+</div>
 <a id="af02288749daefd1a6cce47b8f4cc1670"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af02288749daefd1a6cce47b8f4cc1670">&#9670;&nbsp;</a></span>kheap_init()</h2>
 
@@ -278,7 +601,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="khea
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

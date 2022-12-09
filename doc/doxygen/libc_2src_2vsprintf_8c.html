@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">vsprintf.c File Reference</div>  </div>
 </div><!--header-->
@@ -126,6 +127,31 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a3fa7c8ef8597579301cb4b5c59bc6d9a"><td class="memItemLeft" align="right" valign="top"><a id="a3fa7c8ef8597579301cb4b5c59bc6d9a"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libc_2src_2vsprintf_8c.html#a3fa7c8ef8597579301cb4b5c59bc6d9a">skip_atoi</a> (const char **s)</td></tr>
+<tr class="memdesc:a3fa7c8ef8597579301cb4b5c59bc6d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the first non-integer character. <br /></td></tr>
+<tr class="separator:a3fa7c8ef8597579301cb4b5c59bc6d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a43f21844a42c06bb74f7844f467002"><td class="memItemLeft" align="right" valign="top"><a id="a3a43f21844a42c06bb74f7844f467002"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><b>number</b> (char *str, long num, int base, int size, <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a> precision, unsigned flags)</td></tr>
+<tr class="separator:a3a43f21844a42c06bb74f7844f467002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e62687f386c3351dd4cdc50be0c44b8"><td class="memItemLeft" align="right" valign="top"><a id="a4e62687f386c3351dd4cdc50be0c44b8"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><b>eaddr</b> (char *str, unsigned char *addr, int size, int precision, unsigned flags)</td></tr>
+<tr class="separator:a4e62687f386c3351dd4cdc50be0c44b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc579a457e516b4d7fa72b57390b233"><td class="memItemLeft" align="right" valign="top"><a id="abfc579a457e516b4d7fa72b57390b233"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><b>iaddr</b> (char *str, unsigned char *addr, int size, int precision, unsigned flags)</td></tr>
+<tr class="separator:abfc579a457e516b4d7fa72b57390b233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692e21e9e3e4044af5eea226e525c93c"><td class="memItemLeft" align="right" valign="top"><a id="a692e21e9e3e4044af5eea226e525c93c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>cfltcvt</b> (double value, char *buffer, char fmt, int precision)</td></tr>
+<tr class="separator:a692e21e9e3e4044af5eea226e525c93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af957040d30a2d0eebc99699edca2a3"><td class="memItemLeft" align="right" valign="top"><a id="a6af957040d30a2d0eebc99699edca2a3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>forcdecpt</b> (char *buffer)</td></tr>
+<tr class="separator:a6af957040d30a2d0eebc99699edca2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840d64d7e4488b831df13779808c7955"><td class="memItemLeft" align="right" valign="top"><a id="a840d64d7e4488b831df13779808c7955"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>cropzeros</b> (char *buffer)</td></tr>
+<tr class="separator:a840d64d7e4488b831df13779808c7955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f064319479049f3c3eb1df399848168"><td class="memItemLeft" align="right" valign="top"><a id="a0f064319479049f3c3eb1df399848168"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><b>flt</b> (char *str, double num, int size, int precision, char fmt, unsigned flags)</td></tr>
+<tr class="separator:a0f064319479049f3c3eb1df399848168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a760c2a9adc3e177ae208cf07c1424758"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libc_2src_2vsprintf_8c.html#a760c2a9adc3e177ae208cf07c1424758">vsprintf</a> (char *str, const char *fmt, <a class="el" href="stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775">va_list</a> args)</td></tr>
 <tr class="memdesc:a760c2a9adc3e177ae208cf07c1424758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write formatted data from variable argument list to string.  <a href="libc_2src_2vsprintf_8c.html#a760c2a9adc3e177ae208cf07c1424758">More...</a><br /></td></tr>
 <tr class="separator:a760c2a9adc3e177ae208cf07c1424758"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +164,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a4cd6c6c3536f5eec53c7d6892f489351"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libc_2src_2vsprintf_8c.html#a4cd6c6c3536f5eec53c7d6892f489351">fprintf</a> (int fd, const char *fmt,...)</td></tr>
 <tr class="memdesc:a4cd6c6c3536f5eec53c7d6892f489351"><td class="mdescLeft">&#160;</td><td class="mdescRight">The same as sprintf, but it putput on file.  <a href="libc_2src_2vsprintf_8c.html#a4cd6c6c3536f5eec53c7d6892f489351">More...</a><br /></td></tr>
 <tr class="separator:a4cd6c6c3536f5eec53c7d6892f489351"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ade68c8ea98a247a4d15002b9326ffdc0"><td class="memItemLeft" align="right" valign="top"><a id="ade68c8ea98a247a4d15002b9326ffdc0"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libc_2src_2vsprintf_8c.html#ade68c8ea98a247a4d15002b9326ffdc0">_digits</a> = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;</td></tr>
+<tr class="memdesc:ade68c8ea98a247a4d15002b9326ffdc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of digits. <br /></td></tr>
+<tr class="separator:ade68c8ea98a247a4d15002b9326ffdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f15b4decb0bde879d38aac2600eae3c"><td class="memItemLeft" align="right" valign="top"><a id="a4f15b4decb0bde879d38aac2600eae3c"></a>
+static char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libc_2src_2vsprintf_8c.html#a4f15b4decb0bde879d38aac2600eae3c">_upper_digits</a> = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</td></tr>
+<tr class="memdesc:a4f15b4decb0bde879d38aac2600eae3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of uppercase digits. <br /></td></tr>
+<tr class="separator:a4f15b4decb0bde879d38aac2600eae3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Print formatting routines. </p>
@@ -333,7 +370,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

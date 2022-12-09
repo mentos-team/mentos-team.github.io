@@ -118,6 +118,9 @@ typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad95c7654e85010391d91a4d6ee05eb25"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">sys_ni_syscall</a> ()</td></tr>
+<tr class="memdesc:ad95c7654e85010391d91a4d6ee05eb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Not Implemented (NI) system-call.  <a href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">More...</a><br /></td></tr>
+<tr class="separator:ad95c7654e85010391d91a4d6ee05eb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="memItemLeft" align="right" valign="top"><a id="a581ed37968ead91b6d3a0b3b7a71da9d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#a581ed37968ead91b6d3a0b3b7a71da9d">syscall_init</a> ()</td></tr>
 <tr class="memdesc:a581ed37968ead91b6d3a0b3b7a71da9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the system calls. <br /></td></tr>
@@ -135,6 +138,10 @@ Variables</h2></td></tr>
 <a class="el" href="syscall_8c.html#ad9724e91d3ff8a37569ffc8d44985928">SystemCall</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a> [<a class="el" href="syscall__types_8h.html#a1555196921bb6e8c9acf1b13b7342bd0">SYSCALL_NUMBER</a>]</td></tr>
 <tr class="memdesc:a7816640256ba3e7436f148c8e536e1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of function call. <br /></td></tr>
 <tr class="separator:a7816640256ba3e7436f148c8e536e1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676bbd142227a8703c02b1e6b941b93e"><td class="memItemLeft" align="right" valign="top"><a id="a676bbd142227a8703c02b1e6b941b93e"></a>
+static <a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">current_interrupt_stack_frame</a></td></tr>
+<tr class="memdesc:a676bbd142227a8703c02b1e6b941b93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last interupt stack frame. <br /></td></tr>
+<tr class="separator:a676bbd142227a8703c02b1e6b941b93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>System Call management functions. </p>
@@ -161,6 +168,37 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the stack frame. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="syscall_8c_source.html#l00119">119</a> of file <a class="el" href="syscall_8c_source.html">syscall.c</a>.</p>
+
+</div>
+</div>
+<a id="ad95c7654e85010391d91a4d6ee05eb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95c7654e85010391d91a4d6ee05eb25">&#9670;&nbsp;</a></span>sys_ni_syscall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int sys_ni_syscall </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A Not Implemented (NI) system-call. </p>
+<dl class="section return"><dt>Returns</dt><dd>Always returns -ENOSYS.</dd></dl>
+<p>Linux provides a "not implemented" system call, <a class="el" href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25" title="A Not Implemented (NI) system-call.">sys_ni_syscall()</a>, which does nothing except return ENOSYS, the error corresponding to an invalid system call. This function is used to "plug the hole" in the rare event that a syscall is removed or otherwise made unavailable. </p>
+
+<p class="definition">Definition at line <a class="el" href="syscall_8c_source.html#l00045">45</a> of file <a class="el" href="syscall_8c_source.html">syscall.c</a>.</p>
 
 </div>
 </div>
@@ -199,7 +237,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

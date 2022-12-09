@@ -102,6 +102,30 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a02a1aee6047d6b8cb3ca6ffdc53908b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#a02a1aee6047d6b8cb3ca6ffdc53908b5">__update_task_statistics</a> (<a class="el" href="structtask__struct.html">task_struct</a> *task)</td></tr>
+<tr class="memdesc:a02a1aee6047d6b8cb3ca6ffdc53908b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates task execution statistics.  <a href="scheduler__algorithm_8c.html#a02a1aee6047d6b8cb3ca6ffdc53908b5">More...</a><br /></td></tr>
+<tr class="separator:a02a1aee6047d6b8cb3ca6ffdc53908b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66987dac5222d777b8d3d5aefdc8d47b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#a66987dac5222d777b8d3d5aefdc8d47b">__is_periodic_task</a> (<a class="el" href="structtask__struct.html">task_struct</a> *task)</td></tr>
+<tr class="memdesc:a66987dac5222d777b8d3d5aefdc8d47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given task is actually a periodic task.  <a href="scheduler__algorithm_8c.html#a66987dac5222d777b8d3d5aefdc8d47b">More...</a><br /></td></tr>
+<tr class="separator:a66987dac5222d777b8d3d5aefdc8d47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b29243c83a51084a36f613064171ff6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#a9b29243c83a51084a36f613064171ff6">__scheduler_rr</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>, <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> skip_periodic)</td></tr>
+<tr class="memdesc:a9b29243c83a51084a36f613064171ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Employs time-sharing, giving each job a timeslice, and is also preemptive since the scheduler forces the task out of the CPU once the timeslice expires.  <a href="scheduler__algorithm_8c.html#a9b29243c83a51084a36f613064171ff6">More...</a><br /></td></tr>
+<tr class="separator:a9b29243c83a51084a36f613064171ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3f81f0f8e255692f7db82330ce0c7f9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#ab3f81f0f8e255692f7db82330ce0c7f9">__scheduler_priority</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>, <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> skip_periodic)</td></tr>
+<tr class="memdesc:ab3f81f0f8e255692f7db82330ce0c7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a non-preemptive algorithm, where each task is assigned a priority. Processes with highest priority are executed first, while processes with same priority are executed on first-come/first-served basis. Priority can be decided based on memory requirements, time requirements or any other resource requirement.  <a href="scheduler__algorithm_8c.html#ab3f81f0f8e255692f7db82330ce0c7f9">More...</a><br /></td></tr>
+<tr class="separator:ab3f81f0f8e255692f7db82330ce0c7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab811d3e006ed1c0e1c3eb259018cf157"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#ab811d3e006ed1c0e1c3eb259018cf157">__scheduler_cfs</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>, <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> skip_periodic)</td></tr>
+<tr class="memdesc:ab811d3e006ed1c0e1c3eb259018cf157"><td class="mdescLeft">&#160;</td><td class="mdescRight">It aims at giving a fair share of CPU time to processes, and achieves that by associating a virtual runtime to each of them. It always tries to run the task with the smallest vruntime (i.e., the task which executed least so far). It always tries to split up CPU time between runnable tasks as close to "ideal multitasking hardware" as possible.  <a href="scheduler__algorithm_8c.html#ab811d3e006ed1c0e1c3eb259018cf157">More...</a><br /></td></tr>
+<tr class="separator:ab811d3e006ed1c0e1c3eb259018cf157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f713f27080375be84fcd764f9c75cf7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#a3f713f27080375be84fcd764f9c75cf7">__scheduler_aedf</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>)</td></tr>
+<tr class="memdesc:a3f713f27080375be84fcd764f9c75cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the task with the earliest absolute deadline among all the ready tasks.  <a href="scheduler__algorithm_8c.html#a3f713f27080375be84fcd764f9c75cf7">More...</a><br /></td></tr>
+<tr class="separator:a3f713f27080375be84fcd764f9c75cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade79fbd32d6cf8b052433b4df928750c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#ade79fbd32d6cf8b052433b4df928750c">__scheduler_edf</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>)</td></tr>
+<tr class="memdesc:ade79fbd32d6cf8b052433b4df928750c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the task with the earliest absolute DEADLINE among all the ready tasks. When a task was executed, and its period is starting again, it must be set as 'executable again', and its deadline and next_period must be updated.  <a href="scheduler__algorithm_8c.html#ade79fbd32d6cf8b052433b4df928750c">More...</a><br /></td></tr>
+<tr class="separator:ade79fbd32d6cf8b052433b4df928750c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30db47a9f33a323450162ca560d16d3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#ae30db47a9f33a323450162ca560d16d3">__scheduler_rm</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>)</td></tr>
+<tr class="memdesc:ae30db47a9f33a323450162ca560d16d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the task with the earliest next PERIOD among all the ready tasks.  <a href="scheduler__algorithm_8c.html#ae30db47a9f33a323450162ca560d16d3">More...</a><br /></td></tr>
+<tr class="separator:ae30db47a9f33a323450162ca560d16d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17c738f5f181967fdfdee09339802cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__algorithm_8c.html#a17c738f5f181967fdfdee09339802cf7">scheduler_pick_next_task</a> (<a class="el" href="structrunqueue__t.html">runqueue_t</a> *<a class="el" href="scheduler_8c.html#acff3d7b3d3e372c44b9acb10ddc883f7">runqueue</a>)</td></tr>
 <tr class="memdesc:a17c738f5f181967fdfdee09339802cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Picks the next task (in <a class="el" href="scheduler__algorithm_8c.html" title="Round Robin algorithm.">scheduler_algorithm.c</a>).  <a href="scheduler__algorithm_8c.html#a17c738f5f181967fdfdee09339802cf7">More...</a><br /></td></tr>
 <tr class="separator:a17c738f5f181967fdfdee09339802cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +136,334 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a66987dac5222d777b8d3d5aefdc8d47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66987dac5222d777b8d3d5aefdc8d47b">&#9670;&nbsp;</a></span>__is_periodic_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> __is_periodic_task </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the given task is actually a periodic task. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>the task to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the task is periodic, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00028">28</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="a3f713f27080375be84fcd764f9c75cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f713f27080375be84fcd764f9c75cf7">&#9670;&nbsp;</a></span>__scheduler_aedf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_aedf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes the task with the earliest absolute deadline among all the ready tasks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00157">157</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="ab811d3e006ed1c0e1c3eb259018cf157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab811d3e006ed1c0e1c3eb259018cf157">&#9670;&nbsp;</a></span>__scheduler_cfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_cfs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td>
+          <td class="paramname"><em>skip_periodic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>It aims at giving a fair share of CPU time to processes, and achieves that by associating a virtual runtime to each of them. It always tries to run the task with the smallest vruntime (i.e., the task which executed least so far). It always tries to split up CPU time between runnable tasks as close to "ideal multitasking hardware" as possible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+    <tr><td class="paramname">skip_periodic</td><td>tells the algorithm if there are periodic processes in the list, and in that case it needs to skip them. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00120">120</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="ade79fbd32d6cf8b052433b4df928750c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade79fbd32d6cf8b052433b4df928750c">&#9670;&nbsp;</a></span>__scheduler_edf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_edf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes the task with the earliest absolute DEADLINE among all the ready tasks. When a task was executed, and its period is starting again, it must be set as 'executable again', and its deadline and next_period must be updated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00168">168</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="ab3f81f0f8e255692f7db82330ce0c7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3f81f0f8e255692f7db82330ce0c7f9">&#9670;&nbsp;</a></span>__scheduler_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_priority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td>
+          <td class="paramname"><em>skip_periodic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Is a non-preemptive algorithm, where each task is assigned a priority. Processes with highest priority are executed first, while processes with same priority are executed on first-come/first-served basis. Priority can be decided based on memory requirements, time requirements or any other resource requirement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+    <tr><td class="paramname">skip_periodic</td><td>tells the algorithm if there are periodic processes in the list, and in that case it needs to skip them. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00076">76</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="ae30db47a9f33a323450162ca560d16d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30db47a9f33a323450162ca560d16d3">&#9670;&nbsp;</a></span>__scheduler_rm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_rm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes the task with the earliest next PERIOD among all the ready tasks. </p>
+<p>When a task was executed, and its period is starting again, it must be set as 'executable again', and its deadline and next_period must be updated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00180">180</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="a9b29243c83a51084a36f613064171ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b29243c83a51084a36f613064171ff6">&#9670;&nbsp;</a></span>__scheduler_rr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structtask__struct.html">task_struct</a>* __scheduler_rr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structrunqueue__t.html">runqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>runqueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td>
+          <td class="paramname"><em>skip_periodic</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Employs time-sharing, giving each job a timeslice, and is also preemptive since the scheduler forces the task out of the CPU once the timeslice expires. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">runqueue</td><td>list of all processes. </td></tr>
+    <tr><td class="paramname">skip_periodic</td><td>tells the algorithm if there are periodic processes in the list, and in that case it needs to skip them. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next task on success, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00041">41</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
+<a id="a02a1aee6047d6b8cb3ca6ffdc53908b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a1aee6047d6b8cb3ca6ffdc53908b5">&#9670;&nbsp;</a></span>__update_task_statistics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __update_task_statistics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtask__struct.html">task_struct</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates task execution statistics. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>the task to update. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="scheduler__algorithm_8c_source.html#l00216">216</a> of file <a class="el" href="scheduler__algorithm_8c_source.html">scheduler_algorithm.c</a>.</p>
+
+</div>
+</div>
 <a id="a17c738f5f181967fdfdee09339802cf7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a17c738f5f181967fdfdee09339802cf7">&#9670;&nbsp;</a></span>scheduler_pick_next_task()</h2>
 
@@ -148,7 +500,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

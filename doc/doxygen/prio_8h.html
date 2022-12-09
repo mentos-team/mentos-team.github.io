@@ -69,7 +69,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">prio.h File Reference</div>  </div>
 </div><!--header-->
@@ -127,27 +128,70 @@ Macros</h2></td></tr>
 <tr class="memdesc:aeeb0a2abe27f81cbec9f5a4748b3fa4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum priority for a user process. <br /></td></tr>
 <tr class="separator:aeeb0a2abe27f81cbec9f5a4748b3fa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08fd8a48fb78d22e4f0720134c06c5e"><td class="memItemLeft" align="right" valign="top"><a id="aa08fd8a48fb78d22e4f0720134c06c5e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prio_8h.html#aa08fd8a48fb78d22e4f0720134c06c5e">GET_WEIGHT</a>(prio)&#160;&#160;&#160;prio_to_weight[<a class="el" href="prio_8h.html#a718c2dc9b347ac80220333765ca411e5">USER_PRIO</a>((prio))]</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prio_8h.html#aa08fd8a48fb78d22e4f0720134c06c5e">GET_WEIGHT</a>(prio)&#160;&#160;&#160;<a class="el" href="prio_8h.html#a7334948f234a229c3da87f4c86666981">prio_to_weight</a>[<a class="el" href="prio_8h.html#a718c2dc9b347ac80220333765ca411e5">USER_PRIO</a>((prio))]</td></tr>
 <tr class="memdesc:aa08fd8a48fb78d22e4f0720134c06c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the priority to weight. <br /></td></tr>
 <tr class="separator:aa08fd8a48fb78d22e4f0720134c06c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d626731f4fb452c257fd15a28d7b82"><td class="memItemLeft" align="right" valign="top"><a id="a01d626731f4fb452c257fd15a28d7b82"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prio_8h.html#a01d626731f4fb452c257fd15a28d7b82">NICE_0_LOAD</a>&#160;&#160;&#160;<a class="el" href="prio_8h.html#aa08fd8a48fb78d22e4f0720134c06c5e">GET_WEIGHT</a>(<a class="el" href="prio_8h.html#a0cbf26ad705a078d6a1ac13555630ccc">DEFAULT_PRIO</a>)</td></tr>
 <tr class="memdesc:a01d626731f4fb452c257fd15a28d7b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weight of a default priority. <br /></td></tr>
 <tr class="separator:a01d626731f4fb452c257fd15a28d7b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7334948f234a229c3da87f4c86666981"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prio_8h.html#a7334948f234a229c3da87f4c86666981">prio_to_weight</a> [<a class="el" href="prio_8h.html#a0d8180edbb9cd028cecbb67c9d063717">NICE_WIDTH</a>]</td></tr>
+<tr class="memdesc:a7334948f234a229c3da87f4c86666981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table that transforms the priority into a weight, used for computing the virtual runtime.  <a href="prio_8h.html#a7334948f234a229c3da87f4c86666981">More...</a><br /></td></tr>
+<tr class="separator:a7334948f234a229c3da87f4c86666981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines processes priority value. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="prio_8h_source.html">prio.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Variable Documentation</h2>
+<a id="a7334948f234a229c3da87f4c86666981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7334948f234a229c3da87f4c86666981">&#9670;&nbsp;</a></span>prio_to_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int prio_to_weight[<a class="el" href="prio_8h.html#a0d8180edbb9cd028cecbb67c9d063717">NICE_WIDTH</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">     88761, 71755, 56483, 46273, 36291,</div>
+<div class="line">     29154, 23254, 18705, 14949, 11916,</div>
+<div class="line">     9548, 7620, 6100, 4904, 3906,</div>
+<div class="line">     3121, 2501, 1991, 1586, 1277,</div>
+<div class="line">     1024, 820, 655, 526, 423,</div>
+<div class="line">     335, 272, 215, 172, 137,</div>
+<div class="line">     110, 87, 70, 56, 45,</div>
+<div class="line">     36, 29, 23, 18, 15</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Table that transforms the priority into a weight, used for computing the virtual runtime. </p>
+
+<p class="definition">Definition at line <a class="el" href="prio_8h_source.html#l00056">56</a> of file <a class="el" href="prio_8h_source.html">prio.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
         <div class="footer">
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

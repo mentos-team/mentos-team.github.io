@@ -120,10 +120,10 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="stringliteral">&quot;Triple fault&quot;</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">static</span> <a class="code" href="group__isr.html#ga5d1e6f2f45493ce2e77845a6daeca39c">interrupt_handler_t</a> isr_routines[<a class="code" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>];</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> *isr_routines_description[<a class="code" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>];</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">   56</a></span>&#160;<span class="keyword">static</span> <a class="code" href="group__isr.html#ga5d1e6f2f45493ce2e77845a6daeca39c">interrupt_handler_t</a> <a class="code" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a>[<a class="code" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>];</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="exception_8c.html#a1b11f0d6247cb744fe21b418f14e591c">   58</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> *<a class="code" href="exception_8c.html#a1b11f0d6247cb744fe21b418f14e591c">isr_routines_description</a>[<a class="code" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>];</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> default_isr_handler(<a class="code" href="structpt__regs.html">pt_regs</a> *f)</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="exception_8c.html#a12df7485412c82ce8adee487737c69fc">   62</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="exception_8c.html#a12df7485412c82ce8adee487737c69fc">default_isr_handler</a>(<a class="code" href="structpt__regs.html">pt_regs</a> *f)</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> irq_line = f-&gt;<a class="code" href="structpt__regs.html#ab43b5bd19673a7f36700acba697a6d33">int_no</a>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">//      pr_default(&quot;calling ISR %d\n&quot;, isr_number);</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//    pr_default(&quot;calling ISR %d\n&quot;, isr_number);</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    isr_routines[isr_number](f);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a>[isr_number](f);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//    pr_default(&quot;end calling ISR %d\n&quot;, isr_number);</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// Setting the default_isr_handler as default handler.</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i = 0; i &lt; <a class="code" href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a>; ++i) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        isr_routines[i] = default_isr_handler;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a>[i] = <a class="code" href="exception_8c.html#a12df7485412c82ce8adee487737c69fc">default_isr_handler</a>;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -163,8 +163,8 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (i &gt; 31 &amp;&amp; i != 80) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    isr_routines[i]             = handler;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    isr_routines_description[i] = description;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a>[i]             = handler;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="exception_8c.html#a1b11f0d6247cb744fe21b418f14e591c">isr_routines_description</a>[i] = description;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
@@ -173,10 +173,13 @@ $(function() {
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (i &gt; 31 &amp;&amp; i != 80) {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    isr_routines[i]             = default_isr_handler;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    isr_routines_description[i] = <span class="stringliteral">&quot;NONE&quot;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a>[i]             = <a class="code" href="exception_8c.html#a12df7485412c82ce8adee487737c69fc">default_isr_handler</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="exception_8c.html#a1b11f0d6247cb744fe21b418f14e591c">isr_routines_description</a>[i] = <span class="stringliteral">&quot;NONE&quot;</span>;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="ttc" id="aexception_8c_html_a084f3284d1e1ef8659f92f489e3fd450"><div class="ttname"><a href="exception_8c.html#a084f3284d1e1ef8659f92f489e3fd450">isr_routines</a></div><div class="ttdeci">static interrupt_handler_t isr_routines[IDT_SIZE]</div><div class="ttdoc">Array of interrupt service routines for execptions and interrupts.</div><div class="ttdef"><b>Definition:</b> <a href="exception_8c_source.html#l00056">exception.c:56</a></div></div>
+<div class="ttc" id="aexception_8c_html_a12df7485412c82ce8adee487737c69fc"><div class="ttname"><a href="exception_8c.html#a12df7485412c82ce8adee487737c69fc">default_isr_handler</a></div><div class="ttdeci">static void default_isr_handler(pt_regs *f)</div><div class="ttdoc">Default handler for exceptions.</div><div class="ttdef"><b>Definition:</b> <a href="exception_8c_source.html#l00062">exception.c:62</a></div></div>
+<div class="ttc" id="aexception_8c_html_a1b11f0d6247cb744fe21b418f14e591c"><div class="ttname"><a href="exception_8c.html#a1b11f0d6247cb744fe21b418f14e591c">isr_routines_description</a></div><div class="ttdeci">static char * isr_routines_description[IDT_SIZE]</div><div class="ttdoc">Descriptions of routines.</div><div class="ttdef"><b>Definition:</b> <a href="exception_8c_source.html#l00058">exception.c:58</a></div></div>
 <div class="ttc" id="aexception_8c_html_ad231c9eb64dcdcb7d258bd7a2f1371f0"><div class="ttname"><a href="exception_8c.html#ad231c9eb64dcdcb7d258bd7a2f1371f0">isr_handler</a></div><div class="ttdeci">void isr_handler(pt_regs *f)</div><div class="ttdoc">Interrupt Service Routines handler called from the assembly.</div><div class="ttdef"><b>Definition:</b> <a href="exception_8c_source.html#l00079">exception.c:79</a></div></div>
 <div class="ttc" id="agroup__idt_html_ga6eb438cc75ca0a7284346ea8b3f94999"><div class="ttname"><a href="group__idt.html#ga6eb438cc75ca0a7284346ea8b3f94999">IDT_SIZE</a></div><div class="ttdeci">#define IDT_SIZE</div><div class="ttdoc">The maximum dimension of the IDT.</div><div class="ttdef"><b>Definition:</b> <a href="idt_8h_source.html#l00018">idt.h:18</a></div></div>
 <div class="ttc" id="agroup__isr_html_ga037fc7ce5902dde73abad30018450b86"><div class="ttname"><a href="group__isr.html#ga037fc7ce5902dde73abad30018450b86">isr_install_handler</a></div><div class="ttdeci">int isr_install_handler(unsigned i, interrupt_handler_t handler, char *description)</div><div class="ttdoc">Installs an ISR to handle an interrupt.</div><div class="ttdef"><b>Definition:</b> <a href="exception_8c_source.html#l00098">exception.c:98</a></div></div>
@@ -202,7 +205,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

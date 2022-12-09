@@ -68,6 +68,8 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">irqflags.h File Reference</div>  </div>
 </div><!--header-->
@@ -77,18 +79,94 @@ $(function() {
 <code>#include &quot;<a class="el" href="stdint_8h_source.html">stdint.h</a>&quot;</code><br />
 </div>
 <p><a href="irqflags_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a06afcfafba25c21759673960cba95b10"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="irqflags_8h.html#a06afcfafba25c21759673960cba95b10">irq_nested_enable</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> flags)</td></tr>
+<tr class="memdesc:a06afcfafba25c21759673960cba95b10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable IRQs (nested).  <a href="irqflags_8h.html#a06afcfafba25c21759673960cba95b10">More...</a><br /></td></tr>
+<tr class="separator:a06afcfafba25c21759673960cba95b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811bd0a53fd57461473d88c1b60009aa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="irqflags_8h.html#a811bd0a53fd57461473d88c1b60009aa">irq_nested_disable</a> ()</td></tr>
+<tr class="memdesc:a811bd0a53fd57461473d88c1b60009aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable IRQs (nested).  <a href="irqflags_8h.html#a811bd0a53fd57461473d88c1b60009aa">More...</a><br /></td></tr>
+<tr class="separator:a811bd0a53fd57461473d88c1b60009aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee8b5e89925abe6c5bb148759286939"><td class="memItemLeft" align="right" valign="top"><a id="afee8b5e89925abe6c5bb148759286939"></a>
+static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="irqflags_8h.html#afee8b5e89925abe6c5bb148759286939">is_irq_enabled</a> ()</td></tr>
+<tr class="memdesc:afee8b5e89925abe6c5bb148759286939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines, if the interrupt flags (IF) is set. <br /></td></tr>
+<tr class="separator:afee8b5e89925abe6c5bb148759286939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="irqflags_8h_source.html">irqflags.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a811bd0a53fd57461473d88c1b60009aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811bd0a53fd57461473d88c1b60009aa">&#9670;&nbsp;</a></span>irq_nested_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> irq_nested_disable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Disable IRQs (nested). </p>
+<p>Disable IRQs when unsure if IRQs were enabled at all. This function together with irq_nested_enable can be used in situations when interrupts shouldn't be activated if they were not activated before calling this function. </p>
+
+<p class="definition">Definition at line <a class="el" href="irqflags_8h_source.html#l00027">27</a> of file <a class="el" href="irqflags_8h_source.html">irqflags.h</a>.</p>
+
+</div>
+</div>
+<a id="a06afcfafba25c21759673960cba95b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06afcfafba25c21759673960cba95b10">&#9670;&nbsp;</a></span>irq_nested_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void irq_nested_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enable IRQs (nested). </p>
+<p>If called after calling irq_nested_disable, this function will not activate IRQs if they were not active before. </p>
+
+<p class="definition">Definition at line <a class="el" href="irqflags_8h_source.html#l00015">15</a> of file <a class="el" href="irqflags_8h_source.html">irqflags.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
         <div class="footer">
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -165,12 +165,53 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1223d541e1745c790e7284ec4b40a605"><td class="memItemLeft" align="right" valign="top"><a id="a1223d541e1745c790e7284ec4b40a605"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ps2_8c.html#a1223d541e1745c790e7284ec4b40a605">__ps2_wait_read</a> ()</td></tr>
+<tr class="memdesc:a1223d541e1745c790e7284ec4b40a605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling until we can receive bytes from the device. <br /></td></tr>
+<tr class="separator:a1223d541e1745c790e7284ec4b40a605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46fa0eef69fa75c4f231b7026348e035"><td class="memItemLeft" align="right" valign="top"><a id="a46fa0eef69fa75c4f231b7026348e035"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ps2_8c.html#a46fa0eef69fa75c4f231b7026348e035">__ps2_wait_write</a> ()</td></tr>
+<tr class="memdesc:a46fa0eef69fa75c4f231b7026348e035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling until we can send bytes to the device. <br /></td></tr>
+<tr class="separator:a46fa0eef69fa75c4f231b7026348e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4d077ca54c7c0e770e2af311625a5d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ps2_8c.html#af4d077ca54c7c0e770e2af311625a5d9">ps2_write</a> (unsigned char data)</td></tr>
 <tr class="memdesc:af4d077ca54c7c0e770e2af311625a5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes data to the PS/2 port.  <a href="ps2_8c.html#af4d077ca54c7c0e770e2af311625a5d9">More...</a><br /></td></tr>
 <tr class="separator:af4d077ca54c7c0e770e2af311625a5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134e820367f965bcc2c3ae4d2ad22b01"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ps2_8c.html#a134e820367f965bcc2c3ae4d2ad22b01">ps2_read</a> ()</td></tr>
 <tr class="memdesc:a134e820367f965bcc2c3ae4d2ad22b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads data from the PS/2 port.  <a href="ps2_8c.html#a134e820367f965bcc2c3ae4d2ad22b01">More...</a><br /></td></tr>
 <tr class="separator:a134e820367f965bcc2c3ae4d2ad22b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac009ccba2a7d78af54c9d07dac038100"><td class="memItemLeft" align="right" valign="top"><a id="ac009ccba2a7d78af54c9d07dac038100"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_write_command</b> (unsigned char command)</td></tr>
+<tr class="separator:ac009ccba2a7d78af54c9d07dac038100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7d9a97358fbb852021f8887be80198"><td class="memItemLeft" align="right" valign="top"><a id="abf7d9a97358fbb852021f8887be80198"></a>
+static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_get_controller_status</b> ()</td></tr>
+<tr class="separator:abf7d9a97358fbb852021f8887be80198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab081db94ed018799833ef76e083771cb"><td class="memItemLeft" align="right" valign="top"><a id="ab081db94ed018799833ef76e083771cb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_set_controller_status</b> (unsigned char status)</td></tr>
+<tr class="separator:ab081db94ed018799833ef76e083771cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a0e54417f99bdcfd52c730ada51dea"><td class="memItemLeft" align="right" valign="top"><a id="a58a0e54417f99bdcfd52c730ada51dea"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_is_dual_channel</b> ()</td></tr>
+<tr class="separator:a58a0e54417f99bdcfd52c730ada51dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae986ec842d704c57ffba8097b25b5163"><td class="memItemLeft" align="right" valign="top"><a id="ae986ec842d704c57ffba8097b25b5163"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_enable_first_port</b> ()</td></tr>
+<tr class="separator:ae986ec842d704c57ffba8097b25b5163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a59cb4df96995375047623446c4114"><td class="memItemLeft" align="right" valign="top"><a id="a71a59cb4df96995375047623446c4114"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_enable_second_port</b> ()</td></tr>
+<tr class="separator:a71a59cb4df96995375047623446c4114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5966c8cc44ae43876ae638243e4a710f"><td class="memItemLeft" align="right" valign="top"><a id="a5966c8cc44ae43876ae638243e4a710f"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_disable_first_port</b> ()</td></tr>
+<tr class="separator:a5966c8cc44ae43876ae638243e4a710f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d0f6b1923201413a56aaa7d7c11da5b"><td class="memItemLeft" align="right" valign="top"><a id="a7d0f6b1923201413a56aaa7d7c11da5b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_disable_second_port</b> ()</td></tr>
+<tr class="separator:a7d0f6b1923201413a56aaa7d7c11da5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb74218ae2a42707450503906a887618"><td class="memItemLeft" align="right" valign="top"><a id="acb74218ae2a42707450503906a887618"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_write_first_port</b> (unsigned char byte)</td></tr>
+<tr class="separator:acb74218ae2a42707450503906a887618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5b1b0a8f728edc52dc40b0467698d3"><td class="memItemLeft" align="right" valign="top"><a id="aab5b1b0a8f728edc52dc40b0467698d3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_write_second_port</b> (unsigned char byte)</td></tr>
+<tr class="separator:aab5b1b0a8f728edc52dc40b0467698d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2919ecd749d0e67ef245531cfb45b421"><td class="memItemLeft" align="right" valign="top"><a id="a2919ecd749d0e67ef245531cfb45b421"></a>
+static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>__ps2_get_response_error_message</b> (unsigned response)</td></tr>
+<tr class="separator:a2919ecd749d0e67ef245531cfb45b421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d35c44a02d795cae5bf07d01e77901"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ps2_8c.html#a48d35c44a02d795cae5bf07d01e77901">ps2_initialize</a> ()</td></tr>
 <tr class="memdesc:a48d35c44a02d795cae5bf07d01e77901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ps2 devices.  <a href="ps2_8c.html#a48d35c44a02d795cae5bf07d01e77901">More...</a><br /></td></tr>
 <tr class="separator:a48d35c44a02d795cae5bf07d01e77901"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,7 +301,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

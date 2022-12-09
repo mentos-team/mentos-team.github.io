@@ -98,9 +98,9 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">   33</a></span>&#160;<a class="code" href="syscall_8c.html#ad9724e91d3ff8a37569ffc8d44985928">SystemCall</a> <a class="code" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a>[<a class="code" href="syscall__types_8h.html#a1555196921bb6e8c9acf1b13b7342bd0">SYSCALL_NUMBER</a>];</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <a class="code" href="structpt__regs.html">pt_regs</a> *current_interrupt_stack_frame;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">   36</a></span>&#160;<span class="keyword">static</span> <a class="code" href="structpt__regs.html">pt_regs</a> *<a class="code" href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">current_interrupt_stack_frame</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> sys_ni_syscall()</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">   45</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">sys_ni_syscall</a>()</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> -<a class="code" href="mentos_2inc_2sys_2errno_8h.html#a43785b9969e0bd1af532dbde06c5540b">ENOSYS</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
@@ -109,7 +109,7 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// Initialize the list of system calls.</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> it = 0; it &lt; <a class="code" href="syscall__types_8h.html#a1555196921bb6e8c9acf1b13b7342bd0">SYSCALL_NUMBER</a>; ++it) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a>[it] = sys_ni_syscall;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a>[it] = <a class="code" href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">sys_ni_syscall</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a>[<a class="code" href="syscall__types_8h.html#a26b1ed95036b630e0f5a41d5f0ac879a">__NR_exit</a>]           = (<a class="code" href="syscall_8c.html#ad9724e91d3ff8a37569ffc8d44985928">SystemCall</a>)<a class="code" href="syscall_8h.html#a8a9ac0a2a3cf57e6bc85e8d8b070eb7c">sys_exit</a>;</div>
@@ -176,13 +176,13 @@ $(function() {
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="syscall_8h.html#a1a0036350a80a3483c90aa3edec318b7">  119</a></span>&#160;<a class="code" href="structpt__regs.html">pt_regs</a> *<a class="code" href="syscall_8c.html#a1a0036350a80a3483c90aa3edec318b7">get_current_interrupt_stack_frame</a>()</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> current_interrupt_stack_frame;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">current_interrupt_stack_frame</a>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="syscall_8h.html#ae1dbdd934680470c670d5a6bc3a4d380">  124</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="syscall_8c.html#ae1dbdd934680470c670d5a6bc3a4d380">syscall_handler</a>(<a class="code" href="structpt__regs.html">pt_regs</a> *f)</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Saves current interrupt stack frame</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    current_interrupt_stack_frame = f;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">current_interrupt_stack_frame</a> = f;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="comment">// dbg_print_regs(f);</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">// Save current process fpu state.</span></div>
@@ -259,7 +259,9 @@ $(function() {
 <div class="ttc" id="astructpt__regs_html_afd15cab97cc4f73329200206c9e60311"><div class="ttname"><a href="structpt__regs.html#afd15cab97cc4f73329200206c9e60311">pt_regs::edx</a></div><div class="ttdeci">uint32_t edx</div><div class="ttdoc">32-bit data register.</div><div class="ttdef"><b>Definition:</b> <a href="kernel_8h_source.html#l00044">kernel.h:44</a></div></div>
 <div class="ttc" id="asyscall_8c_html_a1a0036350a80a3483c90aa3edec318b7"><div class="ttname"><a href="syscall_8c.html#a1a0036350a80a3483c90aa3edec318b7">get_current_interrupt_stack_frame</a></div><div class="ttdeci">pt_regs * get_current_interrupt_stack_frame()</div><div class="ttdoc">Returns the current interrupt stack frame.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00119">syscall.c:119</a></div></div>
 <div class="ttc" id="asyscall_8c_html_a581ed37968ead91b6d3a0b3b7a71da9d"><div class="ttname"><a href="syscall_8c.html#a581ed37968ead91b6d3a0b3b7a71da9d">syscall_init</a></div><div class="ttdeci">void syscall_init()</div><div class="ttdoc">Initialize the system calls.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00050">syscall.c:50</a></div></div>
+<div class="ttc" id="asyscall_8c_html_a676bbd142227a8703c02b1e6b941b93e"><div class="ttname"><a href="syscall_8c.html#a676bbd142227a8703c02b1e6b941b93e">current_interrupt_stack_frame</a></div><div class="ttdeci">static pt_regs * current_interrupt_stack_frame</div><div class="ttdoc">Last interupt stack frame.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00036">syscall.c:36</a></div></div>
 <div class="ttc" id="asyscall_8c_html_a7816640256ba3e7436f148c8e536e1e0"><div class="ttname"><a href="syscall_8c.html#a7816640256ba3e7436f148c8e536e1e0">sys_call_table</a></div><div class="ttdeci">SystemCall sys_call_table[SYSCALL_NUMBER]</div><div class="ttdoc">The list of function call.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00033">syscall.c:33</a></div></div>
+<div class="ttc" id="asyscall_8c_html_ad95c7654e85010391d91a4d6ee05eb25"><div class="ttname"><a href="syscall_8c.html#ad95c7654e85010391d91a4d6ee05eb25">sys_ni_syscall</a></div><div class="ttdeci">static int sys_ni_syscall()</div><div class="ttdoc">A Not Implemented (NI) system-call.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00045">syscall.c:45</a></div></div>
 <div class="ttc" id="asyscall_8c_html_ad9724e91d3ff8a37569ffc8d44985928"><div class="ttname"><a href="syscall_8c.html#ad9724e91d3ff8a37569ffc8d44985928">SystemCall</a></div><div class="ttdeci">int(* SystemCall)()</div><div class="ttdoc">The signature of a function call.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00030">syscall.c:30</a></div></div>
 <div class="ttc" id="asyscall_8c_html_ae1dbdd934680470c670d5a6bc3a4d380"><div class="ttname"><a href="syscall_8c.html#ae1dbdd934680470c670d5a6bc3a4d380">syscall_handler</a></div><div class="ttdeci">void syscall_handler(pt_regs *f)</div><div class="ttdoc">Handler for the system calls.</div><div class="ttdef"><b>Definition:</b> <a href="syscall_8c_source.html#l00124">syscall.c:124</a></div></div>
 <div class="ttc" id="asyscall_8h_html"><div class="ttname"><a href="syscall_8h.html">syscall.h</a></div><div class="ttdoc">System Call handler definition.</div></div>
@@ -367,7 +369,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

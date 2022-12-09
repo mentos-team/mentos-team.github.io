@@ -73,7 +73,8 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">ext2.c File Reference</div>  </div>
 </div><!--header-->
@@ -316,6 +317,159 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7693666c4c51189986bc989c04eec367"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ext2_8c.html#a0069622e1f4804618494a1830ac35c43">ext2_block_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a7693666c4c51189986bc989c04eec367">ext2_check_bitmap_bit</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> linear_index)</td></tr>
+<tr class="memdesc:a7693666c4c51189986bc989c04eec367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cheks if the bit at the given linear index is free.  <a href="ext2_8c.html#a7693666c4c51189986bc989c04eec367">More...</a><br /></td></tr>
+<tr class="separator:a7693666c4c51189986bc989c04eec367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee1a9ae4c95f5c601c5e87dbd04d750"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#aeee1a9ae4c95f5c601c5e87dbd04d750">ext2_set_bitmap_bit</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> linear_index, <a class="el" href="ext2_8c.html#a0069622e1f4804618494a1830ac35c43">ext2_block_status_t</a> status)</td></tr>
+<tr class="memdesc:aeee1a9ae4c95f5c601c5e87dbd04d750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bit at the given linear index accordingly to <code>status</code>.  <a href="ext2_8c.html#aeee1a9ae4c95f5c601c5e87dbd04d750">More...</a><br /></td></tr>
+<tr class="separator:aeee1a9ae4c95f5c601c5e87dbd04d750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27678d7bf376d91c2af89ad3f9467cfd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a27678d7bf376d91c2af89ad3f9467cfd">ext2_read_superblock</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:a27678d7bf376d91c2af89ad3f9467cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the superblock from the block device associated with this filesystem.  <a href="ext2_8c.html#a27678d7bf376d91c2af89ad3f9467cfd">More...</a><br /></td></tr>
+<tr class="separator:a27678d7bf376d91c2af89ad3f9467cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f834291c706bbd75a3345d284e5f88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a07f834291c706bbd75a3345d284e5f88">ext2_write_superblock</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:a07f834291c706bbd75a3345d284e5f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the superblock on the block device associated with this filesystem.  <a href="ext2_8c.html#a07f834291c706bbd75a3345d284e5f88">More...</a><br /></td></tr>
+<tr class="separator:a07f834291c706bbd75a3345d284e5f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a73547ac7fdd8f4b24cde11e973166a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a0a73547ac7fdd8f4b24cde11e973166a">ext2_read_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer)</td></tr>
+<tr class="memdesc:a0a73547ac7fdd8f4b24cde11e973166a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a block from the block device associated with this filesystem.  <a href="ext2_8c.html#a0a73547ac7fdd8f4b24cde11e973166a">More...</a><br /></td></tr>
+<tr class="separator:a0a73547ac7fdd8f4b24cde11e973166a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d3573fbb6b099f9935d2519c36a514a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a5d3573fbb6b099f9935d2519c36a514a">ext2_write_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer)</td></tr>
+<tr class="memdesc:a5d3573fbb6b099f9935d2519c36a514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block on the block device associated with this filesystem.  <a href="ext2_8c.html#a5d3573fbb6b099f9935d2519c36a514a">More...</a><br /></td></tr>
+<tr class="separator:a5d3573fbb6b099f9935d2519c36a514a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4961f6e254fd0391ea5781800ec3c9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a7e4961f6e254fd0391ea5781800ec3c9">ext2_read_bgdt</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:a7e4961f6e254fd0391ea5781800ec3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the Block Group Descriptor Table (BGDT) from the block device associated with this filesystem.  <a href="ext2_8c.html#a7e4961f6e254fd0391ea5781800ec3c9">More...</a><br /></td></tr>
+<tr class="separator:a7e4961f6e254fd0391ea5781800ec3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f1f1de274536c1d383e022581a12bb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#af9f1f1de274536c1d383e022581a12bb">ext2_write_bgdt</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:af9f1f1de274536c1d383e022581a12bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the Block Group Descriptor Table (BGDT) to the block device associated with this filesystem.  <a href="ext2_8c.html#af9f1f1de274536c1d383e022581a12bb">More...</a><br /></td></tr>
+<tr class="separator:af9f1f1de274536c1d383e022581a12bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aebb343f7d64aeb65ca7666b084c645"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a1aebb343f7d64aeb65ca7666b084c645">ext2_read_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index)</td></tr>
+<tr class="memdesc:a1aebb343f7d64aeb65ca7666b084c645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an inode.  <a href="ext2_8c.html#a1aebb343f7d64aeb65ca7666b084c645">More...</a><br /></td></tr>
+<tr class="separator:a1aebb343f7d64aeb65ca7666b084c645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd3d11eec17e7bbbc323cca7e67f3a3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a3fd3d11eec17e7bbbc323cca7e67f3a3">ext2_write_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index)</td></tr>
+<tr class="memdesc:a3fd3d11eec17e7bbbc323cca7e67f3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the inode.  <a href="ext2_8c.html#a3fd3d11eec17e7bbbc323cca7e67f3a3">More...</a><br /></td></tr>
+<tr class="separator:a3fd3d11eec17e7bbbc323cca7e67f3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c752678422b8e689636218a40612abf"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a5c752678422b8e689636218a40612abf">ext2_open</a> (const char *path, int flags, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mode)</td></tr>
+<tr class="memdesc:a5c752678422b8e689636218a40612abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the file at the given path and returns its file descriptor.  <a href="ext2_8c.html#a5c752678422b8e689636218a40612abf">More...</a><br /></td></tr>
+<tr class="separator:a5c752678422b8e689636218a40612abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf9a42d00a2f9ff739ae3c787783618"><td class="memItemLeft" align="right" valign="top"><a id="acdf9a42d00a2f9ff739ae3c787783618"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_unlink</b> (const char *path)</td></tr>
+<tr class="separator:acdf9a42d00a2f9ff739ae3c787783618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da44f90310a2558fe4a71f1177b1de1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a8da44f90310a2558fe4a71f1177b1de1">ext2_close</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file)</td></tr>
+<tr class="memdesc:a8da44f90310a2558fe4a71f1177b1de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given file.  <a href="ext2_8c.html#a8da44f90310a2558fe4a71f1177b1de1">More...</a><br /></td></tr>
+<tr class="separator:a8da44f90310a2558fe4a71f1177b1de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdf5e1cfe4f512f725c58768aa6564a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a1bdf5e1cfe4f512f725c58768aa6564a">ext2_read</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, char *buffer, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte)</td></tr>
+<tr class="memdesc:a1bdf5e1cfe4f512f725c58768aa6564a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from the file identified by the file descriptor.  <a href="ext2_8c.html#a1bdf5e1cfe4f512f725c58768aa6564a">More...</a><br /></td></tr>
+<tr class="separator:a1bdf5e1cfe4f512f725c58768aa6564a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a3c090b583f41b2c84e7af24d608d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a27a3c090b583f41b2c84e7af24d608d2">ext2_write</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, const void *buffer, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte)</td></tr>
+<tr class="memdesc:a27a3c090b583f41b2c84e7af24d608d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given content inside the file.  <a href="ext2_8c.html#a27a3c090b583f41b2c84e7af24d608d2">More...</a><br /></td></tr>
+<tr class="separator:a27a3c090b583f41b2c84e7af24d608d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04cabc091404e453b18189582511373c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a04cabc091404e453b18189582511373c">ext2_lseek</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, int whence)</td></tr>
+<tr class="memdesc:a04cabc091404e453b18189582511373c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repositions the file offset inside a file.  <a href="ext2_8c.html#a04cabc091404e453b18189582511373c">More...</a><br /></td></tr>
+<tr class="separator:a04cabc091404e453b18189582511373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac418f8b5e976261694639e821624a35d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ac418f8b5e976261694639e821624a35d">ext2_fstat</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:ac418f8b5e976261694639e821624a35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="ext2_8c.html#ac418f8b5e976261694639e821624a35d">More...</a><br /></td></tr>
+<tr class="separator:ac418f8b5e976261694639e821624a35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade74d0f45b85757025ed9e009cebfd2d"><td class="memItemLeft" align="right" valign="top"><a id="ade74d0f45b85757025ed9e009cebfd2d"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_ioctl</b> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, int request, void *data)</td></tr>
+<tr class="separator:ade74d0f45b85757025ed9e009cebfd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c353c565a8536056426d0b36bfe13a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a28c353c565a8536056426d0b36bfe13a">ext2_getdents</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structdirent__t.html">dirent_t</a> *dirp, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> doff, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> count)</td></tr>
+<tr class="memdesc:a28c353c565a8536056426d0b36bfe13a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads contents of the directories to a dirent buffer, updating the offset and returning the number of written bytes in the buffer, it assumes that all paths are well-formed.  <a href="ext2_8c.html#a28c353c565a8536056426d0b36bfe13a">More...</a><br /></td></tr>
+<tr class="separator:a28c353c565a8536056426d0b36bfe13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1a0dff103e319dec001591a3661a67"><td class="memItemLeft" align="right" valign="top"><a id="a1c1a0dff103e319dec001591a3661a67"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_mkdir</b> (const char *path, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mode)</td></tr>
+<tr class="separator:a1c1a0dff103e319dec001591a3661a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d99cc2ff2493e0dcbcec26a535bd463"><td class="memItemLeft" align="right" valign="top"><a id="a7d99cc2ff2493e0dcbcec26a535bd463"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_rmdir</b> (const char *path)</td></tr>
+<tr class="separator:a7d99cc2ff2493e0dcbcec26a535bd463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ffef442d98e0513c58a2403c01e2500"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a8ffef442d98e0513c58a2403c01e2500">ext2_stat</a> (const char *path, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:a8ffef442d98e0513c58a2403c01e2500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="ext2_8c.html#a8ffef442d98e0513c58a2403c01e2500">More...</a><br /></td></tr>
+<tr class="separator:a8ffef442d98e0513c58a2403c01e2500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4afc29048f4aae0c34c3754d9fbc12"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a1f4afc29048f4aae0c34c3754d9fbc12">ext2_creat</a> (const char *path, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> permission)</td></tr>
+<tr class="memdesc:a1f4afc29048f4aae0c34c3754d9fbc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new file or rewrite an existing one.  <a href="ext2_8c.html#a1f4afc29048f4aae0c34c3754d9fbc12">More...</a><br /></td></tr>
+<tr class="separator:a1f4afc29048f4aae0c34c3754d9fbc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca74429a933038d12d705d82bac7965f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#aca74429a933038d12d705d82bac7965f">ext2_mount</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *block_device, const char *path)</td></tr>
+<tr class="memdesc:aca74429a933038d12d705d82bac7965f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mounts the block device as an EXT2 filesystem.  <a href="ext2_8c.html#aca74429a933038d12d705d82bac7965f">More...</a><br /></td></tr>
+<tr class="separator:aca74429a933038d12d705d82bac7965f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee9bd63f01074cd9f58a06c24fea044"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a3ee9bd63f01074cd9f58a06c24fea044">uuid_to_string</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> uuid[16])</td></tr>
+<tr class="memdesc:a3ee9bd63f01074cd9f58a06c24fea044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns an UUID to string.  <a href="ext2_8c.html#a3ee9bd63f01074cd9f58a06c24fea044">More...</a><br /></td></tr>
+<tr class="separator:a3ee9bd63f01074cd9f58a06c24fea044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4f8a31fd78f3cc6f1fad3e313b1563"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a3a4f8a31fd78f3cc6f1fad3e313b1563">ext2_file_type_to_string</a> (<a class="el" href="ext2_8c.html#a084750f3e16186eac33fdb186f7d0cf2">ext2_file_type_t</a> ext2_type)</td></tr>
+<tr class="memdesc:a3a4f8a31fd78f3cc6f1fad3e313b1563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns an ext2_file_type to string.  <a href="ext2_8c.html#a3a4f8a31fd78f3cc6f1fad3e313b1563">More...</a><br /></td></tr>
+<tr class="separator:a3a4f8a31fd78f3cc6f1fad3e313b1563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ceaf22434124e64edccbf7fc09aebc9"><td class="memItemLeft" align="right" valign="top"><a id="a2ceaf22434124e64edccbf7fc09aebc9"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_file_type_to_vfs_file_type</b> (int ext2_type)</td></tr>
+<tr class="separator:a2ceaf22434124e64edccbf7fc09aebc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b8a49680593ba911dd8df76fe52f223"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a1b8a49680593ba911dd8df76fe52f223">time_to_string</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="time_8h.html#ae7841e681c8c9d59818568d39553642c">time</a>)</td></tr>
+<tr class="memdesc:a1b8a49680593ba911dd8df76fe52f223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns the time to string.  <a href="ext2_8c.html#a1b8a49680593ba911dd8df76fe52f223">More...</a><br /></td></tr>
+<tr class="separator:a1b8a49680593ba911dd8df76fe52f223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8561fb3f1b66c7a4108c413e8fd03136"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a8561fb3f1b66c7a4108c413e8fd03136">ext2_valid_permissions</a> (int flags, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mask, <a class="el" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid, <a class="el" href="stddef_8h.html#a79e4526f6cb611a2e272db092186f8f0">gid_t</a> gid)</td></tr>
+<tr class="memdesc:a8561fb3f1b66c7a4108c413e8fd03136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the requests in flags are valid.  <a href="ext2_8c.html#a8561fb3f1b66c7a4108c413e8fd03136">More...</a><br /></td></tr>
+<tr class="separator:a8561fb3f1b66c7a4108c413e8fd03136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49a9aa61f96df91c19b0934b4364945"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ae49a9aa61f96df91c19b0934b4364945">ext2_dump_superblock</a> (<a class="el" href="structext2__superblock__t.html">ext2_superblock_t</a> *sb)</td></tr>
+<tr class="memdesc:ae49a9aa61f96df91c19b0934b4364945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the superblock.  <a href="ext2_8c.html#ae49a9aa61f96df91c19b0934b4364945">More...</a><br /></td></tr>
+<tr class="separator:ae49a9aa61f96df91c19b0934b4364945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac93be4a775f21ffa673aea36ca0d46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a9ac93be4a775f21ffa673aea36ca0d46">ext2_dump_group_descriptor</a> (<a class="el" href="structext2__group__descriptor__t.html">ext2_group_descriptor_t</a> *gd)</td></tr>
+<tr class="memdesc:a9ac93be4a775f21ffa673aea36ca0d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the group descriptor.  <a href="ext2_8c.html#a9ac93be4a775f21ffa673aea36ca0d46">More...</a><br /></td></tr>
+<tr class="separator:a9ac93be4a775f21ffa673aea36ca0d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c56aba3e1e8a8e5e1692e223b5627b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a6c56aba3e1e8a8e5e1692e223b5627b9">ext2_dump_inode</a> (<a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode)</td></tr>
+<tr class="memdesc:a6c56aba3e1e8a8e5e1692e223b5627b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the inode.  <a href="ext2_8c.html#a6c56aba3e1e8a8e5e1692e223b5627b9">More...</a><br /></td></tr>
+<tr class="separator:a6c56aba3e1e8a8e5e1692e223b5627b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae693ff57a91f4f8cec111eaf3169accb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ae693ff57a91f4f8cec111eaf3169accb">ext2_dump_dirent</a> (<a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *dirent)</td></tr>
+<tr class="memdesc:ae693ff57a91f4f8cec111eaf3169accb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the dirent.  <a href="ext2_8c.html#ae693ff57a91f4f8cec111eaf3169accb">More...</a><br /></td></tr>
+<tr class="separator:ae693ff57a91f4f8cec111eaf3169accb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae077d214bb8b5805cf9064814eec12e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#aae077d214bb8b5805cf9064814eec12e">ext2_dump_bgdt</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:aae077d214bb8b5805cf9064814eec12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the BGDT.  <a href="ext2_8c.html#aae077d214bb8b5805cf9064814eec12e">More...</a><br /></td></tr>
+<tr class="separator:aae077d214bb8b5805cf9064814eec12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e328343ae803e9f9a1fcdd16cacd88e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a3e328343ae803e9f9a1fcdd16cacd88e">ext2_dump_filesystem</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:a3e328343ae803e9f9a1fcdd16cacd88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the filesystem.  <a href="ext2_8c.html#a3e328343ae803e9f9a1fcdd16cacd88e">More...</a><br /></td></tr>
+<tr class="separator:a3e328343ae803e9f9a1fcdd16cacd88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accfbd2412d0387cf1be6678c64c1137e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#accfbd2412d0387cf1be6678c64c1137e">ext2_get_group_index_from_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index)</td></tr>
+<tr class="memdesc:accfbd2412d0387cf1be6678c64c1137e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determining which block group contains an inode.  <a href="ext2_8c.html#accfbd2412d0387cf1be6678c64c1137e">More...</a><br /></td></tr>
+<tr class="separator:accfbd2412d0387cf1be6678c64c1137e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d14ed9a50c5a4405c193a15160b2949"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a2d14ed9a50c5a4405c193a15160b2949">ext2_get_inode_offest_in_group</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index)</td></tr>
+<tr class="memdesc:a2d14ed9a50c5a4405c193a15160b2949"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determining the offest of the inode inside the block group.  <a href="ext2_8c.html#a2d14ed9a50c5a4405c193a15160b2949">More...</a><br /></td></tr>
+<tr class="separator:a2d14ed9a50c5a4405c193a15160b2949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d7815aa3393e8e2e94ed8341f20da2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a88d7815aa3393e8e2e94ed8341f20da2">ext2_get_block_index_from_inode_offset</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_offset)</td></tr>
+<tr class="memdesc:a88d7815aa3393e8e2e94ed8341f20da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines which block contains our inode.  <a href="ext2_8c.html#a88d7815aa3393e8e2e94ed8341f20da2">More...</a><br /></td></tr>
+<tr class="separator:a88d7815aa3393e8e2e94ed8341f20da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3247e5475302a3d532b7dc5c36e7c09b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a3247e5475302a3d532b7dc5c36e7c09b">ext2_find_free_inode_in_group</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *cache, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *linear_index, <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> skip_reserved)</td></tr>
+<tr class="memdesc:a3247e5475302a3d532b7dc5c36e7c09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a free inode inside the group data loaded inside the cache.  <a href="ext2_8c.html#a3247e5475302a3d532b7dc5c36e7c09b">More...</a><br /></td></tr>
+<tr class="separator:a3247e5475302a3d532b7dc5c36e7c09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef8456eac95f894ca4392801a656f15"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a7ef8456eac95f894ca4392801a656f15">ext2_find_free_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *cache, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *group_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *linear_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> preferred_group)</td></tr>
+<tr class="memdesc:a7ef8456eac95f894ca4392801a656f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a free inode inside the Block Group Descriptor Table (BGDT).  <a href="ext2_8c.html#a7ef8456eac95f894ca4392801a656f15">More...</a><br /></td></tr>
+<tr class="separator:a7ef8456eac95f894ca4392801a656f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf168e993f8f8c0132c43040d135891f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#acf168e993f8f8c0132c43040d135891f">ext2_find_free_block_in_group</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *cache, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *linear_index)</td></tr>
+<tr class="memdesc:acf168e993f8f8c0132c43040d135891f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a free block inside the group data loaded inside the cache.  <a href="ext2_8c.html#acf168e993f8f8c0132c43040d135891f">More...</a><br /></td></tr>
+<tr class="separator:acf168e993f8f8c0132c43040d135891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a1b8a024da02f391598423df5a5482"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a55a1b8a024da02f391598423df5a5482">ext2_find_free_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *cache, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *group_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *linear_index)</td></tr>
+<tr class="memdesc:a55a1b8a024da02f391598423df5a5482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for a free block.  <a href="ext2_8c.html#a55a1b8a024da02f391598423df5a5482">More...</a><br /></td></tr>
+<tr class="separator:a55a1b8a024da02f391598423df5a5482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5e9daf0556130c5ec591ecbaf15f84"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a8a5e9daf0556130c5ec591ecbaf15f84">ext2_allocate_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, unsigned preferred_group)</td></tr>
+<tr class="memdesc:a8a5e9daf0556130c5ec591ecbaf15f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a new inode.  <a href="ext2_8c.html#a8a5e9daf0556130c5ec591ecbaf15f84">More...</a><br /></td></tr>
+<tr class="separator:a8a5e9daf0556130c5ec591ecbaf15f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad101642dceeec3e0460e4f0940789b3e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ad101642dceeec3e0460e4f0940789b3e">ext2_allocate_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>)</td></tr>
+<tr class="memdesc:ad101642dceeec3e0460e4f0940789b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a new block.  <a href="ext2_8c.html#ad101642dceeec3e0460e4f0940789b3e">More...</a><br /></td></tr>
+<tr class="separator:ad101642dceeec3e0460e4f0940789b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14edc828680056c7ae4e939c1b06cfb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ac14edc828680056c7ae4e939c1b06cfb">ext2_set_real_block_index</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> real_index)</td></tr>
+<tr class="memdesc:ac14edc828680056c7ae4e939c1b06cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the real block index based on the block index inside an inode.  <a href="ext2_8c.html#ac14edc828680056c7ae4e939c1b06cfb">More...</a><br /></td></tr>
+<tr class="separator:ac14edc828680056c7ae4e939c1b06cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7495a91cba1f6637797588accd9e22f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#af7495a91cba1f6637797588accd9e22f">ext2_get_real_block_index</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index)</td></tr>
+<tr class="memdesc:af7495a91cba1f6637797588accd9e22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the real block index starting from a block index inside an inode.  <a href="ext2_8c.html#af7495a91cba1f6637797588accd9e22f">More...</a><br /></td></tr>
+<tr class="separator:af7495a91cba1f6637797588accd9e22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2174234063d361633b9aeec378131e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a0b2174234063d361633b9aeec378131e">ext2_allocate_inode_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index)</td></tr>
+<tr class="memdesc:a0b2174234063d361633b9aeec378131e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a new block for an inode.  <a href="ext2_8c.html#a0b2174234063d361633b9aeec378131e">More...</a><br /></td></tr>
+<tr class="separator:a0b2174234063d361633b9aeec378131e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4073a249125278a5f6a0b130ad2156"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#adc4073a249125278a5f6a0b130ad2156">ext2_read_inode_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer)</td></tr>
+<tr class="memdesc:adc4073a249125278a5f6a0b130ad2156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the real block starting from an inode and the block index inside the inode.  <a href="ext2_8c.html#adc4073a249125278a5f6a0b130ad2156">More...</a><br /></td></tr>
+<tr class="separator:adc4073a249125278a5f6a0b130ad2156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72d43c896521bf25d285c2160428cf2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ae72d43c896521bf25d285c2160428cf2">ext2_write_inode_block</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> block_index, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *buffer)</td></tr>
+<tr class="memdesc:ae72d43c896521bf25d285c2160428cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the real block starting from an inode and the block index inside the inode.  <a href="ext2_8c.html#ae72d43c896521bf25d285c2160428cf2">More...</a><br /></td></tr>
+<tr class="separator:ae72d43c896521bf25d285c2160428cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed8566d255825da71b0adc3c91bc1383"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#aed8566d255825da71b0adc3c91bc1383">ext2_read_inode_data</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte, char *buffer)</td></tr>
+<tr class="memdesc:aed8566d255825da71b0adc3c91bc1383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the data from the given inode.  <a href="ext2_8c.html#aed8566d255825da71b0adc3c91bc1383">More...</a><br /></td></tr>
+<tr class="separator:aed8566d255825da71b0adc3c91bc1383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b365f3219403699547724d459eeb60"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a12b365f3219403699547724d459eeb60">ext2_write_inode_data</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte, char *buffer)</td></tr>
+<tr class="memdesc:a12b365f3219403699547724d459eeb60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the data on the given inode.  <a href="ext2_8c.html#a12b365f3219403699547724d459eeb60">More...</a><br /></td></tr>
+<tr class="separator:a12b365f3219403699547724d459eeb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21dcd2a7b6269dfbeac79dfa9de5e4ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a21dcd2a7b6269dfbeac79dfa9de5e4ea">ext2_direntry_iterator_get</a> (<a class="el" href="structext2__direntry__iterator__t.html">ext2_direntry_iterator_t</a> *iterator)</td></tr>
 <tr class="memdesc:a21dcd2a7b6269dfbeac79dfa9de5e4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structext2__dirent__t.html" title="The header of an ext2 directory entry.">ext2_dirent_t</a> pointed by the iterator.  <a href="ext2_8c.html#a21dcd2a7b6269dfbeac79dfa9de5e4ea">More...</a><br /></td></tr>
 <tr class="separator:a21dcd2a7b6269dfbeac79dfa9de5e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,12 +482,66 @@ Functions</h2></td></tr>
 <tr class="memitem:acb619163a9502fe020deaa128246d1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#acb619163a9502fe020deaa128246d1f1">ext2_direntry_iterator_next</a> (<a class="el" href="structext2__direntry__iterator__t.html">ext2_direntry_iterator_t</a> *iterator)</td></tr>
 <tr class="memdesc:acb619163a9502fe020deaa128246d1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves to the next direntry, and moves to the next block if necessary.  <a href="ext2_8c.html#acb619163a9502fe020deaa128246d1f1">More...</a><br /></td></tr>
 <tr class="separator:acb619163a9502fe020deaa128246d1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83586c5bb467a89ebb5ce64640137c4"><td class="memItemLeft" align="right" valign="top"><a id="ad83586c5bb467a89ebb5ce64640137c4"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_directory_is_empty</b> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *cache, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode)</td></tr>
+<tr class="separator:ad83586c5bb467a89ebb5ce64640137c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14efc410e5a5fc5ad10a23f8deb0187e"><td class="memItemLeft" align="right" valign="top"><a id="a14efc410e5a5fc5ad10a23f8deb0187e"></a>
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_get_rec_len_from_name</b> (const char *name)</td></tr>
+<tr class="separator:a14efc410e5a5fc5ad10a23f8deb0187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a898ccda96c2912395e5e49cf20f42214"><td class="memItemLeft" align="right" valign="top"><a id="a898ccda96c2912395e5e49cf20f42214"></a>
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_get_rec_len_from_direntry</b> (const <a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *direntry)</td></tr>
+<tr class="separator:a898ccda96c2912395e5e49cf20f42214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459e2b4c76715f98964cc9a723aa1519"><td class="memItemLeft" align="right" valign="top"><a id="a459e2b4c76715f98964cc9a723aa1519"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_allocate_direntry</b> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> parent_inode_index, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, const char *name, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> file_type)</td></tr>
+<tr class="separator:a459e2b4c76715f98964cc9a723aa1519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4005eb58c04cd6ebfc45c176d0e1ec"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a5b4005eb58c04cd6ebfc45c176d0e1ec">ext2_find_direntry</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stddef_8h.html#aa8557cf6ab5962820bb04d260b7b98e2">ino_t</a> ino, const char *name, <a class="el" href="structext2__direntry__search__t.html">ext2_direntry_search_t</a> *search)</td></tr>
+<tr class="memdesc:a5b4005eb58c04cd6ebfc45c176d0e1ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the entry with the given <code>name</code> inside the <code>directory</code>.  <a href="ext2_8c.html#a5b4005eb58c04cd6ebfc45c176d0e1ec">More...</a><br /></td></tr>
+<tr class="separator:a5b4005eb58c04cd6ebfc45c176d0e1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d0c734a2f1f6c77b14653a38dae384"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a68d0c734a2f1f6c77b14653a38dae384">ext2_find_direntry_simple</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stddef_8h.html#aa8557cf6ab5962820bb04d260b7b98e2">ino_t</a> ino, const char *name, <a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *direntry)</td></tr>
+<tr class="memdesc:a68d0c734a2f1f6c77b14653a38dae384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the entry with the given <code>name</code> inside the <code>directory</code>.  <a href="ext2_8c.html#a68d0c734a2f1f6c77b14653a38dae384">More...</a><br /></td></tr>
+<tr class="separator:a68d0c734a2f1f6c77b14653a38dae384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d72ea4761ec3ec5874c101d1dd58b3c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a6d72ea4761ec3ec5874c101d1dd58b3c">ext2_resolve_path</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *directory, char *path, <a class="el" href="structext2__direntry__search__t.html">ext2_direntry_search_t</a> *search)</td></tr>
+<tr class="memdesc:a6d72ea4761ec3ec5874c101d1dd58b3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the entry specified in <code>path</code> starting from <code>directory</code>.  <a href="ext2_8c.html#a6d72ea4761ec3ec5874c101d1dd58b3c">More...</a><br /></td></tr>
+<tr class="separator:a6d72ea4761ec3ec5874c101d1dd58b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85804312a6fdc5296aab6e906da51034"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a85804312a6fdc5296aab6e906da51034">ext2_resolve_path_direntry</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *directory, char *path, <a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *direntry)</td></tr>
+<tr class="memdesc:a85804312a6fdc5296aab6e906da51034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the entry specified in <code>path</code> starting from <code>directory</code>.  <a href="ext2_8c.html#a85804312a6fdc5296aab6e906da51034">More...</a><br /></td></tr>
+<tr class="separator:a85804312a6fdc5296aab6e906da51034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9304164e46f2b94bc2eb3f02b3dbfdab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a9304164e46f2b94bc2eb3f02b3dbfdab">get_ext2_filesystem</a> (const char *absolute_path)</td></tr>
+<tr class="memdesc:a9304164e46f2b94bc2eb3f02b3dbfdab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ext2 filesystem object starting from a path.  <a href="ext2_8c.html#a9304164e46f2b94bc2eb3f02b3dbfdab">More...</a><br /></td></tr>
+<tr class="separator:a9304164e46f2b94bc2eb3f02b3dbfdab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a240f519468c85cf3a8010106e1cee249"><td class="memItemLeft" align="right" valign="top"><a id="a240f519468c85cf3a8010106e1cee249"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_init_vfs_file</b> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> inode_index, const char *name, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> name_len)</td></tr>
+<tr class="separator:a240f519468c85cf3a8010106e1cee249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83c550dcdc8058fef4ddfd7f891f8af"><td class="memItemLeft" align="right" valign="top"><a id="ad83c550dcdc8058fef4ddfd7f891f8af"></a>
+static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_find_vfs_file_with_inode</b> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="stddef_8h.html#aa8557cf6ab5962820bb04d260b7b98e2">ino_t</a> inode)</td></tr>
+<tr class="separator:ad83c550dcdc8058fef4ddfd7f891f8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e579b12cc32a114267138751703733b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a1e579b12cc32a114267138751703733b">ext2_create_inode</a> (<a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *<a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a>, <a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mode, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> preferred_group)</td></tr>
+<tr class="memdesc:a1e579b12cc32a114267138751703733b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes a new inode.  <a href="ext2_8c.html#a1e579b12cc32a114267138751703733b">More...</a><br /></td></tr>
+<tr class="separator:a1e579b12cc32a114267138751703733b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb67914b033e2ec6741eeadb11590c48"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#adb67914b033e2ec6741eeadb11590c48">__ext2_stat</a> (<a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *inode, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:adb67914b033e2ec6741eeadb11590c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the information concerning the file.  <a href="ext2_8c.html#adb67914b033e2ec6741eeadb11590c48">More...</a><br /></td></tr>
+<tr class="separator:adb67914b033e2ec6741eeadb11590c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a36cb0a26d3bf6ee39ec942a26e81f"><td class="memItemLeft" align="right" valign="top"><a id="a44a36cb0a26d3bf6ee39ec942a26e81f"></a>
+static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ext2_mount_callback</b> (const char *path, const char *device)</td></tr>
+<tr class="separator:a44a36cb0a26d3bf6ee39ec942a26e81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db7866816b9ae2eea72d92339970743"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a0db7866816b9ae2eea72d92339970743">ext2_initialize</a> (void)</td></tr>
 <tr class="memdesc:a0db7866816b9ae2eea72d92339970743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the EXT2 drivers.  <a href="ext2_8c.html#a0db7866816b9ae2eea72d92339970743">More...</a><br /></td></tr>
 <tr class="separator:a0db7866816b9ae2eea72d92339970743"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab19de73ebcd0e0b7e6f3d339067a9dee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ab19de73ebcd0e0b7e6f3d339067a9dee">ext2_finalize</a> (void)</td></tr>
 <tr class="memdesc:ab19de73ebcd0e0b7e6f3d339067a9dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes the EXT2 drivers.  <a href="ext2_8c.html#ab19de73ebcd0e0b7e6f3d339067a9dee">More...</a><br /></td></tr>
 <tr class="separator:ab19de73ebcd0e0b7e6f3d339067a9dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aaeae5a7a01aee53d760cca32c16aa5a6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#aaeae5a7a01aee53d760cca32c16aa5a6">ext2_sys_operations</a></td></tr>
+<tr class="memdesc:aaeae5a7a01aee53d760cca32c16aa5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem general operations.  <a href="ext2_8c.html#aaeae5a7a01aee53d760cca32c16aa5a6">More...</a><br /></td></tr>
+<tr class="separator:aaeae5a7a01aee53d760cca32c16aa5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99ad5e6af75334d5d5de925bbcf6fd5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#ae99ad5e6af75334d5d5de925bbcf6fd5">ext2_fs_operations</a></td></tr>
+<tr class="memdesc:ae99ad5e6af75334d5d5de925bbcf6fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem file operations.  <a href="ext2_8c.html#ae99ad5e6af75334d5d5de925bbcf6fd5">More...</a><br /></td></tr>
+<tr class="separator:ae99ad5e6af75334d5d5de925bbcf6fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e50c1b6cbe06a9c19675c184c9aae7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structfile__system__type.html">file_system_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ext2_8c.html#a46e50c1b6cbe06a9c19675c184c9aae7">ext2_file_system_type</a></td></tr>
+<tr class="memdesc:a46e50c1b6cbe06a9c19675c184c9aae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem information.  <a href="ext2_8c.html#a46e50c1b6cbe06a9c19675c184c9aae7">More...</a><br /></td></tr>
+<tr class="separator:a46e50c1b6cbe06a9c19675c184c9aae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>EXT2 driver. </p>
@@ -420,6 +628,400 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="adb67914b033e2ec6741eeadb11590c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb67914b033e2ec6741eeadb11590c48">&#9670;&nbsp;</a></span>__ext2_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __ext2_stat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the information concerning the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inode</td><td>The inode containing the data. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02594">2594</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ad101642dceeec3e0460e4f0940789b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad101642dceeec3e0460e4f0940789b3e">&#9670;&nbsp;</a></span>ext2_allocate_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ext2_allocate_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocates a new block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on failure, or the index of the new block on success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01076">1076</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a8a5e9daf0556130c5ec591ecbaf15f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5e9daf0556130c5ec591ecbaf15f84">&#9670;&nbsp;</a></span>ext2_allocate_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_allocate_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>preferred_group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate a new inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">preferred_group</td><td>the preferred group. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>index of the inode.</dd></dl>
+<p>Here are the rules used to allocate new inodes:</p><ul>
+<li>the inode for a new file is allocated in the same group of the inode of its parent directory.</li>
+<li>inodes are allocated equally between groups. </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01033">1033</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a0b2174234063d361633b9aeec378131e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2174234063d361633b9aeec378131e">&#9670;&nbsp;</a></span>ext2_allocate_inode_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_allocate_inode_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Allocate a new block for an inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>The index of the inode. </td></tr>
+    <tr><td class="paramname">block_index</td><td>The index of the block within the inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01378">1378</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a7693666c4c51189986bc989c04eec367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7693666c4c51189986bc989c04eec367">&#9670;&nbsp;</a></span>ext2_check_bitmap_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="ext2_8c.html#a0069622e1f4804618494a1830ac35c43">ext2_block_status_t</a> ext2_check_bitmap_bit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>linear_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cheks if the bit at the given linear index is free. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>the buffer containing the bitmap </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the linear index we want to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if the bit is 0 or 1.</dd></dl>
+<p>How we access the specific bits inside the bitmap takes inspiration from the mailman's algorithm. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00736">736</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a8da44f90310a2558fe4a71f1177b1de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da44f90310a2558fe4a71f1177b1de1">&#9670;&nbsp;</a></span>ext2_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the given file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02476">2476</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a1f4afc29048f4aae0c34c3754d9fbc12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4afc29048f4aae0c34c3754d9fbc12">&#9670;&nbsp;</a></span>ext2_creat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> * ext2_creat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>permission</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new file or rewrite an existing one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>path to the file. </td></tr>
+    <tr><td class="paramname">mode</td><td>mode for file creation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>file descriptor number, -1 otherwise and errno is set to indicate the error.</dd></dl>
+<p>It is equivalent to: open(path, O_WRONLY|O_CREAT|O_TRUNC, mode) </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02219">2219</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a1e579b12cc32a114267138751703733b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e579b12cc32a114267138751703733b">&#9670;&nbsp;</a></span>ext2_create_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_create_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>preferred_group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates and initializes a new inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode we use to initialize the root of the filesystem. </td></tr>
+    <tr><td class="paramname">preferred_group</td><td>the preferred group where the inode should be allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the inode index on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02142">2142</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
 <a id="a1282a522dccdce6e54403e04f1606609"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1282a522dccdce6e54403e04f1606609">&#9670;&nbsp;</a></span>ext2_direntry_iterator_begin()</h2>
 
@@ -553,6 +1155,259 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aae077d214bb8b5805cf9064814eec12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae077d214bb8b5805cf9064814eec12e">&#9670;&nbsp;</a></span>ext2_dump_bgdt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_bgdt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the BGDT. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem of which we print the BGDT. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00634">634</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ae693ff57a91f4f8cec111eaf3169accb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae693ff57a91f4f8cec111eaf3169accb">&#9670;&nbsp;</a></span>ext2_dump_dirent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_dirent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *&#160;</td>
+          <td class="paramname"><em>dirent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the dirent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirent</td><td>the object to dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00627">627</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a3e328343ae803e9f9a1fcdd16cacd88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e328343ae803e9f9a1fcdd16cacd88e">&#9670;&nbsp;</a></span>ext2_dump_filesystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_filesystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the object to dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00678">678</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a9ac93be4a775f21ffa673aea36ca0d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac93be4a775f21ffa673aea36ca0d46">&#9670;&nbsp;</a></span>ext2_dump_group_descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_group_descriptor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__group__descriptor__t.html">ext2_group_descriptor_t</a> *&#160;</td>
+          <td class="paramname"><em>gd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the group descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gd</td><td>the object to dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00575">575</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a6c56aba3e1e8a8e5e1692e223b5627b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c56aba3e1e8a8e5e1692e223b5627b9">&#9670;&nbsp;</a></span>ext2_dump_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inode</td><td>the object to dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00587">587</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ae49a9aa61f96df91c19b0934b4364945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49a9aa61f96df91c19b0934b4364945">&#9670;&nbsp;</a></span>ext2_dump_superblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_dump_superblock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__superblock__t.html">ext2_superblock_t</a> *&#160;</td>
+          <td class="paramname"><em>sb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dumps on debugging output the superblock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sb</td><td>the object to dump. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00524">524</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a3a4f8a31fd78f3cc6f1fad3e313b1563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4f8a31fd78f3cc6f1fad3e313b1563">&#9670;&nbsp;</a></span>ext2_file_type_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* ext2_file_type_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ext2_8c.html#a084750f3e16186eac33fdb186f7d0cf2">ext2_file_type_t</a>&#160;</td>
+          <td class="paramname"><em>ext2_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Turns an ext2_file_type to string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ext2_type</td><td>the ext2_file_type to turn to string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string representing the ext2_file_type. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00435">435</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
 <a id="ab19de73ebcd0e0b7e6f3d339067a9dee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab19de73ebcd0e0b7e6f3d339067a9dee">&#9670;&nbsp;</a></span>ext2_finalize()</h2>
 
@@ -572,6 +1427,686 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, 1 on error. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l03113">3113</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a5b4005eb58c04cd6ebfc45c176d0e1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4005eb58c04cd6ebfc45c176d0e1ec">&#9670;&nbsp;</a></span>ext2_find_direntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_find_direntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#aa8557cf6ab5962820bb04d260b7b98e2">ino_t</a>&#160;</td>
+          <td class="paramname"><em>ino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__direntry__search__t.html">ext2_direntry_search_t</a> *&#160;</td>
+          <td class="paramname"><em>search</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the entry with the given <code>name</code> inside the <code>directory</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>the directory in which we perform the search. </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the entry we are looking for. </td></tr>
+    <tr><td class="paramname">search</td><td>the output variable where we save the info about the entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01851">1851</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a68d0c734a2f1f6c77b14653a38dae384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d0c734a2f1f6c77b14653a38dae384">&#9670;&nbsp;</a></span>ext2_find_direntry_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_find_direntry_simple </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#aa8557cf6ab5962820bb04d260b7b98e2">ino_t</a>&#160;</td>
+          <td class="paramname"><em>ino</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *&#160;</td>
+          <td class="paramname"><em>direntry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the entry with the given <code>name</code> inside the <code>directory</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>the directory in which we perform the search. </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the entry we are looking for. </td></tr>
+    <tr><td class="paramname">search</td><td>the output variable where we save the info about the entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01929">1929</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a55a1b8a024da02f391598423df5a5482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55a1b8a024da02f391598423df5a5482">&#9670;&nbsp;</a></span>ext2_find_free_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> ext2_find_free_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>group_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>linear_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches for a free block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">cache</td><td>the cache from which we read the bgdt data. </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the output variable where we store the linear indes to the free block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if we found a free block, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00837">837</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="acf168e993f8f8c0132c43040d135891f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf168e993f8f8c0132c43040d135891f">&#9670;&nbsp;</a></span>ext2_find_free_block_in_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> ext2_find_free_block_in_group </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>linear_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches for a free block inside the group data loaded inside the cache. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">cache</td><td>the cache from which we read the bgdt data. </td></tr>
+    <tr><td class="paramname">group_index</td><td>the output variable where we store the group index. </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the output variable where we store the linear indes to the free block. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if we found a free block, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00822">822</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a7ef8456eac95f894ca4392801a656f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef8456eac95f894ca4392801a656f15">&#9670;&nbsp;</a></span>ext2_find_free_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> ext2_find_free_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>group_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>linear_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>preferred_group</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches for a free inode inside the Block Group Descriptor Table (BGDT). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">cache</td><td>the cache from which we read the bgdt data. </td></tr>
+    <tr><td class="paramname">group_index</td><td>the output variable where we store the group index. </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the output variable where we store the linear indes to the free inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if we found a free inode, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00782">782</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a3247e5475302a3d532b7dc5c36e7c09b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3247e5475302a3d532b7dc5c36e7c09b">&#9670;&nbsp;</a></span>ext2_find_free_inode_in_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> ext2_find_free_inode_in_group </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>cache</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>linear_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td>
+          <td class="paramname"><em>skip_reserved</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches for a free inode inside the group data loaded inside the cache. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">cache</td><td>the cache from which we read the bgdt data. </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the output variable where we store the linear indes to the free inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if we found a free inode, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00758">758</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ac418f8b5e976261694639e821624a35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac418f8b5e976261694639e821624a35d">&#9670;&nbsp;</a></span>ext2_fstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_fstat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file struct. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+<p>ID of device containing file.</p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02610">2610</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a88d7815aa3393e8e2e94ed8341f20da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d7815aa3393e8e2e94ed8341f20da2">&#9670;&nbsp;</a></span>ext2_get_block_index_from_inode_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ext2_get_block_index_from_inode_offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines which block contains our inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">inode_offset</td><td>the inode offset inside the group. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>which block contains our inode. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00724">724</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="accfbd2412d0387cf1be6678c64c1137e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accfbd2412d0387cf1be6678c64c1137e">&#9670;&nbsp;</a></span>ext2_get_group_index_from_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ext2_get_group_index_from_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determining which block group contains an inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>the inode index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the group index.</dd></dl>
+<p>Remember that inode addressing starts from 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00703">703</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a2d14ed9a50c5a4405c193a15160b2949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d14ed9a50c5a4405c193a15160b2949">&#9670;&nbsp;</a></span>ext2_get_inode_offest_in_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ext2_get_inode_offest_in_group </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determining the offest of the inode inside the block group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>the inode index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the offset of the inode inside the group.</dd></dl>
+<p>Remember that inode addressing starts from 1. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00714">714</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="af7495a91cba1f6637797588accd9e22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7495a91cba1f6637797588accd9e22f">&#9670;&nbsp;</a></span>ext2_get_real_block_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ext2_get_real_block_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the real block index starting from a block index inside an inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the block index inside the inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the real block number. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01309">1309</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a28c353c565a8536056426d0b36bfe13a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c353c565a8536056426d0b36bfe13a">&#9670;&nbsp;</a></span>ext2_getdents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_getdents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdirent__t.html">dirent_t</a> *&#160;</td>
+          <td class="paramname"><em>dirp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>doff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads contents of the directories to a dirent buffer, updating the offset and returning the number of written bytes in the buffer, it assumes that all paths are well-formed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The directory handler. </td></tr>
+    <tr><td class="paramname">dirp</td><td>The buffer where the data should be written. </td></tr>
+    <tr><td class="paramname">doff</td><td>The offset inside the buffer where the data should be written. </td></tr>
+    <tr><td class="paramname">count</td><td>The maximum length of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes in the buffer. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02645">2645</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
 
 </div>
 </div>
@@ -597,6 +2132,1502 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a04cabc091404e453b18189582511373c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04cabc091404e453b18189582511373c">&#9670;&nbsp;</a></span>ext2_lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> ext2_lseek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Repositions the file offset inside a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file we are working with. </td></tr>
+    <tr><td class="paramname">offset</td><td>the offest to use for the operation. </td></tr>
+    <tr><td class="paramname">whence</td><td>the type of operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, returns the resulting offset location as measured in bytes from the beginning of the file. On error, the value (off_t) -1 is returned and errno is set to indicate the error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02551">2551</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="aca74429a933038d12d705d82bac7965f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca74429a933038d12d705d82bac7965f">&#9670;&nbsp;</a></span>ext2_mount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> * ext2_mount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>block_device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mounts the block device as an EXT2 filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">block_device</td><td>the block device formatted as EXT2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the VFS root node of the EXT2 filesystem. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02924">2924</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c752678422b8e689636218a40612abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c752678422b8e689636218a40612abf">&#9670;&nbsp;</a></span>ext2_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> * ext2_open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open the file at the given path and returns its file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the file. </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags used to determine the behavior of the function. </td></tr>
+    <tr><td class="paramname">mode</td><td>The mode with which we open the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The file descriptor of the opened file, otherwise returns -1. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02308">2308</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a1bdf5e1cfe4f512f725c58768aa6564a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdf5e1cfe4f512f725c58768aa6564a">&#9670;&nbsp;</a></span>ext2_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads from the file identified by the file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer where the read content must be placed. </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset from which we start reading from the file. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>The number of bytes to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of red bytes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02502">2502</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a7e4961f6e254fd0391ea5781800ec3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4961f6e254fd0391ea5781800ec3c9">&#9670;&nbsp;</a></span>ext2_read_bgdt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_read_bgdt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the Block Group Descriptor Table (BGDT) from the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00917">917</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a0a73547ac7fdd8f4b24cde11e973166a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a73547ac7fdd8f4b24cde11e973166a">&#9670;&nbsp;</a></span>ext2_read_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_read_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a block from the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the index of the block we want to read. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer where the content will be placed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we read, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00883">883</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a1aebb343f7d64aeb65ca7666b084c645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aebb343f7d64aeb65ca7666b084c645">&#9670;&nbsp;</a></span>ext2_read_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_read_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads an inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>The index of the inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00949">949</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="adc4073a249125278a5f6a0b130ad2156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4073a249125278a5f6a0b130ad2156">&#9670;&nbsp;</a></span>ext2_read_inode_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_read_inode_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the real block starting from an inode and the block index inside the inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the index of the block within the inode. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer where to put the data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we read, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01409">1409</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="aed8566d255825da71b0adc3c91bc1383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8566d255825da71b0adc3c91bc1383">&#9670;&nbsp;</a></span>ext2_read_inode_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_read_inode_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the data from the given inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>the index of the inode. </td></tr>
+    <tr><td class="paramname">offset</td><td>the offset from which we start reading the data. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>the number of bytes to read. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer containing the data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount we read. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01454">1454</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a27678d7bf376d91c2af89ad3f9467cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27678d7bf376d91c2af89ad3f9467cfd">&#9670;&nbsp;</a></span>ext2_read_superblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_read_superblock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads the superblock from the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we read, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00863">863</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a6d72ea4761ec3ec5874c101d1dd58b3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d72ea4761ec3ec5874c101d1dd58b3c">&#9670;&nbsp;</a></span>ext2_resolve_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_resolve_path </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__direntry__search__t.html">ext2_direntry_search_t</a> *&#160;</td>
+          <td class="paramname"><em>search</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches the entry specified in <code>path</code> starting from <code>directory</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>the directory from which we start performing the search. </td></tr>
+    <tr><td class="paramname">path</td><td>the path of the entry we are looking for, it cna be a relative path. </td></tr>
+    <tr><td class="paramname">search</td><td>the output variable where we save the entry information. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01941">1941</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a85804312a6fdc5296aab6e906da51034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85804312a6fdc5296aab6e906da51034">&#9670;&nbsp;</a></span>ext2_resolve_path_direntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_resolve_path_direntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>directory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__dirent__t.html">ext2_dirent_t</a> *&#160;</td>
+          <td class="paramname"><em>direntry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Searches the entry specified in <code>path</code> starting from <code>directory</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">directory</td><td>the directory from which we start performing the search. </td></tr>
+    <tr><td class="paramname">path</td><td>the path of the entry we are looking for, it cna be a relative path. </td></tr>
+    <tr><td class="paramname">direntry</td><td>the output variable where we save the found entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01991">1991</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="aeee1a9ae4c95f5c601c5e87dbd04d750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee1a9ae4c95f5c601c5e87dbd04d750">&#9670;&nbsp;</a></span>ext2_set_bitmap_bit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ext2_set_bitmap_bit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>linear_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ext2_8c.html#a0069622e1f4804618494a1830ac35c43">ext2_block_status_t</a>&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the bit at the given linear index accordingly to <code>status</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>the buffer containing the bitmap </td></tr>
+    <tr><td class="paramname">linear_index</td><td>the linear index we want to check. </td></tr>
+    <tr><td class="paramname">status</td><td>the new status of the block (free|occupied). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00745">745</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ac14edc828680056c7ae4e939c1b06cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14edc828680056c7ae4e939c1b06cfb">&#9670;&nbsp;</a></span>ext2_set_real_block_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_set_real_block_index </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>real_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the real block index based on the block index inside an inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the block index inside the inode. </td></tr>
+    <tr><td class="paramname">real_index</td><td>the real block number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, a negative value on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01124">1124</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a8ffef442d98e0513c58a2403c01e2500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ffef442d98e0513c58a2403c01e2500">&#9670;&nbsp;</a></span>ext2_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_stat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path where the file resides. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+<p>ID of device containing file.</p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02883">2883</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a8561fb3f1b66c7a4108c413e8fd03136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8561fb3f1b66c7a4108c413e8fd03136">&#9670;&nbsp;</a></span>ext2_valid_permissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> ext2_valid_permissions </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a>&#160;</td>
+          <td class="paramname"><em>uid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a79e4526f6cb611a2e272db092186f8f0">gid_t</a>&#160;</td>
+          <td class="paramname"><em>gid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the requests in flags are valid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>the flags to check. </td></tr>
+    <tr><td class="paramname">mask</td><td>the mask to check against. </td></tr>
+    <tr><td class="paramname">uid</td><td>the uid of the owner. </td></tr>
+    <tr><td class="paramname">gid</td><td>the gid of the owner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true on success, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00490">490</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a27a3c090b583f41b2c84e7af24d608d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a3c090b583f41b2c84e7af24d608d2">&#9670;&nbsp;</a></span>ext2_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the given content inside the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file descriptor of the file. </td></tr>
+    <tr><td class="paramname">buffer</td><td>The content to write. </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset from which we start writing in the file. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>The number of bytes to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02526">2526</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="af9f1f1de274536c1d383e022581a12bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f1f1de274536c1d383e022581a12bb">&#9670;&nbsp;</a></span>ext2_write_bgdt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_write_bgdt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the Block Group Descriptor Table (BGDT) to the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00932">932</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a5d3573fbb6b099f9935d2519c36a514a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3573fbb6b099f9935d2519c36a514a">&#9670;&nbsp;</a></span>ext2_write_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_write_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes a block on the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the index of the block we want to read. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer where the content will be placed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we wrote, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00901">901</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a3fd3d11eec17e7bbbc323cca7e67f3a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd3d11eec17e7bbbc323cca7e67f3a3">&#9670;&nbsp;</a></span>ext2_write_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_write_inode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>The index of the inode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00988">988</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ae72d43c896521bf25d285c2160428cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72d43c896521bf25d285c2160428cf2">&#9670;&nbsp;</a></span>ext2_write_inode_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_write_inode_block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>block_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the real block starting from an inode and the block index inside the inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>The index of the inode. </td></tr>
+    <tr><td class="paramname">block_index</td><td>the index of the block within the inode. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer where to put the data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we wrote, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01430">1430</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a12b365f3219403699547724d459eeb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12b365f3219403699547724d459eeb60">&#9670;&nbsp;</a></span>ext2_write_inode_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> ext2_write_inode_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structext2__inode__t.html">ext2_inode_t</a> *&#160;</td>
+          <td class="paramname"><em>inode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>inode_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the data on the given inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the filesystem. </td></tr>
+    <tr><td class="paramname">inode</td><td>the inode which we are working with. </td></tr>
+    <tr><td class="paramname">inode_index</td><td>the index of the inode. </td></tr>
+    <tr><td class="paramname">offset</td><td>the offset from which we start writing the data. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>the number of bytes to write. </td></tr>
+    <tr><td class="paramname">buffer</td><td>the buffer containing the data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount written. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l01527">1527</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a07f834291c706bbd75a3345d284e5f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f834291c706bbd75a3345d284e5f88">&#9670;&nbsp;</a></span>ext2_write_superblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int ext2_write_superblock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>fs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the superblock on the block device associated with this filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>the ext2 filesystem structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the amount of data we wrote, or negative value for an error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00872">872</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a9304164e46f2b94bc2eb3f02b3dbfdab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9304164e46f2b94bc2eb3f02b3dbfdab">&#9670;&nbsp;</a></span>get_ext2_filesystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structext2__filesystem__t.html">ext2_filesystem_t</a>* get_ext2_filesystem </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>absolute_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the ext2 filesystem object starting from a path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">absolute_path</td><td>the absolute path for which we want to find the associated EXT2 filesystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the EXT2 filesystem, NULL otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l02020">2020</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b8a49680593ba911dd8df76fe52f223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b8a49680593ba911dd8df76fe52f223">&#9670;&nbsp;</a></span>time_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* time_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Turns the time to string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>the UNIX time to turn to string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>time turned to string. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00476">476</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="a3ee9bd63f01074cd9f58a06c24fea044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee9bd63f01074cd9f58a06c24fea044">&#9670;&nbsp;</a></span>uuid_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* uuid_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td>
+          <td class="paramname"><em>uuid</em>[16]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Turns an UUID to string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uuid</td><td>the UUID to turn to string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the string representing the UUID. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00423">423</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a46e50c1b6cbe06a9c19675c184c9aae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e50c1b6cbe06a9c19675c184c9aae7">&#9670;&nbsp;</a></span>ext2_file_system_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfile__system__type.html">file_system_type</a> ext2_file_system_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .name     = <span class="stringliteral">&quot;ext2&quot;</span>,</div>
+<div class="line">    .fs_flags = 0,</div>
+<div class="line">    .mount    = ext2_mount_callback</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Filesystem information. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l03100">3100</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="ae99ad5e6af75334d5d5de925bbcf6fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae99ad5e6af75334d5d5de925bbcf6fd5">&#9670;&nbsp;</a></span>ext2_fs_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a> ext2_fs_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .open_f     = <a class="code" href="ext2_8c.html#a5c752678422b8e689636218a40612abf">ext2_open</a>,</div>
+<div class="line">    .unlink_f   = ext2_unlink,</div>
+<div class="line">    .close_f    = <a class="code" href="ext2_8c.html#a8da44f90310a2558fe4a71f1177b1de1">ext2_close</a>,</div>
+<div class="line">    .read_f     = <a class="code" href="ext2_8c.html#a1bdf5e1cfe4f512f725c58768aa6564a">ext2_read</a>,</div>
+<div class="line">    .write_f    = <a class="code" href="ext2_8c.html#a27a3c090b583f41b2c84e7af24d608d2">ext2_write</a>,</div>
+<div class="line">    .lseek_f    = <a class="code" href="ext2_8c.html#a04cabc091404e453b18189582511373c">ext2_lseek</a>,</div>
+<div class="line">    .stat_f     = <a class="code" href="ext2_8c.html#ac418f8b5e976261694639e821624a35d">ext2_fstat</a>,</div>
+<div class="line">    .ioctl_f    = ext2_ioctl,</div>
+<div class="line">    .getdents_f = <a class="code" href="ext2_8c.html#a28c353c565a8536056426d0b36bfe13a">ext2_getdents</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aext2_8c_html_a04cabc091404e453b18189582511373c"><div class="ttname"><a href="ext2_8c.html#a04cabc091404e453b18189582511373c">ext2_lseek</a></div><div class="ttdeci">static off_t ext2_lseek(vfs_file_t *file, off_t offset, int whence)</div><div class="ttdoc">Repositions the file offset inside a file.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02551">ext2.c:2551</a></div></div>
+<div class="ttc" id="aext2_8c_html_a1bdf5e1cfe4f512f725c58768aa6564a"><div class="ttname"><a href="ext2_8c.html#a1bdf5e1cfe4f512f725c58768aa6564a">ext2_read</a></div><div class="ttdeci">static ssize_t ext2_read(vfs_file_t *file, char *buffer, off_t offset, size_t nbyte)</div><div class="ttdoc">Reads from the file identified by the file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02502">ext2.c:2502</a></div></div>
+<div class="ttc" id="aext2_8c_html_a27a3c090b583f41b2c84e7af24d608d2"><div class="ttname"><a href="ext2_8c.html#a27a3c090b583f41b2c84e7af24d608d2">ext2_write</a></div><div class="ttdeci">static ssize_t ext2_write(vfs_file_t *file, const void *buffer, off_t offset, size_t nbyte)</div><div class="ttdoc">Writes the given content inside the file.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02526">ext2.c:2526</a></div></div>
+<div class="ttc" id="aext2_8c_html_a28c353c565a8536056426d0b36bfe13a"><div class="ttname"><a href="ext2_8c.html#a28c353c565a8536056426d0b36bfe13a">ext2_getdents</a></div><div class="ttdeci">static int ext2_getdents(vfs_file_t *file, dirent_t *dirp, off_t doff, size_t count)</div><div class="ttdoc">Reads contents of the directories to a dirent buffer, updating the offset and returning the number of...</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02645">ext2.c:2645</a></div></div>
+<div class="ttc" id="aext2_8c_html_a5c752678422b8e689636218a40612abf"><div class="ttname"><a href="ext2_8c.html#a5c752678422b8e689636218a40612abf">ext2_open</a></div><div class="ttdeci">static vfs_file_t * ext2_open(const char *path, int flags, mode_t mode)</div><div class="ttdoc">Open the file at the given path and returns its file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02308">ext2.c:2308</a></div></div>
+<div class="ttc" id="aext2_8c_html_a8da44f90310a2558fe4a71f1177b1de1"><div class="ttname"><a href="ext2_8c.html#a8da44f90310a2558fe4a71f1177b1de1">ext2_close</a></div><div class="ttdeci">static int ext2_close(vfs_file_t *file)</div><div class="ttdoc">Closes the given file.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02476">ext2.c:2476</a></div></div>
+<div class="ttc" id="aext2_8c_html_ac418f8b5e976261694639e821624a35d"><div class="ttname"><a href="ext2_8c.html#ac418f8b5e976261694639e821624a35d">ext2_fstat</a></div><div class="ttdeci">static int ext2_fstat(vfs_file_t *file, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02610">ext2.c:2610</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem file operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00404">404</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
+<a id="aaeae5a7a01aee53d760cca32c16aa5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeae5a7a01aee53d760cca32c16aa5a6">&#9670;&nbsp;</a></span>ext2_sys_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a> ext2_sys_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .mkdir_f = ext2_mkdir,</div>
+<div class="line">    .rmdir_f = ext2_rmdir,</div>
+<div class="line">    .stat_f  = <a class="code" href="ext2_8c.html#a8ffef442d98e0513c58a2403c01e2500">ext2_stat</a>,</div>
+<div class="line">    .creat_f = <a class="code" href="ext2_8c.html#a1f4afc29048f4aae0c34c3754d9fbc12">ext2_creat</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aext2_8c_html_a1f4afc29048f4aae0c34c3754d9fbc12"><div class="ttname"><a href="ext2_8c.html#a1f4afc29048f4aae0c34c3754d9fbc12">ext2_creat</a></div><div class="ttdeci">static vfs_file_t * ext2_creat(const char *path, mode_t permission)</div><div class="ttdoc">Creates a new file or rewrite an existing one.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02219">ext2.c:2219</a></div></div>
+<div class="ttc" id="aext2_8c_html_a8ffef442d98e0513c58a2403c01e2500"><div class="ttname"><a href="ext2_8c.html#a8ffef442d98e0513c58a2403c01e2500">ext2_stat</a></div><div class="ttdeci">static int ext2_stat(const char *path, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="ext2_8c_source.html#l02883">ext2.c:2883</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem general operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="ext2_8c_source.html#l00396">396</a> of file <a class="el" href="ext2_8c_source.html">ext2.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -604,7 +3635,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

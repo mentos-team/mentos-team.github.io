@@ -305,6 +305,25 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gae23e6dd581366797035fc58a59ae5409"><td class="memItemLeft" align="right" valign="top">
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#gae23e6dd581366797035fc58a59ae5409">pci_extract_bus</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> device)</td></tr>
+<tr class="memdesc:gae23e6dd581366797035fc58a59ae5409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the <code>bus</code> from the device. <br /></td></tr>
+<tr class="separator:gae23e6dd581366797035fc58a59ae5409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4a60f5443ac29a4f5457022b2cff247"><td class="memItemLeft" align="right" valign="top">
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#gae4a60f5443ac29a4f5457022b2cff247">pci_extract_slot</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> device)</td></tr>
+<tr class="memdesc:gae4a60f5443ac29a4f5457022b2cff247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the <code>slot</code> from the device. <br /></td></tr>
+<tr class="separator:gae4a60f5443ac29a4f5457022b2cff247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca7206894b356b1b3574843afd8a2af0"><td class="memItemLeft" align="right" valign="top">
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#gaca7206894b356b1b3574843afd8a2af0">pci_extract_func</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> device)</td></tr>
+<tr class="memdesc:gaca7206894b356b1b3574843afd8a2af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the <code>func</code> from the device. <br /></td></tr>
+<tr class="separator:gaca7206894b356b1b3574843afd8a2af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadeae225297ae527752e05cfdc2b456c9"><td class="memItemLeft" align="right" valign="top">
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#gadeae225297ae527752e05cfdc2b456c9">pci_get_addr</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> device, int field)</td></tr>
+<tr class="memdesc:gadeae225297ae527752e05cfdc2b456c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO: doxygen comment. <br /></td></tr>
+<tr class="separator:gadeae225297ae527752e05cfdc2b456c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b984a780d6fb01bd00ee6a4fb9f191a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#ga5b984a780d6fb01bd00ee6a4fb9f191a">pci_box_device</a> (int bus, int slot, int func)</td></tr>
+<tr class="memdesc:ga5b984a780d6fb01bd00ee6a4fb9f191a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get device number from: bus, slot and function.  <a href="group__pci.html#ga5b984a780d6fb01bd00ee6a4fb9f191a">More...</a><br /></td></tr>
+<tr class="separator:ga5b984a780d6fb01bd00ee6a4fb9f191a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga011a12939cd7fbb5a76d789e0398c47b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__pci.html#ga011a12939cd7fbb5a76d789e0398c47b">pci_read_field</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> device, int field, int size)</td></tr>
 <tr class="memdesc:ga011a12939cd7fbb5a76d789e0398c47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a field from the given PCI device.  <a href="group__pci.html#ga011a12939cd7fbb5a76d789e0398c47b">More...</a><br /></td></tr>
 <tr class="separator:ga011a12939cd7fbb5a76d789e0398c47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,7 +378,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

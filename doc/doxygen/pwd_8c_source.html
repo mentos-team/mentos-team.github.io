@@ -82,7 +82,7 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fcntl_8h.html">fcntl.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;debug.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __parse_line(<a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="grp_8c.html#a4c70fa8cb6ec851237ca1868dce9251e">__parse_line</a>(<a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a>(pwd &amp;&amp; <span class="stringliteral">&quot;Received null pwd!&quot;</span>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span> *token, *ch;</div>
@@ -146,121 +146,122 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> newline_len;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">char</span> *__search_entry(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> buflen, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="pwd_8c.html#ac8889848710f87c8d1b147e9c8d8b36e">__readline</a>(fd, buffer, buflen)) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> (name != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordtype">char</span> *name_end = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(buffer, <span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> (name_end) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                *name_end = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="mentos_2src_2klib_2string_8c.html#a07f4a84c11c106e95c32b6ab509346ef">strncmp</a>(buffer, name, <a class="code" href="mentos_2src_2klib_2string_8c.html#aa383452fe445bfae989358c9d7d96f4f">strlen</a>(name)) == 0) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    *name_end = <span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">return</span> buffer;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Name</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordtype">char</span> *ptr = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(buffer, <span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span> (ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="comment">// Password</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            ++ptr;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">char</span> *uid_start = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(ptr, <span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">if</span> (uid_start == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            ++uid_start;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            ptr = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(uid_start, <span class="charliteral">&#39;:&#39;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">if</span> (ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            *ptr = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">// Parse the uid.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordtype">int</span> found_uid = <a class="code" href="mentos_2src_2io_2stdio_8c.html#aec327ac88a4cd588e82a8b0ac752b089">atoi</a>(uid_start);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// Check the uid.</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (found_uid == uid) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                *ptr = <span class="charliteral">&#39;:&#39;</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">return</span> buffer;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="pwd_8h.html#a515e3b187cc727279556cef2ab2005eb">  123</a></span>&#160;<a class="code" href="structpasswd__t.html">passwd_t</a> *<a class="code" href="pwd_8c.html#a515e3b187cc727279556cef2ab2005eb">getpwnam</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (name == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">static</span> <a class="code" href="structpasswd__t.html">passwd_t</a> pwd;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> buffer[<a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>];</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="structpasswd__t.html">passwd_t</a> *result;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a>(name, &amp;pwd, buffer, <a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>, &amp;result))</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> &amp;pwd;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="pwd_8h.html#aab917ed768e58bada4ced557677dd34f">  135</a></span>&#160;<a class="code" href="structpasswd__t.html">passwd_t</a> *<a class="code" href="pwd_8c.html#aab917ed768e58bada4ced557677dd34f">getpwuid</a>(<a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">static</span> <a class="code" href="structpasswd__t.html">passwd_t</a> pwd;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> buffer[<a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>];</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="structpasswd__t.html">passwd_t</a> *result;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a>(uid, &amp;pwd, buffer, <a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>, &amp;result))</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">return</span> &amp;pwd;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="pwd_8h.html#ad45a99bc1c0a5fdece535700626a3624">  145</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <a class="code" href="structpasswd__t.html">passwd_t</a> **result)</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (name == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">int</span> fd = <a class="code" href="unistd_8h.html#a4e522854927c8a3a43847c39fe999391">open</a>(<span class="stringliteral">&quot;/etc/passwd&quot;</span>, <a class="code" href="fcntl_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>, 0);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">if</span> (fd == -1) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="mentos_2inc_2io_2debug_8h.html#ac90110f7b4f2db466dd7a1d164c866f5">pr_debug</a>(<span class="stringliteral">&quot;Cannot open `/etc/passwd`\n&quot;</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a>   = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        *result = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">char</span> *entry = __search_entry(fd, buf, buflen, name, 0);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (entry != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">// Close the file.</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">// Parse the line.</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        __parse_line(pwd, entry);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="comment">// Return success.</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a> = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">// Close the file.</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// Return fail.</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="pwd_8h.html#ad965c43758775b9e079ed9cacea072a8">  172</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a>(<a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid, <a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <a class="code" href="structpasswd__t.html">passwd_t</a> **result)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">int</span> fd = <a class="code" href="unistd_8h.html#a4e522854927c8a3a43847c39fe999391">open</a>(<span class="stringliteral">&quot;/etc/passwd&quot;</span>, <a class="code" href="fcntl_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>, 0);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (fd == -1) {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="mentos_2inc_2io_2debug_8h.html#ac90110f7b4f2db466dd7a1d164c866f5">pr_debug</a>(<span class="stringliteral">&quot;Cannot open `/etc/passwd`\n&quot;</span>);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a>   = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        *result = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">char</span> *entry = __search_entry(fd, buf, buflen, <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, uid);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (entry != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">// Close the file.</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="comment">// Parse the line.</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        __parse_line(pwd, entry);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// Return success.</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">// Close the file.</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="comment">// Return fail.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="pwd_8c.html#a131b5d594fb7b5a9ac5f1d9fa11f5d41">   91</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">char</span> *<a class="code" href="pwd_8c.html#a131b5d594fb7b5a9ac5f1d9fa11f5d41">__search_entry</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">char</span> *buffer, <span class="keywordtype">int</span> buflen, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="pwd_8c.html#ac8889848710f87c8d1b147e9c8d8b36e">__readline</a>(fd, buffer, buflen)) {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (name != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordtype">char</span> *name_end = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(buffer, <span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">if</span> (name_end) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                *name_end = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="mentos_2src_2klib_2string_8c.html#a07f4a84c11c106e95c32b6ab509346ef">strncmp</a>(buffer, name, <a class="code" href="mentos_2src_2klib_2string_8c.html#aa383452fe445bfae989358c9d7d96f4f">strlen</a>(name)) == 0) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    *name_end = <span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="keywordflow">return</span> buffer;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">// Name</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">char</span> *ptr = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(buffer, <span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">// Password</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            ++ptr;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordtype">char</span> *uid_start = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(ptr, <span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (uid_start == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            ++uid_start;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            ptr = <a class="code" href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a>(uid_start, <span class="charliteral">&#39;:&#39;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span> (ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            *ptr = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="comment">// Parse the uid.</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordtype">int</span> found_uid = <a class="code" href="mentos_2src_2io_2stdio_8c.html#aec327ac88a4cd588e82a8b0ac752b089">atoi</a>(uid_start);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">// Check the uid.</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (found_uid == uid) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                *ptr = <span class="charliteral">&#39;:&#39;</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="keywordflow">return</span> buffer;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="pwd_8h.html#a515e3b187cc727279556cef2ab2005eb">  130</a></span>&#160;<a class="code" href="structpasswd__t.html">passwd_t</a> *<a class="code" href="pwd_8c.html#a515e3b187cc727279556cef2ab2005eb">getpwnam</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (name == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">static</span> <a class="code" href="structpasswd__t.html">passwd_t</a> pwd;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> buffer[<a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>];</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="structpasswd__t.html">passwd_t</a> *result;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a>(name, &amp;pwd, buffer, <a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>, &amp;result))</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> &amp;pwd;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="pwd_8h.html#aab917ed768e58bada4ced557677dd34f">  142</a></span>&#160;<a class="code" href="structpasswd__t.html">passwd_t</a> *<a class="code" href="pwd_8c.html#aab917ed768e58bada4ced557677dd34f">getpwuid</a>(<a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">static</span> <a class="code" href="structpasswd__t.html">passwd_t</a> pwd;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> buffer[<a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>];</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="structpasswd__t.html">passwd_t</a> *result;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a>(uid, &amp;pwd, buffer, <a class="code" href="stddef_8h.html#a72a591cf0a96cf23c63df5c78712dabe">BUFSIZ</a>, &amp;result))</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> &amp;pwd;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="pwd_8h.html#ad45a99bc1c0a5fdece535700626a3624">  152</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <a class="code" href="structpasswd__t.html">passwd_t</a> **result)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (name == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> fd = <a class="code" href="unistd_8h.html#a4e522854927c8a3a43847c39fe999391">open</a>(<span class="stringliteral">&quot;/etc/passwd&quot;</span>, <a class="code" href="fcntl_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>, 0);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (fd == -1) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="mentos_2inc_2io_2debug_8h.html#ac90110f7b4f2db466dd7a1d164c866f5">pr_debug</a>(<span class="stringliteral">&quot;Cannot open `/etc/passwd`\n&quot;</span>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a>   = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        *result = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">char</span> *entry = <a class="code" href="pwd_8c.html#a131b5d594fb7b5a9ac5f1d9fa11f5d41">__search_entry</a>(fd, buf, buflen, name, 0);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span> (entry != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// Close the file.</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// Parse the line.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="grp_8c.html#a4c70fa8cb6ec851237ca1868dce9251e">__parse_line</a>(pwd, entry);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">// Return success.</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a> = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// Close the file.</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// Return fail.</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="pwd_8h.html#ad965c43758775b9e079ed9cacea072a8">  179</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a>(<a class="code" href="stddef_8h.html#a69d80da7a8a72c4ededec9ea8497781c">uid_t</a> uid, <a class="code" href="structpasswd__t.html">passwd_t</a> *pwd, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> buflen, <a class="code" href="structpasswd__t.html">passwd_t</a> **result)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordtype">int</span> fd = <a class="code" href="unistd_8h.html#a4e522854927c8a3a43847c39fe999391">open</a>(<span class="stringliteral">&quot;/etc/passwd&quot;</span>, <a class="code" href="fcntl_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a>, 0);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (fd == -1) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="mentos_2inc_2io_2debug_8h.html#ac90110f7b4f2db466dd7a1d164c866f5">pr_debug</a>(<span class="stringliteral">&quot;Cannot open `/etc/passwd`\n&quot;</span>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a>   = <a class="code" href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        *result = <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordtype">char</span> *entry = <a class="code" href="pwd_8c.html#a131b5d594fb7b5a9ac5f1d9fa11f5d41">__search_entry</a>(fd, buf, buflen, <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, uid);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (entry != <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// Close the file.</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// Parse the line.</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="grp_8c.html#a4c70fa8cb6ec851237ca1868dce9251e">__parse_line</a>(pwd, entry);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">// Return success.</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="comment">// Close the file.</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="unistd_8h.html#aafbcde67669a1b96577e735ddebd8634">close</a>(fd);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="comment">// Return fail.</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
 <div class="ttc" id="aassert_8h_html"><div class="ttname"><a href="assert_8h.html">assert.h</a></div><div class="ttdoc">Defines the function and pre-processor macro for assertions.</div></div>
 <div class="ttc" id="aassert_8h_html_a0041af519e0e7d47c9bcc83760c4669e"><div class="ttname"><a href="assert_8h.html#a0041af519e0e7d47c9bcc83760c4669e">assert</a></div><div class="ttdeci">#define assert(expression)</div><div class="ttdoc">Assert function.</div><div class="ttdef"><b>Definition:</b> <a href="assert_8h_source.html#l00019">assert.h:19</a></div></div>
 <div class="ttc" id="afcntl_8h_html"><div class="ttname"><a href="fcntl_8h.html">fcntl.h</a></div><div class="ttdoc">Headers of functions fcntl() and open().</div></div>
 <div class="ttc" id="afcntl_8h_html_a7a68c9ffaac7dbcd652225dd7c06a54b"><div class="ttname"><a href="fcntl_8h.html#a7a68c9ffaac7dbcd652225dd7c06a54b">O_RDONLY</a></div><div class="ttdeci">#define O_RDONLY</div><div class="ttdoc">Open for reading only.</div><div class="ttdef"><b>Definition:</b> <a href="fcntl_8h_source.html#l00008">fcntl.h:8</a></div></div>
+<div class="ttc" id="agrp_8c_html_a4c70fa8cb6ec851237ca1868dce9251e"><div class="ttname"><a href="grp_8c.html#a4c70fa8cb6ec851237ca1868dce9251e">__parse_line</a></div><div class="ttdeci">static void __parse_line(group_t *grp, char *buf)</div><div class="ttdoc">It parses the line (as string) and saves its content inside the group_t structure.</div><div class="ttdef"><b>Definition:</b> <a href="grp_8c_source.html#l00021">grp.c:21</a></div></div>
 <div class="ttc" id="amentos_2inc_2io_2debug_8h_html_ac90110f7b4f2db466dd7a1d164c866f5"><div class="ttname"><a href="mentos_2inc_2io_2debug_8h.html#ac90110f7b4f2db466dd7a1d164c866f5">pr_debug</a></div><div class="ttdeci">#define pr_debug(...)</div><div class="ttdoc">Prints a KERN_DEBUG.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2inc_2io_2debug_8h_source.html#l00111">debug.h:111</a></div></div>
 <div class="ttc" id="amentos_2inc_2sys_2errno_8h_html_a03e689f378f643d16ea7537918528a48"><div class="ttname"><a href="mentos_2inc_2sys_2errno_8h.html#a03e689f378f643d16ea7537918528a48">ENOENT</a></div><div class="ttdeci">#define ENOENT</div><div class="ttdoc">No such file or directory.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2inc_2sys_2errno_8h_source.html#l00014">errno.h:14</a></div></div>
 <div class="ttc" id="amentos_2inc_2sys_2errno_8h_html_ab03f640d90fbc5bcb75285d08a0f25ed"><div class="ttname"><a href="mentos_2inc_2sys_2errno_8h.html#ab03f640d90fbc5bcb75285d08a0f25ed">errno</a></div><div class="ttdeci">#define errno</div><div class="ttdoc">Provide easy access to the error number.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2inc_2sys_2errno_8h_source.html#l00011">errno.h:11</a></div></div>
@@ -270,11 +271,12 @@ $(function() {
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_a8a841243b3f106fd1729253a4a409c46"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#a8a841243b3f106fd1729253a4a409c46">strchr</a></div><div class="ttdeci">char * strchr(const char *s, int ch)</div><div class="ttdoc">Returns a pointer to the first occurrence of ch in str.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00064">string.c:64</a></div></div>
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_a8cb460f64c449f2a9b9b7a40569ce0fe"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#a8cb460f64c449f2a9b9b7a40569ce0fe">strtok</a></div><div class="ttdeci">char * strtok(char *str, const char *delim)</div><div class="ttdoc">Splits string into tokens.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00503">string.c:503</a></div></div>
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_aa383452fe445bfae989358c9d7d96f4f"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#aa383452fe445bfae989358c9d7d96f4f">strlen</a></div><div class="ttdeci">size_t strlen(const char *s)</div><div class="ttdoc">Returns the length of the string s.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00450">string.c:450</a></div></div>
-<div class="ttc" id="apwd_8c_html_a515e3b187cc727279556cef2ab2005eb"><div class="ttname"><a href="pwd_8c.html#a515e3b187cc727279556cef2ab2005eb">getpwnam</a></div><div class="ttdeci">passwd_t * getpwnam(const char *name)</div><div class="ttdoc">Provides access to the password database entry for name.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00123">pwd.c:123</a></div></div>
-<div class="ttc" id="apwd_8c_html_aab917ed768e58bada4ced557677dd34f"><div class="ttname"><a href="pwd_8c.html#aab917ed768e58bada4ced557677dd34f">getpwuid</a></div><div class="ttdeci">passwd_t * getpwuid(uid_t uid)</div><div class="ttdoc">Provides access to the password database entry for uid.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00135">pwd.c:135</a></div></div>
+<div class="ttc" id="apwd_8c_html_a131b5d594fb7b5a9ac5f1d9fa11f5d41"><div class="ttname"><a href="pwd_8c.html#a131b5d594fb7b5a9ac5f1d9fa11f5d41">__search_entry</a></div><div class="ttdeci">static char * __search_entry(int fd, char *buffer, int buflen, const char *name, uid_t uid)</div><div class="ttdoc">Searches for the given entry inside the buffer.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00091">pwd.c:91</a></div></div>
+<div class="ttc" id="apwd_8c_html_a515e3b187cc727279556cef2ab2005eb"><div class="ttname"><a href="pwd_8c.html#a515e3b187cc727279556cef2ab2005eb">getpwnam</a></div><div class="ttdeci">passwd_t * getpwnam(const char *name)</div><div class="ttdoc">Provides access to the password database entry for name.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00130">pwd.c:130</a></div></div>
+<div class="ttc" id="apwd_8c_html_aab917ed768e58bada4ced557677dd34f"><div class="ttname"><a href="pwd_8c.html#aab917ed768e58bada4ced557677dd34f">getpwuid</a></div><div class="ttdeci">passwd_t * getpwuid(uid_t uid)</div><div class="ttdoc">Provides access to the password database entry for uid.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00142">pwd.c:142</a></div></div>
 <div class="ttc" id="apwd_8c_html_ac8889848710f87c8d1b147e9c8d8b36e"><div class="ttname"><a href="pwd_8c.html#ac8889848710f87c8d1b147e9c8d8b36e">__readline</a></div><div class="ttdeci">ssize_t __readline(int fd, char *buffer, size_t buflen)</div><div class="ttdoc">Reads a line from the file.</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00054">pwd.c:54</a></div></div>
-<div class="ttc" id="apwd_8c_html_ad45a99bc1c0a5fdece535700626a3624"><div class="ttname"><a href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a></div><div class="ttdeci">int getpwnam_r(const char *name, passwd_t *pwd, char *buf, size_t buflen, passwd_t **result)</div><div class="ttdoc">Provides the same information as getpwnam but it stores the results inside pwd, and the string inform...</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00145">pwd.c:145</a></div></div>
-<div class="ttc" id="apwd_8c_html_ad965c43758775b9e079ed9cacea072a8"><div class="ttname"><a href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a></div><div class="ttdeci">int getpwuid_r(uid_t uid, passwd_t *pwd, char *buf, size_t buflen, passwd_t **result)</div><div class="ttdoc">Provides the same information as getpwuid but it stores the results inside pwd, and the string inform...</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00172">pwd.c:172</a></div></div>
+<div class="ttc" id="apwd_8c_html_ad45a99bc1c0a5fdece535700626a3624"><div class="ttname"><a href="pwd_8c.html#ad45a99bc1c0a5fdece535700626a3624">getpwnam_r</a></div><div class="ttdeci">int getpwnam_r(const char *name, passwd_t *pwd, char *buf, size_t buflen, passwd_t **result)</div><div class="ttdoc">Provides the same information as getpwnam but it stores the results inside pwd, and the string inform...</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00152">pwd.c:152</a></div></div>
+<div class="ttc" id="apwd_8c_html_ad965c43758775b9e079ed9cacea072a8"><div class="ttname"><a href="pwd_8c.html#ad965c43758775b9e079ed9cacea072a8">getpwuid_r</a></div><div class="ttdeci">int getpwuid_r(uid_t uid, passwd_t *pwd, char *buf, size_t buflen, passwd_t **result)</div><div class="ttdoc">Provides the same information as getpwuid but it stores the results inside pwd, and the string inform...</div><div class="ttdef"><b>Definition:</b> <a href="pwd_8c_source.html#l00179">pwd.c:179</a></div></div>
 <div class="ttc" id="apwd_8h_html"><div class="ttname"><a href="pwd_8h.html">pwd.h</a></div><div class="ttdoc">Contains the structure and functions for managing passwords.</div></div>
 <div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">Define NULL.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00010">stddef.h:10</a></div></div>
 <div class="ttc" id="astddef_8h_html_a59adc4c82490d23754cd39c2fb99b0da"><div class="ttname"><a href="stddef_8h.html#a59adc4c82490d23754cd39c2fb99b0da">EOF</a></div><div class="ttdeci">#define EOF</div><div class="ttdoc">Define End-Of-File.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00015">stddef.h:15</a></div></div>
@@ -304,7 +306,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

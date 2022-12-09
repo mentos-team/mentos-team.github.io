@@ -79,14 +79,14 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stddef_8h.html">stddef.h</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdint_8h.html">stdint.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> irq_nested_enable(<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> flags)</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="irqflags_8h.html#a06afcfafba25c21759673960cba95b10">   15</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="irqflags_8h.html#a06afcfafba25c21759673960cba95b10">irq_nested_enable</a>(<a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> flags)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">if</span> (flags) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        sti();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="proc__access_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a>();</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> irq_nested_disable()</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="irqflags_8h.html#a811bd0a53fd57461473d88c1b60009aa">   27</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="irqflags_8h.html#a811bd0a53fd57461473d88c1b60009aa">irq_nested_disable</a>()</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">size_t</span> flags;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    __asm__ __volatile__(<span class="stringliteral">&quot;pushf; cli; pop %0&quot;</span></div>
@@ -98,7 +98,7 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> is_irq_enabled()</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="irqflags_8h.html#afee8b5e89925abe6c5bb148759286939">   40</a></span>&#160;<span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="irqflags_8h.html#afee8b5e89925abe6c5bb148759286939">is_irq_enabled</a>()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">size_t</span> flags;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    __asm__ __volatile__(<span class="stringliteral">&quot;pushf; pop %0&quot;</span></div>
@@ -110,7 +110,11 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="airqflags_8h_html_a06afcfafba25c21759673960cba95b10"><div class="ttname"><a href="irqflags_8h.html#a06afcfafba25c21759673960cba95b10">irq_nested_enable</a></div><div class="ttdeci">static void irq_nested_enable(uint8_t flags)</div><div class="ttdoc">Enable IRQs (nested).</div><div class="ttdef"><b>Definition:</b> <a href="irqflags_8h_source.html#l00015">irqflags.h:15</a></div></div>
+<div class="ttc" id="airqflags_8h_html_a811bd0a53fd57461473d88c1b60009aa"><div class="ttname"><a href="irqflags_8h.html#a811bd0a53fd57461473d88c1b60009aa">irq_nested_disable</a></div><div class="ttdeci">static uint8_t irq_nested_disable()</div><div class="ttdoc">Disable IRQs (nested).</div><div class="ttdef"><b>Definition:</b> <a href="irqflags_8h_source.html#l00027">irqflags.h:27</a></div></div>
+<div class="ttc" id="airqflags_8h_html_afee8b5e89925abe6c5bb148759286939"><div class="ttname"><a href="irqflags_8h.html#afee8b5e89925abe6c5bb148759286939">is_irq_enabled</a></div><div class="ttdeci">static uint8_t is_irq_enabled()</div><div class="ttdoc">Determines, if the interrupt flags (IF) is set.</div><div class="ttdef"><b>Definition:</b> <a href="irqflags_8h_source.html#l00040">irqflags.h:40</a></div></div>
 <div class="ttc" id="aproc__access_8h_html"><div class="ttname"><a href="proc__access_8h.html">proc_access.h</a></div><div class="ttdoc">Set of functions and flags used to manage processors registers.</div></div>
+<div class="ttc" id="aproc__access_8h_html_a4657e97b270d7af5a23da2c4d642ada2"><div class="ttname"><a href="proc__access_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a></div><div class="ttdeci">static void sti()</div><div class="ttdoc">Enable IRQs.</div><div class="ttdef"><b>Definition:</b> <a href="proc__access_8h_source.html#l00225">proc_access.h:225</a></div></div>
 <div class="ttc" id="astddef_8h_html"><div class="ttname"><a href="stddef_8h.html">stddef.h</a></div><div class="ttdoc">Define basic data types.</div></div>
 <div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">Standard integer data-types.</div></div>
 <div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdoc">Define the unsigned 8-bit integer.</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00030">stdint.h:30</a></div></div>
@@ -121,7 +125,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

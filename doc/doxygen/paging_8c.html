@@ -162,12 +162,42 @@ Functions</h2></td></tr>
 <tr class="memitem:ae36a4a7cf0ce890a31b6d8148528424b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#ae36a4a7cf0ce890a31b6d8148528424b">clone_vm_area</a> (<a class="el" href="structmm__struct__t.html">mm_struct_t</a> *mm, <a class="el" href="structvm__area__struct__t.html">vm_area_struct_t</a> *area, int cow, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> gfpflags)</td></tr>
 <tr class="memdesc:ae36a4a7cf0ce890a31b6d8148528424b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone a virtual memory area, using copy on write if specified.  <a href="paging_8c.html#ae36a4a7cf0ce890a31b6d8148528424b">More...</a><br /></td></tr>
 <tr class="separator:ae36a4a7cf0ce890a31b6d8148528424b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8216e9b1caec8b4ed1ea21ce7ff7c377"><td class="memItemLeft" align="right" valign="top"><a id="a8216e9b1caec8b4ed1ea21ce7ff7c377"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__init_pagedir</b> (<a class="el" href="structpage__directory__t.html">page_directory_t</a> *pdir)</td></tr>
+<tr class="separator:a8216e9b1caec8b4ed1ea21ce7ff7c377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1a02770d9b06e0221623f071de8a5e"><td class="memItemLeft" align="right" valign="top"><a id="a9f1a02770d9b06e0221623f071de8a5e"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__init_pagetable</b> (<a class="el" href="structpage__table__t.html">page_table_t</a> *ptable)</td></tr>
+<tr class="separator:a9f1a02770d9b06e0221623f071de8a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b4ab6c30b464f8213bf37c451d27b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a4b4ab6c30b464f8213bf37c451d27b30">paging_init</a> (<a class="el" href="structboot__info__t.html">boot_info_t</a> *info)</td></tr>
 <tr class="memdesc:a4b4ab6c30b464f8213bf37c451d27b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes paging.  <a href="paging_8c.html#a4b4ab6c30b464f8213bf37c451d27b30">More...</a><br /></td></tr>
 <tr class="separator:a4b4ab6c30b464f8213bf37c451d27b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506dacfef345489aa614dabbb5c5924c"><td class="memItemLeft" align="right" valign="top"><a id="a506dacfef345489aa614dabbb5c5924c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_pg_table_flags</b> (<a class="el" href="structpage__table__entry__t.html">page_table_entry_t</a> *table, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> flags)</td></tr>
+<tr class="separator:a506dacfef345489aa614dabbb5c5924c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07563f85cca35f30a83ebda12b6d38ba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a07563f85cca35f30a83ebda12b6d38ba">__page_fault_panic</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> addr)</td></tr>
+<tr class="memdesc:a07563f85cca35f30a83ebda12b6d38ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints stack frame data and calls kernel_panic.  <a href="paging_8c.html#a07563f85cca35f30a83ebda12b6d38ba">More...</a><br /></td></tr>
+<tr class="separator:a07563f85cca35f30a83ebda12b6d38ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41309dc23c9fb39ccc514d65c18d50ff"><td class="memItemLeft" align="right" valign="top"><a id="a41309dc23c9fb39ccc514d65c18d50ff"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__page_handle_cow</b> (<a class="el" href="structpage__table__entry__t.html">page_table_entry_t</a> *entry)</td></tr>
+<tr class="separator:a41309dc23c9fb39ccc514d65c18d50ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dec85cce826e482b63a0cfdffc20a75"><td class="memItemLeft" align="right" valign="top"><a id="a0dec85cce826e482b63a0cfdffc20a75"></a>
+static <a class="el" href="structpage__table__t.html">page_table_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__mem_pg_entry_alloc</b> (<a class="el" href="structpage__dir__entry__t.html">page_dir_entry_t</a> *entry, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> flags)</td></tr>
+<tr class="separator:a0dec85cce826e482b63a0cfdffc20a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe689c94d95a2f3a71d9ef63276a41b"><td class="memItemLeft" align="right" valign="top"><a id="adfe689c94d95a2f3a71d9ef63276a41b"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__set_pg_entry_frame</b> (<a class="el" href="structpage__dir__entry__t.html">page_dir_entry_t</a> *entry, <a class="el" href="structpage__table__t.html">page_table_t</a> *table)</td></tr>
+<tr class="separator:adfe689c94d95a2f3a71d9ef63276a41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a6efd35676a6c4f61f21747cc5f2caaa2">page_fault_handler</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
 <tr class="memdesc:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a page fault.  <a href="paging_8c.html#a6efd35676a6c4f61f21747cc5f2caaa2">More...</a><br /></td></tr>
 <tr class="separator:a6efd35676a6c4f61f21747cc5f2caaa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedec74ea7bb51dd21414d98bf3b5acd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#aaedec74ea7bb51dd21414d98bf3b5acd">__pg_iter_init</a> (<a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *iter, <a class="el" href="structpage__directory__t.html">page_directory_t</a> *pgd, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> addr_start, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> flags)</td></tr>
+<tr class="memdesc:aaedec74ea7bb51dd21414d98bf3b5acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a page iterator.  <a href="paging_8c.html#aaedec74ea7bb51dd21414d98bf3b5acd">More...</a><br /></td></tr>
+<tr class="separator:aaedec74ea7bb51dd21414d98bf3b5acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6195f1276850005fab4951ea1a4f82ec"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a6195f1276850005fab4951ea1a4f82ec">__pg_iter_has_next</a> (<a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *iter)</td></tr>
+<tr class="memdesc:a6195f1276850005fab4951ea1a4f82ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the iterator has a next entry.  <a href="paging_8c.html#a6195f1276850005fab4951ea1a4f82ec">More...</a><br /></td></tr>
+<tr class="separator:a6195f1276850005fab4951ea1a4f82ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28f422a31318242dc9418566c34d0c2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="paging_8c.html#ab22b1c27b5c66e596b9d526326c78b7c">pg_iter_entry_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#ae28f422a31318242dc9418566c34d0c2">__pg_iter_next</a> (<a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *iter)</td></tr>
+<tr class="memdesc:ae28f422a31318242dc9418566c34d0c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the iterator to the next entry.  <a href="paging_8c.html#ae28f422a31318242dc9418566c34d0c2">More...</a><br /></td></tr>
+<tr class="separator:ae28f422a31318242dc9418566c34d0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e651c7a6a3dcf11c7f802e2ebd8eee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpage__t.html">page_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a2e651c7a6a3dcf11c7f802e2ebd8eee6">mem_virtual_to_page</a> (<a class="el" href="structpage__directory__t.html">page_directory_t</a> *pgdir, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> virt_start, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> *size)</td></tr>
 <tr class="memdesc:a2e651c7a6a3dcf11c7f802e2ebd8eee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a page from a virtual address.  <a href="paging_8c.html#a2e651c7a6a3dcf11c7f802e2ebd8eee6">More...</a><br /></td></tr>
 <tr class="separator:a2e651c7a6a3dcf11c7f802e2ebd8eee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +234,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a62261c1930fb3fd1d3c07a6e8f7be219"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a62261c1930fb3fd1d3c07a6e8f7be219">pgtbl_cache</a></td></tr>
 <tr class="memdesc:a62261c1930fb3fd1d3c07a6e8f7be219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache for storing page tables.  <a href="paging_8c.html#a62261c1930fb3fd1d3c07a6e8f7be219">More...</a><br /></td></tr>
 <tr class="separator:a62261c1930fb3fd1d3c07a6e8f7be219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3614e050d444d7c6e28822131cbdc9"><td class="memItemLeft" align="right" valign="top"><a id="a0c3614e050d444d7c6e28822131cbdc9"></a>
+static <a class="el" href="structmm__struct__t.html">mm_struct_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="paging_8c.html#a0c3614e050d444d7c6e28822131cbdc9">main_mm</a></td></tr>
+<tr class="memdesc:a0c3614e050d444d7c6e28822131cbdc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mm_struct of the kernel. <br /></td></tr>
+<tr class="separator:a0c3614e050d444d7c6e28822131cbdc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of a memory paging management. </p>
@@ -211,6 +245,195 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a07563f85cca35f30a83ebda12b6d38ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07563f85cca35f30a83ebda12b6d38ba">&#9670;&nbsp;</a></span>__page_fault_panic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __page_fault_panic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints stack frame data and calls kernel_panic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+    <tr><td class="paramname">addr</td><td>The faulting address. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8c_source.html#l00222">222</a> of file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
+
+</div>
+</div>
+<a id="a6195f1276850005fab4951ea1a4f82ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6195f1276850005fab4951ea1a4f82ec">&#9670;&nbsp;</a></span>__pg_iter_has_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __pg_iter_has_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the iterator has a next entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>The iterator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If we can continue the iteration. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8c_source.html#l00398">398</a> of file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
+
+</div>
+</div>
+<a id="aaedec74ea7bb51dd21414d98bf3b5acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaedec74ea7bb51dd21414d98bf3b5acd">&#9670;&nbsp;</a></span>__pg_iter_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __pg_iter_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *&#160;</td>
+          <td class="paramname"><em>iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpage__directory__t.html">page_directory_t</a> *&#160;</td>
+          <td class="paramname"><em>pgd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize a page iterator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>The iterator to initialize. </td></tr>
+    <tr><td class="paramname">pgd</td><td>The page directory to iterate. </td></tr>
+    <tr><td class="paramname">addr_start</td><td>The starting address. </td></tr>
+    <tr><td class="paramname">size</td><td>The total amount we want to iterate. </td></tr>
+    <tr><td class="paramname">flags</td><td>Allocation flags. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8c_source.html#l00375">375</a> of file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
+
+</div>
+</div>
+<a id="ae28f422a31318242dc9418566c34d0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28f422a31318242dc9418566c34d0c2">&#9670;&nbsp;</a></span>__pg_iter_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="paging_8c.html#ab22b1c27b5c66e596b9d526326c78b7c">pg_iter_entry_t</a> __pg_iter_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="paging_8c.html#aa93166c01b073fb600173a68bc98dfd5">page_iterator_t</a> *&#160;</td>
+          <td class="paramname"><em>iter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves the iterator to the next entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>The itetator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The iterator after moving to the next entry. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="paging_8c_source.html#l00406">406</a> of file <a class="el" href="paging_8c_source.html">paging.c</a>.</p>
+
+</div>
+</div>
 <a id="a4110424180238ba9a1ec6e2ad586b07e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4110424180238ba9a1ec6e2ad586b07e">&#9670;&nbsp;</a></span>clone_process_image()</h2>
 
@@ -747,7 +970,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

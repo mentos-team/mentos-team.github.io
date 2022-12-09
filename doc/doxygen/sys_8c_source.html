@@ -86,7 +86,7 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> kernel_power_off()</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="sys_8c.html#a785c2663f69243dc14b18dba1412cbe0">   20</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="sys_8c.html#a785c2663f69243dc14b18dba1412cbe0">kernel_power_off</a>()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//    kernel_shutdown_prepare(SYSTEM_POWER_OFF);</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//    if (pm_power_off_prepare)</span></div>
@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="mentos_2inc_2sys_2reboot_8h.html#aa545e6ea01cc4c40d2832d85c791f131">LINUX_REBOOT_CMD_HALT</a>:</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="mentos_2inc_2sys_2reboot_8h.html#a53470f969c61449eb0841c2488dceb30">LINUX_REBOOT_CMD_POWER_OFF</a>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        kernel_power_off();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="sys_8c.html#a785c2663f69243dc14b18dba1412cbe0">kernel_power_off</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="mentos_2inc_2sys_2reboot_8h.html#a6f967c687abc3618153f1e17506c1d08">LINUX_REBOOT_CMD_RESTART2</a>:</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">break</span>;</div>
@@ -160,6 +160,7 @@ $(function() {
 <div class="ttc" id="astdatomic_8h_html_a89af7a9ebf21399bcbd8e892b6f3d41a"><div class="ttname"><a href="stdatomic_8h.html#a89af7a9ebf21399bcbd8e892b6f3d41a">cpu_relax</a></div><div class="ttdeci">#define cpu_relax()</div><div class="ttdoc">Pause instruction to prevent excess processor bus usage.</div><div class="ttdef"><b>Definition:</b> <a href="stdatomic_8h_source.html#l00026">stdatomic.h:26</a></div></div>
 <div class="ttc" id="astdio_8h_html"><div class="ttname"><a href="stdio_8h.html">stdio.h</a></div><div class="ttdoc">Standard I/0 functions.</div></div>
 <div class="ttc" id="astructmutex__t_html"><div class="ttname"><a href="structmutex__t.html">mutex_t</a></div><div class="ttdoc">Structure of a mutex.</div><div class="ttdef"><b>Definition:</b> <a href="mutex_8h_source.html#l00011">mutex.h:11</a></div></div>
+<div class="ttc" id="asys_8c_html_a785c2663f69243dc14b18dba1412cbe0"><div class="ttname"><a href="sys_8c.html#a785c2663f69243dc14b18dba1412cbe0">kernel_power_off</a></div><div class="ttdeci">static void kernel_power_off()</div><div class="ttdoc">Shutdown everything and perform a clean system power_off.</div><div class="ttdef"><b>Definition:</b> <a href="sys_8c_source.html#l00020">sys.c:20</a></div></div>
 <div class="ttc" id="asys_8c_html_ac953276d7d8a8315c674c8e6c7df978b"><div class="ttname"><a href="sys_8c.html#ac953276d7d8a8315c674c8e6c7df978b">sys_reboot</a></div><div class="ttdeci">int sys_reboot(int magic1, int magic2, unsigned int cmd, void *arg)</div><div class="ttdoc">Reboots the system, or enables/disables the reboot keystroke.</div><div class="ttdef"><b>Definition:</b> <a href="sys_8c_source.html#l00034">sys.c:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
@@ -168,7 +169,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

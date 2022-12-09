@@ -69,7 +69,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">bitops.h File Reference</div>  </div>
 </div><!--header-->
@@ -138,20 +139,104 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitops_8h.html#aa0f8fe9b568b3eb20b763917b3a3dfbb">bitmask_check</a>(V,  <a class="el" href="kernel_8h.html#a52037c938e3c1b126c6277da5ca689d0">M</a>)&#160;&#160;&#160;((V) &amp; (<a class="el" href="kernel_8h.html#a52037c938e3c1b126c6277da5ca689d0">M</a>))</td></tr>
 <tr class="memdesc:aa0f8fe9b568b3eb20b763917b3a3dfbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the bits identified by the mask are all 1. <br /></td></tr>
 <tr class="separator:aa0f8fe9b568b3eb20b763917b3a3dfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a12952d7fc76e1008de2292927c565177"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitops_8h.html#a12952d7fc76e1008de2292927c565177">find_first_zero</a> (unsigned long value)</td></tr>
+<tr class="memdesc:a12952d7fc76e1008de2292927c565177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first bit at zero, starting from the less significative bit.  <a href="bitops_8h.html#a12952d7fc76e1008de2292927c565177">More...</a><br /></td></tr>
+<tr class="separator:a12952d7fc76e1008de2292927c565177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e227d53eda10a9ed977a1b47983c3e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bitops_8h.html#a82e227d53eda10a9ed977a1b47983c3e">find_first_non_zero</a> (unsigned long value)</td></tr>
+<tr class="memdesc:a82e227d53eda10a9ed977a1b47983c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first bit not zero, starting from the less significative bit.  <a href="bitops_8h.html#a82e227d53eda10a9ed977a1b47983c3e">More...</a><br /></td></tr>
+<tr class="separator:a82e227d53eda10a9ed977a1b47983c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Bitmasks functions. </p>
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="bitops_8h_source.html">bitops.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a82e227d53eda10a9ed977a1b47983c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e227d53eda10a9ed977a1b47983c3e">&#9670;&nbsp;</a></span>find_first_non_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int find_first_non_zero </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the first bit not zero, starting from the less significative bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value we need to analyze. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the position of the first non-zero bit. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bitops_8h_source.html#l00038">38</a> of file <a class="el" href="bitops_8h_source.html">bitops.h</a>.</p>
+
+</div>
+</div>
+<a id="a12952d7fc76e1008de2292927c565177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12952d7fc76e1008de2292927c565177">&#9670;&nbsp;</a></span>find_first_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int find_first_zero </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the first bit at zero, starting from the less significative bit. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the value we need to analyze. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the position of the first zero bit. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="bitops_8h_source.html#l00027">27</a> of file <a class="el" href="bitops_8h_source.html">bitops.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
         <div class="footer">
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">debug.c File Reference</div>  </div>
 </div><!--header-->
@@ -105,6 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1577273c86335a130a72ddb6f1ae9d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2io_2debug_8c.html#a1577273c86335a130a72ddb6f1ae9d53">dbg_puts</a> (const char *s)</td></tr>
 <tr class="memdesc:a1577273c86335a130a72ddb6f1ae9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the given string to debug output.  <a href="mentos_2src_2io_2debug_8c.html#a1577273c86335a130a72ddb6f1ae9d53">More...</a><br /></td></tr>
 <tr class="separator:a1577273c86335a130a72ddb6f1ae9d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fef53e21a56dc8a764917b38da9f2d"><td class="memItemLeft" align="right" valign="top"><a id="a29fef53e21a56dc8a764917b38da9f2d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__debug_print_header</b> (const char *file, const char *fun, int line, int log_level, char *header)</td></tr>
+<tr class="separator:a29fef53e21a56dc8a764917b38da9f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac24b3dfc00871ec0f893b13007dcb6ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2io_2debug_8c.html#ac24b3dfc00871ec0f893b13007dcb6ac">set_log_level</a> (int level)</td></tr>
 <tr class="memdesc:ac24b3dfc00871ec0f893b13007dcb6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the loglevel.  <a href="mentos_2src_2io_2debug_8c.html#ac24b3dfc00871ec0f893b13007dcb6ac">More...</a><br /></td></tr>
 <tr class="separator:ac24b3dfc00871ec0f893b13007dcb6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +127,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a6a4821679fdaa9e23cd7cfbe9b5fdaa3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2io_2debug_8c.html#a6a4821679fdaa9e23cd7cfbe9b5fdaa3">dec_to_binary</a> (unsigned long value, unsigned length)</td></tr>
 <tr class="memdesc:a6a4821679fdaa9e23cd7cfbe9b5fdaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the given value to a binary string.  <a href="mentos_2src_2io_2debug_8c.html#a6a4821679fdaa9e23cd7cfbe9b5fdaa3">More...</a><br /></td></tr>
 <tr class="separator:a6a4821679fdaa9e23cd7cfbe9b5fdaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae2f64f8ce87a92d397512cbe69c85f44"><td class="memItemLeft" align="right" valign="top"><a id="ae2f64f8ce87a92d397512cbe69c85f44"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mentos_2src_2io_2debug_8c.html#ae2f64f8ce87a92d397512cbe69c85f44">max_log_level</a> = <a class="el" href="kernel__levels_8h.html#a46ea50af448beb2f412a2db6e41e7090">LOGLEVEL_DEBUG</a></td></tr>
+<tr class="memdesc:ae2f64f8ce87a92d397512cbe69c85f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the log level. <br /></td></tr>
+<tr class="separator:ae2f64f8ce87a92d397512cbe69c85f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Debugging primitives. </p>
@@ -407,7 +418,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

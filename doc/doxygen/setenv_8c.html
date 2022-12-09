@@ -87,6 +87,13 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a44fe55f85401ad09b834f8c4a8a0b08c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setenv_8c.html#a44fe55f85401ad09b834f8c4a8a0b08c">__find_entry</a> (const char *name, const <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> name_len)</td></tr>
+<tr class="memdesc:a44fe55f85401ad09b834f8c4a8a0b08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the entry in the environ.  <a href="setenv_8c.html#a44fe55f85401ad09b834f8c4a8a0b08c">More...</a><br /></td></tr>
+<tr class="separator:a44fe55f85401ad09b834f8c4a8a0b08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254673de0eb40057a903aef72c63edf9"><td class="memItemLeft" align="right" valign="top"><a id="a254673de0eb40057a903aef72c63edf9"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setenv_8c.html#a254673de0eb40057a903aef72c63edf9">__clone_environ</a> ()</td></tr>
+<tr class="memdesc:a254673de0eb40057a903aef72c63edf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a clone of the current environ. <br /></td></tr>
+<tr class="separator:a254673de0eb40057a903aef72c63edf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d205fd04850ed90bf8bc835ea126c30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setenv_8c.html#a7d205fd04850ed90bf8bc835ea126c30">setenv</a> (const char *name, const char *value, int replace)</td></tr>
 <tr class="memdesc:a7d205fd04850ed90bf8bc835ea126c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to adds the variable to the environment.  <a href="setenv_8c.html#a7d205fd04850ed90bf8bc835ea126c30">More...</a><br /></td></tr>
 <tr class="separator:a7d205fd04850ed90bf8bc835ea126c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,6 +110,12 @@ Variables</h2></td></tr>
 char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="setenv_8c.html#aa006daaf11f1e2e45a6ababaf463212b">environ</a></td></tr>
 <tr class="memdesc:aa006daaf11f1e2e45a6ababaf463212b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the <code>environ</code> variable in <code><a class="el" href="setenv_8c.html" title="Defines the functions used to manipulate the environmental variables.">setenv.c</a></code>. <br /></td></tr>
 <tr class="separator:aa006daaf11f1e2e45a6ababaf463212b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09fe4c716afd8b742c14d504555cf564"><td class="memItemLeft" align="right" valign="top"><a id="a09fe4c716afd8b742c14d504555cf564"></a>
+static char **&#160;</td><td class="memItemRight" valign="bottom"><b>__environ</b> = <a class="el" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="separator:a09fe4c716afd8b742c14d504555cf564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4a6ad13fa18cc2df748f6a18d1927e"><td class="memItemLeft" align="right" valign="top"><a id="a1b4a6ad13fa18cc2df748f6a18d1927e"></a>
+static <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>__environ_size</b> = 0</td></tr>
+<tr class="separator:a1b4a6ad13fa18cc2df748f6a18d1927e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the functions used to manipulate the environmental variables. </p>
@@ -110,6 +123,54 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 
 <p class="definition">Definition in file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a44fe55f85401ad09b834f8c4a8a0b08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fe55f85401ad09b834f8c4a8a0b08c">&#9670;&nbsp;</a></span>__find_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __find_entry </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>name_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the entry in the environ. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the entry we are looking for. </td></tr>
+    <tr><td class="paramname">name_len</td><td>the length of the name we received. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of the entry, or -1 if we did not find it. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00020">20</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
+
+</div>
+</div>
 <a id="abc6595dbf6880c71628fecf0dbb23d66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc6595dbf6880c71628fecf0dbb23d66">&#9670;&nbsp;</a></span>getenv()</h2>
 
@@ -135,7 +196,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the value, or NULL if there is no match. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00136">136</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00141">141</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
 
 </div>
 </div>
@@ -182,7 +243,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Zero on success, or -1 on error with errno indicating the cause. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00048">48</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00053">53</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
 
 </div>
 </div>
@@ -211,7 +272,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Zero on success, or -1 on error with errno indicating the cause. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00108">108</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="setenv_8c_source.html#l00113">113</a> of file <a class="el" href="setenv_8c_source.html">setenv.c</a>.</p>
 
 </div>
 </div>
@@ -222,7 +283,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

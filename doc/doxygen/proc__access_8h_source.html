@@ -290,13 +290,13 @@ $(function() {
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        : <span class="stringliteral">&quot;m&quot;</span>(*desc));</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> sti()</div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="proc__access_8h.html#a4657e97b270d7af5a23da2c4d642ada2">  225</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="proc__access_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a>()</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="proc__access_8h.html#a66857489cf39faa21fc49712ee748961">ASM</a>(<span class="stringliteral">&quot;sti&quot;</span> ::</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            : <span class="stringliteral">&quot;memory&quot;</span>);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> cli()</div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="proc__access_8h.html#acc919e7809ef1db2b20aa3804f540b5c">  232</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="proc__access_8h.html#acc919e7809ef1db2b20aa3804f540b5c">cli</a>()</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;{</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="proc__access_8h.html#a66857489cf39faa21fc49712ee748961">ASM</a>(<span class="stringliteral">&quot;cli&quot;</span> ::</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            : <span class="stringliteral">&quot;memory&quot;</span>);</div>
@@ -312,7 +312,7 @@ $(function() {
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="proc__access_8h.html#a66857489cf39faa21fc49712ee748961">ASM</a>(<span class="stringliteral">&quot;hlt&quot;</span>);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> pause()</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="proc__access_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">  249</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="proc__access_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">pause</a>()</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;{</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="proc__access_8h.html#a66857489cf39faa21fc49712ee748961">ASM</a>(<span class="stringliteral">&quot;pause&quot;</span>);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
@@ -335,7 +335,10 @@ $(function() {
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="comment">//  ASM(&quot;  addic. %0,%1,%2\n&quot; : &quot;=r&quot;(res): &quot;=r&quot;(a),&quot;r&quot;(a))</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">// This can be particularly important in cases when the code is accessing</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="comment">// shared memory.</span></div>
+<div class="ttc" id="aproc__access_8h_html_a2948382efa6ca2d9520fa9bb11a63ff9"><div class="ttname"><a href="proc__access_8h.html#a2948382efa6ca2d9520fa9bb11a63ff9">pause</a></div><div class="ttdeci">static void pause()</div><div class="ttdoc">Pause.</div><div class="ttdef"><b>Definition:</b> <a href="proc__access_8h_source.html#l00249">proc_access.h:249</a></div></div>
+<div class="ttc" id="aproc__access_8h_html_a4657e97b270d7af5a23da2c4d642ada2"><div class="ttname"><a href="proc__access_8h.html#a4657e97b270d7af5a23da2c4d642ada2">sti</a></div><div class="ttdeci">static void sti()</div><div class="ttdoc">Enable IRQs.</div><div class="ttdef"><b>Definition:</b> <a href="proc__access_8h_source.html#l00225">proc_access.h:225</a></div></div>
 <div class="ttc" id="aproc__access_8h_html_a66857489cf39faa21fc49712ee748961"><div class="ttname"><a href="proc__access_8h.html#a66857489cf39faa21fc49712ee748961">ASM</a></div><div class="ttdeci">#define ASM(a)</div><div class="ttdoc">Macro that encapsulate asm and volatile directives.</div><div class="ttdef"><b>Definition:</b> <a href="proc__access_8h_source.html#l00011">proc_access.h:11</a></div></div>
+<div class="ttc" id="aproc__access_8h_html_acc919e7809ef1db2b20aa3804f540b5c"><div class="ttname"><a href="proc__access_8h.html#acc919e7809ef1db2b20aa3804f540b5c">cli</a></div><div class="ttdeci">static void cli()</div><div class="ttdoc">Disable IRQs.</div><div class="ttdef"><b>Definition:</b> <a href="proc__access_8h_source.html#l00232">proc_access.h:232</a></div></div>
 <div class="ttc" id="aprocfs_8c_html_a354ba80a503d291190897a0294e5ada1"><div class="ttname"><a href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a></div><div class="ttdeci">procfs_t fs</div><div class="ttdoc">The procfs filesystem.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00077">procfs.c:77</a></div></div>
 <div class="ttc" id="astdint_8h_html"><div class="ttname"><a href="stdint_8h.html">stdint.h</a></div><div class="ttdoc">Standard integer data-types.</div></div>
 <div class="ttc" id="astdint_8h_html_a19e3e47d795881e91fde03c3f592bef4"><div class="ttname"><a href="stdint_8h.html#a19e3e47d795881e91fde03c3f592bef4">uintptr_t</a></div><div class="ttdeci">unsigned uintptr_t</div><div class="ttdoc">Define the unsigned 32-bit pointer.</div><div class="ttdef"><b>Definition:</b> <a href="stdint_8h_source.html#l00036">stdint.h:36</a></div></div>
@@ -347,7 +350,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

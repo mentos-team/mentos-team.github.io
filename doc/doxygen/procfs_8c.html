@@ -139,6 +139,85 @@ typedef struct <a class="el" href="structprocfs__file__t.html">procfs_file_t</a>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a73eaa0967c7ddbd1c56be85200f77dd7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a73eaa0967c7ddbd1c56be85200f77dd7">procfs_mkdir</a> (const char *path, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mode)</td></tr>
+<tr class="memdesc:a73eaa0967c7ddbd1c56be85200f77dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new directory.  <a href="procfs_8c.html#a73eaa0967c7ddbd1c56be85200f77dd7">More...</a><br /></td></tr>
+<tr class="separator:a73eaa0967c7ddbd1c56be85200f77dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c7d9349a6aae0acb0e36d84c78eb0e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a36c7d9349a6aae0acb0e36d84c78eb0e">procfs_rmdir</a> (const char *path)</td></tr>
+<tr class="memdesc:a36c7d9349a6aae0acb0e36d84c78eb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a directory.  <a href="procfs_8c.html#a36c7d9349a6aae0acb0e36d84c78eb0e">More...</a><br /></td></tr>
+<tr class="separator:a36c7d9349a6aae0acb0e36d84c78eb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfff545f3b1b039bd739c225e21d594"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a5cfff545f3b1b039bd739c225e21d594">procfs_stat</a> (const char *path, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:a5cfff545f3b1b039bd739c225e21d594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="procfs_8c.html#a5cfff545f3b1b039bd739c225e21d594">More...</a><br /></td></tr>
+<tr class="separator:a5cfff545f3b1b039bd739c225e21d594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4966d7cb82b057b68bfaa93a8a27a37"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#af4966d7cb82b057b68bfaa93a8a27a37">procfs_open</a> (const char *path, int flags, <a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a> mode)</td></tr>
+<tr class="memdesc:af4966d7cb82b057b68bfaa93a8a27a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the file at the given path and returns its file descriptor.  <a href="procfs_8c.html#af4966d7cb82b057b68bfaa93a8a27a37">More...</a><br /></td></tr>
+<tr class="separator:af4966d7cb82b057b68bfaa93a8a27a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e426756f0980605e46d1c081910fc2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ad0e426756f0980605e46d1c081910fc2">procfs_unlink</a> (const char *path)</td></tr>
+<tr class="memdesc:ad0e426756f0980605e46d1c081910fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the file at the given path.  <a href="procfs_8c.html#ad0e426756f0980605e46d1c081910fc2">More...</a><br /></td></tr>
+<tr class="separator:ad0e426756f0980605e46d1c081910fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c28e31d4f34083bea0abb07f17f9ad6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a6c28e31d4f34083bea0abb07f17f9ad6">procfs_close</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file)</td></tr>
+<tr class="memdesc:a6c28e31d4f34083bea0abb07f17f9ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given file.  <a href="procfs_8c.html#a6c28e31d4f34083bea0abb07f17f9ad6">More...</a><br /></td></tr>
+<tr class="separator:a6c28e31d4f34083bea0abb07f17f9ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42081e75b8cc9b9a516f451d8a827ab2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a42081e75b8cc9b9a516f451d8a827ab2">procfs_read</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, char *buf, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte)</td></tr>
+<tr class="memdesc:a42081e75b8cc9b9a516f451d8a827ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads from the file identified by the file descriptor.  <a href="procfs_8c.html#a42081e75b8cc9b9a516f451d8a827ab2">More...</a><br /></td></tr>
+<tr class="separator:a42081e75b8cc9b9a516f451d8a827ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7a024233a8246e7cc9ae7dae25ef46"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#aae7a024233a8246e7cc9ae7dae25ef46">procfs_write</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, const void *buf, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> nbyte)</td></tr>
+<tr class="memdesc:aae7a024233a8246e7cc9ae7dae25ef46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given content inside the file.  <a href="procfs_8c.html#aae7a024233a8246e7cc9ae7dae25ef46">More...</a><br /></td></tr>
+<tr class="separator:aae7a024233a8246e7cc9ae7dae25ef46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f72aa89f1ba004c0621055bf129fb5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ae5f72aa89f1ba004c0621055bf129fb5">procfs_lseek</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> offset, int whence)</td></tr>
+<tr class="memdesc:ae5f72aa89f1ba004c0621055bf129fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repositions the file offset inside a file.  <a href="procfs_8c.html#ae5f72aa89f1ba004c0621055bf129fb5">More...</a><br /></td></tr>
+<tr class="separator:ae5f72aa89f1ba004c0621055bf129fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88a2b0da093c5fb6f9cd1d22a434f991"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a88a2b0da093c5fb6f9cd1d22a434f991">procfs_fstat</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:a88a2b0da093c5fb6f9cd1d22a434f991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves information concerning the file at the given position.  <a href="procfs_8c.html#a88a2b0da093c5fb6f9cd1d22a434f991">More...</a><br /></td></tr>
+<tr class="separator:a88a2b0da093c5fb6f9cd1d22a434f991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe8e87821067d9bd4bd2ec9f629e613"><td class="memItemLeft" align="right" valign="top"><a id="afbe8e87821067d9bd4bd2ec9f629e613"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>procfs_ioctl</b> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, int request, void *data)</td></tr>
+<tr class="separator:afbe8e87821067d9bd4bd2ec9f629e613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c2726159888f01e37bc8c48bcc3116"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ae3c2726159888f01e37bc8c48bcc3116">procfs_getdents</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *file, <a class="el" href="structdirent__t.html">dirent_t</a> *dirp, <a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> doff, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> count)</td></tr>
+<tr class="memdesc:ae3c2726159888f01e37bc8c48bcc3116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads contents of the directories to a dirent buffer, updating the offset and returning the number of written bytes in the buffer, it assumes that all paths are well-formed.  <a href="procfs_8c.html#ae3c2726159888f01e37bc8c48bcc3116">More...</a><br /></td></tr>
+<tr class="separator:ae3c2726159888f01e37bc8c48bcc3116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8f4a1a673081b231e0452d1f5d79af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a8a8f4a1a673081b231e0452d1f5d79af">procfs_check_file</a> (<a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *procfs_file)</td></tr>
+<tr class="memdesc:a8a8f4a1a673081b231e0452d1f5d79af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the file is a valid PROCFS file.  <a href="procfs_8c.html#a8a8f4a1a673081b231e0452d1f5d79af">More...</a><br /></td></tr>
+<tr class="separator:a8a8f4a1a673081b231e0452d1f5d79af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8979573790b74670ddeb59e4fc70b604"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a8979573790b74670ddeb59e4fc70b604">procfs_get_file</a> (<a class="el" href="structlist__head.html">list_head</a> *entry)</td></tr>
+<tr class="memdesc:a8979573790b74670ddeb59e4fc70b604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the PROCFS file associated with the given list entry.  <a href="procfs_8c.html#a8979573790b74670ddeb59e4fc70b604">More...</a><br /></td></tr>
+<tr class="separator:a8979573790b74670ddeb59e4fc70b604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa375d0532f0a91f0c026ac162c5b4ad8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#aa375d0532f0a91f0c026ac162c5b4ad8">procfs_find_entry_path</a> (const char *path)</td></tr>
+<tr class="memdesc:aa375d0532f0a91f0c026ac162c5b4ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the PROCFS file at the given path.  <a href="procfs_8c.html#aa375d0532f0a91f0c026ac162c5b4ad8">More...</a><br /></td></tr>
+<tr class="separator:aa375d0532f0a91f0c026ac162c5b4ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee54a500bd4c4269aaed0dd094a8031"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#aeee54a500bd4c4269aaed0dd094a8031">procfs_find_entry_inode</a> (int inode)</td></tr>
+<tr class="memdesc:aeee54a500bd4c4269aaed0dd094a8031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the PROCFS file with the given inode.  <a href="procfs_8c.html#aeee54a500bd4c4269aaed0dd094a8031">More...</a><br /></td></tr>
+<tr class="separator:aeee54a500bd4c4269aaed0dd094a8031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47b31ebd74deb4d0bc2aef586a92569"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ad47b31ebd74deb4d0bc2aef586a92569">procfs_find_inode</a> (const char *path)</td></tr>
+<tr class="memdesc:ad47b31ebd74deb4d0bc2aef586a92569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the inode associated with a PROCFS file at the given path.  <a href="procfs_8c.html#ad47b31ebd74deb4d0bc2aef586a92569">More...</a><br /></td></tr>
+<tr class="separator:ad47b31ebd74deb4d0bc2aef586a92569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02495b9e44ef6401b50d55291f7f5ff4"><td class="memItemLeft" align="right" valign="top"><a id="a02495b9e44ef6401b50d55291f7f5ff4"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>procfs_get_free_inode</b> ()</td></tr>
+<tr class="separator:a02495b9e44ef6401b50d55291f7f5ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e92ac85042feae62a612a4a8886b9c1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a8e92ac85042feae62a612a4a8886b9c1">procfs_check_if_empty</a> (const char *path)</td></tr>
+<tr class="memdesc:a8e92ac85042feae62a612a4a8886b9c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the PROCFS directory at the given path is empty.  <a href="procfs_8c.html#a8e92ac85042feae62a612a4a8886b9c1">More...</a><br /></td></tr>
+<tr class="separator:a8e92ac85042feae62a612a4a8886b9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d856f85880e4c0b263c493c2e452a3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a72d856f85880e4c0b263c493c2e452a3">procfs_create_file</a> (const char *path, unsigned flags)</td></tr>
+<tr class="memdesc:a72d856f85880e4c0b263c493c2e452a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new PROCFS file.  <a href="procfs_8c.html#a72d856f85880e4c0b263c493c2e452a3">More...</a><br /></td></tr>
+<tr class="separator:a72d856f85880e4c0b263c493c2e452a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae702da3f6614140458fc860a6091fa5e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ae702da3f6614140458fc860a6091fa5e">procfs_destroy_file</a> (<a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *procfs_file)</td></tr>
+<tr class="memdesc:ae702da3f6614140458fc860a6091fa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroyes the given PROCFS file.  <a href="procfs_8c.html#ae702da3f6614140458fc860a6091fa5e">More...</a><br /></td></tr>
+<tr class="separator:ae702da3f6614140458fc860a6091fa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6cf844118670ccc83414ec4dc755a51"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ad6cf844118670ccc83414ec4dc755a51">procfs_create_file_struct</a> (<a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *procfs_file)</td></tr>
+<tr class="memdesc:ad6cf844118670ccc83414ec4dc755a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a VFS file, from a PROCFS file.  <a href="procfs_8c.html#ad6cf844118670ccc83414ec4dc755a51">More...</a><br /></td></tr>
+<tr class="separator:ad6cf844118670ccc83414ec4dc755a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf84bdebf9f1b2b8736d4e2c2dbbf0d"><td class="memItemLeft" align="right" valign="top"><a id="a4cf84bdebf9f1b2b8736d4e2c2dbbf0d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a4cf84bdebf9f1b2b8736d4e2c2dbbf0d">dump_procfs</a> ()</td></tr>
+<tr class="memdesc:a4cf84bdebf9f1b2b8736d4e2c2dbbf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps on debugging output the PROCFS. <br /></td></tr>
+<tr class="separator:a4cf84bdebf9f1b2b8736d4e2c2dbbf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad876275381e6751cbd1a96cda3c1e04f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ad876275381e6751cbd1a96cda3c1e04f">__procfs_stat</a> (<a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *file, <a class="el" href="structstat__t.html">stat_t</a> *<a class="el" href="sys_2stat_8h.html#adfd60e6c1a6b08664449e68a1568f525">stat</a>)</td></tr>
+<tr class="memdesc:ad876275381e6751cbd1a96cda3c1e04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the information concerning the file.  <a href="procfs_8c.html#ad876275381e6751cbd1a96cda3c1e04f">More...</a><br /></td></tr>
+<tr class="separator:ad876275381e6751cbd1a96cda3c1e04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49af014c52eeac2be3bf960fc5c35a58"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a49af014c52eeac2be3bf960fc5c35a58">ext2_mount</a> (<a class="el" href="structvfs__file__t.html">vfs_file_t</a> *block_device, const char *path)</td></tr>
+<tr class="memdesc:a49af014c52eeac2be3bf960fc5c35a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mounts the block device as an EXT2 filesystem.  <a href="procfs_8c.html#a49af014c52eeac2be3bf960fc5c35a58">More...</a><br /></td></tr>
+<tr class="separator:a49af014c52eeac2be3bf960fc5c35a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91f4903f115c36d9c337e62b31be32a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ae91f4903f115c36d9c337e62b31be32a">procfs_mount_callback</a> (const char *path, const char *device)</td></tr>
+<tr class="memdesc:ae91f4903f115c36d9c337e62b31be32a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mounts the filesystem at the given path.  <a href="procfs_8c.html#ae91f4903f115c36d9c337e62b31be32a">More...</a><br /></td></tr>
+<tr class="separator:ae91f4903f115c36d9c337e62b31be32a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a119cb9d191575415ebc1fa7903b284"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a5a119cb9d191575415ebc1fa7903b284">procfs_module_init</a> ()</td></tr>
 <tr class="memdesc:a5a119cb9d191575415ebc1fa7903b284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the procfs filesystem.  <a href="procfs_8c.html#a5a119cb9d191575415ebc1fa7903b284">More...</a><br /></td></tr>
 <tr class="separator:a5a119cb9d191575415ebc1fa7903b284"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,6 +246,15 @@ Variables</h2></td></tr>
 <a class="el" href="structprocfs__t.html">procfs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a354ba80a503d291190897a0294e5ada1">fs</a></td></tr>
 <tr class="memdesc:a354ba80a503d291190897a0294e5ada1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The procfs filesystem. <br /></td></tr>
 <tr class="separator:a354ba80a503d291190897a0294e5ada1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac343b3217599b2e7cd91c9a04f050705"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ac343b3217599b2e7cd91c9a04f050705">procfs_sys_operations</a></td></tr>
+<tr class="memdesc:ac343b3217599b2e7cd91c9a04f050705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem general operations.  <a href="procfs_8c.html#ac343b3217599b2e7cd91c9a04f050705">More...</a><br /></td></tr>
+<tr class="separator:ac343b3217599b2e7cd91c9a04f050705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada09d38c2a3a29a5929156fe7223e6ce"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#ada09d38c2a3a29a5929156fe7223e6ce">procfs_fs_operations</a></td></tr>
+<tr class="memdesc:ada09d38c2a3a29a5929156fe7223e6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem file operations.  <a href="procfs_8c.html#ada09d38c2a3a29a5929156fe7223e6ce">More...</a><br /></td></tr>
+<tr class="separator:ada09d38c2a3a29a5929156fe7223e6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58abcda708f9f47045d41e458a790078"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structfile__system__type.html">file_system_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="procfs_8c.html#a58abcda708f9f47045d41e458a790078">procfs_file_system_type</a></td></tr>
+<tr class="memdesc:a58abcda708f9f47045d41e458a790078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem information.  <a href="procfs_8c.html#a58abcda708f9f47045d41e458a790078">More...</a><br /></td></tr>
+<tr class="separator:a58abcda708f9f47045d41e458a790078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Proc file system implementation. </p>
@@ -192,6 +280,101 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad876275381e6751cbd1a96cda3c1e04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad876275381e6751cbd1a96cda3c1e04f">&#9670;&nbsp;</a></span>__procfs_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __procfs_stat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the information concerning the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inode</td><td>The inode containing the data. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00627">627</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a49af014c52eeac2be3bf960fc5c35a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49af014c52eeac2be3bf960fc5c35a58">&#9670;&nbsp;</a></span>ext2_mount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a>* ext2_mount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>block_device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mounts the block device as an EXT2 filesystem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">block_device</td><td>the block device formatted as EXT2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the VFS root node of the EXT2 filesystem. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00758">758</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
 <a id="a81b6e8d604955391eb682b92da008f80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81b6e8d604955391eb682b92da008f80">&#9670;&nbsp;</a></span>proc_create_entry()</h2>
 
@@ -392,6 +575,80 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a8f4a1a673081b231e0452d1f5d79af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8f4a1a673081b231e0452d1f5d79af">&#9670;&nbsp;</a></span>procfs_check_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a> procfs_check_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>procfs_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the file is a valid PROCFS file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">procfs_file</td><td>the file to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if valid, false otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00128">128</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a8e92ac85042feae62a612a4a8886b9c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e92ac85042feae62a612a4a8886b9c1">&#9670;&nbsp;</a></span>procfs_check_if_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_check_if_empty </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the PROCFS directory at the given path is empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path to the directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if empty, 1 if not. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00206">206</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
 <a id="a9d13e7d5f102ed6cf7ffee3b0184c8af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d13e7d5f102ed6cf7ffee3b0184c8af">&#9670;&nbsp;</a></span>procfs_cleanup_module()</h2>
 
@@ -411,6 +668,525 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>0 if fails, 1 if succeed. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00806">806</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a6c28e31d4f34083bea0abb07f17f9ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c28e31d4f34083bea0abb07f17f9ad6">&#9670;&nbsp;</a></span>procfs_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the given file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00521">521</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a72d856f85880e4c0b263c493c2e452a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d856f85880e4c0b263c493c2e452a3">&#9670;&nbsp;</a></span>procfs_create_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a>* procfs_create_file </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new PROCFS file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>where the file resides. </td></tr>
+    <tr><td class="paramname">flags</td><td>the creation flags. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the new PROCFS file, NULL otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00234">234</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ad6cf844118670ccc83414ec4dc755a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6cf844118670ccc83414ec4dc755a51">&#9670;&nbsp;</a></span>procfs_create_file_struct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a>* procfs_create_file_struct </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>procfs_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a VFS file, from a PROCFS file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">procfs_file</td><td>the PROCFS file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the newly create VFS file, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00296">296</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ae702da3f6614140458fc860a6091fa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae702da3f6614140458fc860a6091fa5e">&#9670;&nbsp;</a></span>procfs_destroy_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_destroy_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprocfs__file__t.html">procfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>procfs_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroyes the given PROCFS file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">procfs_file</td><td>pointer to the PROCFS file to destroy. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, 1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00277">277</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="aeee54a500bd4c4269aaed0dd094a8031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee54a500bd4c4269aaed0dd094a8031">&#9670;&nbsp;</a></span>procfs_find_entry_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a>* procfs_find_entry_inode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>inode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the PROCFS file with the given inode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inode</td><td>the inode we search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the PROCFS file, NULL otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00167">167</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="aa375d0532f0a91f0c026ac162c5b4ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa375d0532f0a91f0c026ac162c5b4ad8">&#9670;&nbsp;</a></span>procfs_find_entry_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a>* procfs_find_entry_path </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the PROCFS file at the given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path to the entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the PROCFS file, NULL otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00148">148</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ad47b31ebd74deb4d0bc2aef586a92569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47b31ebd74deb4d0bc2aef586a92569">&#9670;&nbsp;</a></span>procfs_find_inode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_find_inode </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the inode associated with a PROCFS file at the given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path to the entry. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a valid inode, or -1 on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00187">187</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a88a2b0da093c5fb6f9cd1d22a434f991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a2b0da093c5fb6f9cd1d22a434f991">&#9670;&nbsp;</a></span>procfs_fstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_fstat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file struct. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00645">645</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a8979573790b74670ddeb59e4fc70b604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8979573790b74670ddeb59e4fc70b604">&#9670;&nbsp;</a></span>procfs_get_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structprocfs__file__t.html">procfs_file_t</a>* procfs_get_file </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the PROCFS file associated with the given list entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the entry to transform to PROCFS file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a valid pointer to a PROCFS file, NULL otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00136">136</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3c2726159888f01e37bc8c48bcc3116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c2726159888f01e37bc8c48bcc3116">&#9670;&nbsp;</a></span>procfs_getdents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_getdents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdirent__t.html">dirent_t</a> *&#160;</td>
+          <td class="paramname"><em>dirp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>doff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads contents of the directories to a dirent buffer, updating the offset and returning the number of written bytes in the buffer, it assumes that all paths are well-formed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The directory handler. </td></tr>
+    <tr><td class="paramname">dirp</td><td>The buffer where the data should be written. </td></tr>
+    <tr><td class="paramname">doff</td><td>The offset inside the buffer where the data should be written. </td></tr>
+    <tr><td class="paramname">count</td><td>The maximum length of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes in the buffer. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00696">696</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ae5f72aa89f1ba004c0621055bf129fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f72aa89f1ba004c0621055bf129fb5">&#9670;&nbsp;</a></span>procfs_lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a> procfs_lseek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Repositions the file offset inside a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file we are working with. </td></tr>
+    <tr><td class="paramname">offset</td><td>the offest to use for the operation. </td></tr>
+    <tr><td class="paramname">whence</td><td>the type of operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, returns the resulting offset location as measured in bytes from the beginning of the file. On error, the value (off_t) -1 is returned and errno is set to indicate the error. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00606">606</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a73eaa0967c7ddbd1c56be85200f77dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73eaa0967c7ddbd1c56be85200f77dd7">&#9670;&nbsp;</a></span>procfs_mkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the new directory. </td></tr>
+    <tr><td class="paramname">mode</td><td>The file mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00347">347</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
 
 </div>
 </div>
@@ -436,6 +1212,467 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae91f4903f115c36d9c337e62b31be32a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae91f4903f115c36d9c337e62b31be32a">&#9670;&nbsp;</a></span>procfs_mount_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a>* procfs_mount_callback </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mounts the filesystem at the given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path where we want to mount a procfs. </td></tr>
+    <tr><td class="paramname">device</td><td>we expect it to be NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the root VFS file. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00771">771</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="af4966d7cb82b057b68bfaa93a8a27a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4966d7cb82b057b68bfaa93a8a27a37">&#9670;&nbsp;</a></span>procfs_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structvfs__file__t.html">vfs_file_t</a> * procfs_open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#adb8322e115035a284aab704909e63d00">mode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open the file at the given path and returns its file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the file. </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags used to determine the behavior of the function. </td></tr>
+    <tr><td class="paramname">mode</td><td>The mode with which we open the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The file descriptor of the opened file, otherwise returns -1. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00418">418</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a42081e75b8cc9b9a516f451d8a827ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42081e75b8cc9b9a516f451d8a827ab2">&#9670;&nbsp;</a></span>procfs_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> procfs_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads from the file identified by the file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer where the read content must be placed. </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset from which we start reading from the file. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>The number of bytes to read. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of red bytes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00570">570</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a36c7d9349a6aae0acb0e36d84c78eb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c7d9349a6aae0acb0e36d84c78eb0e">&#9670;&nbsp;</a></span>procfs_rmdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_rmdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00380">380</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="a5cfff545f3b1b039bd739c225e21d594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfff545f3b1b039bd739c225e21d594">&#9670;&nbsp;</a></span>procfs_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_stat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structstat__t.html">stat_t</a> *&#160;</td>
+          <td class="paramname"><em>stat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves information concerning the file at the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the file. </td></tr>
+    <tr><td class="paramname">stat</td><td>The structure where the information are stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if success. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00663">663</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ad0e426756f0980605e46d1c081910fc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e426756f0980605e46d1c081910fc2">&#9670;&nbsp;</a></span>procfs_unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int procfs_unlink </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deletes the file at the given path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The path to the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, zero is returned. On error, -1 is returned. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00535">535</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="aae7a024233a8246e7cc9ae7dae25ef46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7a024233a8246e7cc9ae7dae25ef46">&#9670;&nbsp;</a></span>procfs_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stddef_8h.html#a831c6b6852c6d34448e30a88c34539fd">ssize_t</a> procfs_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structvfs__file__t.html">vfs_file_t</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#a97ae9c9688da2790e5d5a8fa2751881e">off_t</a>&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>nbyte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Writes the given content inside the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file descriptor of the file. </td></tr>
+    <tr><td class="paramname">buffer</td><td>The content to write. </td></tr>
+    <tr><td class="paramname">offset</td><td>Offset from which we start writing in the file. </td></tr>
+    <tr><td class="paramname">nbyte</td><td>The number of bytes to write. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of written bytes. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00587">587</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a58abcda708f9f47045d41e458a790078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58abcda708f9f47045d41e458a790078">&#9670;&nbsp;</a></span>procfs_file_system_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfile__system__type.html">file_system_type</a> procfs_file_system_type</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .name     = <span class="stringliteral">&quot;procfs&quot;</span>,</div>
+<div class="line">    .fs_flags = 0,</div>
+<div class="line">    .mount    = <a class="code" href="procfs_8c.html#ae91f4903f115c36d9c337e62b31be32a">procfs_mount_callback</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aprocfs_8c_html_ae91f4903f115c36d9c337e62b31be32a"><div class="ttname"><a href="procfs_8c.html#ae91f4903f115c36d9c337e62b31be32a">procfs_mount_callback</a></div><div class="ttdeci">static vfs_file_t * procfs_mount_callback(const char *path, const char *device)</div><div class="ttdoc">Mounts the filesystem at the given path.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00771">procfs.c:771</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem information. </p>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00787">787</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ada09d38c2a3a29a5929156fe7223e6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada09d38c2a3a29a5929156fe7223e6ce">&#9670;&nbsp;</a></span>procfs_fs_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__file__operations__t.html">vfs_file_operations_t</a> procfs_fs_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .open_f     = <a class="code" href="procfs_8c.html#af4966d7cb82b057b68bfaa93a8a27a37">procfs_open</a>,</div>
+<div class="line">    .unlink_f   = <a class="code" href="procfs_8c.html#ad0e426756f0980605e46d1c081910fc2">procfs_unlink</a>,</div>
+<div class="line">    .close_f    = <a class="code" href="procfs_8c.html#a6c28e31d4f34083bea0abb07f17f9ad6">procfs_close</a>,</div>
+<div class="line">    .read_f     = <a class="code" href="procfs_8c.html#a42081e75b8cc9b9a516f451d8a827ab2">procfs_read</a>,</div>
+<div class="line">    .write_f    = <a class="code" href="procfs_8c.html#aae7a024233a8246e7cc9ae7dae25ef46">procfs_write</a>,</div>
+<div class="line">    .lseek_f    = <a class="code" href="procfs_8c.html#ae5f72aa89f1ba004c0621055bf129fb5">procfs_lseek</a>,</div>
+<div class="line">    .stat_f     = <a class="code" href="procfs_8c.html#a88a2b0da093c5fb6f9cd1d22a434f991">procfs_fstat</a>,</div>
+<div class="line">    .ioctl_f    = procfs_ioctl,</div>
+<div class="line">    .getdents_f = <a class="code" href="procfs_8c.html#ae3c2726159888f01e37bc8c48bcc3116">procfs_getdents</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aprocfs_8c_html_a42081e75b8cc9b9a516f451d8a827ab2"><div class="ttname"><a href="procfs_8c.html#a42081e75b8cc9b9a516f451d8a827ab2">procfs_read</a></div><div class="ttdeci">static ssize_t procfs_read(vfs_file_t *file, char *buffer, off_t offset, size_t nbyte)</div><div class="ttdoc">Reads from the file identified by the file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00570">procfs.c:570</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_a6c28e31d4f34083bea0abb07f17f9ad6"><div class="ttname"><a href="procfs_8c.html#a6c28e31d4f34083bea0abb07f17f9ad6">procfs_close</a></div><div class="ttdeci">static int procfs_close(vfs_file_t *file)</div><div class="ttdoc">Closes the given file.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00521">procfs.c:521</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_a88a2b0da093c5fb6f9cd1d22a434f991"><div class="ttname"><a href="procfs_8c.html#a88a2b0da093c5fb6f9cd1d22a434f991">procfs_fstat</a></div><div class="ttdeci">static int procfs_fstat(vfs_file_t *file, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00645">procfs.c:645</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_aae7a024233a8246e7cc9ae7dae25ef46"><div class="ttname"><a href="procfs_8c.html#aae7a024233a8246e7cc9ae7dae25ef46">procfs_write</a></div><div class="ttdeci">static ssize_t procfs_write(vfs_file_t *file, const void *buffer, off_t offset, size_t nbyte)</div><div class="ttdoc">Writes the given content inside the file.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00587">procfs.c:587</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_ad0e426756f0980605e46d1c081910fc2"><div class="ttname"><a href="procfs_8c.html#ad0e426756f0980605e46d1c081910fc2">procfs_unlink</a></div><div class="ttdeci">static int procfs_unlink(const char *path)</div><div class="ttdoc">Deletes the file at the given path.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00535">procfs.c:535</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_ae3c2726159888f01e37bc8c48bcc3116"><div class="ttname"><a href="procfs_8c.html#ae3c2726159888f01e37bc8c48bcc3116">procfs_getdents</a></div><div class="ttdeci">static int procfs_getdents(vfs_file_t *file, dirent_t *dirp, off_t doff, size_t count)</div><div class="ttdoc">Reads contents of the directories to a dirent buffer, updating the offset and returning the number of...</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00696">procfs.c:696</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_ae5f72aa89f1ba004c0621055bf129fb5"><div class="ttname"><a href="procfs_8c.html#ae5f72aa89f1ba004c0621055bf129fb5">procfs_lseek</a></div><div class="ttdeci">static off_t procfs_lseek(vfs_file_t *file, off_t offset, int whence)</div><div class="ttdoc">Repositions the file offset inside a file.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00606">procfs.c:606</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_af4966d7cb82b057b68bfaa93a8a27a37"><div class="ttname"><a href="procfs_8c.html#af4966d7cb82b057b68bfaa93a8a27a37">procfs_open</a></div><div class="ttdeci">static vfs_file_t * procfs_open(const char *path, int flags, mode_t mode)</div><div class="ttdoc">Open the file at the given path and returns its file descriptor.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00418">procfs.c:418</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem file operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00109">109</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
+<a id="ac343b3217599b2e7cd91c9a04f050705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac343b3217599b2e7cd91c9a04f050705">&#9670;&nbsp;</a></span>procfs_sys_operations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvfs__sys__operations__t.html">vfs_sys_operations_t</a> procfs_sys_operations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    .mkdir_f = <a class="code" href="procfs_8c.html#a73eaa0967c7ddbd1c56be85200f77dd7">procfs_mkdir</a>,</div>
+<div class="line">    .rmdir_f = <a class="code" href="procfs_8c.html#a36c7d9349a6aae0acb0e36d84c78eb0e">procfs_rmdir</a>,</div>
+<div class="line">    .stat_f  = <a class="code" href="procfs_8c.html#a5cfff545f3b1b039bd739c225e21d594">procfs_stat</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aprocfs_8c_html_a36c7d9349a6aae0acb0e36d84c78eb0e"><div class="ttname"><a href="procfs_8c.html#a36c7d9349a6aae0acb0e36d84c78eb0e">procfs_rmdir</a></div><div class="ttdeci">static int procfs_rmdir(const char *path)</div><div class="ttdoc">Removes a directory.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00380">procfs.c:380</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_a5cfff545f3b1b039bd739c225e21d594"><div class="ttname"><a href="procfs_8c.html#a5cfff545f3b1b039bd739c225e21d594">procfs_stat</a></div><div class="ttdeci">static int procfs_stat(const char *path, stat_t *stat)</div><div class="ttdoc">Retrieves information concerning the file at the given position.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00663">procfs.c:663</a></div></div>
+<div class="ttc" id="aprocfs_8c_html_a73eaa0967c7ddbd1c56be85200f77dd7"><div class="ttname"><a href="procfs_8c.html#a73eaa0967c7ddbd1c56be85200f77dd7">procfs_mkdir</a></div><div class="ttdeci">static int procfs_mkdir(const char *path, mode_t mode)</div><div class="ttdoc">Creates a new directory.</div><div class="ttdef"><b>Definition:</b> <a href="procfs_8c_source.html#l00347">procfs.c:347</a></div></div>
+</div><!-- fragment -->
+<p>Filesystem general operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="procfs_8c_source.html#l00102">102</a> of file <a class="el" href="procfs_8c_source.html">procfs.c</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -443,7 +1680,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

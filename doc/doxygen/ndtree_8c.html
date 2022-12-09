@@ -100,6 +100,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a89a066661c411c486b475d2b32e67c92"><td class="memItemLeft" align="right" valign="top"><a id="a89a066661c411c486b475d2b32e67c92"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>__ndtree_tree_node_cmp_ptr_cb</b> (<a class="el" href="structndtree__t.html">ndtree_t</a> *self, void *a, void *b)</td></tr>
+<tr class="separator:a89a066661c411c486b475d2b32e67c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99336dbd5e30154f676f6100785c517b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#a99336dbd5e30154f676f6100785c517b">ndtree_node_alloc</a> ()</td></tr>
 <tr class="memdesc:a99336dbd5e30154f676f6100785c517b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for a node.  <a href="ndtree_8c.html#a99336dbd5e30154f676f6100785c517b">More...</a><br /></td></tr>
 <tr class="separator:a99336dbd5e30154f676f6100785c517b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +148,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ab34fed38fb2843906a37628e091cdc89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structndtree__t.html">ndtree_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#ab34fed38fb2843906a37628e091cdc89">ndtree_tree_init</a> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="ndtree_8h.html#a622073b9a38f3a0e8f922b5bf6c7afc2">ndtree_tree_cmp_f</a> node_cmp_cb)</td></tr>
 <tr class="memdesc:ab34fed38fb2843906a37628e091cdc89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the tree.  <a href="ndtree_8c.html#ab34fed38fb2843906a37628e091cdc89">More...</a><br /></td></tr>
 <tr class="separator:ab34fed38fb2843906a37628e091cdc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25d29c2319a477bb5aafa3971ad75932"><td class="memItemLeft" align="right" valign="top"><a id="a25d29c2319a477bb5aafa3971ad75932"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ndtree_tree_dealloc_rec</b> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *node, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> node_cb)</td></tr>
+<tr class="separator:a25d29c2319a477bb5aafa3971ad75932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7b7a050e023ecd42b91919dd67ec9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#a0b7b7a050e023ecd42b91919dd67ec9d">ndtree_tree_dealloc</a> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> node_cb)</td></tr>
 <tr class="memdesc:a0b7b7a050e023ecd42b91919dd67ec9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a node.  <a href="ndtree_8c.html#a0b7b7a050e023ecd42b91919dd67ec9d">More...</a><br /></td></tr>
 <tr class="separator:a0b7b7a050e023ecd42b91919dd67ec9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a016b1faf222e839976ff6f180c17d1"><td class="memItemLeft" align="right" valign="top"><a id="a9a016b1faf222e839976ff6f180c17d1"></a>
+static <a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__ndtree_tree_find_rec</b> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="ndtree_8h.html#a622073b9a38f3a0e8f922b5bf6c7afc2">ndtree_tree_cmp_f</a> cmp, void *value, <a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *node)</td></tr>
+<tr class="separator:a9a016b1faf222e839976ff6f180c17d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c02503cc64ddb22d23c8be216964c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#ac1c02503cc64ddb22d23c8be216964c5">ndtree_tree_find</a> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="ndtree_8h.html#a622073b9a38f3a0e8f922b5bf6c7afc2">ndtree_tree_cmp_f</a> cmp, void *value)</td></tr>
 <tr class="memdesc:ac1c02503cc64ddb22d23c8be216964c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches the node inside the tree with the given value.  <a href="ndtree_8c.html#ac1c02503cc64ddb22d23c8be216964c5">More...</a><br /></td></tr>
 <tr class="separator:ac1c02503cc64ddb22d23c8be216964c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,6 +190,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1c9ec7fc12fac87ac65958e30eb0763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#ad1c9ec7fc12fac87ac65958e30eb0763">ndtree_iter_prev</a> (<a class="el" href="structndtree__iter__t.html">ndtree_iter_t</a> *iter)</td></tr>
 <tr class="memdesc:ad1c9ec7fc12fac87ac65958e30eb0763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the iterator to the previous element.  <a href="ndtree_8c.html#ad1c9ec7fc12fac87ac65958e30eb0763">More...</a><br /></td></tr>
 <tr class="separator:ad1c9ec7fc12fac87ac65958e30eb0763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dacb8af5423991382f630321a93bceb"><td class="memItemLeft" align="right" valign="top"><a id="a3dacb8af5423991382f630321a93bceb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>__ndtree_tree_visitor_iter</b> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="structndtree__node__t.html">ndtree_node_t</a> *node, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> enter_fun, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> exit_fun)</td></tr>
+<tr class="separator:a3dacb8af5423991382f630321a93bceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c057f2a3d096fc4d9ce1ef601fc9aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ndtree_8c.html#a7c057f2a3d096fc4d9ce1ef601fc9aa0">ndtree_tree_visitor</a> (<a class="el" href="structndtree__t.html">ndtree_t</a> *tree, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> enter_fun, <a class="el" href="ndtree_8h.html#aa40e33ce6bda85f03c2391faaf37b4d2">ndtree_tree_node_f</a> exit_fun)</td></tr>
 <tr class="memdesc:a7c057f2a3d096fc4d9ce1ef601fc9aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a visit of the tree (DFS).  <a href="ndtree_8c.html#a7c057f2a3d096fc4d9ce1ef601fc9aa0">More...</a><br /></td></tr>
 <tr class="separator:a7c057f2a3d096fc4d9ce1ef601fc9aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1205,7 +1217,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

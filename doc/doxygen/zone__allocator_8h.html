@@ -109,19 +109,19 @@ Data Structures</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a3da56390fe5721da921e57ad7919ec98"><td class="memItemLeft" align="right" valign="top"><a id="a3da56390fe5721da921e57ad7919ec98"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a3da56390fe5721da921e57ad7919ec98">page_count</a>(p)&#160;&#160;&#160;atomic_read(&amp;(p)-&gt;count)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a3da56390fe5721da921e57ad7919ec98">page_count</a>(p)&#160;&#160;&#160;<a class="el" href="stdatomic_8h.html#a493a53e0f615fd5d0417a1f9f509ae08">atomic_read</a>(&amp;(p)-&gt;count)</td></tr>
 <tr class="memdesc:a3da56390fe5721da921e57ad7919ec98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the page count. <br /></td></tr>
 <tr class="separator:a3da56390fe5721da921e57ad7919ec98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a336322279fba288d356e7f9b56885ada"><td class="memItemLeft" align="right" valign="top"><a id="a336322279fba288d356e7f9b56885ada"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a336322279fba288d356e7f9b56885ada">set_page_count</a>(p,  v)&#160;&#160;&#160;atomic_set(&amp;(p)-&gt;count, v)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a336322279fba288d356e7f9b56885ada">set_page_count</a>(p,  v)&#160;&#160;&#160;<a class="el" href="stdatomic_8h.html#a25e8927e307eceed0b2a83b86b7e62d0">atomic_set</a>(&amp;(p)-&gt;count, v)</td></tr>
 <tr class="memdesc:a336322279fba288d356e7f9b56885ada"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the page count. <br /></td></tr>
 <tr class="separator:a336322279fba288d356e7f9b56885ada"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc91ee5789762a2566abfb18bdbeeb86"><td class="memItemLeft" align="right" valign="top"><a id="adc91ee5789762a2566abfb18bdbeeb86"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#adc91ee5789762a2566abfb18bdbeeb86">page_inc</a>(p)&#160;&#160;&#160;atomic_inc(&amp;(p)-&gt;count)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#adc91ee5789762a2566abfb18bdbeeb86">page_inc</a>(p)&#160;&#160;&#160;<a class="el" href="stdatomic_8h.html#a0dacbbf784da33bbb574817dde887dda">atomic_inc</a>(&amp;(p)-&gt;count)</td></tr>
 <tr class="memdesc:adc91ee5789762a2566abfb18bdbeeb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the counter for the given page. <br /></td></tr>
 <tr class="separator:adc91ee5789762a2566abfb18bdbeeb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c48d855d736515abd9d160ec112e0b"><td class="memItemLeft" align="right" valign="top"><a id="af1c48d855d736515abd9d160ec112e0b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#af1c48d855d736515abd9d160ec112e0b">page_dec</a>(p)&#160;&#160;&#160;atomic_dec(&amp;(p)-&gt;count)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#af1c48d855d736515abd9d160ec112e0b">page_dec</a>(p)&#160;&#160;&#160;<a class="el" href="stdatomic_8h.html#ab8db27b944d33494090002d7b01110ce">atomic_dec</a>(&amp;(p)-&gt;count)</td></tr>
 <tr class="memdesc:af1c48d855d736515abd9d160ec112e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements the counter for the given page. <br /></td></tr>
 <tr class="separator:af1c48d855d736515abd9d160ec112e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -206,6 +206,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a72e6f56e18e2159403d0453e6c5a706c"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a72e6f56e18e2159403d0453e6c5a706c">get_zone_cached_space</a> (<a class="el" href="gfp_8h.html#a99dcacb83509949e516cf6ae0367ff73">gfp_t</a> gfp_mask)</td></tr>
 <tr class="memdesc:a72e6f56e18e2159403d0453e6c5a706c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total cached space for the given zone.  <a href="zone__allocator_8h.html#a72e6f56e18e2159403d0453e6c5a706c">More...</a><br /></td></tr>
 <tr class="separator:a72e6f56e18e2159403d0453e6c5a706c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af8a95b3eb57dba8b1b7b2b50a97ac3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zone__allocator_8h.html#a8af8a95b3eb57dba8b1b7b2b50a97ac3">is_lowmem_page_struct</a> (void *addr)</td></tr>
+<tr class="memdesc:a8af8a95b3eb57dba8b1b7b2b50a97ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the specified address points to a <a class="el" href="structpage__t.html" title="Page descriptor. Use as a bitmap to understand the order of the block and if it is free or allocated.">page_t</a> (or field) that belongs to lowmem.  <a href="zone__allocator_8h.html#a8af8a95b3eb57dba8b1b7b2b50a97ac3">More...</a><br /></td></tr>
+<tr class="separator:a8af8a95b3eb57dba8b1b7b2b50a97ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -746,6 +749,43 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a8af8a95b3eb57dba8b1b7b2b50a97ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af8a95b3eb57dba8b1b7b2b50a97ac3">&#9670;&nbsp;</a></span>is_lowmem_page_struct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int is_lowmem_page_struct </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the specified address points to a <a class="el" href="structpage__t.html" title="Page descriptor. Use as a bitmap to understand the order of the block and if it is free or allocated.">page_t</a> (or field) that belongs to lowmem. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>The address to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if it belongs to lowmem, 0 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="zone__allocator_8h_source.html#l00211">211</a> of file <a class="el" href="zone__allocator_8h_source.html">zone_allocator.h</a>.</p>
+
+</div>
+</div>
 <a id="ae118563b91978e181e76a04d77c50860"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae118563b91978e181e76a04d77c50860">&#9670;&nbsp;</a></span>pmmngr_init()</h2>
 
@@ -782,7 +822,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

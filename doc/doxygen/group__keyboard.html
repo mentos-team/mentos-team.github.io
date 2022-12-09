@@ -197,9 +197,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__keyboard.html#ga698f86d8d3402b97ebd154ec8ae7b382">init_keymaps</a> ()</td></tr>
 <tr class="memdesc:ga698f86d8d3402b97ebd154ec8ae7b382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the supported keymaps. <br /></td></tr>
 <tr class="separator:ga698f86d8d3402b97ebd154ec8ae7b382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac29edb418fd3f44227832bb4c6e8687d"><td class="memItemLeft" align="right" valign="top"><a id="gac29edb418fd3f44227832bb4c6e8687d"></a>
+static <a class="el" href="stdbool_8h.html#a04dd5074964518403bf944f2b240a5f8">bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_keypad_number</b> (int scancode)</td></tr>
+<tr class="separator:gac29edb418fd3f44227832bb4c6e8687d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22d42a384daa47f800f099bd52b4ce2c"><td class="memItemLeft" align="right" valign="top"><a id="ga22d42a384daa47f800f099bd52b4ce2c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>keyboard_push_front</b> (int c)</td></tr>
+<tr class="separator:ga22d42a384daa47f800f099bd52b4ce2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:gacdf97a4f92cab2e4ca9e873831b88d4f"><td class="memItemLeft" align="right" valign="top"><a id="gacdf97a4f92cab2e4ca9e873831b88d4f"></a>
+static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__keyboard.html#gacdf97a4f92cab2e4ca9e873831b88d4f">ledstate</a> = 0</td></tr>
+<tr class="memdesc:gacdf97a4f92cab2e4ca9e873831b88d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks the state of the leds. <br /></td></tr>
+<tr class="separator:gacdf97a4f92cab2e4ca9e873831b88d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa7de9a746a421f389bf1d5ddf5f3b93"><td class="memItemLeft" align="right" valign="top"><a id="gafa7de9a746a421f389bf1d5ddf5f3b93"></a>
+static <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__keyboard.html#gafa7de9a746a421f389bf1d5ddf5f3b93">kflags</a> = 0</td></tr>
+<tr class="memdesc:gafa7de9a746a421f389bf1d5ddf5f3b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flags concerning the keyboard. <br /></td></tr>
+<tr class="separator:gafa7de9a746a421f389bf1d5ddf5f3b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7357788608baa9c32fe60e4058999ce4"><td class="memItemLeft" align="right" valign="top"><a id="ga7357788608baa9c32fe60e4058999ce4"></a>
 fs_rb_scancode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__keyboard.html#ga7357788608baa9c32fe60e4058999ce4">scancodes</a></td></tr>
 <tr class="memdesc:ga7357788608baa9c32fe60e4058999ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Where we store the keypress. <br /></td></tr>
@@ -890,7 +904,7 @@ fs_rb_scancode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:54.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

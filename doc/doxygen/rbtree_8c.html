@@ -114,6 +114,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a9e666327f036c4553361b0ded6795065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#a9e666327f036c4553361b0ded6795065">rbtree_node_dealloc</a> (<a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node)</td></tr>
 <tr class="memdesc:a9e666327f036c4553361b0ded6795065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a node.  <a href="rbtree_8c.html#a9e666327f036c4553361b0ded6795065">More...</a><br /></td></tr>
 <tr class="separator:a9e666327f036c4553361b0ded6795065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae929ed76bcaca36bf34f897a337e2798"><td class="memItemLeft" align="right" valign="top"><a id="ae929ed76bcaca36bf34f897a337e2798"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_node_is_red</b> (const <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node)</td></tr>
+<tr class="separator:ae929ed76bcaca36bf34f897a337e2798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493a100798012dbe484e84f8fbac1230"><td class="memItemLeft" align="right" valign="top"><a id="a493a100798012dbe484e84f8fbac1230"></a>
+static <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_node_rotate</b> (<a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node, int dir)</td></tr>
+<tr class="separator:a493a100798012dbe484e84f8fbac1230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49781bdf30b92cd179749da0e8792df"><td class="memItemLeft" align="right" valign="top"><a id="ac49781bdf30b92cd179749da0e8792df"></a>
+static <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_node_rotate2</b> (<a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node, int dir)</td></tr>
+<tr class="separator:ac49781bdf30b92cd179749da0e8792df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d1f3ebcff59b237c4b740d095cd86c"><td class="memItemLeft" align="right" valign="top"><a id="a58d1f3ebcff59b237c4b740d095cd86c"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_tree_node_cmp_ptr_cb</b> (<a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *a, <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *b)</td></tr>
+<tr class="separator:a58d1f3ebcff59b237c4b740d095cd86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b5ed3410fdfff3f1d1886458e97b937"><td class="memItemLeft" align="right" valign="top"><a id="a4b5ed3410fdfff3f1d1886458e97b937"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_tree_node_dealloc_cb</b> (<a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node)</td></tr>
+<tr class="separator:a4b5ed3410fdfff3f1d1886458e97b937"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac96d42f76ea2a33748fbea970dfba7a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrbtree__t.html">rbtree_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#ac96d42f76ea2a33748fbea970dfba7a0">rbtree_tree_alloc</a> ()</td></tr>
 <tr class="memdesc:ac96d42f76ea2a33748fbea970dfba7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory for a tree.  <a href="rbtree_8c.html#ac96d42f76ea2a33748fbea970dfba7a0">More...</a><br /></td></tr>
 <tr class="separator:ac96d42f76ea2a33748fbea970dfba7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +174,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a874d2783b021ccf00d301d00115b8d5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#a874d2783b021ccf00d301d00115b8d5a">rbtree_iter_dealloc</a> (<a class="el" href="structrbtree__iter__t.html">rbtree_iter_t</a> *iter)</td></tr>
 <tr class="memdesc:a874d2783b021ccf00d301d00115b8d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the memory for the iterator.  <a href="rbtree_8c.html#a874d2783b021ccf00d301d00115b8d5a">More...</a><br /></td></tr>
 <tr class="separator:a874d2783b021ccf00d301d00115b8d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf9faa0c1e97c48c11956a4c96fde5b"><td class="memItemLeft" align="right" valign="top"><a id="a0cf9faa0c1e97c48c11956a4c96fde5b"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_iter_start</b> (<a class="el" href="structrbtree__iter__t.html">rbtree_iter_t</a> *iter, <a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, int dir)</td></tr>
+<tr class="separator:a0cf9faa0c1e97c48c11956a4c96fde5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ca72ab59f5d09d351b9140d8f69c7b"><td class="memItemLeft" align="right" valign="top"><a id="a74ca72ab59f5d09d351b9140d8f69c7b"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_iter_move</b> (<a class="el" href="structrbtree__iter__t.html">rbtree_iter_t</a> *iter, int dir)</td></tr>
+<tr class="separator:a74ca72ab59f5d09d351b9140d8f69c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ecb345e8991772387bb09f913501e96"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#a9ecb345e8991772387bb09f913501e96">rbtree_iter_first</a> (<a class="el" href="structrbtree__iter__t.html">rbtree_iter_t</a> *iter, <a class="el" href="structrbtree__t.html">rbtree_t</a> *tree)</td></tr>
 <tr class="memdesc:a9ecb345e8991772387bb09f913501e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the iterator the the first element of the tree.  <a href="rbtree_8c.html#a9ecb345e8991772387bb09f913501e96">More...</a><br /></td></tr>
 <tr class="separator:a9ecb345e8991772387bb09f913501e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,6 +195,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae6f1c857d13379e17fc1b3e96156de3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#ae6f1c857d13379e17fc1b3e96156de3a">rbtree_tree_test</a> (<a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *root)</td></tr>
 <tr class="memdesc:ae6f1c857d13379e17fc1b3e96156de3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the tree.  <a href="rbtree_8c.html#ae6f1c857d13379e17fc1b3e96156de3a">More...</a><br /></td></tr>
 <tr class="separator:ae6f1c857d13379e17fc1b3e96156de3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c53bedd716d25acc403fc340c67e701"><td class="memItemLeft" align="right" valign="top"><a id="a5c53bedd716d25acc403fc340c67e701"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>rbtree_tree_print_iter</b> (<a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, <a class="el" href="structrbtree__node__t.html">rbtree_node_t</a> *node, <a class="el" href="rbtree_8h.html#a4ac2f1e6467ae7105c02377441587623">rbtree_tree_node_f</a> fun)</td></tr>
+<tr class="separator:a5c53bedd716d25acc403fc340c67e701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1515b3e5759e908f8d60598ef9f3e1ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rbtree_8c.html#a1515b3e5759e908f8d60598ef9f3e1ec">rbtree_tree_print</a> (<a class="el" href="structrbtree__t.html">rbtree_t</a> *tree, <a class="el" href="rbtree_8h.html#a4ac2f1e6467ae7105c02377441587623">rbtree_tree_node_f</a> fun)</td></tr>
 <tr class="memdesc:a1515b3e5759e908f8d60598ef9f3e1ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the tree using the provided callback.  <a href="rbtree_8c.html#a1515b3e5759e908f8d60598ef9f3e1ec">More...</a><br /></td></tr>
 <tr class="separator:a1515b3e5759e908f8d60598ef9f3e1ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1070,7 +1094,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

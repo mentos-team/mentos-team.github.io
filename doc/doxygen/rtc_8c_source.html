@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> is_updating_rtc()</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">   53</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">is_updating_rtc</a>()</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="mentos_2inc_2io_2port__io_8h.html#ab34b586e56022d1fc718bbdf0a7ef420">outportb</a>(<a class="code" href="group__rtc.html#ga02a3fdc124230bc76821a320a083bd80">CMOS_ADDR</a>, 0x0A);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> status = <a class="code" href="mentos_2inc_2io_2port__io_8h.html#a949b17ce70df57cd75b5c2124484192a">inportb</a>(<a class="code" href="group__rtc.html#ga5554a9134430636bc1044eb72126fe32">CMOS_DATA</a>);</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> first_update = 1;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// Wait until rtc is not updating.</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">while</span> (is_updating_rtc()) {}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">is_updating_rtc</a>()) {}</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// Read the values.</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    rtc_read_datetime();</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">if</span> (first_update) {</div>
@@ -171,7 +171,7 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="comment">// Save the previous global time.</span></div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="group__rtc.html#ga1024b407cf2fece4516b8096abf2c10d">previous_global_time</a> = <a class="code" href="group__rtc.html#ga342e79da20617ae0e0de7bf4405afb4c">global_time</a>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">// Wait until rtc is not updating.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">while</span> (is_updating_rtc()) {}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">while</span> (<a class="code" href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">is_updating_rtc</a>()) {}</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// Read the values.</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            rtc_read_datetime();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        } <span class="keywordflow">while</span> (!rtc_are_different(&amp;<a class="code" href="group__rtc.html#ga1024b407cf2fece4516b8096abf2c10d">previous_global_time</a>, &amp;<a class="code" href="group__rtc.html#ga342e79da20617ae0e0de7bf4405afb4c">global_time</a>));</div>
@@ -232,6 +232,7 @@ $(function() {
 <div class="ttc" id="agroup__rtc_html_ga5554a9134430636bc1044eb72126fe32"><div class="ttname"><a href="group__rtc.html#ga5554a9134430636bc1044eb72126fe32">CMOS_DATA</a></div><div class="ttdeci">#define CMOS_DATA</div><div class="ttdoc">Addess where we need to write the Data.</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00024">rtc.c:24</a></div></div>
 <div class="ttc" id="agroup__rtc_html_ga6bb793e0ab42769d369246f59c481151"><div class="ttname"><a href="group__rtc.html#ga6bb793e0ab42769d369246f59c481151">is_bcd</a></div><div class="ttdeci">int is_bcd</div><div class="ttdoc">Data type is BCD.</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00031">rtc.c:31</a></div></div>
 <div class="ttc" id="agroup__rtc_html_ga6bea41ca03a20afa48a3d07feeb9b3c8"><div class="ttname"><a href="group__rtc.html#ga6bea41ca03a20afa48a3d07feeb9b3c8">rtc_finalize</a></div><div class="ttdeci">int rtc_finalize()</div><div class="ttdoc">De-initializes the Real Time Clock (RTC).</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00154">rtc.c:154</a></div></div>
+<div class="ttc" id="agroup__rtc_html_ga7ca41878208fad587afd2b108eedce25"><div class="ttname"><a href="group__rtc.html#ga7ca41878208fad587afd2b108eedce25">is_updating_rtc</a></div><div class="ttdeci">static unsigned int is_updating_rtc()</div><div class="ttdoc">Check if rtc is updating time currently.</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00053">rtc.c:53</a></div></div>
 <div class="ttc" id="agroup__rtc_html_gaca4fb59d0962f8c259d9906e853b8d21"><div class="ttname"><a href="group__rtc.html#gaca4fb59d0962f8c259d9906e853b8d21">rtc_initialize</a></div><div class="ttdeci">int rtc_initialize()</div><div class="ttdoc">Initializes the Real Time Clock (RTC).</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00131">rtc.c:131</a></div></div>
 <div class="ttc" id="agroup__rtc_html_gaf43b3e8dfc15fe0e44352ddd00d9d501"><div class="ttname"><a href="group__rtc.html#gaf43b3e8dfc15fe0e44352ddd00d9d501">gettime</a></div><div class="ttdeci">void gettime(tm_t *time)</div><div class="ttdoc">Copies the global time inside the provided variable.</div><div class="ttdef"><b>Definition:</b> <a href="rtc_8c_source.html#l00125">rtc.c:125</a></div></div>
 <div class="ttc" id="aisr_8h_html"><div class="ttname"><a href="isr_8h.html">isr.h</a></div><div class="ttdoc">Data structures concerning the Interrupt Service Routines (ISRs).</div></div>
@@ -263,7 +264,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

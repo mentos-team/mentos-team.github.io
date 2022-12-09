@@ -97,6 +97,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad287cd15f9abb87380e1ac37f916f310"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#ad287cd15f9abb87380e1ac37f916f310">__find_in_path</a> (const char *file, char *buf, <a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a> buf_len)</td></tr>
+<tr class="memdesc:ad287cd15f9abb87380e1ac37f916f310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds an executable inside the PATH entries.  <a href="exec_8c.html#ad287cd15f9abb87380e1ac37f916f310">More...</a><br /></td></tr>
+<tr class="separator:ad287cd15f9abb87380e1ac37f916f310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc82fdfe438348366f4ec229904243c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">_syscall3</a> (int, <a class="el" href="unistd_8h.html#a7098c10773c2fc8fd4bd5bb20c9f89c9">execve</a>, const char *, int <a class="el" href="unistd_8h.html#ae1dd6bbd94b0f4e3dd37ecf1c1b832dd">execv</a>(const char *path, char *const *, argv, char *const *, envp)</td></tr>
 <tr class="memdesc:a1cc82fdfe438348366f4ec229904243c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the current process image with a new process image (argument vector), allows the caller to specify the environment of the executed program via <code>envp</code>.  <a href="exec_8c.html#a1cc82fdfe438348366f4ec229904243c">More...</a><br /></td></tr>
 <tr class="separator:a1cc82fdfe438348366f4ec229904243c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +134,61 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
 
 <p class="definition">Definition in file <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad287cd15f9abb87380e1ac37f916f310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad287cd15f9abb87380e1ac37f916f310">&#9670;&nbsp;</a></span>__find_in_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __find_in_path </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>&#160;</td>
+          <td class="paramname"><em>buf_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds an executable inside the PATH entries. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file to search. </td></tr>
+    <tr><td class="paramname">buf</td><td>The buffer where we will store the absolute path. </td></tr>
+    <tr><td class="paramname">buf_len</td><td>The length of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if we have found the file inside the entries of PATH, -1 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="exec_8c_source.html#l00028">28</a> of file <a class="el" href="exec_8c_source.html">exec.c</a>.</p>
+
+</div>
+</div>
 <a id="a1cc82fdfe438348366f4ec229904243c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1cc82fdfe438348366f4ec229904243c">&#9670;&nbsp;</a></span>_syscall3()</h2>
 
@@ -490,7 +548,7 @@ char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="e
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

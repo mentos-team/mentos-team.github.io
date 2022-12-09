@@ -70,7 +70,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">pic8259.c File Reference</div>  </div>
 </div><!--header-->
@@ -179,6 +180,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pic8
 <tr class="memitem:ab1bacc0f81303c9d175ec32145780018"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pic8259_8c.html#ab1bacc0f81303c9d175ec32145780018">pic8259_send_eoi</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> irq)</td></tr>
 <tr class="memdesc:ab1bacc0f81303c9d175ec32145780018"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is issued to the PIC chips at the end of an IRQ-based interrupt routine.  <a href="pic8259_8c.html#ab1bacc0f81303c9d175ec32145780018">More...</a><br /></td></tr>
 <tr class="separator:ab1bacc0f81303c9d175ec32145780018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2022871b500aa405a43b83a3ae08655c"><td class="memItemLeft" align="right" valign="top"><a id="a2022871b500aa405a43b83a3ae08655c"></a>
+static <a class="el" href="stddef_8h.html#a780bd50362a995b802eb8e00f4b0c200">byte_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pic8259_8c.html#a2022871b500aa405a43b83a3ae08655c">master_cur_mask</a></td></tr>
+<tr class="memdesc:a2022871b500aa405a43b83a3ae08655c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current mask of the master. <br /></td></tr>
+<tr class="separator:a2022871b500aa405a43b83a3ae08655c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4252a19bae27dd4a6a842b9db0c6d82b"><td class="memItemLeft" align="right" valign="top"><a id="a4252a19bae27dd4a6a842b9db0c6d82b"></a>
+static <a class="el" href="stddef_8h.html#a780bd50362a995b802eb8e00f4b0c200">byte_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pic8259_8c.html#a4252a19bae27dd4a6a842b9db0c6d82b">slave_cur_mask</a></td></tr>
+<tr class="memdesc:a4252a19bae27dd4a6a842b9db0c6d82b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current mask of the slave. <br /></td></tr>
+<tr class="separator:a4252a19bae27dd4a6a842b9db0c6d82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>pic8259 definitions. </p>
@@ -279,7 +291,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pic8
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -105,6 +105,36 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab1092ed8df51f2466597c650d680b7eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#ab1092ed8df51f2466597c650d680b7eb">__set_fpu_cw</a> (const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> cw)</td></tr>
+<tr class="memdesc:ab1092ed8df51f2466597c650d680b7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the FPU control word.  <a href="fpu_8c.html#ab1092ed8df51f2466597c650d680b7eb">More...</a><br /></td></tr>
+<tr class="separator:ab1092ed8df51f2466597c650d680b7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5d7e8e1767121872dc011b50cb9798"><td class="memItemLeft" align="right" valign="top"><a id="a5f5d7e8e1767121872dc011b50cb9798"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#a5f5d7e8e1767121872dc011b50cb9798">__enable_fpu</a> ()</td></tr>
+<tr class="memdesc:a5f5d7e8e1767121872dc011b50cb9798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the FPU and SSE. <br /></td></tr>
+<tr class="separator:a5f5d7e8e1767121872dc011b50cb9798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a60a6d29d76410634e61d859f2d531d"><td class="memItemLeft" align="right" valign="top"><a id="a1a60a6d29d76410634e61d859f2d531d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#a1a60a6d29d76410634e61d859f2d531d">__disable_fpu</a> ()</td></tr>
+<tr class="memdesc:a1a60a6d29d76410634e61d859f2d531d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable FPU and SSE so it traps to the kernel. <br /></td></tr>
+<tr class="separator:a1a60a6d29d76410634e61d859f2d531d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bda7abff214eab2b26087d74f7964eb"><td class="memItemLeft" align="right" valign="top"><a id="a5bda7abff214eab2b26087d74f7964eb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#a5bda7abff214eab2b26087d74f7964eb">__restore_fpu</a> (<a class="el" href="structtask__struct.html">task_struct</a> *proc)</td></tr>
+<tr class="memdesc:a5bda7abff214eab2b26087d74f7964eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore the FPU for a process. <br /></td></tr>
+<tr class="separator:a5bda7abff214eab2b26087d74f7964eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4276f8bbb151f28c4a3f38c22c7bcbd2"><td class="memItemLeft" align="right" valign="top"><a id="a4276f8bbb151f28c4a3f38c22c7bcbd2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#a4276f8bbb151f28c4a3f38c22c7bcbd2">__save_fpu</a> (<a class="el" href="structtask__struct.html">task_struct</a> *proc)</td></tr>
+<tr class="memdesc:a4276f8bbb151f28c4a3f38c22c7bcbd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the FPU for a process. <br /></td></tr>
+<tr class="separator:a4276f8bbb151f28c4a3f38c22c7bcbd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7450719876c4bf5db12ec0a80c77ef9a"><td class="memItemLeft" align="right" valign="top"><a id="a7450719876c4bf5db12ec0a80c77ef9a"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#a7450719876c4bf5db12ec0a80c77ef9a">__init_fpu</a> ()</td></tr>
+<tr class="memdesc:a7450719876c4bf5db12ec0a80c77ef9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the FPU. <br /></td></tr>
+<tr class="separator:a7450719876c4bf5db12ec0a80c77ef9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff6769687c81b28b9e6db3f191e83158"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#aff6769687c81b28b9e6db3f191e83158">__invalid_op</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="separator:aff6769687c81b28b9e6db3f191e83158"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac161129f3b980401a59e8593ed78b1f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#ac161129f3b980401a59e8593ed78b1f6">__sigfpe_handler</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="separator:ac161129f3b980401a59e8593ed78b1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14744ae872d4bd206029e7c0a93da85"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fpu_8c.html#ad14744ae872d4bd206029e7c0a93da85">__fpu_test</a> ()</td></tr>
+<tr class="memdesc:ad14744ae872d4bd206029e7c0a93da85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure basic FPU functionality works.  <a href="fpu_8c.html#ad14744ae872d4bd206029e7c0a93da85">More...</a><br /></td></tr>
+<tr class="separator:ad14744ae872d4bd206029e7c0a93da85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0d0a30d9fefca3ecc9b3a88e88f38013"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__fpu.html#ga0d0a30d9fefca3ecc9b3a88e88f38013">switch_fpu</a> ()</td></tr>
 <tr class="memdesc:ga0d0a30d9fefca3ecc9b3a88e88f38013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called during a context switch to save the FPU registers status of the currently running thread. <br /></td></tr>
@@ -133,14 +163,149 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="fpu_8c_source.html">fpu.c</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ad14744ae872d4bd206029e7c0a93da85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14744ae872d4bd206029e7c0a93da85">&#9670;&nbsp;</a></span>__fpu_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int __fpu_test </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ensure basic FPU functionality works. </p>
+<p>For processors without a FPU, this tests that maths libraries link correctly. </p>
+
+<p class="definition">Definition at line <a class="el" href="fpu_8c_source.html#l00135">135</a> of file <a class="el" href="fpu_8c_source.html">fpu.c</a>.</p>
+
+</div>
+</div>
+<a id="aff6769687c81b28b9e6db3f191e83158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff6769687c81b28b9e6db3f191e83158">&#9670;&nbsp;</a></span>__invalid_op()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __invalid_op </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kernel trap for FPU usage when FPU is disabled. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fpu_8c_source.html#l00092">92</a> of file <a class="el" href="fpu_8c_source.html">fpu.c</a>.</p>
+
+</div>
+</div>
+<a id="ab1092ed8df51f2466597c650d680b7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1092ed8df51f2466597c650d680b7eb">&#9670;&nbsp;</a></span>__set_fpu_cw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __set_fpu_cw </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td>
+          <td class="paramname"><em>cw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the FPU control word. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cw</td><td>What to set the control word to. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fpu_8c_source.html#l00030">30</a> of file <a class="el" href="fpu_8c_source.html">fpu.c</a>.</p>
+
+</div>
+</div>
+<a id="ac161129f3b980401a59e8593ed78b1f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac161129f3b980401a59e8593ed78b1f6">&#9670;&nbsp;</a></span>__sigfpe_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __sigfpe_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Kernel trap for various integer and floating-point errors </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="fpu_8c_source.html#l00121">121</a> of file <a class="el" href="fpu_8c_source.html">fpu.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
         <div class="footer">
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

@@ -71,7 +71,8 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">list_head.h File Reference</div>  </div>
 </div><!--header-->
@@ -110,6 +111,33 @@ Typedefs</h2></td></tr>
 typedef struct <a class="el" href="structlist__head.html">list_head</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a371b3bb4739830f6d86be3945a2fbb0e">list_head</a></td></tr>
 <tr class="memdesc:a371b3bb4739830f6d86be3945a2fbb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure used to implement the <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a> data structure. <br /></td></tr>
 <tr class="separator:a371b3bb4739830f6d86be3945a2fbb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1d8fce796637606fb5366d7edc076cd3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a1d8fce796637606fb5366d7edc076cd3">list_head_init</a> (<a class="el" href="structlist__head.html">list_head</a> *head)</td></tr>
+<tr class="memdesc:a1d8fce796637606fb5366d7edc076cd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a>.  <a href="list__head_8h.html#a1d8fce796637606fb5366d7edc076cd3">More...</a><br /></td></tr>
+<tr class="separator:a1d8fce796637606fb5366d7edc076cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a5fd18254415ca191c104b4fd4cf97"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a91a5fd18254415ca191c104b4fd4cf97">list_head_empty</a> (const <a class="el" href="structlist__head.html">list_head</a> *head)</td></tr>
+<tr class="memdesc:a91a5fd18254415ca191c104b4fd4cf97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether the given list is empty.  <a href="list__head_8h.html#a91a5fd18254415ca191c104b4fd4cf97">More...</a><br /></td></tr>
+<tr class="separator:a91a5fd18254415ca191c104b4fd4cf97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5aaf204c3c8551268a92f37e2c856a9"><td class="memItemLeft" align="right" valign="top">static unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#ad5aaf204c3c8551268a92f37e2c856a9">list_head_size</a> (const <a class="el" href="structlist__head.html">list_head</a> *head)</td></tr>
+<tr class="memdesc:ad5aaf204c3c8551268a92f37e2c856a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a>.  <a href="list__head_8h.html#ad5aaf204c3c8551268a92f37e2c856a9">More...</a><br /></td></tr>
+<tr class="separator:ad5aaf204c3c8551268a92f37e2c856a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3185f6cfc8d0f9ed5fde6070f60488"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#aca3185f6cfc8d0f9ed5fde6070f60488">list_head_insert_after</a> (<a class="el" href="structlist__head.html">list_head</a> *new_entry, <a class="el" href="structlist__head.html">list_head</a> *location)</td></tr>
+<tr class="memdesc:aca3185f6cfc8d0f9ed5fde6070f60488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the new entry after the given location.  <a href="list__head_8h.html#aca3185f6cfc8d0f9ed5fde6070f60488">More...</a><br /></td></tr>
+<tr class="separator:aca3185f6cfc8d0f9ed5fde6070f60488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cacd6ad6863aae47561df20604bdcac"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a6cacd6ad6863aae47561df20604bdcac">list_head_insert_before</a> (<a class="el" href="structlist__head.html">list_head</a> *new_entry, <a class="el" href="structlist__head.html">list_head</a> *location)</td></tr>
+<tr class="memdesc:a6cacd6ad6863aae47561df20604bdcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the new entry before the given location.  <a href="list__head_8h.html#a6cacd6ad6863aae47561df20604bdcac">More...</a><br /></td></tr>
+<tr class="separator:a6cacd6ad6863aae47561df20604bdcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0daf96d52de8303b9c8e7df30f753f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a5c0daf96d52de8303b9c8e7df30f753f">list_head_remove</a> (<a class="el" href="structlist__head.html">list_head</a> *entry)</td></tr>
+<tr class="memdesc:a5c0daf96d52de8303b9c8e7df30f753f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the given entry from the list it is contained in.  <a href="list__head_8h.html#a5c0daf96d52de8303b9c8e7df30f753f">More...</a><br /></td></tr>
+<tr class="separator:a5c0daf96d52de8303b9c8e7df30f753f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209a21adf6e5b69f86973c37d7375344"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structlist__head.html">list_head</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#a209a21adf6e5b69f86973c37d7375344">list_head_pop</a> (<a class="el" href="structlist__head.html">list_head</a> *head)</td></tr>
+<tr class="memdesc:a209a21adf6e5b69f86973c37d7375344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an element from the list, it's used when we have a possibly null list pointer and want to pop an element from it.  <a href="list__head_8h.html#a209a21adf6e5b69f86973c37d7375344">More...</a><br /></td></tr>
+<tr class="separator:a209a21adf6e5b69f86973c37d7375344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f327dcdccb3f140aff995ff30331d3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__head_8h.html#ad8f327dcdccb3f140aff995ff30331d3">list_head_append</a> (<a class="el" href="structlist__head.html">list_head</a> *main, <a class="el" href="structlist__head.html">list_head</a> *secondary)</td></tr>
+<tr class="memdesc:ad8f327dcdccb3f140aff995ff30331d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append the <code>secondary</code> list at the end of the <code>main</code> list.  <a href="list__head_8h.html#ad8f327dcdccb3f140aff995ff30331d3">More...</a><br /></td></tr>
+<tr class="separator:ad8f327dcdccb3f140aff995ff30331d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2014-2022 This file is distributed under the MIT License. See LICENSE.md for details. </dd></dl>
@@ -327,6 +355,330 @@ typedef struct <a class="el" href="structlist__head.html">list_head</a>&#160;</t
 
 </div>
 </div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad8f327dcdccb3f140aff995ff30331d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f327dcdccb3f140aff995ff30331d3">&#9670;&nbsp;</a></span>list_head_append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void list_head_append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>secondary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append the <code>secondary</code> list at the end of the <code>main</code> list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">main</td><td>the main list where we append the secondary list. </td></tr>
+    <tr><td class="paramname">secondary</td><td>the secondary list, which gets appended, and re-initialized as empty. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00145">145</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="a91a5fd18254415ca191c104b4fd4cf97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a5fd18254415ca191c104b4fd4cf97">&#9670;&nbsp;</a></span>list_head_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int list_head_empty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tests whether the given list is empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The list to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if empty, 0 otherwise. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00060">60</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="a1d8fce796637606fb5366d7edc076cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8fce796637606fb5366d7edc076cd3">&#9670;&nbsp;</a></span>list_head_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void list_head_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The head of your list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00052">52</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="aca3185f6cfc8d0f9ed5fde6070f60488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3185f6cfc8d0f9ed5fde6070f60488">&#9670;&nbsp;</a></span>list_head_insert_after()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void list_head_insert_after </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>new_entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insert the new entry after the given location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_entry</td><td>the new element we want to insert. </td></tr>
+    <tr><td class="paramname">location</td><td>the element after which we insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00078">78</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="a6cacd6ad6863aae47561df20604bdcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cacd6ad6863aae47561df20604bdcac">&#9670;&nbsp;</a></span>list_head_insert_before()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void list_head_insert_before </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>new_entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insert the new entry before the given location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_entry</td><td>the new element we want to insert. </td></tr>
+    <tr><td class="paramname">location</td><td>the element after which we insert. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00095">95</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="a209a21adf6e5b69f86973c37d7375344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a209a21adf6e5b69f86973c37d7375344">&#9670;&nbsp;</a></span>list_head_pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structlist__head.html">list_head</a>* list_head_pop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes an element from the list, it's used when we have a possibly null list pointer and want to pop an element from it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>the head of the list. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a> pointing to the element we removed, NULL on failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00128">128</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="a5c0daf96d52de8303b9c8e7df30f753f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0daf96d52de8303b9c8e7df30f753f">&#9670;&nbsp;</a></span>list_head_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void list_head_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes the given entry from the list it is contained in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>the entry we want to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00111">111</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
+<a id="ad5aaf204c3c8551268a92f37e2c856a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5aaf204c3c8551268a92f37e2c856a9">&#9670;&nbsp;</a></span>list_head_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned list_head_size </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structlist__head.html">list_head</a> *&#160;</td>
+          <td class="paramname"><em>head</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="structlist__head.html" title="Structure used to implement the list_head data structure.">list_head</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">head</td><td>The head for your list. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="list__head_8h_source.html#l00067">67</a> of file <a class="el" href="list__head_8h_source.html">list_head.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
         <!-- HTML footer for doxygen 1.8.16-->
         <!-- start footer part -->
@@ -334,7 +686,7 @@ typedef struct <a class="el" href="structlist__head.html">list_head</a>&#160;</t
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

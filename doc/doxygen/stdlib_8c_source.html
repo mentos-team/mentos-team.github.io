@@ -80,94 +80,96 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">   13</a></span>&#160;<span class="preprocessor">#define MALLOC_MAGIC_NUMBER 0x600DC0DE</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> __malloc_is_valid_ptr(<span class="keywordtype">void</span> *ptr)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> (ptr &amp;&amp; (((<span class="keywordtype">size_t</span> *)ptr)[-1] == <a class="code" href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">MALLOC_MAGIC_NUMBER</a>));</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="stdlib_8h.html#aa011d7b7bfeba45c8c32e04204a0f565">   20</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a>(<span class="keywordtype">void</span> *ptr)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (__malloc_is_valid_ptr(ptr))</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> ((<span class="keywordtype">size_t</span> *)ptr)[-2];</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="stdlib_8h.html#ac0a811fd8b7a378500f100a2d9a1f1a2">   27</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">size_t</span> *_res, _size = 2 * <span class="keyword">sizeof</span>(<a class="code" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>) + size;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, _size);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    _res[0] = size;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    _res[1] = <a class="code" href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">MALLOC_MAGIC_NUMBER</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> &amp;_res[2];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a7b3d8b7cea59b137b167878ec88eb8d6">   36</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#a7b3d8b7cea59b137b167878ec88eb8d6">calloc</a>(<span class="keywordtype">size_t</span> num, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> *ptr = <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(num * size);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (ptr) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a>(ptr, 0, num * size);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> ptr;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a1a6b5e8d2f1c37e5b43e4345586075be">   45</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#a1a6b5e8d2f1c37e5b43e4345586075be">realloc</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// C standard implementation: When NULL is passed to realloc,</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// simply malloc the requested size and return a pointer to that.</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (__builtin_expect(ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 0)) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(size);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">// C standard implementation: For a size of zero, free the</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// pointer and return NULL, allocating no new memory.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (__builtin_expect(size == 0, 0)) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(ptr);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Get the old size.</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">size_t</span> old_size = <a class="code" href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a>(ptr);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">// Create the new pointer.</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> *newp = <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(size);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a>(newp, 0, size);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="mentos_2src_2klib_2string_8c.html#a37562939be846210ce0560a6168cd7f1">memcpy</a>(newp, ptr, old_size);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(ptr);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> newp;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="stdlib_8h.html#afbedc913aa4651b3c3b4b3aecd9b4711">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(<span class="keywordtype">void</span> *ptr)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> _res;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (__malloc_is_valid_ptr(ptr)) {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">size_t</span> *_ptr = (<span class="keywordtype">size_t</span> *)ptr - 2;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, _ptr);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, ptr);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> rseed = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="stdlib_8c.html#aeba450fb08640dee9854ec55fc395c2c">   18</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="stdlib_8c.html#aeba450fb08640dee9854ec55fc395c2c">__malloc_is_valid_ptr</a>(<span class="keywordtype">void</span> *ptr)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> (ptr &amp;&amp; (((<span class="keywordtype">size_t</span> *)ptr)[-1] == <a class="code" href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">MALLOC_MAGIC_NUMBER</a>));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="stdlib_8h.html#aa011d7b7bfeba45c8c32e04204a0f565">   23</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a>(<span class="keywordtype">void</span> *ptr)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="stdlib_8c.html#aeba450fb08640dee9854ec55fc395c2c">__malloc_is_valid_ptr</a>(ptr))</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> ((<span class="keywordtype">size_t</span> *)ptr)[-2];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="stdlib_8h.html#ac0a811fd8b7a378500f100a2d9a1f1a2">   30</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">size_t</span> *_res, _size = 2 * <span class="keyword">sizeof</span>(<a class="code" href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a>) + size;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, _size);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    _res[0] = size;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    _res[1] = <a class="code" href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">MALLOC_MAGIC_NUMBER</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> &amp;_res[2];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a7b3d8b7cea59b137b167878ec88eb8d6">   39</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#a7b3d8b7cea59b137b167878ec88eb8d6">calloc</a>(<span class="keywordtype">size_t</span> num, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> *ptr = <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(num * size);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (ptr) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a>(ptr, 0, num * size);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a1a6b5e8d2f1c37e5b43e4345586075be">   48</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="stdlib_8c.html#a1a6b5e8d2f1c37e5b43e4345586075be">realloc</a>(<span class="keywordtype">void</span> *ptr, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// C standard implementation: When NULL is passed to realloc,</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// simply malloc the requested size and return a pointer to that.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (__builtin_expect(ptr == <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, 0)) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(size);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// C standard implementation: For a size of zero, free the</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">// pointer and return NULL, allocating no new memory.</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (__builtin_expect(size == 0, 0)) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(ptr);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// Get the old size.</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">size_t</span> old_size = <a class="code" href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a>(ptr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Create the new pointer.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> *newp = <a class="code" href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a>(size);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a>(newp, 0, size);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="mentos_2src_2klib_2string_8c.html#a37562939be846210ce0560a6168cd7f1">memcpy</a>(newp, ptr, old_size);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(ptr);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> newp;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="stdlib_8h.html#afbedc913aa4651b3c3b4b3aecd9b4711">   71</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a>(<span class="keywordtype">void</span> *ptr)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> _res;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="stdlib_8c.html#aeba450fb08640dee9854ec55fc395c2c">__malloc_is_valid_ptr</a>(ptr)) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">size_t</span> *_ptr = (<span class="keywordtype">size_t</span> *)ptr - 2;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, _ptr);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="syscall__types_8h.html#ae4fe2a5315700e80bc6b0cfecf2490ec">__inline_syscall1</a>(_res, brk, ptr);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a19c9bc56f94e76391d0d8fb51a044e79">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlib_8c.html#a19c9bc56f94e76391d0d8fb51a044e79">srand</a>(<span class="keywordtype">int</span> x)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    rseed = x;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a20e50ab9d6b10af0e2940d9419448f42">   87</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdlib_8c.html#a20e50ab9d6b10af0e2940d9419448f42">rand</a>()</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> rseed = (rseed * 1103515245U + 12345U) &amp; <a class="code" href="stdlib_8h.html#a690f251553b39fd4f31894826141b61a">RAND_MAX</a>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">   83</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">rseed</a> = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a19c9bc56f94e76391d0d8fb51a044e79">   85</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdlib_8c.html#a19c9bc56f94e76391d0d8fb51a044e79">srand</a>(<span class="keywordtype">int</span> x)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">rseed</a> = x;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="stdlib_8h.html#a20e50ab9d6b10af0e2940d9419448f42">   90</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdlib_8c.html#a20e50ab9d6b10af0e2940d9419448f42">rand</a>()</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">rseed</a> = (<a class="code" href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">rseed</a> * 1103515245U + 12345U) &amp; <a class="code" href="stdlib_8h.html#a690f251553b39fd4f31894826141b61a">RAND_MAX</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="ttc" id="aassert_8h_html"><div class="ttname"><a href="assert_8h.html">assert.h</a></div><div class="ttdoc">Defines the function and pre-processor macro for assertions.</div></div>
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_a37562939be846210ce0560a6168cd7f1"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#a37562939be846210ce0560a6168cd7f1">memcpy</a></div><div class="ttdeci">void * memcpy(void *dst, const void *src, size_t num)</div><div class="ttdoc">Copy a block of memory, handling overlap.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00419">string.c:419</a></div></div>
 <div class="ttc" id="amentos_2src_2klib_2string_8c_html_a4cb469bec7b722064b97a406346acb61"><div class="ttname"><a href="mentos_2src_2klib_2string_8c.html#a4cb469bec7b722064b97a406346acb61">memset</a></div><div class="ttdeci">void * memset(void *ptr, int value, size_t num)</div><div class="ttdoc">Sets the first num bytes of the block of memory pointed by ptr to the specified value.</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2src_2klib_2string_8c_source.html#l00390">string.c:390</a></div></div>
 <div class="ttc" id="astddef_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="stddef_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdoc">Define NULL.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00010">stddef.h:10</a></div></div>
 <div class="ttc" id="astddef_8h_html_acf18a0d6c4b39d531e021702e9a77984"><div class="ttname"><a href="stddef_8h.html#acf18a0d6c4b39d531e021702e9a77984">size_t</a></div><div class="ttdeci">unsigned long size_t</div><div class="ttdoc">Define the generic size type.</div><div class="ttdef"><b>Definition:</b> <a href="stddef_8h_source.html#l00028">stddef.h:28</a></div></div>
-<div class="ttc" id="astdlib_8c_html_a19c9bc56f94e76391d0d8fb51a044e79"><div class="ttname"><a href="stdlib_8c.html#a19c9bc56f94e76391d0d8fb51a044e79">srand</a></div><div class="ttdeci">void srand(int x)</div><div class="ttdoc">Allows to set the seed of the random value generator.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00082">stdlib.c:82</a></div></div>
-<div class="ttc" id="astdlib_8c_html_a1a6b5e8d2f1c37e5b43e4345586075be"><div class="ttname"><a href="stdlib_8c.html#a1a6b5e8d2f1c37e5b43e4345586075be">realloc</a></div><div class="ttdeci">void * realloc(void *ptr, size_t size)</div><div class="ttdoc">Reallocates the given area of memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00045">stdlib.c:45</a></div></div>
-<div class="ttc" id="astdlib_8c_html_a20e50ab9d6b10af0e2940d9419448f42"><div class="ttname"><a href="stdlib_8c.html#a20e50ab9d6b10af0e2940d9419448f42">rand</a></div><div class="ttdeci">int rand()</div><div class="ttdoc">Generates a random value.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00087">stdlib.c:87</a></div></div>
+<div class="ttc" id="astdlib_8c_html_a19c9bc56f94e76391d0d8fb51a044e79"><div class="ttname"><a href="stdlib_8c.html#a19c9bc56f94e76391d0d8fb51a044e79">srand</a></div><div class="ttdeci">void srand(int x)</div><div class="ttdoc">Allows to set the seed of the random value generator.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00085">stdlib.c:85</a></div></div>
+<div class="ttc" id="astdlib_8c_html_a1a6b5e8d2f1c37e5b43e4345586075be"><div class="ttname"><a href="stdlib_8c.html#a1a6b5e8d2f1c37e5b43e4345586075be">realloc</a></div><div class="ttdeci">void * realloc(void *ptr, size_t size)</div><div class="ttdoc">Reallocates the given area of memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00048">stdlib.c:48</a></div></div>
+<div class="ttc" id="astdlib_8c_html_a20e50ab9d6b10af0e2940d9419448f42"><div class="ttname"><a href="stdlib_8c.html#a20e50ab9d6b10af0e2940d9419448f42">rand</a></div><div class="ttdeci">int rand()</div><div class="ttdoc">Generates a random value.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00090">stdlib.c:90</a></div></div>
 <div class="ttc" id="astdlib_8c_html_a4d1ba0f7b16aadd5e0f03b2b5e69d040"><div class="ttname"><a href="stdlib_8c.html#a4d1ba0f7b16aadd5e0f03b2b5e69d040">MALLOC_MAGIC_NUMBER</a></div><div class="ttdeci">#define MALLOC_MAGIC_NUMBER</div><div class="ttdoc">Number which identifies a memory area allocated through a call to malloc(), calloc() or realloc().</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00013">stdlib.c:13</a></div></div>
-<div class="ttc" id="astdlib_8c_html_a7b3d8b7cea59b137b167878ec88eb8d6"><div class="ttname"><a href="stdlib_8c.html#a7b3d8b7cea59b137b167878ec88eb8d6">calloc</a></div><div class="ttdeci">void * calloc(size_t num, size_t size)</div><div class="ttdoc">Allocates a block of memory for an array of num elements.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00036">stdlib.c:36</a></div></div>
-<div class="ttc" id="astdlib_8c_html_aa011d7b7bfeba45c8c32e04204a0f565"><div class="ttname"><a href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a></div><div class="ttdeci">size_t malloc_usable_size(void *ptr)</div><div class="ttdoc">Returns the number of usable bytes in the block pointed to by ptr.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00020">stdlib.c:20</a></div></div>
-<div class="ttc" id="astdlib_8c_html_ac0a811fd8b7a378500f100a2d9a1f1a2"><div class="ttname"><a href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a></div><div class="ttdeci">void * malloc(unsigned int size)</div><div class="ttdoc">Provides dynamically allocated memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00027">stdlib.c:27</a></div></div>
-<div class="ttc" id="astdlib_8c_html_afbedc913aa4651b3c3b4b3aecd9b4711"><div class="ttname"><a href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a></div><div class="ttdeci">void free(void *ptr)</div><div class="ttdoc">Frees dynamically allocated memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00068">stdlib.c:68</a></div></div>
+<div class="ttc" id="astdlib_8c_html_a7b3d8b7cea59b137b167878ec88eb8d6"><div class="ttname"><a href="stdlib_8c.html#a7b3d8b7cea59b137b167878ec88eb8d6">calloc</a></div><div class="ttdeci">void * calloc(size_t num, size_t size)</div><div class="ttdoc">Allocates a block of memory for an array of num elements.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00039">stdlib.c:39</a></div></div>
+<div class="ttc" id="astdlib_8c_html_aa011d7b7bfeba45c8c32e04204a0f565"><div class="ttname"><a href="stdlib_8c.html#aa011d7b7bfeba45c8c32e04204a0f565">malloc_usable_size</a></div><div class="ttdeci">size_t malloc_usable_size(void *ptr)</div><div class="ttdoc">Returns the number of usable bytes in the block pointed to by ptr.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00023">stdlib.c:23</a></div></div>
+<div class="ttc" id="astdlib_8c_html_ac0a811fd8b7a378500f100a2d9a1f1a2"><div class="ttname"><a href="stdlib_8c.html#ac0a811fd8b7a378500f100a2d9a1f1a2">malloc</a></div><div class="ttdeci">void * malloc(unsigned int size)</div><div class="ttdoc">Provides dynamically allocated memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00030">stdlib.c:30</a></div></div>
+<div class="ttc" id="astdlib_8c_html_accdbbe2355c1318646c2f23685642dff"><div class="ttname"><a href="stdlib_8c.html#accdbbe2355c1318646c2f23685642dff">rseed</a></div><div class="ttdeci">static int rseed</div><div class="ttdoc">Seed used to generate random numbers.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00083">stdlib.c:83</a></div></div>
+<div class="ttc" id="astdlib_8c_html_aeba450fb08640dee9854ec55fc395c2c"><div class="ttname"><a href="stdlib_8c.html#aeba450fb08640dee9854ec55fc395c2c">__malloc_is_valid_ptr</a></div><div class="ttdeci">static int __malloc_is_valid_ptr(void *ptr)</div><div class="ttdoc">Checks if the pointer is a valid malloc entry.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00018">stdlib.c:18</a></div></div>
+<div class="ttc" id="astdlib_8c_html_afbedc913aa4651b3c3b4b3aecd9b4711"><div class="ttname"><a href="stdlib_8c.html#afbedc913aa4651b3c3b4b3aecd9b4711">free</a></div><div class="ttdeci">void free(void *ptr)</div><div class="ttdoc">Frees dynamically allocated memory.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8c_source.html#l00071">stdlib.c:71</a></div></div>
 <div class="ttc" id="astdlib_8h_html"><div class="ttname"><a href="stdlib_8h.html">stdlib.h</a></div><div class="ttdoc">Useful generic functions and macros.</div></div>
 <div class="ttc" id="astdlib_8h_html_a690f251553b39fd4f31894826141b61a"><div class="ttname"><a href="stdlib_8h.html#a690f251553b39fd4f31894826141b61a">RAND_MAX</a></div><div class="ttdeci">#define RAND_MAX</div><div class="ttdoc">The maximum value returned by the rand function.</div><div class="ttdef"><b>Definition:</b> <a href="stdlib_8h_source.html#l00042">stdlib.h:42</a></div></div>
 <div class="ttc" id="astring_8h_html"><div class="ttname"><a href="string_8h.html">string.h</a></div><div class="ttdoc">String routines.</div></div>
@@ -180,7 +182,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:30.
+                    This page was last modified on Fri Dec 9 2022 11:34:52.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

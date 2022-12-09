@@ -82,12 +82,12 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __add_wait_queue(<a class="code" href="structwait__queue__head__t.html">wait_queue_head_t</a> *head, <a class="code" href="structwait__queue__entry__t.html">wait_queue_entry_t</a> *wq)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    list_head_insert_before(&amp;wq-&gt;<a class="code" href="structwait__queue__entry__t.html#ab5a30aef4962102b8428bb8adbbb9970">task_list</a>, &amp;head-&gt;<a class="code" href="structwait__queue__head__t.html#a5176a31b40bffb8f99bb737905e48a6a">task_list</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="list__head_8h.html#a6cacd6ad6863aae47561df20604bdcac">list_head_insert_before</a>(&amp;wq-&gt;<a class="code" href="structwait__queue__entry__t.html#ab5a30aef4962102b8428bb8adbbb9970">task_list</a>, &amp;head-&gt;<a class="code" href="structwait__queue__head__t.html#a5176a31b40bffb8f99bb737905e48a6a">task_list</a>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __remove_wait_queue(<a class="code" href="structwait__queue__head__t.html">wait_queue_head_t</a> *head, <a class="code" href="structwait__queue__entry__t.html">wait_queue_entry_t</a> *wq)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    list_head_remove(&amp;wq-&gt;<a class="code" href="structwait__queue__entry__t.html#ab5a30aef4962102b8428bb8adbbb9970">task_list</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="list__head_8h.html#a5c0daf96d52de8303b9c8e7df30f753f">list_head_remove</a>(&amp;wq-&gt;<a class="code" href="structwait__queue__entry__t.html#ab5a30aef4962102b8428bb8adbbb9970">task_list</a>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="mentos_2inc_2process_2wait_8h.html#ac95b4f2ec86f24ba09499c05c867bbf4">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="wait_8c.html#ac95b4f2ec86f24ba09499c05c867bbf4">init_waitqueue_entry</a>(<a class="code" href="structwait__queue__entry__t.html">wait_queue_entry_t</a> *wq, <span class="keyword">struct</span> <a class="code" href="structtask__struct.html">task_struct</a> *task)</div>
@@ -113,6 +113,8 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 <div class="ttc" id="agroup__WaitQueueFlags_html_ga9b6e0ab3fb23b83bb1153ff4d06f14b9"><div class="ttname"><a href="group__WaitQueueFlags.html#ga9b6e0ab3fb23b83bb1153ff4d06f14b9">WQ_FLAG_EXCLUSIVE</a></div><div class="ttdeci">#define WQ_FLAG_EXCLUSIVE</div><div class="ttdoc">When an entry has this flag is added to the end of the wait queue. Entries without that flag are,...</div><div class="ttdef"><b>Definition:</b> <a href="mentos_2inc_2process_2wait_8h_source.html#l00054">wait.h:54</a></div></div>
 <div class="ttc" id="akernel__levels_8h_html"><div class="ttname"><a href="kernel__levels_8h.html">kernel_levels.h</a></div></div>
+<div class="ttc" id="alist__head_8h_html_a5c0daf96d52de8303b9c8e7df30f753f"><div class="ttname"><a href="list__head_8h.html#a5c0daf96d52de8303b9c8e7df30f753f">list_head_remove</a></div><div class="ttdeci">static void list_head_remove(list_head *entry)</div><div class="ttdoc">Removes the given entry from the list it is contained in.</div><div class="ttdef"><b>Definition:</b> <a href="list__head_8h_source.html#l00111">list_head.h:111</a></div></div>
+<div class="ttc" id="alist__head_8h_html_a6cacd6ad6863aae47561df20604bdcac"><div class="ttname"><a href="list__head_8h.html#a6cacd6ad6863aae47561df20604bdcac">list_head_insert_before</a></div><div class="ttdeci">static void list_head_insert_before(list_head *new_entry, list_head *location)</div><div class="ttdoc">Insert the new entry before the given location.</div><div class="ttdef"><b>Definition:</b> <a href="list__head_8h_source.html#l00095">list_head.h:95</a></div></div>
 <div class="ttc" id="amentos_2inc_2process_2wait_8h_html"><div class="ttname"><a href="mentos_2inc_2process_2wait_8h.html">wait.h</a></div></div>
 <div class="ttc" id="amentos_2inc_2process_2wait_8h_html_a457bca3efb91a2ccf468b6007f5574e2"><div class="ttname"><a href="mentos_2inc_2process_2wait_8h.html#a457bca3efb91a2ccf468b6007f5574e2">default_wake_function</a></div><div class="ttdeci">int default_wake_function(wait_queue_entry_t *wait, unsigned mode, int sync)</div><div class="ttdoc">The default wake function, a wrapper for try_to_wake_up.</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8c_source.html#l00227">scheduler.c:227</a></div></div>
 <div class="ttc" id="aspinlock_8h_html_a4fc140f942e2e7acab87811b30de2eb4"><div class="ttname"><a href="spinlock_8h.html#a4fc140f942e2e7acab87811b30de2eb4">spinlock_lock</a></div><div class="ttdeci">void spinlock_lock(spinlock_t *spinlock)</div><div class="ttdoc">Try to lock the spinlock.</div><div class="ttdef"><b>Definition:</b> <a href="spinlock_8c_source.html#l00013">spinlock.c:13</a></div></div>
@@ -136,7 +138,7 @@ $(function() {
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

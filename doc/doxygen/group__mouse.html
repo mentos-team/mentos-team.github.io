@@ -66,7 +66,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Mouse<div class="ingroups"><a class="el" href="group__drivers.html">Device Drivers</a></div></div>  </div>
 </div><!--header-->
@@ -106,10 +107,187 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5cf17a199a67b7c625a73bbc3c8873c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga5cf17a199a67b7c625a73bbc3c8873c3">mouse_finalize</a> ()</td></tr>
 <tr class="memdesc:ga5cf17a199a67b7c625a73bbc3c8873c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes the mouse.  <a href="group__mouse.html#ga5cf17a199a67b7c625a73bbc3c8873c3">More...</a><br /></td></tr>
 <tr class="separator:ga5cf17a199a67b7c625a73bbc3c8873c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b04a21dd9b6dbc085c90eedba7a855c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga3b04a21dd9b6dbc085c90eedba7a855c">__mouse_waitcmd</a> (unsigned char type)</td></tr>
+<tr class="memdesc:ga3b04a21dd9b6dbc085c90eedba7a855c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse wait for a command.  <a href="group__mouse.html#ga3b04a21dd9b6dbc085c90eedba7a855c">More...</a><br /></td></tr>
+<tr class="separator:ga3b04a21dd9b6dbc085c90eedba7a855c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga027d00ee2d521636d3eaf14a141df339"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga027d00ee2d521636d3eaf14a141df339">__mouse_write</a> (unsigned char data)</td></tr>
+<tr class="memdesc:ga027d00ee2d521636d3eaf14a141df339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to mouse.  <a href="group__mouse.html#ga027d00ee2d521636d3eaf14a141df339">More...</a><br /></td></tr>
+<tr class="separator:ga027d00ee2d521636d3eaf14a141df339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3aed2fc5b8f7a5ad900a52f3ae8b2787"><td class="memItemLeft" align="right" valign="top">static unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga3aed2fc5b8f7a5ad900a52f3ae8b2787">__mouse_read</a> ()</td></tr>
+<tr class="memdesc:ga3aed2fc5b8f7a5ad900a52f3ae8b2787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from mouse.  <a href="group__mouse.html#ga3aed2fc5b8f7a5ad900a52f3ae8b2787">More...</a><br /></td></tr>
+<tr class="separator:ga3aed2fc5b8f7a5ad900a52f3ae8b2787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab0505d53d72bd6ac3dbdea000dea5a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#gaab0505d53d72bd6ac3dbdea000dea5a3">__mouse_isr</a> (<a class="el" href="structpt__regs.html">pt_regs</a> *f)</td></tr>
+<tr class="memdesc:gaab0505d53d72bd6ac3dbdea000dea5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interrupt service routine of the mouse.  <a href="group__mouse.html#gaab0505d53d72bd6ac3dbdea000dea5a3">More...</a><br /></td></tr>
+<tr class="separator:gaab0505d53d72bd6ac3dbdea000dea5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a412b6602190c5bbad2a891785e80b2"><td class="memItemLeft" align="right" valign="top"><a id="ga8a412b6602190c5bbad2a891785e80b2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga8a412b6602190c5bbad2a891785e80b2">__mouse_enable</a> ()</td></tr>
+<tr class="memdesc:ga8a412b6602190c5bbad2a891785e80b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the mouse driver. <br /></td></tr>
+<tr class="separator:ga8a412b6602190c5bbad2a891785e80b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3feb18f2df0787f5a0aff74cb1cc7afb"><td class="memItemLeft" align="right" valign="top"><a id="ga3feb18f2df0787f5a0aff74cb1cc7afb"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga3feb18f2df0787f5a0aff74cb1cc7afb">__mouse_disable</a> ()</td></tr>
+<tr class="memdesc:ga3feb18f2df0787f5a0aff74cb1cc7afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the mouse driver. <br /></td></tr>
+<tr class="separator:ga3feb18f2df0787f5a0aff74cb1cc7afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gad6c8dc92bbb626f9a9ea002fa25162af"><td class="memItemLeft" align="right" valign="top"><a id="gad6c8dc92bbb626f9a9ea002fa25162af"></a>
+static <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#gad6c8dc92bbb626f9a9ea002fa25162af">mouse_cycle</a> = 0</td></tr>
+<tr class="memdesc:gad6c8dc92bbb626f9a9ea002fa25162af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse ISR cycle. <br /></td></tr>
+<tr class="separator:gad6c8dc92bbb626f9a9ea002fa25162af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41e922c837372c2d405d62197572e835"><td class="memItemLeft" align="right" valign="top"><a id="ga41e922c837372c2d405d62197572e835"></a>
+static <a class="el" href="stdint_8h.html#ad566f6541e98b74246db1a3a3a85ad49">int8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga41e922c837372c2d405d62197572e835">mouse_bytes</a> [3]</td></tr>
+<tr class="memdesc:ga41e922c837372c2d405d62197572e835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse communication data. <br /></td></tr>
+<tr class="separator:ga41e922c837372c2d405d62197572e835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1649482b4cd0afe5d8ea4ef86a911b16"><td class="memItemLeft" align="right" valign="top"><a id="ga1649482b4cd0afe5d8ea4ef86a911b16"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga1649482b4cd0afe5d8ea4ef86a911b16">mouse_x</a> = (800 / 2)</td></tr>
+<tr class="memdesc:ga1649482b4cd0afe5d8ea4ef86a911b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse x position. <br /></td></tr>
+<tr class="separator:ga1649482b4cd0afe5d8ea4ef86a911b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2da2845d051f38cc5f9850bd65c5aebf"><td class="memItemLeft" align="right" valign="top"><a id="ga2da2845d051f38cc5f9850bd65c5aebf"></a>
+static <a class="el" href="stdint_8h.html#a32f2e37ee053cf2ce8ca28d1f74630e5">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mouse.html#ga2da2845d051f38cc5f9850bd65c5aebf">mouse_y</a> = (600 / 2)</td></tr>
+<tr class="memdesc:ga2da2845d051f38cc5f9850bd65c5aebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse y position. <br /></td></tr>
+<tr class="separator:ga2da2845d051f38cc5f9850bd65c5aebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Routines for interfacing with the mouse. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gaab0505d53d72bd6ac3dbdea000dea5a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab0505d53d72bd6ac3dbdea000dea5a3">&#9670;&nbsp;</a></span>__mouse_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __mouse_isr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpt__regs.html">pt_regs</a> *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The interrupt service routine of the mouse. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>The interrupt stack frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mouse_8c_source.html#l00080">80</a> of file <a class="el" href="mouse_8c_source.html">mouse.c</a>.</p>
+
+</div>
+</div>
+<a id="ga3aed2fc5b8f7a5ad900a52f3ae8b2787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3aed2fc5b8f7a5ad900a52f3ae8b2787">&#9670;&nbsp;</a></span>__mouse_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned char __mouse_read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read data from mouse. </p>
+<dl class="section return"><dt>Returns</dt><dd>The data received from mouse. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mouse_8c_source.html#l00072">72</a> of file <a class="el" href="mouse_8c_source.html">mouse.c</a>.</p>
+
+</div>
+</div>
+<a id="ga3b04a21dd9b6dbc085c90eedba7a855c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b04a21dd9b6dbc085c90eedba7a855c">&#9670;&nbsp;</a></span>__mouse_waitcmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __mouse_waitcmd </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mouse wait for a command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>1 for sending - 0 for receiving. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mouse_8c_source.html#l00038">38</a> of file <a class="el" href="mouse_8c_source.html">mouse.c</a>.</p>
+
+</div>
+</div>
+<a id="ga027d00ee2d521636d3eaf14a141df339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga027d00ee2d521636d3eaf14a141df339">&#9670;&nbsp;</a></span>__mouse_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void __mouse_write </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send data to mouse. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The data to send. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mouse_8c_source.html#l00062">62</a> of file <a class="el" href="mouse_8c_source.html">mouse.c</a>.</p>
+
+</div>
+</div>
 <a id="ga5cf17a199a67b7c625a73bbc3c8873c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5cf17a199a67b7c625a73bbc3c8873c3">&#9670;&nbsp;</a></span>mouse_finalize()</h2>
 
@@ -161,7 +339,7 @@ Functions</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:54.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>

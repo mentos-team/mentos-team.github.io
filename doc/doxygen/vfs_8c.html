@@ -184,6 +184,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a145e66e6173201b7b28544a4210c68a4"><td class="memItemLeft" align="right" valign="top"><a id="a145e66e6173201b7b28544a4210c68a4"></a>
+static <a class="el" href="structhashmap__t.html">hashmap_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#a145e66e6173201b7b28544a4210c68a4">vfs_filesystems</a></td></tr>
+<tr class="memdesc:a145e66e6173201b7b28544a4210c68a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The hashmap that associates a type of Filesystem <code>name</code> to its <code>mount</code> function;. <br /></td></tr>
+<tr class="separator:a145e66e6173201b7b28544a4210c68a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3752a6314408fdfd546d295e962a32"><td class="memItemLeft" align="right" valign="top"><a id="a6b3752a6314408fdfd546d295e962a32"></a>
+static <a class="el" href="structlist__head.html">list_head</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#a6b3752a6314408fdfd546d295e962a32">vfs_super_blocks</a></td></tr>
+<tr class="memdesc:a6b3752a6314408fdfd546d295e962a32"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of superblocks. <br /></td></tr>
+<tr class="separator:a6b3752a6314408fdfd546d295e962a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f78357957e4d6dbb7620b45887c509c"><td class="memItemLeft" align="right" valign="top"><a id="a3f78357957e4d6dbb7620b45887c509c"></a>
+static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#a3f78357957e4d6dbb7620b45887c509c">vfs_filesystems_max</a> = 10</td></tr>
+<tr class="memdesc:a3f78357957e4d6dbb7620b45887c509c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of filesystem types. <br /></td></tr>
+<tr class="separator:a3f78357957e4d6dbb7620b45887c509c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c812f440440e37ed59685fcf8357f7"><td class="memItemLeft" align="right" valign="top"><a id="ae6c812f440440e37ed59685fcf8357f7"></a>
+static <a class="el" href="spinlock_8h.html#a1a7da4ce80f3ccdd08051012ff5580ff">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#ae6c812f440440e37ed59685fcf8357f7">vfs_spinlock_refcount</a></td></tr>
+<tr class="memdesc:ae6c812f440440e37ed59685fcf8357f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock for refcount field. <br /></td></tr>
+<tr class="separator:ae6c812f440440e37ed59685fcf8357f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafac0046a2133b156c6a8aeae7b295a"><td class="memItemLeft" align="right" valign="top"><a id="afafac0046a2133b156c6a8aeae7b295a"></a>
+static <a class="el" href="spinlock_8h.html#a1a7da4ce80f3ccdd08051012ff5580ff">spinlock_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#afafac0046a2133b156c6a8aeae7b295a">vfs_spinlock</a></td></tr>
+<tr class="memdesc:afafac0046a2133b156c6a8aeae7b295a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spinlock for the entire virtual filesystem. <br /></td></tr>
+<tr class="separator:afafac0046a2133b156c6a8aeae7b295a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5bf5461a9fbe730d93e9f408931aee"><td class="memItemLeft" align="right" valign="top"><a id="aaf5bf5461a9fbe730d93e9f408931aee"></a>
+static <a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#aaf5bf5461a9fbe730d93e9f408931aee">vfs_superblock_cache</a></td></tr>
+<tr class="memdesc:aaf5bf5461a9fbe730d93e9f408931aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">VFS memory cache for superblocks. <br /></td></tr>
+<tr class="separator:aaf5bf5461a9fbe730d93e9f408931aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb3e14bae654211884af101ec024f7d"><td class="memItemLeft" align="right" valign="top"><a id="a4eb3e14bae654211884af101ec024f7d"></a>
 <a class="el" href="structkmem__cache__t.html">kmem_cache_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vfs_8c.html#a4eb3e14bae654211884af101ec024f7d">vfs_file_cache</a></td></tr>
 <tr class="memdesc:a4eb3e14bae654211884af101ec024f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">VFS memory cache for files. <br /></td></tr>
@@ -1081,7 +1105,7 @@ Variables</h2></td></tr>
             <hr class="footer" />
             <ul class="footer-info">
                 <li class="footer-info-lastmode">
-                    This page was last modified on Fri Dec 9 2022 11:03:31.
+                    This page was last modified on Fri Dec 9 2022 11:34:53.
                 </li>
                 <li class="footer-info-copyright">
                     MentOs © 2014–2022 the MentOs-Team, and numerous contributors.<br>
