@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dev_5ft_5674',['dev_t',['../stddef_8h.html#aa758a95a46ba0d45ab3c0fafecc75c08',1,'stddef.h']]],
-  ['dirent_5ft_5675',['dirent_t',['../dirent_8h.html#a22ccee7945883328ba08cf43546b4a28',1,'dirent.h']]]
+  ['cc_5ft_6316',['cc_t',['../termios-struct_8h.html#a02a4a51b25871e505aad0dcae945a0dc',1,'termios-struct.h']]],
+  ['cpuinfo_5ft_6317',['cpuinfo_t',['../cpuid_8h.html#a23cf88769d4cc3bb01656f0382fd3363',1,'cpuid.h']]]
 ];

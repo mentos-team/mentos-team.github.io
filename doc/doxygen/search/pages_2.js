@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['signal_6939',['Signal',['../md_doc_signal.html',1,'']]],
-  ['system_20call_6940',['System Call',['../md_doc_syscall.html',1,'']]]
+  ['signal_7586',['Signal',['../md_signal.html',1,'']]],
+  ['system_20call_7587',['System Call',['../md_syscall.html',1,'']]]
 ];

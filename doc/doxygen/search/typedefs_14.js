@@ -1,5 +1,28 @@
 var searchData=
 [
-  ['wait_5fqueue_5fentry_5ft_5836',['wait_queue_entry_t',['../mentos_2inc_2process_2wait_8h.html#ab5f41150a5cb60afcabd5b52c304eb45',1,'wait.h']]],
-  ['wait_5fqueue_5fhead_5ft_5837',['wait_queue_head_t',['../mentos_2inc_2process_2wait_8h.html#a18f6956b849799d612a80b188779b905',1,'wait.h']]]
+  ['va_5flist_6446',['va_list',['../stdarg_8h.html#abaefbc6cabb217bf0138d4f9c94d4775',1,'stdarg.h']]],
+  ['vfs_5fclose_5fcallback_6447',['vfs_close_callback',['../vfs__types_8h.html#ad5dfad08a91a66d12c68c7796f58fbf8',1,'vfs_types.h']]],
+  ['vfs_5fcreat_5fcallback_6448',['vfs_creat_callback',['../vfs__types_8h.html#ab78219410e8c4e61f7a6982107d6b2e2',1,'vfs_types.h']]],
+  ['vfs_5ffile_5fdescriptor_5ft_6449',['vfs_file_descriptor_t',['../vfs__types_8h.html#a5e75fea261f31c301d5a98ff18bae3cd',1,'vfs_types.h']]],
+  ['vfs_5ffile_5foperations_5ft_6450',['vfs_file_operations_t',['../vfs__types_8h.html#a6f28b76b5538aef4ad18f7442e1c55e0',1,'vfs_types.h']]],
+  ['vfs_5ffile_5ft_6451',['vfs_file_t',['../vfs__types_8h.html#aa90ed1c6184cf98640e1e5251412232c',1,'vfs_types.h']]],
+  ['vfs_5ffsetattr_5fcallback_6452',['vfs_fsetattr_callback',['../vfs__types_8h.html#ab36f05fde30f33383902d13e1dcabfdb',1,'vfs_types.h']]],
+  ['vfs_5ffstat_5fcallback_6453',['vfs_fstat_callback',['../vfs__types_8h.html#ab8c4a67664d001b1a8b46bdfc9d0f5f8',1,'vfs_types.h']]],
+  ['vfs_5fgetdents_5fcallback_6454',['vfs_getdents_callback',['../vfs__types_8h.html#ad5235abeafc2463ee08bd96ec18b0155',1,'vfs_types.h']]],
+  ['vfs_5fioctl_5fcallback_6455',['vfs_ioctl_callback',['../vfs__types_8h.html#a4ecfdd9423cf4796450559e797cdb1b0',1,'vfs_types.h']]],
+  ['vfs_5flseek_5fcallback_6456',['vfs_lseek_callback',['../vfs__types_8h.html#a0050c60eccb7afbc52623eb2fb75dcad',1,'vfs_types.h']]],
+  ['vfs_5fmkdir_5fcallback_6457',['vfs_mkdir_callback',['../vfs__types_8h.html#a1c5008efae1f02885b6b238e18eb5b6f',1,'vfs_types.h']]],
+  ['vfs_5fopen_5fcallback_6458',['vfs_open_callback',['../vfs__types_8h.html#a6f355f027f5b1b2af7f1f344d36cd918',1,'vfs_types.h']]],
+  ['vfs_5fread_5fcallback_6459',['vfs_read_callback',['../vfs__types_8h.html#a10f0bb6ec1476ee2cc476cb635918896',1,'vfs_types.h']]],
+  ['vfs_5freadlink_5fcallback_6460',['vfs_readlink_callback',['../vfs__types_8h.html#a0dcd453cbc7e1dff5a02d985bf3f50a7',1,'vfs_types.h']]],
+  ['vfs_5frmdir_5fcallback_6461',['vfs_rmdir_callback',['../vfs__types_8h.html#aabb73e4aeb7bbbd446dea700f53fafa6',1,'vfs_types.h']]],
+  ['vfs_5fsetattr_5fcallback_6462',['vfs_setattr_callback',['../vfs__types_8h.html#ae26f254b14fb17c04c198dc735517065',1,'vfs_types.h']]],
+  ['vfs_5fstat_5fcallback_6463',['vfs_stat_callback',['../vfs__types_8h.html#a2b2f47b6bebbf4ede711627cd2479f1a',1,'vfs_types.h']]],
+  ['vfs_5fsymlink_5fcallback_6464',['vfs_symlink_callback',['../vfs__types_8h.html#a91ccb70eec27d9ae6fe122b2af414029',1,'vfs_types.h']]],
+  ['vfs_5fsys_5foperations_5ft_6465',['vfs_sys_operations_t',['../vfs__types_8h.html#aa54b2da64d2c7821ad10c3053bc86f55',1,'vfs_types.h']]],
+  ['vfs_5funlink_5fcallback_6466',['vfs_unlink_callback',['../vfs__types_8h.html#a721c44d0ae6197df49d67be4d44aca4a',1,'vfs_types.h']]],
+  ['vfs_5fwrite_5fcallback_6467',['vfs_write_callback',['../vfs__types_8h.html#acd12f1c81f076948e796ed8514d19712',1,'vfs_types.h']]],
+  ['virt_5fmap_5fpage_5fmanager_5ft_6468',['virt_map_page_manager_t',['../vmem__map_8h.html#a7a245be0fd5aadce4e6c755628411438',1,'vmem_map.h']]],
+  ['virt_5fmap_5fpage_5ft_6469',['virt_map_page_t',['../vmem__map_8h.html#a56140a035427cb2850da762bd7eaf9dc',1,'vmem_map.h']]],
+  ['vm_5farea_5fstruct_5ft_6470',['vm_area_struct_t',['../paging_8h.html#a48c644ca450ef69849a16de38f8d50ee',1,'paging.h']]]
 ];
