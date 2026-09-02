@@ -1,0 +1,168 @@
+# Course material.
+#
+# Each entry describes one PDF published as a release asset of
+# mentos-team/mentos-downloads. The website NEVER carries the file itself: that is the
+# whole point of this list. The download URL is assembled from `release` and `file` by
+# src/lib/content.ts, so there is no URL to mistype here.
+#
+# To publish or replace a lecture:
+#
+#   gh release upload <release> <file>.pdf --clobber --repo mentos-team/mentos-downloads
+#
+# then add or edit its entry below. `file` must match the asset name exactly — the
+# download URL is built from it, and tests/content.test.mjs checks the shape but cannot
+# check that the asset exists.
+#
+# `course` groups the list into sections and must be one of the ids in courses.yaml.
+# `order` sorts within a course.
+
+# ---- Operating Systems course -------------------------------------------------------
+- id: os-1-c-programming
+  course: os
+  order: 1
+  title: C Programming
+  summary: >-
+    The subset of C the rest of the course assumes — pointers, memory, and the
+    compilation model.
+  release: os-course
+  file: 1_c_programming.pdf
+
+- id: os-2-fundamental-concepts
+  course: os
+  order: 2
+  title: Fundamental Concepts
+  summary: >-
+    What an operating system is for — kernel and user mode, the system-call boundary,
+    and how a machine gets from power-on to a shell prompt.
+  release: os-course
+  file: 2_fundamental_concepts.pdf
+
+- id: os-3-filesystem
+  course: os
+  order: 3
+  title: Filesystem
+  summary: >-
+    Files, directories, inodes and mount points, and the interface a process actually
+    sees.
+  release: os-course
+  file: 3_filesystem.pdf
+
+- id: os-4-processes
+  course: os
+  order: 4
+  title: Processes
+  summary: >-
+    Process creation and termination, the process tree, and what fork and exec each do.
+  release: os-course
+  file: 4_process.pdf
+
+- id: os-5-ipc-semaphores
+  course: os
+  order: 5
+  title: "IPC: System V concepts and semaphores"
+  summary: >-
+    The System V IPC model, and semaphores as the primitive the rest of it is built on.
+  release: os-course
+  file: 5_IPC_semaphores_shared_memory.pdf
+
+- id: os-6-ipc-message-queues
+  course: os
+  order: 6
+  title: "IPC: shared memory and message queues"
+  summary: >-
+    Two ways for unrelated processes to exchange data, and when each is the right one.
+  release: os-course
+  file: 6_IPC_system_v_message_queue.pdf
+
+- id: os-7-ipc-signals-pipes
+  course: os
+  order: 7
+  title: "IPC: signals, pipes and FIFOs"
+  summary: >-
+    Asynchronous notification and byte streams — the mechanisms a shell is built out of.
+  release: os-course
+  file: 7_IPC_signal_pipe_fifo.pdf
+
+- id: os-8-real-time-scheduling
+  course: os
+  order: 8
+  title: Real-time scheduler basics
+  summary: >-
+    Deadlines, periodic tasks, and what makes a schedule feasible.
+  release: os-course
+  file: 8_real_time_scheduler_basics.pdf
+
+# ---- MentOS lectures ----------------------------------------------------------------
+- id: mentos-1-fundamental-concepts
+  course: mentos
+  order: 1
+  title: Fundamental Concepts
+  summary: >-
+    How MentOS is put together, and where in the tree each part of the course lives.
+  release: mentos-course
+  file: mentos_1_fundamental_concepts.pdf
+
+- id: mentos-2-process-management
+  course: mentos
+  order: 2
+  title: Process Management
+  summary: >-
+    The task structure, the process list, and the path a process takes through fork,
+    exec and wait.
+  release: mentos-course
+  file: mentos_2_process_management.pdf
+
+- id: mentos-3-real-time-scheduler
+  course: mentos
+  order: 3
+  title: Real-time Scheduler
+  summary: >-
+    The scheduling policies MentOS ships, and the ones left as an exercise.
+  release: mentos-course
+  file: mentos_3_real_time_scheduler.pdf
+
+- id: mentos-4-memory-management
+  course: mentos
+  order: 4
+  title: Memory Management
+  summary: >-
+    Two-level x86 paging, the buddy allocator, and the slab layer above it.
+  release: mentos-course
+  file: mentos_4_memory_management.pdf
+
+- id: mentos-5-system-calls
+  course: mentos
+  order: 5
+  title: System Calls
+  summary: >-
+    The int 0x80 path from a libc wrapper to a kernel handler, and how to add one.
+  release: mentos-course
+  file: mentos_5_system_call.pdf
+
+- id: mentos-6-timers
+  course: mentos
+  order: 6
+  title: Timers
+  summary: >-
+    The PIT, the tick, and how the kernel measures time.
+  release: mentos-course
+  file: mentos_6_timers.pdf
+
+- id: mentos-7-signals
+  course: mentos
+  order: 7
+  title: Signals
+  summary: >-
+    Delivery, handlers, and the return path back into user code.
+  release: mentos-course
+  file: mentos_7_signals.pdf
+
+# ---- Exercises ----------------------------------------------------------------------
+- id: mentos-exercise-1-deadlock
+  course: exercises
+  order: 1
+  title: Deadlock prevention
+  summary: >-
+    A worked exercise on the conditions for deadlock and how to design them away.
+  release: mentos-course
+  file: mentos_example_1_deadlock_prevention.pdf

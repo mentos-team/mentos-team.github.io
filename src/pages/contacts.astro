@@ -1,0 +1,108 @@
+---
+/**
+ * Contacts. Deliberately short: for anything about the software itself the issue tracker
+ * is the right address, and saying so is more useful than an email that goes unread.
+ */
+import SectionHeading from '../components/SectionHeading.astro';
+import { site } from '../data/site.ts';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const org = site.organisation;
+---
+
+<PageLayout
+  title="Contacts"
+  eyebrow="Get in touch"
+  lede="For anything about the software — a bug, a build failure, a question about the code — the issue tracker reaches the people who can answer and leaves a record for whoever asks next."
+  width="narrow"
+>
+  <section class="section" aria-labelledby="contact-project">
+    <SectionHeading title="About the software" id="contact-project" />
+    <ul class="channels">
+      <li class="channel">
+        <h3 class="channel__title"><a href={site.links.issues}>Issue tracker</a></h3>
+        <p class="channel__body">
+          Bugs, build problems, and feature discussion. Search the closed issues first —
+          a good many questions have already been answered there.
+        </p>
+      </li>
+      <li class="channel">
+        <h3 class="channel__title"><a href={site.links.wiki}>Wiki</a></h3>
+        <p class="channel__body">
+          Setup, architecture and subsystem documentation. If something there is wrong or
+          missing, that is worth an issue too.
+        </p>
+      </li>
+      <li class="channel">
+        <h3 class="channel__title"><a href={site.links.organisation}>GitHub organisation</a></h3>
+        <p class="channel__body">
+          The source repository, this website, and the repository the course material is
+          published from.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="contact-course">
+    <SectionHeading title="About the course" id="contact-course" />
+    <div class="prose">
+      <p>
+        If you are taking the Operating Systems course, questions about the course itself
+        — timetables, exams, assignments — go through the university's own channels
+        rather than the issue tracker. The{' '}
+        <a href={org.departmentUrl}>{org.department}</a> pages carry the current
+        arrangements.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="contact-where">
+    <SectionHeading title="Where we are" id="contact-where" />
+    <address class="address">
+      <span>{org.department}</span>
+      <span>{org.university}</span>
+      {org.address.map((line) => <span>{line}</span>)}
+    </address>
+    <p><a class="more" href={org.mapUrl}>Open in a map</a></p>
+  </section>
+</PageLayout>
+
+<style>
+  .channels {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .channel {
+    display: grid;
+    gap: var(--space-2xs);
+    padding-top: var(--space-sm);
+    border-top: var(--rule);
+  }
+
+  .channel__title {
+    font-size: var(--text-lg);
+  }
+
+  .channel__title a {
+    text-decoration: none;
+  }
+
+  .channel__title a:hover {
+    text-decoration: underline;
+  }
+
+  .channel__body {
+    color: var(--color-ink-2);
+  }
+
+  .address {
+    font-style: normal;
+    display: grid;
+    gap: var(--space-2xs);
+    color: var(--color-ink-2);
+    margin-bottom: var(--space-md);
+  }
+</style>

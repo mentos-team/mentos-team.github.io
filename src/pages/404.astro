@@ -1,0 +1,35 @@
+---
+/**
+ * Not found. Short, and pointed at the four places anything on this site actually is.
+ */
+import { site } from '../data/site.ts';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout title="Page not found" eyebrow="404" lede="That page is not here." width="narrow">
+  <div class="prose">
+    <p>
+      This site was rebuilt, and a handful of old addresses did not survive it. Two
+      things in particular moved:
+    </p>
+    <ul>
+      <li>
+        <strong>Lecture PDFs</strong> used to live under <code>/doc/</code>. They are now
+        published as release assets — see <a href="/course-material/">Course material</a>.
+      </li>
+      <li>
+        <strong>Generated API documentation</strong> used to live under{' '}
+        <code>/doc/doxygen/</code>. It is no longer published; generate it from the source
+        with <code>make doc</code>, as described under{' '}
+        <a href="/documentation/">Documentation</a>.
+      </li>
+    </ul>
+    <p>
+      Everything else is one of: <a href="/">the home page</a>,{' '}
+      <a href="/course-material/">Course material</a>,{' '}
+      <a href="/documentation/">Documentation</a>, <a href="/team/">Team</a>, or{' '}
+      <a href="/contacts/">Contacts</a>. The code itself is on{' '}
+      <a href={site.links.github}>GitHub</a>.
+    </p>
+  </div>
+</PageLayout>

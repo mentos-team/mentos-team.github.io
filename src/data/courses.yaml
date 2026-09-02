@@ -1,0 +1,21 @@
+# Sections of the Course Material page. `id` is what a lecture's `course` field refers
+# to; `order` is the order the sections appear in.
+- id: os
+  order: 1
+  name: Operating Systems
+  summary: >-
+    The lecture course. These slides are about operating systems in general — the
+    concepts, the mechanisms, and the vocabulary — and do not assume MentOS.
+
+- id: mentos
+  order: 2
+  name: MentOS
+  summary: >-
+    The same topics again, but read off the source tree: where each mechanism lives in
+    MentOS, and what the code actually does.
+
+- id: exercises
+  order: 3
+  name: Exercises
+  summary: >-
+    Worked exercises handed out alongside the lectures.

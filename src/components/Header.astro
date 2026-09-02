@@ -1,0 +1,195 @@
+---
+/**
+ * Site masthead and primary navigation. Works without JavaScript (plain links).
+ *
+ * The mark sits *inside* the home link rather than beside it, for two reasons: a masthead
+ * mark is what people click to get home, and below 46rem the expanded name is hidden,
+ * which would otherwise leave the link with nothing in it. The project name stays set in
+ * type next to the mark — the mark is a pixel glyph in a dotted frame, which is legible at
+ * 2rem but is not a wordmark and cannot be read as one.
+ */
+import logo from '../assets/logo_mentos.png';
+import { site } from '../data/site.ts';
+
+const NAV = [
+  { href: '/course-material/', label: 'Course material' },
+  { href: '/documentation/', label: 'Documentation' },
+  { href: '/team/', label: 'Team' },
+  { href: '/contacts/', label: 'Contacts' },
+] as const;
+
+const current = `/${Astro.url.pathname.split('/')[1] ?? ''}/`;
+---
+
+<header class="masthead">
+  <div class="container masthead__inner">
+    <a class="wordmark" href="/" aria-label={`${site.name} — home`}>
+      <img
+        class="wordmark__mark"
+        src={logo.src}
+        width={logo.width}
+        height={logo.height}
+        alt=""
+        aria-hidden="true"
+      />
+      <span class="wordmark__name">{site.name}</span>
+      <span class="wordmark__long">{site.expandedName}<span class="wordmark__affiliation"> · {site.organisation.university}</span></span>
+    </a>
+    <div class="masthead__end">
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__list">
+          {NAV.map((item) => (
+            <li>
+              <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>
+            </li>
+          ))}
+          <li><a href={site.links.github}>GitHub</a></li>
+        </ul>
+      </nav>
+      {/*
+        Light/dark switch. Hidden until the inline script in BaseLayout.astro marks the
+        document as scripted, because without JavaScript the theme follows the operating
+        system and the button would do nothing. The half-filled disc reads as "change
+        appearance" in either theme, so no icon swapping is needed; the script keeps the
+        accessible name pointed at the action.
+      */}
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path d="M8 1.75a6.25 6.25 0 0 0 0 12.5Z" fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .masthead {
+    border-bottom: 1px solid var(--color-rule-strong);
+    padding-block: var(--space-sm) var(--space-xs);
+  }
+
+  /*
+   * Two explicit rows, not one wrapping row: the wordmark on top, navigation and the
+   * theme toggle below. As a single flex row the navigation reflowed onto the wordmark
+   * line whenever the available width changed by a few pixels — which happens on every
+   * navigation to a page short enough to lose its scrollbar. The grid makes that
+   * impossible, and `scrollbar-gutter: stable` in base.css removes the width change too.
+   */
+  .masthead__inner {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-width: 0;
+    text-decoration: none;
+  }
+
+  /*
+   * The mark carries its own near-black ground — the glyph inside it is cream, which
+   * would vanish on light paper — so it is a self-contained badge in both themes and
+   * needs no light/dark pair.
+   */
+  .wordmark__mark {
+    flex: none;
+    width: auto;
+    height: 2rem;
+    border-radius: var(--radius);
+  }
+
+  .wordmark:hover {
+    color: inherit;
+  }
+
+  /* The project name is the mark until there is a mark: mono, because MentOS is a
+     console, and that is the one typographic cue the old site got right. */
+  .wordmark__name {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    flex: none;
+  }
+
+  .wordmark__long {
+    font-size: var(--text-sm);
+    color: var(--color-ink-2);
+  }
+
+  .wordmark__affiliation {
+    color: var(--color-ink-3);
+  }
+
+  /* Row 2: navigation on the left, the theme toggle pushed to the right. */
+  .masthead__end {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xs) var(--space-lg);
+  }
+
+  /* Only offered when the theme script is running — see BaseLayout.astro. */
+  .theme-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    color: var(--color-ink-3);
+    background: none;
+    border: var(--rule);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition-control);
+  }
+
+  :root[data-js] .theme-toggle {
+    display: inline-flex;
+  }
+
+  .theme-toggle:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background: var(--color-paper-2);
+  }
+
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-lg);
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav__list a {
+    display: inline-block;
+    padding-block: var(--space-2xs);
+    font-size: var(--text-sm);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav__list a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+
+  .nav__list a[aria-current='page'] {
+    border-bottom-color: var(--color-rule-strong);
+    font-weight: 600;
+  }
+
+  @media (max-width: 46rem) {
+    .wordmark__long {
+      display: none;
+    }
+  }
+</style>

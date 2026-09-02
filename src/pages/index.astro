@@ -1,0 +1,298 @@
+---
+/**
+ * Home page: what MentOS is, what it looks like running, the figures that describe the
+ * source tree, and the two things a visitor is here to do — read the code or get the
+ * course material.
+ *
+ * Bands alternate paper / paper-2 so the page reads as plates rather than one white sheet.
+ */
+import Console from '../components/Console.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { site } from '../data/site.ts';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const START = [
+  {
+    href: '/documentation/',
+    title: 'Read the documentation',
+    body: 'The Wiki covers the architecture, the kernel, the C library and the system-call interface, page by page.',
+  },
+  {
+    href: '/course-material/',
+    title: 'Get the course material',
+    body: 'Lecture slides for the Operating Systems course and for MentOS itself, published as downloadable PDFs.',
+  },
+  {
+    href: site.links.github,
+    title: 'Build it yourself',
+    body: 'Clone, run cmake, make, and make qemu. It compiles in seconds and boots into a shell.',
+  },
+] as const;
+
+const WHY = [
+  {
+    title: 'It follows Linux',
+    body: 'MentOS uses the same data structures and algorithms Linux does — task lists, a VFS, EXT2, System V IPC — so what you learn here transfers to a kernel you cannot read in an afternoon.',
+  },
+  {
+    title: 'It is small enough to read',
+    body: 'A 32-bit x86 kernel with no PAE, no SMP and no device zoo. Two-level paging, one interrupt gate for system calls, and a source tree you can hold in your head.',
+  },
+  {
+    title: 'It is meant to be modified',
+    body: 'Several of the scheduling policies ship as exercises rather than as implementations: selecting one stops the build at the placeholder until you write it. Being incomplete on purpose is the point.',
+  },
+] as const;
+---
+
+<BaseLayout title={site.title} description={site.description}>
+  <section class="hero page-open container">
+    <p class="eyebrow">{site.organisation.department} · {site.organisation.university}</p>
+    <div class="hero__content">
+      <h1 class="hero__title">{site.expandedName}</h1>
+      <p class="hero__lede">{site.mission}</p>
+      <nav class="hero__links" aria-label="Start here">
+        <a class="more" href="/documentation/">Documentation</a>
+        <a class="more" href="/course-material/">Course material</a>
+        <a class="more" href={site.links.github}>Source</a>
+      </nav>
+    </div>
+    <div class="hero__console">
+      <Console />
+    </div>
+  </section>
+
+  <div class="band band--sunken">
+    <section class="section container" aria-labelledby="home-slogan">
+      <h2 class="visually-hidden" id="home-slogan">What MentOS is for</h2>
+      {/*
+        The slogan. Each word is a span so the emphasised ones can take the accent, but
+        the line is a plain sentence underneath: read in one colour it still says the
+        same thing, which is the rule for colour anywhere on this site.
+      */}
+      <p class="slogan">
+        {site.slogan.map((line) => (
+          <span class="slogan__line">
+            {line.map((word) => (
+              <span class:list={['slogan__word', word.accent && 'slogan__word--accent']}>{word.text}</span>
+            ))}
+          </span>
+        ))}
+      </p>
+    </section>
+  </div>
+
+  <div class="band">
+    <section class="section container" aria-labelledby="home-facts">
+      <h2 class="visually-hidden" id="home-facts">MentOS in numbers</h2>
+      <dl class="facts">
+        {site.facts.map((fact) => (
+          <div class="fact">
+            <dt class="fact__value">{fact.value}</dt>
+            <dd class="fact__body">
+              <span class="fact__label">{fact.label}</span>
+              <span class="fact__note">{fact.note}</span>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  </div>
+
+  <div class="band band--sunken">
+    <section class="section container" aria-labelledby="home-why">
+      <SectionHeading eyebrow="Why MentOS" title="An operating system you can actually read" id="home-why" />
+      <ul class="reasons">
+        {WHY.map((reason) => (
+          <li class="reason">
+            <h3 class="reason__title">{reason.title}</h3>
+            <p class="reason__body">{reason.body}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+
+  <div class="band">
+    <section class="section container" aria-labelledby="home-start">
+      <SectionHeading eyebrow="Start here" title="Three ways in" id="home-start" />
+      <ul class="start">
+        {START.map((item) => (
+          <li class="start__item">
+            <h3 class="start__title"><a href={item.href}>{item.title}</a></h3>
+            <p class="start__body">{item.body}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Padding comes from `.page-open` in base.css — the hero is this page's opening block. */
+  .hero {
+    display: grid;
+    gap: var(--space-lg) var(--space-2xl);
+  }
+
+  .hero__content {
+    display: grid;
+    gap: var(--space-md);
+    align-content: start;
+  }
+
+  /* Size and measure come from `.page-open h1`; only the weight is the hero's own. */
+  .hero__title {
+    font-weight: 500;
+  }
+
+  .hero__lede {
+    font-size: var(--text-xl);
+    line-height: 1.4;
+    max-width: 52ch;
+    color: var(--color-ink-2);
+  }
+
+  .hero__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-lg);
+    margin-top: var(--space-xs);
+  }
+
+  .hero__console {
+    min-width: 0;
+  }
+
+  @media (min-width: 62rem) {
+    .hero {
+      grid-template-columns: minmax(24rem, 1fr) minmax(26rem, 1.1fr);
+      align-items: start;
+    }
+
+    .hero > .eyebrow {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /*
+   * The slogan. Mono and uppercase, one clause per line, because the three clauses are a
+   * sequence — learn, understand, shape — and setting them as running prose would lose
+   * that. `text-wrap: balance` is off: the lines are already the author's breaks.
+   */
+  .slogan {
+    display: grid;
+    gap: var(--space-2xs);
+    font-family: var(--font-mono);
+    /*
+     * Its own clamp rather than a step off the scale: the slogan is the largest mono on
+     * the site and the scale's --text-2xl left it looking incidental beside the serif
+     * headings. The floor is set by the longest line — "UNDERSTAND THE SYSTEM." has to
+     * fit a 420px viewport without wrapping mid-clause.
+     */
+    font-size: clamp(1.35rem, 3.2vw, 2.6rem);
+    font-weight: 500;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+  }
+
+  .slogan__line {
+    display: block;
+  }
+
+  /* A space between words, since each one is its own element. */
+  .slogan__word + .slogan__word {
+    margin-left: 0.3em;
+  }
+
+  .slogan__word--accent {
+    color: var(--color-accent);
+  }
+
+  /*
+   * The figures. A number this large is set in mono, not serif: these are counts read
+   * off a source tree, and the mono face is the site's voice for anything measured.
+   */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-lg) var(--space-xl);
+  }
+
+  /*
+   * `align-content: start` is load-bearing, not tidiness. All four blocks sit in one row
+   * of `.facts`, so each is stretched to the height of the tallest — and a grid taller
+   * than its content distributes the surplus across its auto rows by default. That
+   * pushed the label of every short block 14px further down than the label of the
+   * tallest one, so the four labels did not line up. Pinning the rows to their content
+   * puts the surplus at the bottom, where nothing can see it.
+   */
+  .fact {
+    display: grid;
+    align-content: start;
+    gap: var(--space-2xs);
+    padding-top: var(--space-sm);
+    border-top: 2px solid var(--color-accent);
+  }
+
+  .fact__value {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xl);
+    line-height: 1;
+    color: var(--color-accent);
+  }
+
+  .fact__body {
+    display: grid;
+    gap: var(--space-2xs);
+    margin: 0;
+  }
+
+  .fact__label {
+    font-size: var(--text-base);
+    color: var(--color-ink);
+  }
+
+  .fact__note {
+    font-size: var(--text-sm);
+    color: var(--color-ink-3);
+  }
+
+  .reasons,
+  .start {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .reason,
+  .start__item {
+    display: grid;
+    gap: var(--space-xs);
+    align-content: start;
+    padding-top: var(--space-md);
+    border-top: var(--rule);
+  }
+
+  .reason__title,
+  .start__title {
+    font-size: var(--text-lg);
+  }
+
+  .start__title a {
+    text-decoration: none;
+  }
+
+  .start__title a:hover {
+    text-decoration: underline;
+  }
+
+  .reason__body,
+  .start__body {
+    color: var(--color-ink-2);
+  }
+</style>

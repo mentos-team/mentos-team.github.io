@@ -1,0 +1,88 @@
+---
+/**
+ * <head> metadata: title, description, canonical URL, Open Graph/Twitter cards
+ * and a small amount of homepage structured data for search engines.
+ */
+import { site } from '../data/site.ts';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Open Graph type. */
+  type?: 'website' | 'article';
+  /** Path (from public/) or absolute URL of a preview image. */
+  image?: string;
+  /** Exclude from search engines (used for legacy compatibility stubs). */
+  noindex?: boolean;
+  /** Override the canonical URL (defaults to the current page). */
+  canonical?: string;
+}
+
+const { title, description = site.description, type = 'website', image = site.brand.ogImage, noindex = false, canonical } = Astro.props;
+
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+const fullTitle = Astro.url.pathname === '/' ? site.title : `${title} · ${site.shortName}`;
+const imageUrl = image ? new URL(image, Astro.site).href : undefined;
+const homeUrl = new URL('/', Astro.site).href;
+const organisationId = `${homeUrl}#organization`;
+const websiteId = `${homeUrl}#website`;
+const structuredData = Astro.url.pathname === '/'
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          '@id': websiteId,
+          url: homeUrl,
+          name: site.title,
+          description: site.description,
+          inLanguage: site.locale,
+          publisher: { '@id': organisationId },
+        },
+        {
+          /*
+           * MentOS is a piece of software, not a research group, so the home page
+           * describes SoftwareSourceCode rather than an Organization. The university is
+           * the provider, not the subject.
+           */
+          '@type': 'SoftwareSourceCode',
+          '@id': `${homeUrl}#software`,
+          name: site.name,
+          alternateName: site.expandedName,
+          description: site.description,
+          url: homeUrl,
+          codeRepository: site.links.github,
+          programmingLanguage: 'C',
+          license: site.licence.url,
+          isAccessibleForFree: true,
+          provider: { '@id': organisationId },
+        },
+        {
+          '@type': 'CollegeOrUniversity',
+          '@id': organisationId,
+          name: site.organisation.university,
+          url: site.organisation.universityUrl,
+          department: {
+            '@type': 'Organization',
+            name: site.organisation.department,
+            url: site.organisation.departmentUrl,
+          },
+        },
+      ],
+    }
+  : undefined;
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+<meta property="og:site_name" content={site.title} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content="en_GB" />
+{imageUrl && <meta property="og:image" content={imageUrl} />}
+<meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+{structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}

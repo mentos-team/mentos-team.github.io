@@ -1,0 +1,121 @@
+---
+/**
+ * Course Material: every lecture PDF, grouped by course section.
+ *
+ * The files are NOT in this repository. Each one is a release asset of
+ * mentos-team/mentos-downloads, and the link is assembled by `lectureUrl` from the
+ * entry's release tag and filename — see src/data/lectures.yaml to add or replace one.
+ */
+import SectionHeading from '../components/SectionHeading.astro';
+import { site } from '../data/site.ts';
+import PageLayout from '../layouts/PageLayout.astro';
+import { getCourses, getLectures, lectureUrl } from '../lib/content.ts';
+
+const courses = await getCourses();
+const lectures = await getLectures();
+const sections = courses
+  .map((course) => ({ course, items: lectures.filter((lecture) => lecture.data.course === course.id) }))
+  .filter((section) => section.items.length > 0);
+---
+
+<PageLayout
+  title="Course material"
+  eyebrow="Teaching"
+  lede="Lecture slides for the Operating Systems course and for MentOS itself. Every file is a PDF; nothing needs an account."
+>
+  <div slot="header" class="header-note">
+    <p class="meta">
+      The slides are published as release assets of{' '}
+      <a href={site.links.downloads}>mentos-team/mentos-downloads</a>, which keeps this
+      website small enough to clone in a second.
+    </p>
+  </div>
+
+  {sections.map(({ course, items }) => (
+    <section class="section" aria-labelledby={`course-${course.id}`}>
+      <SectionHeading eyebrow={`${items.length} ${items.length === 1 ? 'file' : 'files'}`} title={course.data.name} id={`course-${course.id}`} />
+      <p class="course__summary">{course.data.summary}</p>
+      <ol class="lectures">
+        {items.map((lecture) => (
+          <li class="lecture">
+            <span class="lecture__index" aria-hidden="true">{String(lecture.data.order).padStart(2, '0')}</span>
+            <div class="lecture__text">
+              <h3 class="lecture__title">
+                <a href={lectureUrl(lecture)}>{lecture.data.title}</a>
+              </h3>
+              <p class="lecture__summary">{lecture.data.summary}</p>
+              <p class="lecture__file meta">{lecture.data.file}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</PageLayout>
+
+<style>
+  .header-note {
+    margin-top: var(--space-sm);
+    max-width: var(--measure);
+  }
+
+  .course__summary {
+    max-width: var(--measure);
+    color: var(--color-ink-2);
+    margin-bottom: var(--space-lg);
+  }
+
+  .lectures {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  /*
+   * The lecture number sits in its own margin column, in mono and in the accent. It is
+   * the only coloured element in the row, and the title is right beside it, so colour is
+   * never the thing carrying the meaning.
+   */
+  .lecture {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+    border-top: var(--rule);
+  }
+
+  .lecture__index {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+  }
+
+  .lecture__text {
+    display: grid;
+    gap: var(--space-2xs);
+    min-width: 0;
+  }
+
+  .lecture__title {
+    font-size: var(--text-lg);
+  }
+
+  .lecture__title a {
+    text-decoration: none;
+  }
+
+  .lecture__title a:hover {
+    text-decoration: underline;
+  }
+
+  .lecture__summary {
+    color: var(--color-ink-2);
+    max-width: var(--measure);
+  }
+
+  /* The filename is shown so a downloaded PDF can be matched back to this list. */
+  .lecture__file {
+    font-size: var(--text-xs);
+  }
+</style>

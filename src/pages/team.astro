@@ -1,0 +1,110 @@
+---
+/**
+ * Team: who wrote MentOS and who advises it.
+ *
+ * A credits list, deliberately: names, roles and GitHub links, with no portraits. See
+ * the comment on the `people` collection in src/content.config.ts for why.
+ */
+import SectionHeading from '../components/SectionHeading.astro';
+import { site } from '../data/site.ts';
+import PageLayout from '../layouts/PageLayout.astro';
+import { getPeopleByStanding } from '../lib/content.ts';
+
+const GROUPS = [
+  {
+    standing: 'maintainer' as const,
+    title: 'Maintainer',
+    summary: 'Responsible for the project as it stands today.',
+  },
+  {
+    standing: 'advisor' as const,
+    title: 'Academic advisors',
+    summary: 'Advise the project from the Department of Engineering for Innovation Medicine.',
+  },
+  {
+    standing: 'past' as const,
+    title: 'Past developers',
+    summary: 'Wrote much of what MentOS is, and have since moved on to other things.',
+  },
+];
+
+const sections = await Promise.all(
+  GROUPS.map(async (group) => ({ ...group, people: await getPeopleByStanding(group.standing) })),
+);
+---
+
+<PageLayout
+  title="Team"
+  eyebrow="People"
+  lede="MentOS has been written by students and staff at the University of Verona since 2014."
+>
+  {sections.filter((section) => section.people.length > 0).map((section) => (
+    <section class="section" aria-labelledby={`team-${section.standing}`}>
+      <SectionHeading title={section.title} id={`team-${section.standing}`} />
+      <p class="group__summary">{section.summary}</p>
+      <ul class="people">
+        {section.people.map((person) => (
+          <li class="person">
+            <p class="person__name">{person.data.name}</p>
+            <p class="person__role">{person.data.role}</p>
+            {person.data.github && (
+              <p class="person__github meta">
+                <a href={`https://github.com/${person.data.github}`}>@{person.data.github}</a>
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="team-contributors">
+    <SectionHeading title="Everyone else" id="team-contributors" />
+    <p class="group__summary">
+      This page lists the people who shaped the project's direction. Many more have fixed
+      a bug, corrected a document or sent a pull request, and GitHub keeps the full and
+      always-current record.
+    </p>
+    <p><a class="more" href={site.links.contributors}>All contributors on GitHub</a></p>
+  </section>
+</PageLayout>
+
+<style>
+  .group__summary {
+    max-width: var(--measure);
+    color: var(--color-ink-2);
+    margin-bottom: var(--space-lg);
+  }
+
+  .people {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg) var(--space-xl);
+  }
+
+  .person {
+    display: grid;
+    gap: var(--space-2xs);
+    align-content: start;
+    padding-top: var(--space-sm);
+    border-top: var(--rule);
+  }
+
+  .person__name {
+    font-family: var(--font-serif);
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    color: var(--color-ink);
+  }
+
+  .person__role {
+    font-size: var(--text-sm);
+    color: var(--color-ink-3);
+  }
+
+  .person__github {
+    font-size: var(--text-xs);
+  }
+</style>

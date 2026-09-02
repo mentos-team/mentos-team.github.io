@@ -1,0 +1,151 @@
+---
+/**
+ * Documentation: a signpost, not a copy.
+ *
+ * Everything here links to the Wiki in the source repository. That is deliberate — the
+ * documentation lives next to the code it describes and is edited by the people changing
+ * that code, so duplicating any of it onto this website would guarantee two versions and
+ * one of them wrong. The old site instead committed 17 MB of generated Doxygen HTML,
+ * which had gone stale against a source tree that no longer existed.
+ */
+import SectionHeading from '../components/SectionHeading.astro';
+import { site } from '../data/site.ts';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const wiki = (page: string) => `${site.links.wiki}/${page}`;
+
+const SECTIONS = [
+  {
+    id: 'start',
+    title: 'Getting started',
+    summary: 'Set up a toolchain, build the kernel, and boot it.',
+    links: [
+      { page: 'Getting-Started', label: 'Getting Started', body: 'What to install, on Linux or WSL.' },
+      { page: 'Building-MentOS', label: 'Building MentOS', body: 'CMake options, build targets, and the filesystem image.' },
+      { page: 'Running-MentOS', label: 'Running MentOS', body: 'Booting under QEMU, and with GRUB from an ISO.' },
+      { page: 'Debugging', label: 'Debugging', body: 'Attaching GDB, and reading kernel log output.' },
+    ],
+  },
+  {
+    id: 'internals',
+    title: 'How it works',
+    summary: 'The kernel, subsystem by subsystem.',
+    links: [
+      { page: 'Architecture', label: 'Architecture', body: 'The source tree, and how the parts fit together.' },
+      { page: 'Kernel', label: 'Kernel', body: 'Boot, interrupts, paging, and the core data structures.' },
+      { page: 'Process-Management', label: 'Process management', body: 'Tasks, fork, exec, wait, and signals.' },
+      { page: 'Scheduling', label: 'Scheduling', body: 'The policies that ship, and the ones left as exercises.' },
+      { page: 'File-Systems', label: 'File systems', body: 'The VFS layer, EXT2, and procfs.' },
+      { page: 'System-Calls', label: 'System calls', body: 'The int 0x80 path, the table, and how to add one.' },
+      { page: 'IPC', label: 'IPC', body: 'System V semaphores, message queues and shared memory.' },
+      { page: 'C-Library', label: 'C library', body: 'The libc MentOS ships, and its syscall wrappers.' },
+    ],
+  },
+  {
+    id: 'contributing',
+    title: 'Working on MentOS',
+    summary: 'Adding to it, testing it, and getting a change merged.',
+    links: [
+      { page: 'Development-Guide', label: 'Development guide', body: 'Adding a userspace program or a kernel feature.' },
+      { page: 'Userspace-Programs', label: 'Userspace programs', body: 'The shell and the utilities around it.' },
+      { page: 'Unit-Testing', label: 'Unit testing', body: 'The kernel test runner and the userspace test suite.' },
+      { page: 'Contributing', label: 'Contributing', body: 'Coding style, commit conventions, and pull requests.' },
+      { page: 'Features', label: 'Features', body: 'What is implemented, and what is planned.' },
+    ],
+  },
+];
+---
+
+<PageLayout
+  title="Documentation"
+  eyebrow="Reference"
+  lede="MentOS is documented in the Wiki of its source repository, so the documentation is edited by the same people, in the same pull requests, as the code it describes."
+  width="wide"
+>
+  <div slot="header" class="header-actions">
+    <a class="more" href={site.links.wiki}>Open the Wiki</a>
+    <a class="more" href={site.links.github}>Browse the source</a>
+  </div>
+
+  {SECTIONS.map((section) => (
+    <section class="section" aria-labelledby={`doc-${section.id}`}>
+      <SectionHeading title={section.title} id={`doc-${section.id}`} />
+      <p class="section__summary">{section.summary}</p>
+      <ul class="pages">
+        {section.links.map((link) => (
+          <li class="page">
+            <h3 class="page__title"><a href={wiki(link.page)}>{link.label}</a></h3>
+            <p class="page__body">{link.body}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <section class="section" aria-labelledby="doc-api">
+    <SectionHeading title="API documentation" id="doc-api" />
+    <div class="prose">
+      <p>
+        MentOS is documented inline with Doxygen. The previous version of this website
+        committed the generated HTML — some 17 MB of it, for a source tree that had since
+        moved on. It is not published here any more; generate it against the revision you
+        are actually reading:
+      </p>
+      <pre><code>mkdir build &amp;&amp; cd build
+cmake ..
+make doc</code></pre>
+      <p>
+        The <a href={wiki('Building-MentOS')}>Building MentOS</a> page covers the build
+        options, including what <code>make doc</code> needs installed.
+      </p>
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-lg);
+    margin-top: var(--space-sm);
+  }
+
+  .section__summary {
+    max-width: var(--measure);
+    color: var(--color-ink-2);
+    margin-bottom: var(--space-lg);
+  }
+
+  .pages {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+    gap: var(--space-lg) var(--space-xl);
+  }
+
+  .page {
+    display: grid;
+    gap: var(--space-2xs);
+    align-content: start;
+    padding-top: var(--space-sm);
+    border-top: var(--rule);
+  }
+
+  .page__title {
+    font-size: var(--text-lg);
+  }
+
+  .page__title a {
+    text-decoration: none;
+  }
+
+  .page__title a:hover {
+    text-decoration: underline;
+  }
+
+  .page__body {
+    font-size: var(--text-sm);
+    color: var(--color-ink-2);
+  }
+</style>
